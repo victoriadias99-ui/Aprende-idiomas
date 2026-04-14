@@ -1,0 +1,28 @@
+[07-Apr-2026 03:41:18 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Persistence\Mapping\Driver\MappingDriver' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php on line 34
+[07-Apr-2026 03:41:18 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Persistence\Mapping\Driver\FileLocator' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/DefaultFileLocator.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/DefaultFileLocator.php on line 33
+[07-Apr-2026 03:41:19 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Persistence\Mapping\Driver\MappingDriver' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/FileDriver.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/FileDriver.php on line 39
+[07-Apr-2026 03:41:21 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Persistence\Mapping\Driver\MappingDriver' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php on line 35
+[07-Apr-2026 03:41:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Doctrine\Common\Persistence\Mapping\Driver\FileDriver' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/PHPDriver.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/PHPDriver.php on line 35
+[07-Apr-2026 03:41:21 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Persistence\Mapping\Driver\MappingDriver' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/StaticPHPDriver.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/StaticPHPDriver.php on line 36
+[07-Apr-2026 03:41:22 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Persistence\Mapping\Driver\FileLocator' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/SymfonyFileLocator.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/Driver/SymfonyFileLocator.php on line 33

@@ -1,0 +1,8 @@
+[07-Apr-2026 03:42:22 UTC] PHP Fatal error:  Uncaught Error: Interface 'MercadoPago\Config\ParserInterface' not found in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Config/Json.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Config/Json.php on line 10
+[07-Apr-2026 03:42:23 UTC] PHP Fatal error:  Uncaught Error: Interface 'MercadoPago\Config\ParserInterface' not found in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Config/Yaml.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Config/Yaml.php on line 11

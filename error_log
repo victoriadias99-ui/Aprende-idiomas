@@ -1,0 +1,222 @@
+[10-Aug-2023 22:58:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('T100008717')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[11-Aug-2023 12:08:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/unirse.php(11): getVenta('KP00000026')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[11-Aug-2023 12:09:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/unirse.php(11): getVenta('KP00000026')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[11-Aug-2023 12:09:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(83): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/unirse.php(12): getCursoDetalle(NULL)
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[11-Aug-2023 12:09:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('KP00000026')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Aug-2023 22:43:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/unirse.php(11): getVenta('T200000081')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[25-Aug-2023 22:33:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('A000001350')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[04-Oct-2023 02:54:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('G200000052')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[22-Oct-2023 17:35:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('T500000450')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[09-Dec-2023 18:39:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/unirse.php(11): getVenta('')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Jan-2024 22:40:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('KP00000214')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Jan-2024 12:13:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(58): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/pago_exitoso.php(11): getVenta('KP00000236')
+#3 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[24-Feb-2024 22:13:12 America/Argentina/Buenos_Aires] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/checkAbandonedUser.php(6): OpenCon()
+#2 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[04-Apr-2025 04:27:10 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.156.232?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[25-May-2025 03:42:20 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.129.218?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/142.132.195.214?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.144.42?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/162.55.94.176?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-idi in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.147.166?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.139.172?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.136.12?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:02 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/121.229.156.13?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[11-Jul-2025 03:09:03 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.144.42?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-id in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[12-Jul-2025 03:19:32 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.156.232?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[12-Jul-2025 03:19:34 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TransportException: Couldn't resolve host name for "https://api.ipdata.co/114.119.147.166?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CurlResponse.php:317
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(170): Symfony\Component\HttpClient\Response\CurlResponse::perform(Object(Symfony\Component\HttpClient\Internal\CurlClientState), Array)
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(153): Symfony\Component\HttpClient\Response\CurlResponse::stream(Array)
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#3 /home/aprendee/aprende-i in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[14-Oct-2025 15:56:10 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TimeoutException: Idle timeout reached for "https://api.ipdata.co/114.119.153.91?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Chunk/ErrorChunk.php:65
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(154): Symfony\Component\HttpClient\Chunk\ErrorChunk->isFirst()
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php(99): Symfony\Component\HttpClient\Response\CurlResponse->getStatusCode()
+#3 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/ipdata/api-client/src/Ipdata.php(92): Symfony\Component\HttpClient\Psr18Clien in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[14-Oct-2025 21:31:27 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TimeoutException: Idle timeout reached for "https://api.ipdata.co/188.77.15.194?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Chunk/ErrorChunk.php:65
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(154): Symfony\Component\HttpClient\Chunk\ErrorChunk->isFirst()
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php(99): Symfony\Component\HttpClient\Response\CurlResponse->getStatusCode()
+#3 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/ipdata/api-client/src/Ipdata.php(92): Symfony\Component\HttpClient\Psr18Client in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120
+[14-Oct-2025 21:31:50 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpClient\Exception\TimeoutException: Idle timeout reached for "https://api.ipdata.co/114.119.151.133?api-key=670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd". in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Chunk/ErrorChunk.php:65
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/CommonResponseTrait.php(154): Symfony\Component\HttpClient\Chunk\ErrorChunk->isFirst()
+#1 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Response/TransportResponseTrait.php(53): Symfony\Component\HttpClient\Response\CurlResponse::initialize(Object(Symfony\Component\HttpClient\Response\CurlResponse))
+#2 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php(99): Symfony\Component\HttpClient\Response\CurlResponse->getStatusCode()
+#3 /home/aprendee/aprende-idiomas.com/a-libraries/vendor/ipdata/api-client/src/Ipdata.php(92): Symfony\Component\HttpClient\Psr18Clie in /home/aprendee/aprende-idiomas.com/a-libraries/vendor/symfony/http-client/Psr18Client.php on line 120

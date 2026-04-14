@@ -1,0 +1,628 @@
+[02-Aug-2023 13:02:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('104.164.173.181', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Aug-2023 13:02:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.149', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Aug-2023 13:02:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.245', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[13-Aug-2023 00:04:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.103.118', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Aug-2023 22:00:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.111.9', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[21-Aug-2023 18:10:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.189.117', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Aug-2023 13:12:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.119.71.14', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Aug-2023 13:12:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.119.71.14', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[24-Aug-2023 01:04:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('20.15.242.142', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/checkout.php(7): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[14-Sep-2023 14:55:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.95.5', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Sep-2023 20:34:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.111.173.244', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Sep-2023 20:34:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.111.173.244', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/checkout.php(7): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[11-Oct-2023 01:14:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.61.165.91', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[11-Oct-2023 01:14:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.61.165.91', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[18-Oct-2023 21:09:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.8', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Nov-2023 13:17:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.127.11', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Nov-2023 13:17:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.127.7', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Nov-2023 13:17:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.127.11', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Nov-2023 13:17:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.127.6', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Nov-2023 13:22:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.4', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Nov-2023 12:19:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('51.222.253.15', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Nov-2023 17:16:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.249.79.74', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Nov-2023 18:25:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.107.8', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Dec-2023 22:33:15 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=2787644 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('104.164.173.53', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicpar in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Dec-2023 22:33:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.105', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[13-Dec-2023 01:01:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.9.154.9', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[13-Dec-2023 01:01:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.9.154.9', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[13-Dec-2023 01:01:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.9.154.9', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[28-Dec-2023 02:54:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.46.252.175', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[29-Dec-2023 08:47:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.127.7', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[29-Dec-2023 08:47:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.127.9', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[29-Dec-2023 08:47:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.127.119', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[29-Dec-2023 20:30:31 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=3456838 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.18.67.21', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparam in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:34:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.114.119.154', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:35:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.3', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:35:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.118', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:35:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.120', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:35:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.7', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:35:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.107.10', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 18:36:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.6', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 19:21:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('66.249.66.168', 'aleman', '{"ip":"66.249.6...', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[01-Jan-2024 20:00:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.22.56.133', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 01:53:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('173.252.87.116', 'aleman', '{"ip":"173.252....', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 01:53:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('173.252.87.2', 'aleman', '{"ip":"173.252....', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 01:53:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('173.252.87.1', 'aleman', '{"ip":"173.252....', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 14:45:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('144.76.68.124', 'aleman', '{"ip":"144.76.6...', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/checkout.php(7): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 14:45:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('144.76.68.124', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 15:00:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.8', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 15:00:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.11', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 15:00:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.5', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 15:00:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.4', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 15:00:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.116', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 16:03:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.220.149.12', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 16:03:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.220.149.2', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 16:03:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.220.149.17', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 16:25:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.18.65.189', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 16:31:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('69.171.251.1', 'aleman', '{"ip":"69.171.2...', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 16:31:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('69.171.251.117', 'aleman', '{"ip":"69.171.2...', '[]')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 17:01:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.103.10', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 17:01:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.103.9', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 17:01:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.103.116', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 17:01:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('31.13.103.120', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 18:01:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.231.10', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 18:02:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.231.2', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 18:02:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.231.10', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[02-Jan-2024 18:02:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.231.117', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[05-Jan-2024 23:00:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('177.231.16.79', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/checkout.php(7): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[09-Jan-2024 15:20:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('94.198.138.36', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Jan-2024 21:39:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.209.76.242', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Jan-2024 21:39:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.209.76.242', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[15-Jan-2024 21:39:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.111.160.126', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Jan-2024 14:55:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.251.15', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[17-Jan-2024 14:59:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.33.252.234', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Jan-2024 00:57:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.231.87.247', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[23-Jan-2024 00:57:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.231.87.247', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[08-Apr-2024 05:10:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php:1) in /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php on line 6
+[10-Apr-2024 05:25:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php:1) in /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php on line 6
+[06-Jul-2025 06:27:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(77): getIP('66.249.66.200', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/index.php(6): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
+[09-Jul-2025 04:09:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
+#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(77): getIP('35.196.53.154', 'aleman')
+#3 /home/aprendee/aprende-idiomas.com/aleman/checkout.php(7): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8

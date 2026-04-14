@@ -1,0 +1,16 @@
+[07-Apr-2026 03:42:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Doctrine\Common\Annotations\Annotation' not found in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/Attribute.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/Attribute.php on line 9
+[07-Apr-2026 03:42:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Doctrine\Common\Annotations\Annotation' not found in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/DenyDynamicAttribute.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/DenyDynamicAttribute.php on line 9
+[07-Apr-2026 03:42:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Doctrine\Common\Annotations\Annotation' not found in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/RequestParam.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/RequestParam.php on line 9
+[07-Apr-2026 03:42:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Doctrine\Common\Annotations\Annotation' not found in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/RestMethod.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/mercadopago/dx-php/src/MercadoPago/Annotation/RestMethod.php on line 9

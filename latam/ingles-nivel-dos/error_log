@@ -1,0 +1,12 @@
+[10-Mar-2024 01:11:57 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=51643 in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php(217): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php(341): getDataProducto('ingles_dos', NULL, 'US')
+#3 /home/aprendee/aprende-idiomas.com/latam/ingles-nivel-dos/checkout.php(16): getDataProductoCheckout('ingles_dos', NULL, 'US')
+#4 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/i in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4

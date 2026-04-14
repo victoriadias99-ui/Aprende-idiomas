@@ -1,0 +1,4 @@
+[07-Apr-2026 03:41:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Doctrine\Common\Inflector\Inflector' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Util/Inflector.php on line 29

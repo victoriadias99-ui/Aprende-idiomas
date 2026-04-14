@@ -1,0 +1,10 @@
+[07-Apr-2026 03:41:36 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Reflection\ClassFinderInterface' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Reflection/Psr0FindFile.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Reflection/Psr0FindFile.php on line 27
+[07-Apr-2026 03:41:38 UTC] PHP Warning:  Declaration of Doctrine\Common\Reflection\StaticReflectionMethod::getClosure($object) should be compatible with ReflectionMethod::getClosure($object = NULL) in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionMethod.php on line 110
+[07-Apr-2026 03:41:38 UTC] PHP Warning:  Declaration of Doctrine\Common\Reflection\StaticReflectionMethod::getClosure($object) should be compatible with ReflectionMethod::getClosure($object = NULL) in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionMethod.php on line 110
+[07-Apr-2026 03:41:39 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Reflection\ReflectionProviderInterface' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionParser.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/common/lib/Doctrine/Common/Reflection/StaticReflectionParser.php on line 30
