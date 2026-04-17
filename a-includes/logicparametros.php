@@ -53,13 +53,36 @@ $ip = explode(',', str_replace(' ', '', $ip))[0];
  * donde se tendra que registrar y obtener tu nueva key y cambiarla en $keyApi
 *  */
 $keyApi = '670ffe7a0bd967e949ee51ff856a24a4812fe48f9efe99140e1ce4fd';
-if(isset($productoIP) && $productoIP != null){
-    $dataIP = getIP($ip, $productoIP);
-    if ($dataIP == null) {
+
+/**
+ * Fallback para cuando la API de ipdata falla o da timeout.
+ * Usa el header de Cloudflare si está disponible para al menos conocer el país.
+ * Evita que una caída de la API externa tumbe todas las páginas del sitio.
+ */
+function lookupIpdataSafe($ip, $keyApi) {
+    try {
         $httpClient = new Psr18Client();
         $psr17Factory = new Psr17Factory();
         $ipdata = new Ipdata($keyApi, $httpClient, $psr17Factory);
-        $data = $ipdata->lookup($ip);
+        return $ipdata->lookup($ip);
+    } catch (\Throwable $e) {
+        error_log('ipdata lookup failed: ' . $e->getMessage());
+        $cf = isset($_SERVER['HTTP_CF_IPCOUNTRY']) ? trim($_SERVER['HTTP_CF_IPCOUNTRY']) : '';
+        $country = ($cf && $cf !== 'XX' && $cf !== 'T1') ? $cf : 'AR';
+        return [
+            'country_code' => $country,
+            'currency' => [
+                'code' => $country === 'AR' ? 'ARS' : 'USD',
+                'symbol' => '$',
+            ],
+        ];
+    }
+}
+
+if(isset($productoIP) && $productoIP != null){
+    $dataIP = getIP($ip, $productoIP);
+    if ($dataIP == null) {
+        $data = lookupIpdataSafe($ip, $keyApi);
 
         insertIP($ip, $productoIP, json_encode($data), json_encode($_COOKIE));
     } else {
@@ -69,17 +92,11 @@ if(isset($productoIP) && $productoIP != null){
 } else {
     $dataC =  isset($idcurso) ? $idcurso : (isset($_GET['curso']) ? $_GET['curso'] : null);
     if($dataC == null){
-        $httpClient = new Psr18Client();
-        $psr17Factory = new Psr17Factory();
-        $ipdata = new Ipdata($keyApi, $httpClient, $psr17Factory);
-        $data = $ipdata->lookup($ip);
+        $data = lookupIpdataSafe($ip, $keyApi);
     } else {
         $dataIP = getIP($ip, $dataC) ;
         if ($dataIP == null) {
-            $httpClient = new Psr18Client();
-            $psr17Factory = new Psr17Factory();
-            $ipdata = new Ipdata($keyApi, $httpClient, $psr17Factory);
-            $data = $ipdata->lookup($ip);
+            $data = lookupIpdataSafe($ip, $keyApi);
 
             insertIP($ip, $dataC, json_encode($data), json_encode($_COOKIE));
         } else {
@@ -87,6 +104,14 @@ if(isset($productoIP) && $productoIP != null){
             updateIP($ip, $dataC, $dataIP['visitas'] + 1, json_encode($_COOKIE));
         }
     }
+}
+
+if (!is_array($data)) {
+    $data = ['country_code' => 'AR', 'currency' => ['code' => 'ARS', 'symbol' => '$']];
+}
+if (!isset($data['country_code'])) { $data['country_code'] = 'AR'; }
+if (!isset($data['currency']) || !is_array($data['currency'])) {
+    $data['currency'] = ['code' => 'ARS', 'symbol' => '$'];
 }
 /** Fin Explicación 2 **/
 
