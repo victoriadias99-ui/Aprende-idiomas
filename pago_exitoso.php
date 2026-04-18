@@ -9,8 +9,20 @@ include("a-includes/funcionsDBStripe.php");
 
 $titulo = 'Pago exitoso';
 $dirpage = '';
-$venta = getDataPaymentByID($_GET['id']);
-$producto = getDataProducto($venta['PRODUCTO'], $_GET['moneda'])['producto'];
+
+// Validacion de params: si falta id, la pagina se accedio sin venta real
+$_idVenta = isset($_GET['id']) ? $_GET['id'] : null;
+$_moneda = isset($_GET['moneda']) ? $_GET['moneda'] : 'ARS';
+if (!$_idVenta) {
+    header('Location: /');
+    exit;
+}
+$venta = getDataPaymentByID($_idVenta);
+if (!$venta) {
+    header('Location: /');
+    exit;
+}
+$producto = getDataProducto($venta['PRODUCTO'], $_moneda)['producto'];
 $productoUSD = getDataProducto($venta['PRODUCTO'], 'USD')['producto'];
 $totalUSD = $productoUSD['PRECIO_DESC'];
 $total = $producto['PRECIO_DESC'];
@@ -18,7 +30,7 @@ $upsell = [];
 
 if ($venta['UPSELL'] != $venta['PRODUCTO']) {
     $upsell = explode('|', $venta['UPSELL']);
-    $productoCheckout = getDataProductoCheckout($venta['PRODUCTO'], $_GET['moneda']);
+    $productoCheckout = getDataProductoCheckout($venta['PRODUCTO'], $_moneda);
     foreach ($productoCheckout['pack'] as $item) {
         if (in_array($item['ID_ABRE'], $upsell)) {
             $total += $item['PRECIO'];

@@ -67,6 +67,10 @@ if (!wizard.validate({errorPlacement: function (error, element) {}}).element("#e
                     metodoPago: $('#metodoPago').val().trim(),
                     pais: $('#pais').val().trim(),
                     moneda: $('#moneda').val().trim(),
+                    // El slug (carpeta del curso) viene del path actual
+                    // asi el cancel_url de Stripe redirige al curso correcto
+                    // (ej: ingles-nivel-dos != str_replace de ID_ABRE ingles_dos)
+                    slug: (window.location.pathname.split('/').filter(Boolean)[0] || ''),
                 },
                 success: function (response1) {
                     if (response1.tipoPago == "payment-paypal") {

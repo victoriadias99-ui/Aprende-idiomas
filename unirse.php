@@ -6,6 +6,10 @@ if (isset($_GET['test'])) {
 }
 
 $dirpage = '';
+if (!isset($_GET['idVenta']) || $_GET['idVenta'] === '') {
+    header('Location: /');
+    exit;
+}
 $_idVenta = $_GET['idVenta'];
 include("a-includes/funcionsDB.php");
 $venta = getVenta($_idVenta);
@@ -73,7 +77,7 @@ if (isset($_GET['test'])) {
                         <p class="lead mt-5" style=""><b>Leer con atención:</b></p>
                         <p class="">📧 En minutos vas a recibir un e-mail. Allí vas a ver las instrucciones para descargar el curso (si no lo encontrás, revisá la sección No Deseados/Spam)<br></p>
                         <h4 class="mt-5">✅ ¡Novedad!</h4>
-                        <p class="">Para ver el curso debes ingresar a nuestra academia <a href="https://academia.aprende-idiomas.com/">Ingresar</a> con tu correo. All� se encuentran todos los videos para que puedas cursar :).</p>
+                        <p class="">Para ver el curso debes ingresar a nuestra academia <a href="https://academia.aprende-idiomas.com/">Ingresar</a> con tu correo. All� se encuentran todos los videos para que puedas cursar :).</p>
 
                         <hr>
                         <?php
