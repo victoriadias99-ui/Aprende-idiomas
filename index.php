@@ -2129,34 +2129,106 @@ a[href*="wa.me"],
 <!-- CHAT_IA_WIDGET -->
 <?php include(__DIR__ . "/a-includes/chat-widget.php"); ?>
 
-<!-- MODAL: SUSCRIPCION -->
-<div id="modal-suscripcion" style="display:none;position:fixed;inset:0;background:rgba(10,10,15,.72);z-index:9999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);" onclick="if(event.target===this){this.style.display='none';}">
-    <div style="background:#fff;border-radius:24px;max-width:480px;width:100%;padding:36px 32px;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative;font-family:'Inter',sans-serif;">
-        <button onclick="document.getElementById('modal-suscripcion').style.display='none';" aria-label="Cerrar" style="position:absolute;top:14px;right:14px;background:#f3f3f6;border:0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:#5a5d72;">✕</button>
-        <div style="text-align:center;">
-            <div style="display:inline-block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:14px;">SUSCRIPCIÓN ALL-ACCESS</div>
-            <h2 style="margin:0 0 10px;font-size:26px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;line-height:1.15;">5 idiomas · desde USD 2/mes</h2>
-            <p style="margin:0 0 22px;color:#5a5d72;font-size:15px;line-height:1.5;">Acceso ilimitado a inglés, italiano, francés, alemán y japonés. Todos los niveles, todos los cursos nuevos. Garantía 7 días.</p>
-            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
-                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" style="display:block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:16px 20px;border-radius:14px;text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 10px 28px rgba(236,19,137,.3);">✦ Plan anual · USD 2/mes <span style="opacity:.7;font-weight:500;">(ahorrás 50%)</span></a>
-                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" style="display:block;background:#f8f8fb;color:#0a0a0f;padding:14px 20px;border-radius:14px;text-decoration:none;font-weight:600;font-size:14px;border:1px solid rgba(10,10,15,.08);">Plan mensual · USD 4/mes</a>
+<!-- MODAL: SUSCRIPCION (2 pasos) -->
+<div id="modal-suscripcion" style="display:none;position:fixed;inset:0;background:rgba(10,10,15,.72);z-index:9999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);" onclick="if(event.target===this){cerrarModalSus();}">
+    <div style="background:#fff;border-radius:24px;max-width:620px;width:100%;padding:40px 36px;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative;font-family:'Inter',sans-serif;max-height:90vh;overflow-y:auto;">
+        <button onclick="cerrarModalSus();" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;background:#f3f3f6;border:0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:#5a5d72;z-index:2;">✕</button>
+
+        <!-- ========== PASO 1: ELEGIR PLAN ========== -->
+        <div id="sus-step1" style="text-align:center;">
+            <div style="display:inline-block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:6px 16px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:14px;">✦ SUSCRIPCIÓN ALL-ACCESS</div>
+            <h2 style="margin:0 0 10px;font-size:30px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;line-height:1.15;">Elegí tu plan</h2>
+            <p style="margin:0 0 26px;color:#5a5d72;font-size:15px;line-height:1.5;">Acceso ilimitado a los 5 idiomas · +15 cursos · Certificado oficial</p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+                <!-- PLAN MENSUAL -->
+                <div onclick="avanzarPasoSus('mensual')" style="cursor:pointer;background:#fff;border:1.5px solid rgba(10,10,15,.1);border-radius:20px;padding:24px 18px;text-align:left;transition:all .2s;" onmouseover="this.style.borderColor='#ec1389';this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='rgba(10,10,15,.1)';this.style.transform='translateY(0)';">
+                    <div style="font-weight:700;color:#0a0a0f;margin-bottom:6px;text-align:center;">Plan Mensual</div>
+                    <div style="text-align:center;margin:14px 0;"><span style="font-size:42px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;">USD 4</span><span style="color:#5a5d72;font-size:14px;"> /mes</span></div>
+                    <div style="font-size:12px;color:#5a5d72;text-align:center;line-height:1.4;margin-bottom:14px;">Flexibilidad total · Cancelás cuando quieras</div>
+                    <div style="color:#ec1389;font-weight:700;font-size:14px;text-align:left;">Ver plan →</div>
+                </div>
+                <!-- PLAN ANUAL -->
+                <div onclick="avanzarPasoSus('anual')" style="cursor:pointer;background:#0a0a0f;border:2px solid #ec1389;border-radius:20px;padding:24px 18px;text-align:left;transition:all .2s;position:relative;box-shadow:0 12px 38px rgba(236,19,137,.35);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+                    <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;font-size:10px;font-weight:700;padding:5px 12px;border-radius:999px;white-space:nowrap;letter-spacing:.3px;">★ MÁS POPULAR · AHORRÁS 50%</div>
+                    <div style="font-weight:700;color:#fff;margin-bottom:6px;text-align:center;">Plan Anual</div>
+                    <div style="text-align:center;margin:14px 0;"><span style="font-size:42px;font-weight:800;background:linear-gradient(135deg,#ec1389,#00b6ed);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:'Sora',sans-serif;">USD 2</span><span style="color:rgba(255,255,255,.7);font-size:14px;"> /mes</span></div>
+                    <div style="font-size:12px;color:rgba(255,255,255,.7);text-align:center;line-height:1.4;margin-bottom:14px;">Pago único anual · USD 24 al año</div>
+                    <div style="color:#ec1389;font-weight:700;font-size:14px;text-align:left;">Ver plan →</div>
+                </div>
             </div>
-            <div style="display:flex;gap:12px;justify-content:center;font-size:12px;color:#5a5d72;margin-bottom:14px;">
-                <span>🔒 Stripe</span>
-                <span>🛡️ Garantía 7 días</span>
-                <span>⚡ Cancelás cuando quieras</span>
+            <div style="font-size:13px;color:#5a5d72;">🔒 Pago seguro vía Stripe · Garantía de 7 días</div>
+        </div>
+
+        <!-- ========== PASO 2: CONFIRMAR / PAGAR ========== -->
+        <div id="sus-step2" style="display:none;">
+            <button onclick="volverPasoSus();" style="background:transparent;border:0;color:#5a5d72;font-size:14px;cursor:pointer;padding:4px 0 14px;display:flex;align-items:center;gap:6px;font-weight:600;">← Volver</button>
+            <div style="text-align:center;">
+                <h2 id="sus-title" style="margin:0 0 8px;font-size:26px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;">Confirmá tu suscripción</h2>
+                <p style="margin:0 0 22px;color:#5a5d72;font-size:14px;">Vas a ser redirigido a Stripe para pagar de forma segura.</p>
+
+                <a id="sus-stripe-btn" href="#" style="display:block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:18px 24px;border-radius:16px;text-decoration:none;font-weight:800;font-size:17px;box-shadow:0 14px 36px rgba(236,19,137,.35);margin-bottom:22px;">🔒 Pagar con Stripe</a>
+
+                <!-- MINI RESUMEN -->
+                <div style="background:#f8f8fb;border-radius:16px;padding:20px;text-align:left;border:1px solid rgba(10,10,15,.06);">
+                    <div style="font-size:11px;font-weight:700;color:#5a5d72;letter-spacing:.6px;margin-bottom:10px;">RESUMEN DE TU COMPRA</div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(10,10,15,.08);">
+                        <span style="font-weight:700;color:#0a0a0f;font-size:15px;" id="sus-plan-nombre">Plan Anual</span>
+                        <span style="font-weight:700;color:#0a0a0f;font-size:15px;" id="sus-plan-precio">USD 24/año</span>
+                    </div>
+                    <ul style="list-style:none;padding:0;margin:10px 0 0;font-size:13px;color:#0a0a0f;line-height:1.9;">
+                        <li>✓ Acceso ilimitado a 5 idiomas (inglés, italiano, francés, alemán, japonés)</li>
+                        <li>✓ +15 cursos · Todos los niveles</li>
+                        <li>✓ Certificado oficial al completar</li>
+                        <li>✓ Garantía 7 días · Reembolso sin preguntas</li>
+                        <li>✓ Cancelás cuando quieras</li>
+                    </ul>
+                </div>
+                <div style="margin-top:16px;font-size:12px;color:#5a5d72;">🔒 Pago procesado por Stripe · Tus datos están seguros</div>
             </div>
-            <a href="/suscripcion/" style="color:#ec1389;font-size:13px;text-decoration:none;font-weight:600;">Ver todos los detalles →</a>
         </div>
     </div>
 </div>
+
 <script>
-document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') {
-        var m = document.getElementById('modal-suscripcion');
-        if (m && m.style.display !== 'none') m.style.display = 'none';
-    }
-});
+(function(){
+    var STRIPE_URLS = {
+        mensual: 'https://buy.stripe.com/fZeg0UeY12610M0003',
+        anual:   'https://buy.stripe.com/aEUg0UdTX5id8es002'
+    };
+    var PLAN_INFO = {
+        mensual: { nombre: 'Plan Mensual', precio: 'USD 4/mes' },
+        anual:   { nombre: 'Plan Anual',   precio: 'USD 24/año (USD 2/mes)' }
+    };
+    window.avanzarPasoSus = function(plan){
+        var info = PLAN_INFO[plan];
+        document.getElementById('sus-plan-nombre').textContent = info.nombre;
+        document.getElementById('sus-plan-precio').textContent = info.precio;
+        document.getElementById('sus-stripe-btn').href = STRIPE_URLS[plan];
+        document.getElementById('sus-step1').style.display = 'none';
+        document.getElementById('sus-step2').style.display = 'block';
+        var modalDiv = document.querySelector('#modal-suscripcion > div');
+        if (modalDiv) modalDiv.scrollTop = 0;
+    };
+    window.volverPasoSus = function(){
+        document.getElementById('sus-step2').style.display = 'none';
+        document.getElementById('sus-step1').style.display = 'block';
+    };
+    window.cerrarModalSus = function(){
+        document.getElementById('modal-suscripcion').style.display = 'none';
+        // Reset to step 1 for next open
+        setTimeout(function(){
+            document.getElementById('sus-step2').style.display = 'none';
+            document.getElementById('sus-step1').style.display = 'block';
+        }, 200);
+    };
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') {
+            var m = document.getElementById('modal-suscripcion');
+            if (m && m.style.display !== 'none') cerrarModalSus();
+        }
+    });
+})();
 </script>
 
 </body>
