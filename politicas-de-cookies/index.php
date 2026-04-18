@@ -168,12 +168,12 @@ footer a{color:var(--pink);font-weight:600}
 <p>Nos reservamos el derecho de actualizar esta política de cookies para reflejar cambios legales o técnicos. Cualquier modificación se publicará en esta misma página con la fecha actualizada.</p>
 
 <h2>7. Contacto</h2>
-<p>Si tenés dudas sobre nuestra política de cookies, escribinos a <a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a> y te respondemos a la brevedad.</p>
+<p>Si tenés dudas sobre nuestra política de cookies, escribinos a  y te respondemos a la brevedad.</p>
 
 <div class="highlight">
     <strong>Responsable de tratamiento:</strong><br>
     NEMTOR LLC<br>
-    Email: aprende.idiomas.latam@gmail.com<br>
+    
     Sitio web: https://aprende-idiomas.com
 </div>
 
@@ -188,7 +188,7 @@ footer a{color:var(--pink);font-weight:600}
         <a href="../suscripcion/">Suscripción</a>
         <a href="../politicas-de-cookies/">Cookies</a>
         <a href="../aviso-legal/">Aviso legal</a>
-        <a href="mailto:aprende.idiomas.latam@gmail.com">Contacto</a>
+        Contacto
     </div>
     <div class="footer-bottom">© 2026 NEMTOR LLC · Todos los derechos reservados</div>
 </footer>

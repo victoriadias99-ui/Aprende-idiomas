@@ -1223,7 +1223,7 @@ $urlCheckout = 'checkout.php';
     <div class="footer-inner">
         <img src="../img/logo.jpg" alt="Aprende Idiomas">
         <p>Cursos online de idiomas. Aprendé a tu ritmo, desde tu casa, con certificado oficial y comunidad activa.</p>
-        <p><a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a></p>
+        <p></p>
         <div class="footer-bottom">© 2026 Aprende Idiomas · Hecho con cariño en Buenos Aires</div>
     </div>
 </footer>

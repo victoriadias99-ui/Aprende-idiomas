@@ -139,7 +139,7 @@ footer a{color:var(--pink);font-weight:600}
     <div class="right-item"><b>Portabilidad</b><span>Recibir tus datos en formato estándar</span></div>
     <div class="right-item"><b>Limitación</b><span>Pedir que restrinjamos el uso</span></div>
 </div>
-<p>Para ejercer cualquiera de estos derechos, escribinos a <a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a> indicando el derecho que querés ejercer. Respondemos en un máximo de 48 horas.</p>
+<p>Para ejercer cualquiera de estos derechos, escribinos a  indicando el derecho que querés ejercer. Respondemos en un máximo de 48 horas.</p>
 
 <h2>6. Enlaces externos</h2>
 <p>El sitio puede contener enlaces a otras webs (redes sociales, medios de pago, servicios asociados). NEMTOR LLC no se responsabiliza por las políticas de privacidad de esos sitios. Te recomendamos leer las políticas de cada uno individualmente.</p>
@@ -164,7 +164,7 @@ footer a{color:var(--pink);font-weight:600}
 <p>Podés revocar tu consentimiento para el tratamiento de datos con fines de marketing en cualquier momento:</p>
 <ul>
     <li>Haciendo clic en "Darse de baja" en cualquier newsletter que recibas.</li>
-    <li>Escribiéndonos a <a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a>.</li>
+    <li>Escribiéndonos a .</li>
     <li>Eliminando cookies desde tu navegador.</li>
 </ul>
 <p>La revocación se hace efectiva en un máximo de 48 horas y no afecta al tratamiento previo.</p>
@@ -198,7 +198,7 @@ footer a{color:var(--pink);font-weight:600}
     <strong>Responsable de tratamiento:</strong><br>
     NEMTOR LLC<br>
     Delaware, Estados Unidos<br>
-    Email: <a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a><br>
+    Email: <br>
     Sitio web: https://aprende-idiomas.com
 </div>
 
@@ -214,7 +214,7 @@ footer a{color:var(--pink);font-weight:600}
         <a href="../politicas-de-cookies/">Cookies</a>
         <a href="../aviso-legal/">Aviso legal</a>
         <a href="../politicas-de-privacidad/">Privacidad</a>
-        <a href="mailto:aprende.idiomas.latam@gmail.com">Contacto</a>
+        Contacto
     </div>
     <div class="footer-bottom">© 2026 NEMTOR LLC · Todos los derechos reservados</div>
 </footer>

@@ -134,7 +134,7 @@ footer a{color:var(--pink);font-weight:600}
 
 <h2>9. Garantía y reembolsos</h2>
 <div class="note"><strong>Garantía de 7 días:</strong> Dispones de 7 días desde la compra para solicitar el reembolso del 100% del valor abonado, siempre que el curso no haya sido completado, descargado, ni se haya solicitado certificado durante ese lapso.</div>
-<p>Pasados los 7 días no aplican reembolsos. Las solicitudes deben enviarse a <a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a> indicando motivo y nombre del curso.</p>
+<p>Pasados los 7 días no aplican reembolsos. Las solicitudes deben enviarse a  indicando motivo y nombre del curso.</p>
 
 <h2>10. Disolución del contrato</h2>
 <p>Cualquiera de las partes puede terminar la relación comercial en cualquier momento. NEMTOR LLC podrá cancelar tu cuenta en caso de:</p>
@@ -156,13 +156,13 @@ footer a{color:var(--pink);font-weight:600}
 <p>Las controversias que surjan del uso del sitio se someterán a la legislación del Estado de Delaware, Estados Unidos, y a los tribunales competentes de dicha jurisdicción, salvo disposición legal imperativa en contrario.</p>
 
 <h2>14. Contacto</h2>
-<p>Para cualquier consulta sobre estos términos, escribinos a <a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a>.</p>
+<p>Para cualquier consulta sobre estos términos, escribinos a .</p>
 
 <div class="highlight">
     <strong>Responsable:</strong><br>
     NEMTOR LLC<br>
     Delaware, Estados Unidos<br>
-    Email: aprende.idiomas.latam@gmail.com<br>
+    
     Sitio web: https://aprende-idiomas.com
 </div>
 
@@ -178,7 +178,7 @@ footer a{color:var(--pink);font-weight:600}
         <a href="../politicas-de-cookies/">Cookies</a>
         <a href="../aviso-legal/">Aviso legal</a>
         <a href="../politicas-de-privacidad/">Privacidad</a>
-        <a href="mailto:aprende.idiomas.latam@gmail.com">Contacto</a>
+        Contacto
     </div>
     <div class="footer-bottom">© 2026 NEMTOR LLC · Todos los derechos reservados</div>
 </footer>

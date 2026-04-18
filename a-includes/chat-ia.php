@@ -163,12 +163,12 @@ $rules = [
     // --- Contacto ---
     [
         'kw' => ['contacto', 'contactar', 'whatsapp', 'wpp', 'telefono', 'email', 'mail', 'escribir', 'hablar con alguien', 'atencion al cliente'],
-        'reply' => "Podés escribirnos a aprende.idiomas.latam@gmail.com y te respondemos por ahí. También podés contarme acá qué necesitás y te oriento."
+        'reply' => "Podés escribirnos a  y te respondemos por ahí. También podés contarme acá qué necesitás y te oriento."
     ],
     // --- Reembolso / devolución ---
     [
         'kw' => ['reembolso', 'devolucion', 'devolver', 'garantia', 'cancelar', 'arrepentimiento'],
-        'reply' => "Si no estás conforme, escribinos a aprende.idiomas.latam@gmail.com dentro de los primeros días de la compra y lo revisamos."
+        'reply' => "Si no estás conforme, escribinos a  dentro de los primeros días de la compra y lo revisamos."
     ],
     // --- Saludos ---
     [
@@ -193,7 +193,7 @@ foreach ($rules as $rule) {
 
 // --- Fallback ---
 if ($reply === null) {
-    $reply = "No estoy seguro de haber entendido. Puedo ayudarte con:\n- Qué cursos hay y precios\n- Formas de pago y acceso\n- Certificado y comunidad\n- Duración y modalidad\n\n¿Sobre qué te gustaría saber? También podés escribirnos a aprende.idiomas.latam@gmail.com.";
+    $reply = "No estoy seguro de haber entendido. Puedo ayudarte con:\n- Qué cursos hay y precios\n- Formas de pago y acceso\n- Certificado y comunidad\n- Duración y modalidad\n\n¿Sobre qué te gustaría saber? También podés escribirnos a .";
 }
 
 echo json_encode(['ok' => true, 'reply' => $reply], JSON_UNESCAPED_UNICODE);

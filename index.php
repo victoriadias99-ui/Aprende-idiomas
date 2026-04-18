@@ -1543,7 +1543,7 @@ a[href*="wa.me"],
             <p class="hero-sub">Cursos online de inglés, italiano, francés, alemán y japonés. Certificado oficial, comunidad activa y acceso ilimitado para que aprendas a tu ritmo.</p>
             <div class="hero-ctas">
                 <a href="#cursos" class="btn btn-pink btn-arrow">Ver todos los cursos</a>
-                <a href="#suscripciones" class="btn btn-light">Suscripción · USD 2/mes</a>
+                <a href="#" class="btn btn-light" onclick="event.preventDefault(); document.getElementById('modal-suscripcion').style.display='flex'; return false;">Suscripción · USD 2/mes</a>
             </div>
             <div class="hero-stats">
                 <div class="stat"><div class="stat-num">5</div><div class="stat-label">Idiomas</div></div>
@@ -1861,8 +1861,8 @@ a[href*="wa.me"],
                 </div>
                 <h2>Plan Empresas</h2>
                 <p>Capacitamos equipos de trabajo con planes a medida. Tenemos amplia experiencia en pymes y empresas. Nos adaptamos a la necesidad de cada cliente.</p>
-                <p>Escribinos y armamos juntos el plan ideal:<br><a href="mailto:aprende.idiomas.latam@gmail.com" class="email-link">aprende.idiomas.latam@gmail.com</a></p>
-                <a href="mailto:aprende.idiomas.latam@gmail.com" class="btn btn-pink btn-arrow" style="margin-top: 20px;">Solicitar propuesta</a>
+                <p>Escribinos y armamos juntos el plan ideal:<br></p>
+                Solicitar propuesta
             </div>
         </div>
     </div>
@@ -1998,7 +1998,7 @@ a[href*="wa.me"],
                 <span class="tag">Clases 1 a 1</span>
                 <span class="tag">PET · FIRST · CAE</span>
             </div>
-            <a href="mailto:aprende.idiomas.latam@gmail.com" class="btn btn-pink btn-arrow" style="margin-top: 28px;">Consultar disponibilidad</a>
+            Consultar disponibilidad
         </div>
     </div>
 </section>
@@ -2034,7 +2034,7 @@ a[href*="wa.me"],
                 <h4>Contacto</h4>
                 <ul>
                     <li>Ciudad de Buenos Aires</li>
-                    <li><a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a></li>
+                    <li></li>
                     <li><a href="https://academia.aprende-idiomas.com/">Acceder a la academia</a></li>
                 </ul>
             </div>
@@ -2128,5 +2128,36 @@ a[href*="wa.me"],
 <script src="/libraries/js/cookie-banner.js" defer></script>
 <!-- CHAT_IA_WIDGET -->
 <?php include(__DIR__ . "/a-includes/chat-widget.php"); ?>
+
+<!-- MODAL: SUSCRIPCION -->
+<div id="modal-suscripcion" style="display:none;position:fixed;inset:0;background:rgba(10,10,15,.72);z-index:9999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);" onclick="if(event.target===this){this.style.display='none';}">
+    <div style="background:#fff;border-radius:24px;max-width:480px;width:100%;padding:36px 32px;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative;font-family:'Inter',sans-serif;">
+        <button onclick="document.getElementById('modal-suscripcion').style.display='none';" aria-label="Cerrar" style="position:absolute;top:14px;right:14px;background:#f3f3f6;border:0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:#5a5d72;">✕</button>
+        <div style="text-align:center;">
+            <div style="display:inline-block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:14px;">SUSCRIPCIÓN ALL-ACCESS</div>
+            <h2 style="margin:0 0 10px;font-size:26px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;line-height:1.15;">5 idiomas · desde USD 2/mes</h2>
+            <p style="margin:0 0 22px;color:#5a5d72;font-size:15px;line-height:1.5;">Acceso ilimitado a inglés, italiano, francés, alemán y japonés. Todos los niveles, todos los cursos nuevos. Garantía 7 días.</p>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" style="display:block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:16px 20px;border-radius:14px;text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 10px 28px rgba(236,19,137,.3);">✦ Plan anual · USD 2/mes <span style="opacity:.7;font-weight:500;">(ahorrás 50%)</span></a>
+                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" style="display:block;background:#f8f8fb;color:#0a0a0f;padding:14px 20px;border-radius:14px;text-decoration:none;font-weight:600;font-size:14px;border:1px solid rgba(10,10,15,.08);">Plan mensual · USD 4/mes</a>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;font-size:12px;color:#5a5d72;margin-bottom:14px;">
+                <span>🔒 Stripe</span>
+                <span>🛡️ Garantía 7 días</span>
+                <span>⚡ Cancelás cuando quieras</span>
+            </div>
+            <a href="/suscripcion/" style="color:#ec1389;font-size:13px;text-decoration:none;font-weight:600;">Ver todos los detalles →</a>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') {
+        var m = document.getElementById('modal-suscripcion');
+        if (m && m.style.display !== 'none') m.style.display = 'none';
+    }
+});
+</script>
+
 </body>
 </html>
