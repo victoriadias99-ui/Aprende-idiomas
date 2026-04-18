@@ -1029,14 +1029,14 @@ $urlCheckout = 'checkout.php';
     </div>
     <div class="benefits-grid">
         <div class="benefit">
-            <img src="img/certificado.jpg" alt="Certificado" class="benefit-img">
+            <img src="../img/certificado.jpg" alt="Certificado" class="benefit-img">
             <h3>Certificado oficial</h3>
             <p>Obtené tu certificación oficial para sumar a tu CV al finalizar el curso.</p>
         </div>
         <div class="benefit">
-            <img src="img/soporte.jpg" alt="Comunidad" class="benefit-img">
+            <img src="../img/soporte.jpg" alt="Comunidad" class="benefit-img">
             <h3>Comunidad online</h3>
-            <p>Espacio exclusivo para que practiques italiano con otros alumnos y profes.</p>
+            <p>Espacio exclusivo para que practiques japonés con otros alumnos y profes.</p>
         </div>
 </div>
 </section>
