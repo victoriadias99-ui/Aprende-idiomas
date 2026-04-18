@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <title>Suscripción All-Access · 5 idiomas desde USD 2/mes | Aprende Idiomas</title>
     <meta name="description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Certificado oficial. Cancelás cuando quieras.">
+    <!-- SEO_TAGS_V1 -->
+    <link rel="canonical" href="https://www.aprende-idiomas.com/suscripcion/">
+    <meta name="keywords" content="suscripcion idiomas, 5 idiomas, acceso ilimitado cursos, suscripcion italiano ingles">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprende Idiomas">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.aprende-idiomas.com/suscripcion/">
+    <meta property="og:title" content="Suscripción All-Access · 5 Idiomas desde USD 2/mes | Aprende Idiomas">
+    <meta property="og:description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Todos los niveles. Cancelás cuando quieras.">
+    <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Suscripción All-Access · 5 Idiomas desde USD 2/mes | Aprende Idiomas">
+    <meta name="twitter:description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Todos los niveles. Cancelás cuando quieras.">
+    <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Suscripción All-Access Aprende Idiomas","description":"Suscripción con acceso ilimitado a todos los cursos de 5 idiomas: inglés, italiano, francés, alemán y japonés.","url":"https://www.aprende-idiomas.com/suscripcion/","brand":{"@type":"Brand","name":"Aprende Idiomas"},"image":"https://www.aprende-idiomas.com/img/logo.jpg"}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">

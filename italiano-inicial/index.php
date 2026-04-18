@@ -29,6 +29,22 @@ $urlCheckout = 'checkout.php';
     <meta charset="utf-8">
     <title>Italiano A1 — Curso Online desde cero | Aprende Idiomas</title>
     <meta name="description" content="Curso de italiano nivel inicial A1. Desde cero, 25 clases, 200+ ejercicios. Certificado oficial, comunidad y acceso de por vida.">
+    <!-- SEO_TAGS_V1 -->
+    <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-inicial/">
+    <meta name="keywords" content="curso de italiano, italiano online, italiano desde cero, italiano a1, aprender italiano, curso italiano principiantes, italiano para principiantes">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprende Idiomas">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.aprende-idiomas.com/italiano-inicial/">
+    <meta property="og:title" content="Curso de Italiano Online A1 desde Cero | Aprende Idiomas">
+    <meta property="og:description" content="Aprendé italiano online desde cero con el curso A1 inicial. +25 clases paso a paso, +200 ejercicios, certificado oficial y soporte de profes. Ideal para principiantes.">
+    <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curso de Italiano Online A1 desde Cero | Aprende Idiomas">
+    <meta name="twitter:description" content="Aprendé italiano online desde cero con el curso A1 inicial. +25 clases paso a paso, +200 ejercicios, certificado oficial y soporte de profes. Ideal para principiantes.">
+    <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Italiano A1 — Curso Online desde cero","description":"Curso de italiano nivel A1 inicial, 100% online. Aprendé italiano desde cero con más de 25 clases paso a paso, 200 ejercicios prácticos, profesores de soporte y certificado oficial.","url":"https://www.aprende-idiomas.com/italiano-inicial/","inLanguage":"es","teaches":"Italiano","educationalLevel":"Beginner (A1)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT40H"},"about":["Italiano para principiantes","Gramática italiana","Vocabulario italiano","Conversación en italiano"]}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">

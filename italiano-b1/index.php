@@ -29,6 +29,22 @@ $urlCheckout = 'checkout.php';
     <meta charset="utf-8">
     <title>Italiano B1 — Nivel Avanzado · Apto Ciudadanía | Aprende Idiomas</title>
     <meta name="description" content="Curso de italiano B1 avanzado. Apto requisito para ciudadanía italiana. Certificado oficial y acceso de por vida.">
+    <!-- SEO_TAGS_V1 -->
+    <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-b1/">
+    <meta name="keywords" content="italiano b1, italiano avanzado, italiano ciudadania, italiano ciudadania italiana, curso italiano b1, requisito italiano ciudadania">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprende Idiomas">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.aprende-idiomas.com/italiano-b1/">
+    <meta property="og:title" content="Curso Italiano B1 Avanzado · Apto Ciudadanía Italiana | Aprende Idiomas">
+    <meta property="og:description" content="Curso de italiano B1 avanzado online. Apto como requisito de idioma para la ciudadanía italiana. Certificado oficial y acceso de por vida.">
+    <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curso Italiano B1 Avanzado · Apto Ciudadanía Italiana | Aprende Idiomas">
+    <meta name="twitter:description" content="Curso de italiano B1 avanzado online. Apto como requisito de idioma para la ciudadanía italiana. Certificado oficial y acceso de por vida.">
+    <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Italiano B1 — Nivel Avanzado · Apto Ciudadanía","description":"Curso de italiano B1 avanzado online. Apto para cumplir el requisito de idioma exigido para la ciudadanía italiana.","url":"https://www.aprende-idiomas.com/italiano-b1/","inLanguage":"es","teaches":"Italiano","educationalLevel":"Upper-Intermediate (B1)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT50H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">

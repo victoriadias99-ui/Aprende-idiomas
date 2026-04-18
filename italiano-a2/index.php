@@ -29,6 +29,22 @@ $urlCheckout = 'checkout.php';
     <meta charset="utf-8">
     <title>Italiano A2 — Nivel Intermedio | Aprende Idiomas</title>
     <meta name="description" content="Curso de italiano nivel A2 intermedio. Continuá tu camino tras el A1. Certificado oficial y acceso de por vida.">
+    <!-- SEO_TAGS_V1 -->
+    <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-a2/">
+    <meta name="keywords" content="italiano a2, italiano intermedio, curso italiano a2, italiano online intermedio, aprender italiano a2">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprende Idiomas">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.aprende-idiomas.com/italiano-a2/">
+    <meta property="og:title" content="Curso de Italiano A2 Intermedio Online | Aprende Idiomas">
+    <meta property="og:description" content="Curso de italiano nivel A2 intermedio 100% online. Continuá tu camino tras el A1 con clases, ejercicios y certificado oficial. Acceso de por vida.">
+    <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curso de Italiano A2 Intermedio Online | Aprende Idiomas">
+    <meta name="twitter:description" content="Curso de italiano nivel A2 intermedio 100% online. Continuá tu camino tras el A1 con clases, ejercicios y certificado oficial. Acceso de por vida.">
+    <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Italiano A2 — Nivel Intermedio","description":"Curso de italiano A2 intermedio online. Continuación del nivel A1 para consolidar gramática, vocabulario y conversación.","url":"https://www.aprende-idiomas.com/italiano-a2/","inLanguage":"es","teaches":"Italiano","educationalLevel":"Intermediate (A2)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT40H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">

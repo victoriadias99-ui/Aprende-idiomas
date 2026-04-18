@@ -29,6 +29,22 @@ $urlCheckout = 'checkout.php';
     <meta charset="utf-8">
     <title>Inglés Nivel 1 — Curso Online desde cero | Aprende Idiomas</title>
     <meta name="description" content="Curso de inglés nivel 1. Desde cero, +25 clases, +200 ejercicios. Certificado oficial, comunidad y acceso de por vida.">
+    <!-- SEO_TAGS_V1 -->
+    <link rel="canonical" href="https://www.aprende-idiomas.com/ingles-nivel-uno/">
+    <meta name="keywords" content="curso de ingles, ingles online, ingles desde cero, ingles nivel 1, aprender ingles, curso ingles principiantes">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprende Idiomas">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.aprende-idiomas.com/ingles-nivel-uno/">
+    <meta property="og:title" content="Curso de Inglés Online Nivel 1 desde Cero | Aprende Idiomas">
+    <meta property="og:description" content="Aprendé inglés online desde cero con el curso Nivel 1. +25 clases, +200 ejercicios, certificado oficial, soporte de profes y acceso de por vida.">
+    <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curso de Inglés Online Nivel 1 desde Cero | Aprende Idiomas">
+    <meta name="twitter:description" content="Aprendé inglés online desde cero con el curso Nivel 1. +25 clases, +200 ejercicios, certificado oficial, soporte de profes y acceso de por vida.">
+    <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Inglés Nivel 1 — Curso Online desde cero","description":"Curso de inglés nivel 1 (A1) online para principiantes. +25 clases paso a paso, +200 ejercicios, certificado oficial.","url":"https://www.aprende-idiomas.com/ingles-nivel-uno/","inLanguage":"es","teaches":"Inglés","educationalLevel":"Beginner (A1)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT40H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">

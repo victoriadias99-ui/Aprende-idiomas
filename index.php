@@ -31,6 +31,22 @@ a[href*="wa.me"],
     <meta charset="utf-8">
     <title>Aprende Idiomas | Cursos Online</title>
     <meta name="description" content="Aprendé Idiomas desde cero desde tu casa y a tu ritmo">
+    <!-- SEO_TAGS_V1 -->
+    <link rel="canonical" href="https://www.aprende-idiomas.com/">
+    <meta name="keywords" content="aprende idiomas, cursos de idiomas online, cursos online, italiano online, ingles online, academia de idiomas, curso de italiano desde cero">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aprende Idiomas">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://www.aprende-idiomas.com/">
+    <meta property="og:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Francés, Alemán y Japonés">
+    <meta property="og:description" content="Academia online de idiomas. Cursos de italiano, inglés, francés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
+    <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Francés, Alemán y Japonés">
+    <meta name="twitter:description" content="Academia online de idiomas. Cursos de italiano, inglés, francés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
+    <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.aprende-idiomas.com/#organization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","sameAs":[]},{"@type":"WebSite","@id":"https://www.aprende-idiomas.com/#website","url":"https://www.aprende-idiomas.com/","name":"Aprende Idiomas","publisher":{"@id":"https://www.aprende-idiomas.com/#organization"},"inLanguage":"es"},{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","description":"Academia online de idiomas con cursos de italiano, inglés, francés, alemán y japonés."}]}</script>
     <meta name="keywords" content="aprende ingles, cursos online de ingles, curso de ingles, saber ingles cursos, curso de italiano, cursos online de idiomas, curso de frances, aprende italiano, aprende frances">
     <meta name="author" content="Aprende Idiomas">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1756,7 +1772,7 @@ a[href*="wa.me"],
         <article class="course-card en" data-lang="en">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
-                <img src="img/curso-ingles-uno.svg" alt="Inglés Nivel 1">
+                <img src="img/producto1.jpg" alt="Inglés Nivel 1">
             </div>
             <div class="course-body">
                 <h3>Inglés Nivel 1</h3>
@@ -1772,7 +1788,7 @@ a[href*="wa.me"],
         <article class="course-card en" data-lang="en">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
-                <img src="img/curso-ingles-dos.svg" alt="Inglés Nivel 2">
+                <img src="img/producto2.jpg" alt="Inglés Nivel 2">
             </div>
             <div class="course-body">
                 <h3>Inglés Nivel 2</h3>
@@ -1788,7 +1804,7 @@ a[href*="wa.me"],
         <article class="course-card it" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/curso-italiano-inicial.svg" alt="Italiano A1">
+                <img src="img/italiana1.jpg" alt="Italiano A1">
             </div>
             <div class="course-body">
                 <h3>Italiano A1</h3>
@@ -1804,7 +1820,7 @@ a[href*="wa.me"],
         <article class="course-card it" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/curso-italiano-a2.svg" alt="Italiano A2">
+                <img src="img/italiano-a2.jpg" alt="Italiano A2">
             </div>
             <div class="course-body">
                 <h3>Italiano A2</h3>
@@ -1820,7 +1836,7 @@ a[href*="wa.me"],
         <article class="course-card it" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/curso-italiano-b1.svg" alt="Italiano B1" loading="lazy">
+                <img src="img/italiano-b1.jpg" alt="Italiano B1" loading="lazy">
             </div>
             <div class="course-body">
                 <h3>Italiano B1</h3>
@@ -1836,7 +1852,7 @@ a[href*="wa.me"],
         <article class="course-card pack" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ Pack</span>
-                <img src="img/curso-italiano-pack.svg" alt="Pack Italiano Avanzado" loading="lazy">
+                <img src="img/italiano-pack.jpg" alt="Pack Italiano Avanzado" loading="lazy">
             </div>
             <div class="course-body">
                 <h3>Pack Italiano Avanzado</h3>
@@ -1852,7 +1868,7 @@ a[href*="wa.me"],
         <article class="course-card fr" data-lang="fr">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇫🇷</span> Francés</span>
-                <img src="img/curso-frances.svg" alt="Francés">
+                <img src="img/frances1.png" alt="Francés">
             </div>
             <div class="course-body">
                 <h3>Francés Inicial</h3>
@@ -1868,7 +1884,7 @@ a[href*="wa.me"],
         <article class="course-card pack" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ Pack 2x1</span>
-                <img src="img/curso-italiano-ingles.svg" alt="Pack Italiano + Inglés">
+                <img src="img/pack.jpg" alt="Pack Italiano + Inglés">
             </div>
             <div class="course-body">
                 <h3>Pack Italiano + Inglés</h3>
@@ -1884,7 +1900,7 @@ a[href*="wa.me"],
         <article class="course-card de" data-lang="de">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇩🇪</span> Alemán</span>
-                <img src="img/curso-aleman.svg" alt="Alemán">
+                <img src="img/aleman1.png" alt="Alemán">
             </div>
             <div class="course-body">
                 <h3>Alemán</h3>
@@ -1900,7 +1916,7 @@ a[href*="wa.me"],
         <article class="course-card ja" data-lang="ja">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇯🇵</span> Japonés</span>
-                <img src="img/curso-japones.svg" alt="Japonés">
+                <img src="img/japon.png" alt="Japonés">
             </div>
             <div class="course-body">
                 <h3>Japonés</h3>
