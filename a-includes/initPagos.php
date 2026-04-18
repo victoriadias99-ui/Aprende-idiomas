@@ -1,9 +1,16 @@
 <?php
+// Endpoint JSON: silenciar warnings/deprecated de libs viejas
+// (Stripe SDK, Guzzle) que contaminan el body y rompen el JSON
+// parser de jQuery. En modo ?test=1 si queremos ver errores.
 if(isset($_GET['test'])){
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+} else {
+    ini_set('display_errors', 0);
+    error_reporting(E_ERROR | E_PARSE);
 }
+header('Content-Type: application/json; charset=utf-8');
 
 require_once dirname(__DIR__) . '/a-libraries/vendor/autoload.php';
 
