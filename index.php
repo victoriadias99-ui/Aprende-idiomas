@@ -2067,6 +2067,15 @@ a[href*="wa.me"],
     </div>
 </footer>
 
+<!-- Legal links bar -->
+<div style="background:#0a0a0f;color:rgba(255,255,255,.5);padding:14px 20px;text-align:center;font-size:.78rem;border-top:1px solid rgba(255,255,255,.08)">
+    <a href="/politicas-de-cookies/" style="color:rgba(255,255,255,.6);margin:0 10px;text-decoration:none">Política de cookies</a> ·
+    <a href="/politicas-de-privacidad/" style="color:rgba(255,255,255,.6);margin:0 10px;text-decoration:none">Privacidad</a> ·
+    <a href="/aviso-legal/" style="color:rgba(255,255,255,.6);margin:0 10px;text-decoration:none">Aviso legal</a>
+    <span style="color:rgba(255,255,255,.3);margin-left:12px">© 2026 NEMTOR LLC</span>
+</div>
+
+
 <!-- Filter de cursos por idioma + Modal suscripción -->
 <script>
 (function() {
@@ -2137,5 +2146,6 @@ a[href*="wa.me"],
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196494254-1"></script>
 
+<script src="/libraries/js/cookie-banner.js" defer></script>
 </body>
 </html>

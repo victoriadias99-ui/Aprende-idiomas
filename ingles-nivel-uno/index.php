@@ -1260,5 +1260,6 @@ gtag('config','UA-196494254-1');
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196494254-1"></script>
 
+<script src="/libraries/js/cookie-banner.js" defer></script>
 </body>
 </html>

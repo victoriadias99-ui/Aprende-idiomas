@@ -735,5 +735,6 @@ gtag('config','G-VE1K0ZKEG6');
 gtag('config','UA-196494254-1');
 </script>
 
+<script src="/libraries/js/cookie-banner.js" defer></script>
 </body>
 </html>
