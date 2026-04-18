@@ -1,0 +1,11 @@
+================================================================================
+LOG DE ERRORES - aprende-idiomas.com
+Snapshot generado: (se completa post-deploy de perf)
+Fuente: Railway logs (servicio Aprende-idiomas) + curl directo a cada pagina
+================================================================================
+
+ESTADO: pendiente verificacion post-deploy de optimizaciones de velocidad.
+
+El documento se regenera automaticamente al terminar el deploy con el
+resultado del escaneo completo de todas las paginas del sitio + logs
+de Railway de la ultima hora.

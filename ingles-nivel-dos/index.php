@@ -6,649 +6,1259 @@ if(isset($_GET['test'])){
 }
 
 $dirpage = '../';
-$titulo = 'Aprende Ingles desde 0';
+$titulo = 'Aprende Idiomas - Cursos Online';
 $curso = 'ingles_dos';
 
 require("../a-includes/Keys.php");
 include("../a-includes/funcionsDB.php");
 include("../a-includes/logicparametros.php");
-require ("../a-includes/Funciones.php");
+require("../a-includes/Funciones.php");
 
-//echo 'curso = ' . $curso . '<br>';
-//echo 'moneda = ' . $moneda . '<br><br><br>';
 $productoC1 = getDataProducto($curso, $moneda, $country_code);
-//echo "<pre>";
-//print_r($productoC1);
-//echo "</pre>";
 $simbolo = $productoC1['producto']['SIMBOLO'];
 $monedaOficial = $productoC1['producto']['MONEDA'];
 $precioCursoOficial = Funciones::getFormatMoneda($productoC1['producto']['PRECIO'], $simbolo, $productoC1['producto']['MONEDA']);
 $value = $valPrecio = $productoC1['producto']['PRECIO_DESC'];
 $precioCurso = Funciones::getFormatMoneda($valPrecio, $simbolo, $productoC1['producto']['MONEDA']);
 $porcentaje = '50%';
-
 $urlCheckout = 'checkout.php';
 ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Aprende Idiomas - Cursos Online</title>
-        <?php include('../a-pages/header.php') ?>
-    </head>
-    <body style="font-family: montserrat_regular;">
-        <header class="bg-dark " style="">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-2 col-sm-6 col-6 logo">
-                        <a href="./" target="_blank"><img src="img/logo2.png" alt="logo" class="img-fluid"> </a>
-                    </div>
-                    <div class="col-md-3 hdphone">
-                        <p> </p>
-                    </div>
-                    <div class="col-md-3 hdphone">
-                    </div>
-                    <div class="col-md-3 cta-button  col-sm-6 col-6 text-dark">
-                        <a class="hvr-sweep-to-right text-white" href="checkout.php">COMPRAR EL CURSO</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Website Sections -->
-        <!-- Top Product Banner -->
-        <section class="top-product  bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5" style="">
-                        <div class=" py-auto">
-                            <img src="img/producto2.jpg" class="img-fluid my-auto py-auto align-items-center justify-content-center pt-5 pt-md-5 mt-md-5" alt="curso de power bi">
-                        </div>
-                    </div>
-                    <div class="col-md-1">&nbsp;</div>
-                    <div class="col-md-6">
-                        <div class="section-heading ">
-                            <h3 style="color:black;">Curso online a distancia</h3>
-                            <h1 class="mt-4  " style=""><b>APRENDE <span style="font-family: montserrat_black ;">INGLÉS DESDE CERO!</span></b></h1>
-                        </div>
-                        <div class="feature-list mt-4" >
-                            <ul class="font-weight-light" style="font-family: montserrat_light ;" >
-                                <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;" ><i class="fas fa-check-circle text-dark"></i> + 35 clases paso a paso!</li>
-                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Descarga el curso y míralo sin conexión a internet</li>
-                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Acceso para siempre al curso</li>
-                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Ayuda de los profesores online</li>
-                                <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;"><i class="fas fa-check-circle text-dark"></i> Otorgamos Certificado Oficial</li>
-                                <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;-webkit-animation-delay: 0.3; -moz-animation-delay: 0.3; animation-delay: 0.3;"><i class="fas fa-check-circle text-dark"></i> Estudialo desde tu PC, notebook, tablet o Celular</li>
-                            </ul>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
-                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Latina. Éste precio es final y moneda local.</p>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Inglés Nivel 2 — Curso Online intermedio | Aprende Idiomas</title>
+    <meta name="description" content="Curso de inglés nivel 2 intermedio. Profundizá tu nivel con clases avanzadas. Certificado oficial y acceso de por vida.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../fav/favicon-16x16.png">
+    <meta name="theme-color" content="#0a0a0f">
 
-                        </div>
-                        <div class="call-button mt-4">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a href="checkout.php" class="hvr-sweep-to-top  wow flipInX animated shadow text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s; background-color:#f3c910;">Lo quiero</a>
-                                </div>
-                                <div class="col-md-6 payments">
-                                    <img src="../img/front_pay.png" class="img-fluid wow flipInX animated pt-md-2 " data-wow-delay="0.3s" alt="payments" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-one mt-5 mt-md-3">
-                            <div class="review-text">
-                                <h5 style="font-family: montserrat_regular" class="font-weight-light">"Excelente curso! lo recomiendo 100%"</h5>
-                            </div>
-                            <div class="review-image">
-                                <p class="user_name d-inline" style="font-family: montserrat_bold;">Franco Basso<i class="ml-3 fa fa-star" style="color:#ffd322;"></i>
-                                    <i class="fa fa-star" style="color:#ffd322;"></i>
-                                    <i class="fa fa-star" style="color:#ffd322;"></i>
-                                    <i class="fa fa-star" style="color:#ffd322;"></i>
-                                    <i class="fa fa-star" style="color:#ffd322;"></i></p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- As Featured On Section -->
-        <!-- Intro Section -->
-        <div class="py-5 text-center mt-5 pt-5 bg-black" style="background-color:#23AFFA;">
-            <div class="container">
-                <div class="row">
-                    <div class="mx-auto col-md-12">
-                        <h1 class="text-white " style="font-family: montserrat_black">Una persona con conocimientos en inglés tiene hasta x5 veces mayor oportunidad laboral</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="py-5 align-items-center d-flex" style="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 px-md-5 mx-auto" style="">
+    <style>
+        /* APRENDE IDIOMAS - Italiano A1 - Preview */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
 
+        :root {
+            --pink: #ec1389;
+            --pink-soft: #fdebf4;
+            --cyan: #00b6ed;
+            --cyan-soft: #e3f6fd;
+            --ink: #0a0a0f;
+            --ink-2: #1f2030;
+            --ink-soft: #5a5d72;
+            --bg: #ffffff;
+            --bg-soft: #f8f8fb;
+            --line: rgba(10, 10, 15, 0.08);
+            --line-strong: rgba(10, 10, 15, 0.14);
 
-                        <p class="font-weight-light lead mb-4" ><span style="background-color:#f3c910; color:black;font-family: montserrat_bold;" class="p-1">Inglés</span> Hoy en día es el idioma más importante del mercado y con mayor <b>facilidad para aprenderlo.</b>
+            /* Colores Italia */
+            --it-green: #1d4ed8;
+            --it-green-deep: #1e3a8a;
+            --it-green-soft: #dbeafe;
+            --it-red: #be123c;
+            --it-red-soft: #fee2e2;
+            --it-cream: #eff6ff;
 
-                        <p class="lead mb-4">A través de este curso aprenderás los verbos más usados, tiempos del pasado básicos y tiempos del futuro básicos y mucho más para puedas mantener una conversación fluida. Explicado paso a paso en más de 35 clases por nuestro profesor <span style="background-color:black; color:white;" class="p-1 font-w">con más de 15 años de trayectoria</span><br></p>
-                        <hr>
-                        <p class="lead" style="">Sin requisitos!<br></p>
-                        <div class="call-button mt-5">
-                            <div class="row justify-content-md-cen">
-                                <div class="col-md-5">
-                                    <a href="checkout.php" class="sc-roll hvr-sweep-to-top wow flipInX shadow-lg text-dark" data-wow-delay="0.2s">Inscribirme</a>
-                                </div>
-                            </div>
-                            <div class="rating-user d-inline"><br>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half"></i>
-                            </div>
-                            <p class="user_name d-inline pl-4 pr-4 font-weight-light">+2000 estudiantes</p>
-                        </div>
-                    </div>
+            --gradient-it: linear-gradient(135deg, #15803d 0%, #be123c 100%);
+            --gradient-brand: linear-gradient(135deg, #ec1389 0%, #00b6ed 100%);
 
-                </div>
-            </div>
-        </div>
-        <div class="py-5 bg text-white" style="background-color:#23AFFA">
-            <div class="container "  >
-                <div class="row mx-auto">
-                    <div class="col-lg-5 col-md-6 p-md-4   mx-0 px-0" > <img class="img-fluid d-block rounded shadow  " src="img/ingles-producto2.jpg" width="1500"> </div>
-                    <div class="col-md-6 offset-lg-1 d-flex flex-column justify-content-center py-4">
-                        <h2 class="my-3 mx-auto mx-md-1 mt-5 mt-md-1" style="font-family: montserrat_bold"> <b>Vas a aprender:</b></h2>
-                        <ul class="mx-auto mx-md-1 lead">
-                            <li><i class="fas fa-check " style="color:#f3c910;"></i> Hablar en tiempos verbales del pasado</li>
-                            <li><i class="fas fa-check  " style="color:#f3c910;"></i> Hablar en tiempos verbales del futuro</li>
-                            <li><i class="fas fa-check " style="color:#f3c910;"></i> Superlativos </li>
-                            <li><i class="fas fa-check  " style="color:#f3c910;"></i> Comparativos</li>
-                            <li><i class="fas fa-check " style="color:#f3c910;"></i> Muchos ejercios prácticos</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pt-5 mb-5 pb-5 mt-5 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 p-3">
-                        <div class="card">
-                            <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="img/certificado.jpg" width="150">
-                                <h4 class="font-weight-bold" style="font-family: montserrat_bold">Certificado Oficial</h4>
-                                <p class="mb-0">Obtén tu Certificado Oficial para adjuntar a tu CV</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 p-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="img/soporte.jpg" width="150">
-                                <h4 class="font-weight-bold" style="font-family: montserrat_bold">Comunidad online</h4>
-                                <p class="mb-0">Contamos con un espacio para que puedas practicar tu ingles con otros alumnos</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 p-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="img/acceso.jpg" width="150">
-                                <h4 class="font-weight-bold" style="font-family: montserrat_bold">Descargá el curso</h4>
-                                <p class="mb-0">Podrás ver el curso sin conexión a internet desde cualquier parte. Te queda para siempre. Házlo a tu ritmo y sin horarios.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="py-5 bg-dark text-white"   id="ch">
-            <div class="container my-3">
-                <div class="row">
-                    <div class="text-center mx-auto col-md-12">
-                        <h1  style="font-family: montserrat_bold">Lo que dicen nuestros alumnos/as</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 p-4 text-center">
-                        <div class="review-image text-center mt-3 mb-3">
-                        </div>
-                        <p class="mb-3"><i>"</i>Muy detallado con ejemplos claros. Soy nuevo aprendiendo inglés y me resulta muy fácil<i>"</i> </p>
-                        <p class="mb-1"> <b>Maximiliano Rodriguez</b></p>
-                        <div class="rating-user d-inline">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 p-4 text-center">
-                        <div class="review-image text-center mt-3 mb-3">
-                        </div>
-                        <p class="mb-3">"Excelente curso de Inglés. Tenia algo de experiencia en inglés y me ayudo a asentar algunas bases. Lo recomiendo totalmente para nuevos estudiantes"&nbsp;&nbsp;</p>
-                        <p class="mb-1"> <b>Juan Guerra</b></p>
-                        <div class="rating-user d-inline">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 p-4 text-center">
-                        <div class="review-image text-center mt-3 mb-3">
-                        </div>
-                        <p class="mb-3">"Está muy por encima de lo que esperaba." </p>
-                        <p class="mb-1"> <b>Natalia Testa</b></p>
-                        <div class="rating-user d-inline">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 p-4 text-center">
-                        <div class="review-image text-center mt-3 mb-3">
-                        </div>
-                        <p class="mb-3">"Curso práctico y amigable. Recomiendo ampliamente"</p>
-                        <p class="mb-1"> <b>Victoria Rial</b></p>
-                        <div class="rating-user d-inline">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 p-4 text-center">
-                        <div class="review-image text-center mt-3 mb-3">
-                        </div>
-                        <p class="mb-3">"Da muy buenas bases para seguir incursionando en el idioma. Espero el próximo curso"</p>
-                        <p class="mb-1"> <b>Federico Romero</b></p>
-                        <div class="rating-user d-inline">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 p-4 text-center">
-                        <div class="review-image text-center mt-3 mb-3">
-                        </div>
-                        <p class="mb-3"> "Empecé sin concomientos y ya estoy practicando con alumnos del grupo. Los videos son muy claros y la atención que me dieron con mis dudas fué rápida"</p>
-                        <p class="mb-1"><b>Julia Armani</b></p>
-                        <div class="rating-user d-inline">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Reviews Section -->
-        <div class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- FAQ -->
-        <section class="pt-5 pb-5" id="gr">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <h2 class="mt-2 mb-1 pb-3 text-dark " style="font-family: montserrat_bold" ><i class="fa fa-question-circle" aria-hidden="true">&nbsp;</i>Preguntas Frecuentes&nbsp;</h2>
-                </div>
-                <div class="accordion mt-4" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">#1 ¿Por cuánto tiempo lo tengo o lo puedo descargar?</button></h5>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
-                            <div class="card-body"> Si, puedes descargarlo y te queda ¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0" style=""><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">#2 ¿Cuánto dura el curso?</button></h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
-                            <div class="card-body">Lo que vos decidas, + 35 clases para que hagas a tu ritmo y si decidís seguir practicando el curso no tiene FIN! ya que contamos con un espacio para que puedas conversar con alumnos y practicar ejercicios.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0" style=""><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">#3 ¿Dan material práctico?</button></h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
-                            <div class="card-body">Sí! Además de brindarte tareas contamos con una comunidad en facebook donde podrás comunicarte con cualquier alumno para practicar</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <h5 class="mb-0" style="">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">#4 ¿Incluye Certificación o Diploma?</button></h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample" style="">
-                            <div class="card-body">Una vez termines el curso podrás solicitarnos gratis el Certificado de Cursado.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0" style="">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">#5 ¿Qué requisitos tiene?</button></h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="">
-                            <div class="card-body">No hay requisitos previos, este curso es para que comiences a estudiar inglés desde cero!</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0" style="">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">#6 ¿Dan soporte?</button></h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="">
-                            <div class="card-body">Si damos soporte 24/7. Podrás consultar cualquier duda en nuestro e-mail</div>
-                        </div>
-                    </div>
-                    <!--TEMARIO -->
-                    <div class=" index2_services float_left pt-100 pb-100 " style="background-color:#d52d7a" >
-                        <div class="container align-items-center justify-content-center rounded py-5" >
-                            <h2 class="text-center text-white pb-4 f-34" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0" style="text-shadow: 2px 2px 4px #333333;"> <i class="fas fa-lightbulb"></i> Mirá todo lo que vas a aprender</h2>						 
-                            <div class="row " >
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12  mx-auto" >
-                                    <div id="accordion" role="tablist ">
-                                        <div class="card">
-                                            <!-- Card Title -->
-                                            <div class="card_pagee py-4 shadow "  role="tab" id="headingSix"  >
-                                                <h5 class="h5-md text-center text-dark" >
-                                                    <a data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="true" aria-controls="collapseSix" class="py-4  text-dark">
-                                                        Clickeame
-                                                    </a>
-                                                </h5>
-                                            </div>
-                                            <!-- Card Content -->
-                                            <div id="collapseSix" id="gr" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion" style="">
-                                                <div class="card-body">
-                                                    <div class=" show ">
-                                                        <br>
-                                                        <b>Módulo 1 - Las Preposiciones</b><br>
-                                                        <li>Clase 1 – Preposiciones IN/ON/AT</li>   
-                                                        <li>Clase 2 – Ejercicios Preposiciones IN/ON/AT</li>   
-                                                        <li>Clase 3 – Preposiciones del lugar</li>   
-                                                        <li>Clase 4 – Preposiciones del tiempo </li>   
-                                                        <li>Clase 5 – Preposiciones de dirección</li>   
-                                                        <li>Clase 6 – Ejerciciones de Preposiciones combinadas</li>  
-                                                        <br>
-                                                        <b>Módulo 2 - Gramática</b><br>		  
-                                                        <li>Clase 7 - Usos del HAVE</li>
-                                                        <li>Clase 8 – Comparativo y Superlativo</li>
-                                                        <li>Clase 9 – Ejercicios Comparativos y Superlativos</li>
-                                                        <li>Clase 10 – Preposiciones FROM, SINCE, TO</li>
-                                                        <li>Clase 11 – Directions</li>
-                                                        <li>Clase 12 – Situations</li>
-                                                        <br>
-                                                        <b>Módulo 3 - Tiempo Pasado</b><br>
-                                                        <li>Clase 13 – Teoría Simple Past</li>  
-                                                        <li>Clase 14 – Simple Past</li>   
-                                                        <li>Clase 15 – Lista de Verbos Irregulares</li> 
-                                                        <li>Clase 16 – Ejercicios Simple Past </li>   
-                                                        <li>Clase 17 – Teoría Past Continuos</li>  
-                                                        <li>Clase 18 – Past Continuos</li>   
-                                                        <li>Clase 19 – Ejercicios Past Continuos</li>   
-                                                        <li>Clase 20 – Teoría Present Perfect</li> 
-                                                        <li>Clase 21 – Present Perfect</li>   
-                                                        <li>Clase 22 – Ejercicios Present Perfect</li>  
-                                                        <li>Clase 23 – Teoría Past Perfect</li>   
-                                                        <li>Clase 24 – Past Perfect</li>   
-                                                        <li>Clase 25 – Ejercicios Past Perfect</li>   
-                                                        <li>Clase 26 – Línea de tiempos verbales</li>   
-                                                        <li>Clase 27 – Modal VERBS IN PAST</li>   
-                                                        <li>Clase 28 – Pronunciación E y ED</li>   
-                                                        <li>Clase 29 – DID vs HAVE</li>   
-                                                        <br>
-                                                        <b>Módulo 4 - Tiempo Futuro</b><br>
-                                                        <li>Clase 30 – Teoría Near Future</li> 
-                                                        <li>Clase 31 – Near Future (GOING TO)</li>   
-                                                        <li>Clase 32 – Teoría Simple Future</li> 
-                                                        <li>Clase 33 – Simple Future</li>   
-                                                        <li>Clase 34 – Excepciones del futuro</li>   
-                                                        <li>Clase 35 – Ejercicios Combinados del futuro</li> 
-                                                        <br>
-                                                        <br>
-                                                        <a href="/ingles-nivel-uno/" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Te faltan conocimientos básicos? Mira el nivel 1 👉 </b></a>	 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>	 
+            --r-sm: 12px;
+            --r: 18px;
+            --r-lg: 24px;
+            --r-xl: 32px;
+            --shadow-1: 0 1px 2px rgba(10,10,15,.04), 0 4px 12px rgba(10,10,15,.06);
+            --shadow-2: 0 8px 24px rgba(10,10,15,.08), 0 16px 40px rgba(10,10,15,.06);
+            --shadow-3: 0 16px 40px rgba(10,10,15,.12), 0 32px 64px rgba(10,10,15,.08);
+            --shadow-it: 0 12px 32px rgba(29,78,216,.32);
+            --ease: cubic-bezier(.2,.8,.2,1);
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: -0.01em;
+        }
 
-                    <div class="call-button mt-5">
-                        <div class="row justify-content-md-center">
-                            <div class="col-md-3">
-                                <a href="checkout.php" class="sc-roll hvr-sweep-to-top wow flipInX shadow text-dark" data-wow-delay="0.2s">Acceder al curso</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <section id="ch">
-            <div class="container">
-                <div class="section-heading ">
-                    <h2 class="mt-2 mb-1 pb-3 text-dark" style="font-family: montserrat_bold"><i class="fa fa-question-circle" aria-hidden="true">&nbsp;</i>Preguntas Frecuentes&nbsp;</h2>
-                </div>
-                <div class="accordion mt-4" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0" style=""><button class="btn btn-link text-left " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">#1 ¿Por cuánto tiempo lo tengo o lo puedo descargar?</button></h5>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
-                            <div class="card-body"> Si, podrás descargarlo y te queda ¡De por vida! Una vez que abones tendrás acceso para siempre</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header " id="headingTwo">
-                            <h5 class="mb-0 " style=""><button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">#2 ¿Cuánto dura el curso?</button></h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" style="">
-                            <div class="card-body">Lo que vos decidas, + 35 clases para que hagas a tu ritmo y si decides seguir practicando el curso no tiene FIN! ya que contamos con un espacio para que puedas conversar con alumnos y practicar ejercicios.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0" style=""><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">#3 ¿Dan material práctico?</button></h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
-                            <div class="card-body">Sí! Además de brindarte tareas contamos con una comunidad en facebook donde podrás comunicarte con cualquier alumno para practicar</div>
-                        </div>
-                    </div>
-                    <div class="card text-left">
-                        <div class="card-header " id="headingFour">
-                            <h5 class="mb-0" style="">
-                                <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">#4 ¿Incluye Certificado o Diploma?</button></h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample" style="">
-                            <div class="card-body">Una vez termines el curso podrás solicitarnos gratis el Certificado de Cursado.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0" style="">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">#5 ¿Qué requisitos tiene?</button></h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="">
-                            <div class="card-body">No hay requisitos previos, este curso es para que comiences a estudiar inglés desde cero!</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                            <h5 class="mb-0" style="">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">#6 ¿Dan soporte?</button></h5>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="">
-                            <div class="card-body">Si damos soporte 24/7. Podrás consultar cualquier duda en nuestro e-mail</div>
-                        </div>
-                    </div>
-                    <!--TEMARIO -->
-                    <div class=" index2_services float_left pt-100 pb-100 " style="background-color:#d52d7a" >
-                        <div class="container align-items-center justify-content-center rounded py-5" >
-                            <h2 class="text-center text-white pb-4 f-34" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0" style="text-shadow: 2px 2px 4px #333333;"> <i class="fas fa-lightbulb"></i> Mira todo lo que vas a aprender</h2>						 
-                            <div class="row " >
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12  mx-auto" >
-                                    <div id="accordion" role="tablist ">
-                                        <div class="card">
-                                            <!-- Card Title -->
-                                            <div class="card_pagee py-4 shadow "  role="tab" id="headingSix"  >
-                                                <h5 class="h5-md text-center text-dark" >
-                                                    <a data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="true" aria-controls="collapseSix" class="py-4  text-dark">
-                                                        Clickeame
-                                                    </a>
-                                                </h5>
-                                            </div>
-                                            <!-- Card Content -->
-                                            <div id="collapseSix" id="ch" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion" style="">
-                                                <div class="card-body">
-                                                    <div class=" show ">
-                                                        <br>
-                                                        <b>Módulo 1 - Las Preposiciones</b><br>
-                                                        <li>Clase 1 – Preposiciones IN/ON/AT</li>   
-                                                        <li>Clase 2 – Ejercicios Preposiciones IN/ON/AT</li>   
-                                                        <li>Clase 3 – Preposiciones del lugar</li>   
-                                                        <li>Clase 4 – Preposiciones del tiempo </li>   
-                                                        <li>Clase 5 – Preposiciones de dirección</li>   
-                                                        <li>Clase 6 – Ejerciciones de Preposiciones combinadas</li>  
-                                                        <br>
-                                                        <b>Módulo 2 - Gramática</b><br>		  
-                                                        <li>Clase 7 - Usos del HAVE</li>
-                                                        <li>Clase 8 – Comparativo y Superlativo</li>
-                                                        <li>Clase 9 – Ejercicios Comparativos y Superlativos</li>
-                                                        <li>Clase 10 – Preposiciones FROM, SINCE, TO</li>
-                                                        <li>Clase 11 – Directions</li>
-                                                        <li>Clase 12 – Situations</li>
-                                                        <br>
-                                                        <b>Módulo 3 - Tiempo Pasado</b><br>
-                                                        <li>Clase 13 – Teoría Simple Past</li>  
-                                                        <li>Clase 14 – Simple Past</li>   
-                                                        <li>Clase 15 – Lista de Verbos Irregulares</li> 
-                                                        <li>Clase 16 – Ejercicios Simple Past </li>   
-                                                        <li>Clase 17 – Teoría Past Continuos</li>  
-                                                        <li>Clase 18 – Past Continuos</li>   
-                                                        <li>Clase 19 – Ejercicios Past Continuos</li>   
-                                                        <li>Clase 20 – Teoría Present Perfect</li> 
-                                                        <li>Clase 21 – Present Perfect</li>   
-                                                        <li>Clase 22 – Ejercicios Present Perfect</li>  
-                                                        <li>Clase 23 – Teoría Past Perfect</li>   
-                                                        <li>Clase 24 – Past Perfect</li>   
-                                                        <li>Clase 25 – Ejercicios Past Perfect</li>   
-                                                        <li>Clase 26 – Línea de tiempos verbales</li>   
-                                                        <li>Clase 27 – Modal VERBS IN PAST</li>   
-                                                        <li>Clase 28 – Pronunciación E y ED</li>   
-                                                        <li>Clase 29 – DID vs HAVE</li>   
-                                                        <br>
-                                                        <b>Módulo 4 - Tiempo Futuro</b><br>
-                                                        <li>Clase 30 – Teoría Near Future</li> 
-                                                        <li>Clase 31 – Near Future (GOING TO)</li>   
-                                                        <li>Clase 32 – Teoría Simple Future</li> 
-                                                        <li>Clase 33 – Simple Future</li>   
-                                                        <li>Clase 34 – Excepciones del futuro</li>   
-                                                        <li>Clase 35 – Ejercicios Combinados del futuro</li> 
-                                                        <br>
-                                                        <br>
-                                                        <a href="/ingles-nivel-uno/" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Te faltan conocimientos básicos? Mira el nivel 1 👉 </b></a>	  	 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>	
-                    <div class="call-button mt-5">
-                        <div class="row justify-content-md-center">
-                            <div class="col-md-3">
-                                <a href="checkout.php" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">Lo quiero </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- Bottom Product -->
-        <section class="bottom-product bg-light" style="">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-5">
-                        <div class="">
-                            <img src="img/producto2.jpg" class="img-fluid rounded shadow" alt="product">
-                        </div>
-                    </div>
-                    <div class="col-md-1">&nbsp;</div>
-                    <div class="col-md-6" style="">
-                        <div class="section-heading">
-                            <h3>
-                            </h3>
-                            <h1 class="font-weight-bold text-left" style="font-family: montserrat_black">Suma Inglés a tu CV</h1>
-                        </div>
-                        <div class="feature-list mt-4">
-                            <p> • Pago por única vez en mononeda local (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>       </div>
-                        <div class="call-button mt-5">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <a href="checkout.php" class="hvr-sweep-to-top  wow flipInX animated text-dark shadow" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">Inscribirme</a>
-                                </div>
-                                <div class="col-md-6 payments ">
-                                    <img src="img/seguridad.png" class="img-fluid wow flipInX animated px-5 px-md-0 mt-md-0 mt-3 " data-wow-delay="0.3s" alt="payments" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <?php include('../a-pages/footer.php') ?>
-        
-        <script>
-            fbq('track', 'ViewContent');
-        </script>
-        <script>
-            fbq('trackCustom', 'visitas ingles');
-        </script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
+        h1, h2, h3, h4, h5 {
+            font-family: 'Sora', 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--ink);
+        }
+
+        a { color: inherit; text-decoration: none; transition: all .2s var(--ease); }
+        img { max-width: 100%; display: block; }
+
+        /* ===== NAVBAR ===== */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--line);
+            z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .nav-logo img { max-height: 52px; width: auto; }
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .88rem;
+            font-weight: 600;
+            color: var(--ink-soft);
+            padding: 8px 14px;
+            border-radius: 999px;
+        }
+        .nav-back:hover { color: var(--ink); background: var(--bg-soft); }
+        .nav-cta {
+            background: var(--it-green);
+            color: #fff;
+            padding: 11px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .92rem;
+            box-shadow: var(--shadow-it);
+        }
+        .nav-cta:hover { background: var(--it-green-deep); color: #fff; transform: translateY(-1px); }
+        .nav-actions { display: flex; gap: 10px; align-items: center; }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            padding: 60px 0 80px;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 60% 50% at 90% 0%, rgba(190,18,60,.10), transparent 60%),
+                radial-gradient(ellipse 60% 50% at 0% 100%, rgba(29,78,216,.10), transparent 60%),
+                #fff;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(10,10,15,.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(10,10,15,.04) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-visual { position: relative; }
+        .hero-img {
+            width: 100%;
+            border-radius: var(--r-xl);
+            box-shadow: var(--shadow-3);
+            display: block;
+            transform: rotate(-1deg);
+            transition: transform .5s var(--ease);
+        }
+        .hero-img:hover { transform: rotate(0deg) scale(1.01); }
+
+        .hero-flag {
+            position: absolute;
+            top: -16px;
+            right: -16px;
+            background: #fff;
+            padding: 14px 22px;
+            border-radius: 999px;
+            font-family: 'Sora', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-2);
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 3px solid var(--it-green);
+            animation: bob 4s var(--ease) infinite;
+        }
+        .hero-flag .flag-icon { font-size: 1.5rem; }
+        .hero-rating {
+            position: absolute;
+            bottom: -16px;
+            left: -16px;
+            background: #fff;
+            padding: 12px 18px;
+            border-radius: var(--r);
+            box-shadow: var(--shadow-2);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 2;
+            border: 1px solid var(--line);
+        }
+        .hero-rating-stars { color: #fbbf24; font-size: 1rem; letter-spacing: 1.5px; line-height: 1; }
+        .hero-rating-text { font-size: .82rem; color: var(--ink-soft); font-weight: 600; }
+        .hero-rating-text b { color: var(--ink); display: block; font-size: .92rem; }
+        @keyframes bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--it-green-soft);
+            color: var(--it-green);
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-size: .78rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-size: clamp(2.4rem, 4.8vw, 4rem);
+            font-weight: 800;
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+            margin-bottom: 18px;
+            text-wrap: balance;
+        }
+        .hero h1 .grad {
+            background: var(--gradient-it);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            max-width: 540px;
+        }
+
+        /* Features list */
+        .feat-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 16px;
+            margin-bottom: 28px;
+        }
+        .feat-list li {
+            list-style: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .92rem;
+            color: var(--ink-2);
+            font-weight: 500;
+        }
+        .feat-list .check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px; height: 22px;
+            background: var(--it-green);
+            color: #fff;
+            border-radius: 50%;
+            font-size: .72rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Price block */
+        .price-block {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: linear-gradient(135deg, var(--it-cream), #fff);
+            border: 2px solid var(--it-green);
+            border-radius: var(--r);
+            padding: 14px 22px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-1);
+        }
+        .price-old {
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+        .price-new {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--it-green-deep);
+            letter-spacing: -0.02em;
+        }
+        .price-discount {
+            background: var(--pink);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: .72rem;
+            font-weight: 700;
+            margin-left: 4px;
+        }
+        .price-note {
+            font-size: .85rem;
+            color: var(--ink-soft);
+            margin-bottom: 24px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 15px 28px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all .25s var(--ease);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        .btn-it {
+            background: var(--it-green);
+            color: #fff;
+            box-shadow: var(--shadow-it);
+        }
+        .btn-it:hover {
+            background: var(--it-green-deep);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 40px rgba(29,78,216,.45);
+        }
+        .btn-light {
+            background: #fff;
+            color: var(--ink);
+            border: 1px solid var(--line-strong);
+            box-shadow: var(--shadow-1);
+        }
+        .btn-light:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--ink); }
+        .btn-arrow::after { content: '→'; font-weight: 400; transition: transform .2s var(--ease); }
+        .btn:hover.btn-arrow::after { transform: translateX(3px); }
+
+        .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+        .secure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .78rem;
+            color: var(--ink-soft);
+            font-weight: 500;
+            margin-top: 16px;
+        }
+        .secure-badge::before { content: '🔒'; }
+
+        @media (max-width: 980px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero-visual { order: -1; max-width: 480px; margin: 0 auto; }
+            .feat-list { grid-template-columns: 1fr; }
+        }
+
+        /* ===== SECTION HEAD ===== */
+        .section-head {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 56px;
+            padding: 0 24px;
+        }
+        .section-head .eyebrow {
+            display: inline-block;
+            font-size: .78rem;
+            font-weight: 700;
+            color: var(--it-green);
+            background: var(--it-green-soft);
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            padding: 6px 14px;
+            border-radius: 999px;
+        }
+        .section-head h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+        .section-head h2 .grad {
+            background: var(--gradient-it);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .section-head p { font-size: 1.08rem; color: var(--ink-soft); line-height: 1.6; }
+
+        /* ===== BANNER VERDE ===== */
+        .banner-it {
+            background: var(--it-green);
+            color: #fff;
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner-it::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,.08), transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(190,18,60,.20), transparent 50%);
+            pointer-events: none;
+        }
+        .banner-it h2 {
+            position: relative;
+            color: #fff;
+            font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+            max-width: 920px;
+            margin: 0 auto;
+            line-height: 1.15;
+        }
+        .banner-it .flag-strip {
+            display: inline-flex;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0,0,0,.2);
+        }
+        .banner-it .flag-strip span { width: 30px; height: 22px; }
+        .banner-it .flag-strip .green { background: #15803d; }
+        .banner-it .flag-strip .white { background: #fff; }
+        .banner-it .flag-strip .red { background: #be123c; }
+
+        /* ===== INTRO PROSE ===== */
+        .prose {
+            padding: 80px 24px;
+            background: var(--it-cream);
+        }
+        .prose-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .prose p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--ink-2);
+            margin-bottom: 20px;
+        }
+        .prose .highlight-text {
+            background: var(--ink);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .prose .no-req {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--it-green-soft);
+            color: var(--it-green);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .92rem;
+            margin: 12px 0 28px;
+        }
+        .prose-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 28px;
+            color: var(--ink-soft);
+            font-size: .92rem;
+            font-weight: 500;
+        }
+        .prose-stats .stars { color: #fbbf24; letter-spacing: 1.5px; }
+
+        /* ===== APRENDERAS ===== */
+        .learn {
+            padding: 100px 24px;
+            background: #fff;
+        }
+        .learn-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .learn-img {
+            width: 100%;
+            border-radius: var(--r-lg);
+            box-shadow: var(--shadow-3);
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .learn-content .section-head { text-align: left; margin: 0 0 28px; padding: 0; max-width: none; }
+        .learn-content h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 24px; }
+        .learn-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .learn-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-soft);
+            border: 1px solid var(--line);
+            padding: 14px 18px;
+            border-radius: var(--r);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--ink-2);
+            transition: all .25s var(--ease);
+        }
+        .learn-list li:hover {
+            background: var(--it-green-soft);
+            border-color: var(--it-green);
+            transform: translateX(4px);
+        }
+        .learn-list .check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px; height: 28px;
+            background: var(--it-green);
+            color: #fff;
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: .8rem;
+            flex-shrink: 0;
+        }
+        @media (max-width: 880px) {
+            .learn-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        /* ===== 3 BENEFICIOS ===== */
+        .benefits { padding: 80px 24px; background: var(--bg-soft); }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .benefit {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: var(--shadow-1);
+            transition: all .35s var(--ease);
+            position: relative;
+            overflow: hidden;
+        }
+        .benefit::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--it-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .4s var(--ease);
+        }
+        .benefit:hover::before { transform: scaleX(1); }
+        .benefit:hover { transform: translateY(-6px); box-shadow: var(--shadow-3); border-color: var(--line-strong); }
+        .benefit-img {
+            width: 96px; height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 0 8px var(--it-green-soft), 0 8px 20px rgba(10,10,15,.08);
+            transition: transform .35s var(--ease);
+        }
+        .benefit:hover .benefit-img { transform: scale(1.06); }
+        .benefit h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; }
+        .benefit p { color: var(--ink-soft); font-size: .96rem; line-height: 1.6; }
+        @media (max-width: 880px) {
+            .benefits-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== TEMARIO ===== */
+        .syllabus { padding: 100px 24px; }
+        .syllabus-inner {
+            max-width: 880px;
+            margin: 0 auto;
+            background: var(--ink);
+            border-radius: var(--r-xl);
+            padding: 56px 48px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .syllabus-inner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(29,78,216,.30), transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(190,18,60,.25), transparent 55%);
+            pointer-events: none;
+        }
+        .syllabus-content { position: relative; z-index: 1; }
+        .syllabus h2 {
+            color: #fff;
+            font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .syllabus p {
+            text-align: center;
+            color: rgba(255,255,255,.7);
+            margin-bottom: 32px;
+        }
+        .syllabus-toggle {
+            display: block;
+            width: 100%;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            color: #fff;
+            padding: 18px 24px;
+            border-radius: var(--r);
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all .25s var(--ease);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .syllabus-toggle:hover { background: rgba(255,255,255,.12); }
+        .syllabus-toggle .arrow { transition: transform .3s var(--ease); }
+        .syllabus details[open] .syllabus-toggle .arrow { transform: rotate(180deg); }
+        .syllabus-toggle::-webkit-details-marker { display: none; }
+        .syllabus details summary::-webkit-details-marker { display: none; }
+        .syllabus details summary { list-style: none; cursor: pointer; }
+
+        .syllabus-list {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: var(--r);
+            padding: 24px;
+        }
+        .syllabus-list li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,.85);
+            font-size: .9rem;
+            padding: 6px 0;
+        }
+        .syllabus-list .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px; height: 26px;
+            background: var(--it-green);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: .72rem;
+            flex-shrink: 0;
+        }
+        @media (max-width: 720px) {
+            .syllabus-inner { padding: 36px 24px; }
+            .syllabus-list { grid-template-columns: 1fr; }
+        }
+
+        /* ===== TESTIMONIOS ===== */
+        .testimonials {
+            background: var(--ink);
+            padding: 100px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(29,78,216,.20), transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(190,18,60,.20), transparent 50%);
+            pointer-events: none;
+        }
+        .testimonials-inner { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; }
+        .testimonials .section-head h2 { color: #fff; }
+        .testimonials .section-head p { color: rgba(255,255,255,.6); }
+        .testimonials .section-head .eyebrow { background: rgba(29,78,216,.2); color: #5fd687; }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .testimonial {
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: var(--r-lg);
+            padding: 28px;
+            backdrop-filter: blur(12px);
+            transition: all .35s var(--ease);
+        }
+        .testimonial:hover {
+            transform: translateY(-4px);
+            border-color: rgba(29,78,216,.4);
+            background: rgba(255,255,255,.08);
+        }
+        .testimonial-stars { color: #fbbf24; font-size: .95rem; letter-spacing: 2px; margin-bottom: 14px; }
+        .testimonial-text {
+            color: rgba(255,255,255,.92);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: var(--it-green);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: .95rem;
+            border: 2px solid rgba(255,255,255,.15);
+        }
+        .testimonial-info { display: flex; flex-direction: column; }
+        .testimonial-name { color: #fff; font-weight: 700; font-size: .95rem; }
+        @media (max-width: 980px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+        /* ===== FAQ ===== */
+        .faq { padding: 100px 24px; }
+        .faq-inner { max-width: 820px; margin: 0 auto; }
+        .faq-item {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all .25s var(--ease);
+        }
+        .faq-item[open] {
+            border-color: var(--it-green);
+            box-shadow: var(--shadow-2);
+        }
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--ink);
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--it-green);
+            transition: transform .3s var(--ease);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .faq-item[open] summary::after { transform: rotate(45deg); }
+        .faq-item .faq-body {
+            padding: 0 24px 22px;
+            color: var(--ink-soft);
+            font-size: .98rem;
+            line-height: 1.65;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            padding: 100px 24px;
+            background: linear-gradient(135deg, var(--it-cream), #fff);
+            text-align: center;
+        }
+        .final-cta-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--r-xl);
+            padding: 64px;
+            box-shadow: var(--shadow-2);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .final-cta-inner::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px; height: 400px;
+            background: var(--it-green);
+            opacity: 0.08;
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+        .final-cta-img {
+            position: relative;
+            z-index: 1;
+            border-radius: var(--r-lg);
+            box-shadow: var(--shadow-3);
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            width: 100%;
+        }
+        .final-cta-content { position: relative; z-index: 1; }
+        .final-cta h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 16px; line-height: 1.1; }
+        .final-cta p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; margin-bottom: 24px; }
+        .final-cta ul { list-style: none; margin-bottom: 24px; }
+        .final-cta ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: .95rem;
+            color: var(--ink-2);
+        }
+        .final-cta ul li::before {
+            content: '✓';
+            color: var(--it-green);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 880px) {
+            .final-cta-inner { grid-template-columns: 1fr; padding: 36px 28px; }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,.7);
+            padding: 60px 24px 32px;
+            position: relative;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: var(--gradient-brand);
+            opacity: 0.5;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-inner img {
+            max-height: 56px;
+            margin: 0 auto 20px;
+            background: #fff;
+            padding: 10px 14px;
+            border-radius: var(--r-sm);
+        }
+        .footer-inner p { color: rgba(255,255,255,.55); font-size: .88rem; margin-bottom: 16px; }
+        .footer-inner a { color: var(--it-green); font-weight: 600; }
+        .footer-inner a:hover { color: #5fd687; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            padding-top: 20px;
+            margin-top: 32px;
+            font-size: .8rem;
+            color: rgba(255,255,255,.4);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
             }
-            gtag('js', new Date());
+        }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQ2HVF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-            gtag('config', 'G-VE1K0ZKEG6');
-        </script>
-        <!-- Script AI de analytics -->
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+<!-- ============ NAVBAR ============ -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="../" class="nav-logo"><img src="../img/logo.jpg" alt="Aprende Idiomas"></a>
+        <div class="nav-actions">
+            <a href="../" class="nav-back">← Todos los cursos</a>
+            <a href="checkout.php" class="nav-cta">🇺🇸 Quiero el curso</a>
+        </div>
+    </div>
+</nav>
 
-            gtag('config', 'UA-196494254-1');
-        </script>
-    </body>
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-eyebrow">🇺🇸 Inglés · Nivel 2 · Intermedio</div>
+            <h1>Llevá tu inglés <span class="grad">al siguiente nivel</span></h1>
+            <p class="hero-sub">Profundizá tus conocimientos con el nivel 2. Tiempos verbales avanzados, conversación fluida y comprensión auditiva. Ideal si ya completaste el nivel 1.</p>
 
+            <ul class="feat-list">
+                <li><span class="check">✓</span> +25 clases paso a paso</li>
+                <li><span class="check">✓</span> +200 ejercicios prácticos</li>
+                <li><span class="check">✓</span> Descarga sin internet</li>
+                <li><span class="check">✓</span> Acceso de por vida</li>
+                <li><span class="check">✓</span> Soporte de profes online</li>
+                <li><span class="check">✓</span> Certificado oficial</li>
+            </ul>
+
+            <div class="price-block">
+                <span class="price-old"><?= $precioCursoOficial ?></span>
+                <span class="price-new"><?= $precioCurso ?></span>
+                <span class="price-discount">−<?= $porcentaje ?></span>
+            </div>
+            <p class="price-note">Pago único en moneda local · Sin suscripciones · Garantía de 7 días</p>
+
+            <div class="hero-ctas">
+                <a href="checkout.php" class="btn btn-it btn-arrow">Lo quiero ahora</a>
+                <a href="#temario" class="btn btn-light">Ver temario</a>
+            </div>
+            <div class="secure-badge">Pago 100% seguro · MercadoPago, Stripe y más</div>
+        </div>
+
+        <div class="hero-visual">
+            <span class="hero-flag"><span class="flag-icon">🇺🇸</span> Let's go!</span>
+            <img src="img/producto2.jpg" alt="Inglés Nivel 2 — Curso Online intermedio | Aprende Idiomas" class="hero-img">
+            <div class="hero-rating">
+                <div class="hero-rating-stars">★★★★★</div>
+                <div class="hero-rating-text"><b>4.9 de 5</b>+2.500 alumnos</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ BANNER VERDE ============ -->
+<section class="banner-it">
+    
+    <h2>La mejor forma de aprender inglés a nivel mundial</h2>
+</section>
+
+<!-- ============ INTRO PROSE ============ -->
+<section class="prose">
+    <div class="prose-inner">
+        <p>El nivel 2 es donde todo se conecta. Vas a pasar de entender frases sueltas a <b>conversar con confianza</b>. Tiempos verbales más complejos, vocabulario amplio y herramientas para expresarte naturalmente.</p>
+        <p>Pensado como continuación del Nivel 1, este curso profundiza con <span class="highlight-text">+25 clases avanzadas</span> y ejercicios prácticos para que ganes fluidez real.</p>
+        <div class="no-req">✦ Sin requisitos previos</div>
+        <div class="prose-stats">
+            <span class="stars">★★★★★</span>
+            <span><b>+2.500 estudiantes</b> ya empezaron</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ APRENDERAS ============ -->
+<section class="learn">
+    <div class="learn-inner">
+        <img src="img/producto2.jpg" alt="Aprenderás inglés" class="learn-img">
+        <div class="learn-content">
+            <div class="section-head">
+                <div class="eyebrow">Plan de estudio</div>
+                <h2>Lo que vas a <span class="grad">aprender</span></h2>
+            </div>
+            <ul class="learn-list">
+                <li><span class="check">1</span> Past simple y past continuous</li>
+                <li><span class="check">2</span> Present perfect y past perfect</li>
+                <li><span class="check">3</span> Future tenses (will, going to)</li>
+                <li><span class="check">4</span> Conditionals (zero, first, second)</li>
+                <li><span class="check">5</span> Reported speech</li>
+                <li><span class="check">6</span> Phrasal verbs y modismos</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 3 BENEFICIOS ============ -->
+<section class="benefits">
+    <div class="section-head">
+        <div class="eyebrow">Incluye</div>
+        <h2>Todo lo que necesitás</h2>
+    </div>
+    <div class="benefits-grid">
+        <div class="benefit">
+            <img src="img/certificado.jpg" alt="Certificado" class="benefit-img">
+            <h3>Certificado oficial</h3>
+            <p>Obtené tu certificación oficial para sumar a tu CV al finalizar el curso.</p>
+        </div>
+        <div class="benefit">
+            <img src="img/soporte.jpg" alt="Comunidad" class="benefit-img">
+            <h3>Comunidad online</h3>
+            <p>Espacio exclusivo para que practiques italiano con otros alumnos y profes.</p>
+        </div>
+        <div class="benefit">
+            <img src="img/acceso.jpg" alt="Acceso" class="benefit-img">
+            <h3>Acceso de por vida</h3>
+            <p>El curso queda para siempre. Hacelo a tu ritmo, sin horarios, cuando quieras.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TEMARIO ============ -->
+<section class="syllabus" id="temario">
+    <div class="syllabus-inner">
+        <div class="syllabus-content">
+            <h2>Mirá todo lo que vas a aprender</h2>
+            <p>+29 clases paso a paso, organizadas para que avances sin perderte.</p>
+
+            <details>
+                <summary class="syllabus-toggle">
+                    <span>Ver temario completo (29 clases)</span>
+                    <span class="arrow">▼</span>
+                </summary>
+                <ul class="syllabus-list">
+                    <li><span class="num">01</span> Past simple regular verbs</li>
+                    <li><span class="num">02</span> Past simple irregular verbs</li>
+                    <li><span class="num">03</span> Past continuous</li>
+                    <li><span class="num">04</span> Present perfect</li>
+                    <li><span class="num">05</span> Present perfect continuous</li>
+                    <li><span class="num">06</span> Past perfect</li>
+                    <li><span class="num">07</span> Future with will</li>
+                    <li><span class="num">08</span> Future with going to</li>
+                    <li><span class="num">09</span> Future continuous</li>
+                    <li><span class="num">10</span> First conditional</li>
+                    <li><span class="num">11</span> Second conditional</li>
+                    <li><span class="num">12</span> Third conditional</li>
+                    <li><span class="num">13</span> Modal verbs (can, could, may, might)</li>
+                    <li><span class="num">14</span> Modals of obligation (must, have to)</li>
+                    <li><span class="num">15</span> Passive voice present</li>
+                    <li><span class="num">16</span> Passive voice past</li>
+                    <li><span class="num">17</span> Reported speech</li>
+                    <li><span class="num">18</span> Relative clauses</li>
+                    <li><span class="num">19</span> Comparatives & superlatives</li>
+                    <li><span class="num">20</span> Phrasal verbs 1</li>
+                    <li><span class="num">21</span> Phrasal verbs 2</li>
+                    <li><span class="num">22</span> Idioms básicos</li>
+                    <li><span class="num">23</span> Listening: News</li>
+                    <li><span class="num">24</span> Listening: Conversations</li>
+                    <li><span class="num">25</span> Reading: Articles</li>
+                    <li><span class="num">26</span> Writing: Emails</li>
+                    <li><span class="num">27</span> Writing: Essays</li>
+                    <li><span class="num">28</span> Pronunciation tips</li>
+                    <li><span class="num">29</span> Final review</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="testimonials">
+    <div class="testimonials-inner">
+        <div class="section-head">
+            <div class="eyebrow">Reseñas</div>
+            <h2>Lo que dicen nuestros alumnos</h2>
+            <p>Más de 4.9★ promedio en reseñas reales de estudiantes.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Justo lo que necesitaba para superar el plateau. Excelente."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">CN</span>
+                    <div class="testimonial-info"><span class="testimonial-name">Carla Núñez</span></div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Los conditionals me costaban un montón. Acá los entendí fácil."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">JT</span>
+                    <div class="testimonial-info"><span class="testimonial-name">Joaquín Torres</span></div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Conversación fluida en pocos meses. Muy recomendado."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">PG</span>
+                    <div class="testimonial-info"><span class="testimonial-name">Paula Giménez</span></div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"El profe maneja los temas avanzados con mucha claridad."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">FM</span>
+                    <div class="testimonial-info"><span class="testimonial-name">Fernando Mora</span></div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Los ejercicios de listening son geniales."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">VR</span>
+                    <div class="testimonial-info"><span class="testimonial-name">Valentina Ríos</span></div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"100% recomendado para quien ya hizo el nivel 1."</p>
+                <div class="testimonial-author">
+                    <span class="testimonial-avatar">BS</span>
+                    <div class="testimonial-info"><span class="testimonial-name">Bruno Salgado</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+    <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-inner">
+        <details class="faq-item">
+            <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
+            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+        </details>
+        <details class="faq-item">
+            <summary>¿Cuánto dura el curso?</summary>
+            <div class="faq-body">Lo que vos decidas. +25 clases para que hagas a tu ritmo. Si decidís seguir practicando, el curso no tiene fin: tenés un espacio para conversar con alumnos y practicar ejercicios.</div>
+        </details>
+        <details class="faq-item">
+            <summary>¿Dan material práctico?</summary>
+            <div class="faq-body">Sí. Además de tareas, contamos con una comunidad en Facebook donde podés comunicarte con cualquier alumno para practicar.</div>
+        </details>
+        <details class="faq-item">
+            <summary>¿Incluye Certificación o Diploma?</summary>
+            <div class="faq-body">Una vez que termines el curso podés solicitarnos gratis el Certificado de Cursado oficial.</div>
+        </details>
+        <details class="faq-item">
+            <summary>¿Qué requisitos tiene?</summary>
+            <div class="faq-body">No hay requisitos previos. Este curso es para que avances con inglés a tu propio ritmo.</div>
+        </details>
+        <details class="faq-item">
+            <summary>¿Dan soporte?</summary>
+            <div class="faq-body">Sí, damos soporte 24/7. Podés consultarnos cualquier duda por e-mail.</div>
+        </details>
+    </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+    <div class="final-cta-inner">
+        <img src="img/producto2.jpg" alt="Empezá hoy" class="final-cta-img">
+        <div class="final-cta-content">
+            <div class="hero-eyebrow">🇺🇸 Empezá hoy</div>
+            <h2>Sumá inglés a tu CV</h2>
+            <p>Pago único en moneda local. Sin suscripciones ni pagos mensuales. Garantía de devolución de 7 días.</p>
+            <ul>
+                <li>+25 clases paso a paso</li>
+                <li>Acceso de por vida</li>
+                <li>Certificado oficial incluido</li>
+                <li>Soporte personalizado por email</li>
+            </ul>
+            <div class="price-block">
+                <span class="price-old"><?= $precioCursoOficial ?></span>
+                <span class="price-new"><?= $precioCurso ?></span>
+                <span class="price-discount">−<?= $porcentaje ?></span>
+            </div>
+            <div class="hero-ctas" style="margin-top: 8px;">
+                <a href="checkout.php" class="btn btn-it btn-arrow">Inscribirme ahora</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="footer-inner">
+        <img src="../img/logo.jpg" alt="Aprende Idiomas">
+        <p>Cursos online de idiomas. Aprendé a tu ritmo, desde tu casa, con certificado oficial y comunidad activa.</p>
+        <p><a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a></p>
+        <div class="footer-bottom">© 2026 Aprende Idiomas · Hecho con cariño en Buenos Aires</div>
+    </div>
+</footer>
+
+
+<!-- ========== TRACKING ========== -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-THQ2HVF');</script>
+
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','851421198669354');
+fbq('init','177917573796998');
+fbq('track','PageView');
+fbq('track','ViewContent');
+fbq('trackCustom','visitas <?= $curso ?>');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"></noscript>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-VE1K0ZKEG6');
+gtag('config','UA-196494254-1');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-196494254-1"></script>
+
+</body>
 </html>

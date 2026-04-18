@@ -156,7 +156,6 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
                             <div class="col-md-12 text-dark">
                                 <p class="mt-3 pb-2" style="font-family: montserrat_bold;"> ¿Por qué elegir Aprende Idiomas? </p>
                                 <ul>
-                                    <li> <i class="fas fa-check-square " style="color:#33B628;"></i> Descargá el curso y miralo sin conexión!</li>
                                     <li> <i class="fas fa-check-square " style="color:#33B628;"></i> 89 clases</li>
                                     <li> <i class="fas fa-check-square " style="color:#33B628;"></i> Acceso ilimitado</li>
                                     <li> <i class="fas fa-check-square " style="color:#33B628;"></i> Soporte 24 horas ante cualquier duda</li>
