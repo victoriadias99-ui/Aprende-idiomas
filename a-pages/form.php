@@ -105,3 +105,72 @@
     </form>
 </div>
  </div>
+
+<script>
+/* ============================================================
+   Captura de lead de checkout abandonado
+   Se dispara al blur del email (si válido) y al cambiar nombre/apellido.
+   Debounced para no spam-ear el endpoint.
+   ============================================================ */
+(function(){
+    var ENDPOINT = '/a-includes/capturar_lead.php';
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var timer = null;
+    var lastPayload = null;
+
+    function getVal(id){
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+    }
+
+    function capture(){
+        var email = getVal('email');
+        if (!EMAIL_RE.test(email)) return;
+
+        var payload = {
+            email: email,
+            nombre: getVal('nombre'),
+            apellido: getVal('apellido'),
+            curso: getVal('curso'),
+            pais: getVal('pais'),
+            moneda: getVal('moneda'),
+            precio: parseFloat(getVal('amount')) || null,
+            url: window.location.href
+        };
+
+        // Evitar enviar el mismo payload 2 veces seguidas
+        var key = JSON.stringify(payload);
+        if (key === lastPayload) return;
+        lastPayload = key;
+
+        // Fire and forget (no bloquea UX)
+        try {
+            fetch(ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: key,
+                keepalive: true
+            }).catch(function(){ /* silent */ });
+        } catch(e){ /* silent */ }
+    }
+
+    function debouncedCapture(){
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(capture, 800);
+    }
+
+    // Escuchar blur y change en los 3 campos
+    ['email','nombre','apellido'].forEach(function(id){
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener('blur', capture);
+        el.addEventListener('change', capture);
+        el.addEventListener('input', debouncedCapture);
+    });
+
+    // También capturar cuando el user sale de la página (beforeunload)
+    window.addEventListener('beforeunload', function(){
+        if (EMAIL_RE.test(getVal('email'))) capture();
+    });
+})();
+</script>

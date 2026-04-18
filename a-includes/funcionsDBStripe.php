@@ -110,6 +110,16 @@ function updVentaStripe($idPagoOld, $tipopago, $producto, $upsell, $idPago, $mon
     $stmt->bindValue(10, $status, PDO::PARAM_STR);
     $stmt->bindValue(11, $data, PDO::PARAM_STR);
     $stmt->execute();
+
+    // Si la venta quedo CONFIRMADA/APROBADA, marcar el lead como convertido
+    if (in_array(strtoupper($status), ['APROBADO', 'APPROVED', 'PAID', 'COMPLETED', 'SUCCESS', 'CONFIRMADO'])) {
+        try {
+            $stmt2 = $cnx->prepare("UPDATE `leads_abandonados` SET `CONVERTIDO`=1, `FECHA_CONVERSION`=NOW() WHERE `EMAIL`=? AND `CONVERTIDO`=0");
+            $stmt2->execute([$correo]);
+        } catch (Throwable $e) {
+            error_log('[leads_abandonados update] ' . $e->getMessage());
+        }
+    }
 }
 
 function getVentaStripe($idVenta) {
