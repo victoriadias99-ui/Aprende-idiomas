@@ -100,10 +100,20 @@ $rules = [
         'kw' => ['precio', 'cuesta', 'cuanto sale', 'cuanto vale', 'cuanto es', 'valor', 'costo', 'cuota', 'cuotas', 'descuento', 'oferta', 'promo'],
         'reply' => "El precio actualizado para tu país lo ves en la página del curso, el sistema te muestra el valor en tu moneda automáticamente. Entrá a la página del curso que te interese y vas a ver el precio final arriba del botón de compra."
     ],
+    // --- Email no registrado / no aparece en recuperar contraseña → SOPORTE (último paso) ---
+    [
+        'kw' => ['no aparece mi correo', 'no aparece mi email', 'no aparece el correo', 'no aparece el email', 'correo no registrado', 'email no registrado', 'no esta registrado', 'no está registrado', 'no reconoce mi correo', 'no reconoce mi email', 'no figura mi correo', 'no figura mi email', 'no encuentra mi correo', 'no encuentra mi email', 'mi correo no existe', 'mi email no existe', 'usuario no existe', 'no me reconoce'],
+        'reply' => "Si el sistema no encuentra tu correo al recuperar contraseña, escribinos a aprende.idiomas.latam@gmail.com indicándonos el correo con el que compraste y el curso, y te damos acceso manualmente."
+    ],
+    // --- Ingreso a la academia / login / email no llegó / recuperar contraseña ---
+    [
+        'kw' => ['no me llego el email', 'no me llego el mail', 'no llego el email', 'no llego el mail', 'no me llego el correo', 'no llego el correo', 'no recibi el email', 'no recibi el correo', 'no recibi el mail', 'no me llegaron los datos', 'no recibi los datos', 'donde entro', 'como entro', 'como ingreso', 'como accedo', 'donde ingreso', 'como me logueo', 'iniciar sesion', 'login', 'loguearme', 'ingresar a la academia', 'entrar a la academia', 'acceder a la academia', 'academia', 'campus', 'plataforma', 'no puedo entrar', 'no puedo ingresar', 'no puedo acceder', 'olvide mi contraseña', 'olvide la contraseña', 'olvide mi clave', 'olvide la clave', 'olvide mi password', 'perdi la contraseña', 'perdi mi contraseña', 'recuperar contraseña', 'recuperar clave', 'recuperar password', 'reestablecer', 'restablecer contraseña', 'cambiar contraseña', 'no tengo contraseña', 'contraseña', 'password', 'mi clave', 'spam', 'correo basura', 'correo no deseado'],
+        'reply' => "Para entrar a la academia usá este link: https://academia.aprende-idiomas.com/\n\nSi no te llegó el email con tu usuario y contraseña después del pago:\n1) Revisá la carpeta de SPAM o correo no deseado, suele caer ahí.\n2) Si igual no aparece, podés recuperar tu acceso desde este link: https://academia.aprende-idiomas.com/wp-login.php?action=lostpassword\n3) Poné el correo con el que compraste y te llega el link para crear una nueva contraseña.\n\nSi el sistema no encuentra tu correo al intentar recuperar, escribinos a aprende.idiomas.latam@gmail.com y te damos acceso manual."
+    ],
     // --- Acceso / cuándo empieza ---
     [
         'kw' => ['acceso', 'empezar', 'cuando empiezo', 'cuando comienza', 'cuando inicia', 'inmediato', 'despues del pago', 'despues de pagar', 'cuando puedo', 'fecha de inicio'],
-        'reply' => "El acceso es inmediato: apenas se acredita el pago, recibís un email con tu usuario y contraseña para entrar al campus. Podés empezar el mismo día y avanzar a tu ritmo."
+        'reply' => "El acceso es inmediato: apenas se acredita el pago, recibís un email con tu usuario y contraseña para entrar al campus en https://academia.aprende-idiomas.com/. Podés empezar el mismo día y avanzar a tu ritmo."
     ],
     // --- Duración / acceso de por vida ---
     [
