@@ -1,47 +1,46 @@
 <?php
+if (isset($_GET['test'])) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    
+//    echo "<pre>";
+//    print_r($_SERVER);
+//    echo "</pre>";
+}
+
 $dirpage = '../';
-$idcurso = 'ingles_uno';
+$titulo = 'Aprende Ingles desde 0';
+$curso = 'ingles_uno';
+
+require("../a-includes/Keys.php");
 include("../a-includes/funcionsDB.php");
 include("../a-includes/logicparametros.php");
-$curso = getCursoDetalle($idcurso);
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
+require ("../a-includes/Funciones.php");
+
+//echo 'curso = ' . $curso . '<br>';
+//echo 'moneda = ' . $moneda . '<br><br><br>';
+$productoC1 = getDataProducto($curso, $moneda, $country_code);
+//echo "<pre>";
+//print_r($productoC1);
+//echo "</pre>";
+$simbolo = $productoC1['producto']['SIMBOLO'];
+$monedaOficial = $productoC1['producto']['MONEDA'];
+$precioCursoOficial = Funciones::getFormatMoneda($productoC1['producto']['PRECIO'], $simbolo, $productoC1['producto']['MONEDA']);
+$value = $valPrecio = $productoC1['producto']['PRECIO_DESC'];
+$precioCurso = Funciones::getFormatMoneda($valPrecio, $simbolo, $productoC1['producto']['MONEDA']);
+$porcentaje = '50%';
+
+$urlCheckout = 'checkout.php';
 ?>
 <!DOCTYPE html>
 <html>
 
     <head>
-        <title><?php echo $curso['TITULO']; ?></title>
-        <?php include('../a-pages/headerTM.php') ?>
-        
-                <link rel="stylesheet" href="https://app.gandaweb.com/chat-style.css?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1">
-        <style>
-            @media (max-width: 600px) {
-                .chat-container {
-    position: fixed;
-    bottom: 150px;
-    right: 0px;
-    left: 0px;
-    width: 100%;
-    font-weight: bolder;
-}
-}
-
-
-        </style>
-        
-        
+        <title>Aprende Idiomas - Cursos Online</title>
+        <?php include('../a-pages/header.php') ?>
     </head>
     <body style="font-family: montserrat_regular;">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3NBJXZ"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        
-         <?php include('../a-pages/timer.php') ?>
-        
         <header>
             <div class="container">
                 <div class="row align-items-center">
@@ -49,10 +48,10 @@ $precioCurso = '$' . $value . ' ARS';
                         <a href="./" target="_blank"><img src="img/logo.jpg" alt="logo" class="img-fluid"> </a>
                     </div>
                     <div class="col-md-3 hdphone">
-                        <p> Aprendé a distancia</p>
+                        <p> Aprende a distancia</p>
                     </div>
                     <div class="col-md-3 hdphone">
-                        <img src="img/securityjpg.jpg" alt="security" class="img-fluid">
+                        <img src="../img/front_pay.png" alt="security" class="img-fluid">
                     </div>
                     <div class="col-md-3 cta-button  col-sm-6 col-6">
                         <a class="hvr-sweep-to-right" href="checkout.php">Lo quiero</a>
@@ -60,6 +59,20 @@ $precioCurso = '$' . $value . ' ARS';
                 </div>
             </div>
         </header>
+
+        <!-- BANNER TIMER Temporizador -->
+        <div class="container-fluid fixed-top m-0 py-2 d-lg-block d-none" id="banner-timer">
+            <div class="row m-0 p-0 justify-content-center align-items-center">
+                <div class="col-auto m-0 p-0">
+                    <h5 class="mb-0  pe-1">PROMO ESPECIAL PARA ALUMNOS NUEVOS 🎉 </h5>
+                </div>
+                <div class="col-auto m-0 p-0">
+                    <div id="temporizador"></div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN BANNER TIMER Temporizador -->
+
         <!-- Website Sections -->
         <!-- Top Product Banner -->
         <section class="top-product  bg-white">
@@ -74,7 +87,7 @@ $precioCurso = '$' . $value . ' ARS';
                     <div class="col-md-6">
                         <div class="section-heading ">
                             <h3 style="color:black;">Curso online a distancia</h3>
-                            <h1 class="mt-4  " style=""><b>APRENDÉ <span style="font-family: montserrat_black ;">INGLÉS DESDE CERO!</span></b></h1>
+                            <h1 class="mt-4  " style=""><b>APRENDE <span style="font-family: montserrat_black ;">INGLÉS DESDE CERO!</span></b></h1>
                         </div>
                         <div class="feature-list mt-4" >
                             <ul class="font-weight-light" style="font-family: montserrat_light ;" >
@@ -86,7 +99,7 @@ $precioCurso = '$' . $value . ' ARS';
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;-webkit-animation-delay: 0.3; -moz-animation-delay: 0.3; animation-delay: 0.3;"><i class="fas fa-check-circle text-dark"></i> Estudialo desde tu PC, notebook, tablet o Celular</li>			
                             </ul>
                             <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "><?= $precioCurso ?></span></h3>
-                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Argentina. Éste precio es final y en Pesos Argentinos</p>
+                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Latina. El precio se convierte automaticamente a su moneda local.</p>
 
                         </div>
                         <div class="call-button mt-4">
@@ -95,7 +108,7 @@ $precioCurso = '$' . $value . ' ARS';
                                     <a href="checkout.php" class="hvr-sweep-to-top  wow flipInX animated shadow text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s; background-color:#f3c910;">Lo quiero</a>
                                 </div>
                                 <div class="col-md-6 payments">
-                                    <img src="img/security.png" class="img-fluid wow flipInX animated pt-md-2 " data-wow-delay="0.3s" alt="payments" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                                    <img src="../img/front_pay.png" class="img-fluid wow flipInX animated pt-md-2 " data-wow-delay="0.3s" alt="payments" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
                                 </div>
                             </div>
                         </div>
@@ -135,7 +148,7 @@ $precioCurso = '$' . $value . ' ARS';
 
                         <p class="font-weight-light lead mb-4" ><span style="background-color:#f3c910; color:black;font-family: montserrat_bold;" class="p-1">Inglés</span> Hoy en día es el idioma más importante del mercado y con mayor <b>facilidad para aprenderlo.</b>
 
-                        <p class="lead mb-4">A través de este curso vas a aprender los verbos más usados, tiempos verbales básicos y mucho más para puedas mantener una conversación fluida. Explicado paso a paso en más de 45 clases paso a paso por nuestro profesor <span style="background-color:black; color:white;" class="p-1 font-w">con más de 15 años de trayectoria</span><br></p>
+                        <p class="lead mb-4">A través de este curso aprenderás los verbos más usados, tiempos verbales básicos y mucho más para puedas mantener una conversación fluida. Explicado paso a paso en más de 45 clases paso a paso por nuestro profesor <span style="background-color:black; color:white;" class="p-1 font-w">con más de 15 años de trayectoria</span><br></p>
                         <hr>
                         <p class="lead" style="">Sin requisitos!<br></p>
                         <div class="call-button mt-5">
@@ -151,7 +164,7 @@ $precioCurso = '$' . $value . ' ARS';
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-half"></i>
                             </div>
-                            <p class="user_name d-inline pl-4 pr-4 font-weight-light">+600 estudiantes</p>
+                            <p class="user_name d-inline pl-4 pr-4 font-weight-light">+3000 estudiantes</p>
                         </div>
                     </div>
 
@@ -170,7 +183,7 @@ $precioCurso = '$' . $value . ' ARS';
                             <li><i class="fas fa-check " style="color:#f3c910;"></i> Pronombres más usados</li>
                             <li><i class="fas fa-check " style="color:#f3c910;"></i> Preposiciones más usadas</li>
                             <li><i class="fas fa-check  " style="color:#f3c910;"></i> Vocabulario básico para conversar</li>
-                            <li><i class="fas fa-check  " style="color:#f3c910;"></i> Muchos ejercicios prácticos</li>
+                            <li><i class="fas fa-check  " style="color:#f3c910;"></i> +200 Ejercicios Prácticos</li>
                         </ul> 
                     </div>
                 </div>
@@ -183,7 +196,7 @@ $precioCurso = '$' . $value . ' ARS';
                         <div class="card">
                             <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="img/certificado.jpg" width="150">
                                 <h4 class="font-weight-bold" style="font-family: montserrat_bold">Certificado</h4>
-                                <p class="mb-0">Obtené tu Certificación Oficial para adjuntar a tu CV</p>
+                                <p class="mb-0">Obtén tu Certificación Oficial para adjuntar a tu CV</p>
                             </div>
                         </div>
                     </div>
@@ -199,7 +212,7 @@ $precioCurso = '$' . $value . ' ARS';
                         <div class="card">
                             <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle" src="img/acceso.jpg" width="150">
                                 <h4 class="font-weight-bold" style="font-family: montserrat_bold">Acceso de por vida</h4>
-                                <p class="mb-0">Te queda para siempre. Hacelo a tu ritmo y sin horarios</p>
+                                <p class="mb-0">Te queda para siempre. Házlo a tu ritmo y sin horarios</p>
                             </div>
                         </div>
                     </div>
@@ -218,7 +231,7 @@ $precioCurso = '$' . $value . ' ARS';
                     <div class="col-lg-4 col-md-6 p-4 text-center">
                         <div class="review-image text-center mt-3 mb-3">
                         </div>
-                        <p class="mb-3"><i></i>"Excelente curso de ingles"<i></i> </p>
+                        <p class="mb-3"><i></i>"Excelente curso de Inglés"<i></i> </p>
                         <p class="mb-1"> <b>Lara Barro</b></p>
                         <div class="rating-user d-inline">
                             <i class="fa fa-star"></i>
@@ -322,7 +335,7 @@ $precioCurso = '$' . $value . ' ARS';
                             <h5 class="mb-0"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">#1 ¿Por cuánto tiempo lo tengo o lo puedo descargar?</button></h5>
                         </div>
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
-                            <div class="card-body"> ¡De por vida! Una vez que abones vas a tener acceso para siempre, vas a poder descargar el curso y verlo desde cualquier lugar sin conexión a internet.</div>
+                            <div class="card-body"> ¡De por vida! Una vez que abones tendrás acceso para siempre, podrás descargar el curso y verlo desde cualquier lugar sin conexión a internet.</div>
                         </div>
                     </div>
                     <div class="card">
@@ -330,7 +343,7 @@ $precioCurso = '$' . $value . ' ARS';
                             <h5 class="mb-0" style=""><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">#2 ¿Cuánto dura el curso?</button></h5>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
-                            <div class="card-body">Lo que vos decidas, + 45 clases para que hagas a tu ritmo y si decidís seguir practicando el curso no tiene FIN! ya que contamos con un espacio para que puedas conversar con alumnos y practicar ejercicios.</div>
+                            <div class="card-body">Lo que vos decidas, + 45 clases para que hagas a tu ritmo y si decides seguir practicando el curso no tiene FIN! ya que contamos con un espacio para que puedas conversar con alumnos y practicar ejercicios.</div>
                         </div>
                     </div>
                     <div class="card">
@@ -347,7 +360,7 @@ $precioCurso = '$' . $value . ' ARS';
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">#4 ¿Incluye Certificación o Diploma?</button></h5>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample" style="">
-                            <div class="card-body">Una vez termines el curso podés solicitarnos gratis el Certificado de Cursado.</div>
+                            <div class="card-body">Una vez termines el curso podrás solicitarnos gratis el Certificado de Cursado.</div>
                         </div>
                     </div>
                     <div class="card">
@@ -365,7 +378,7 @@ $precioCurso = '$' . $value . ' ARS';
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">#6 ¿Dan soporte?</button></h5>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="">
-                            <div class="card-body">Si damos soporte 24/7. Podés consultar cualquier duda en nuestro e-mail</div>
+                            <div class="card-body">Si damos soporte 24/7. Puedes consultar cualquier duda por e-mail</div>
                         </div>
                     </div>
                     <div class="call-button mt-5">
@@ -382,7 +395,7 @@ $precioCurso = '$' . $value . ' ARS';
         <!--TEMARIO -->
         <div class=" index2_services float_left pt-100 pb-100 " id="gr" style="background-color:#d52d7a" >
             <div class="container align-items-center justify-content-center rounded py-5" >
-                <h2 class="text-center text-white pb-4 f-34" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0" style="text-shadow: 2px 2px 4px #333333;"> <i class="fas fa-lightbulb"></i> Mirá todo lo que vas a aprender</h2>						 
+                <h2 class="text-center text-white pb-4 f-34" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0" style="text-shadow: 2px 2px 4px #333333;"> <i class="fas fa-lightbulb"></i> Mira todo lo que vas a aprender</h2>						 
                 <div class="row " >
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12  mx-auto" >
                         <div id="accordion" role="tablist ">
@@ -455,7 +468,7 @@ $precioCurso = '$' . $value . ' ARS';
                                             <li>Clase 44 – Partes de la casa</li>   
                                             <br>
                                             <br>
-                                            <a href="/ingles-nivel-dos/" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Querés más conocimientos? Mira el nivel 2 👉 </b></a> 	 
+                                            <a href="/ingles-nivel-dos/" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Quieres más conocimientos? Mira el nivel 2 👉 </b></a> 	 
                                         </div>
                                     </div>
                                 </div>
@@ -478,7 +491,7 @@ $precioCurso = '$' . $value . ' ARS';
                             <h5 class="mb-0" style=""><button class="btn btn-link text-left " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">#1 ¿Por cuánto tiempo lo tengo o lo puedo descargar?</button></h5>
                         </div>
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
-                            <div class="card-body">¡De por vida! Una vez que abones vas a tener acceso para siempre, vas a poder descargar el curso y verlo desde cualquier lugar sin conexión a internet.</div>
+                            <div class="card-body">¡De por vida! Una vez que abones tendrás acceso para siempre, podrás descargar el curso y verlo desde cualquier lugar sin conexión a internet.</div>
                         </div>
                     </div>
                     <div class="card">
@@ -495,7 +508,7 @@ $precioCurso = '$' . $value . ' ARS';
                             <h5 class="mb-0" style=""><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">#3 ¿Dan material práctico?</button></h5>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="">
-                            <div class="card-body">Sí! Además de brindarte tareas contamos con una comunidad en facebook donde vas a poder comunicarte con cualquier alumno para practicar</div>
+                            <div class="card-body">Sí! Además de brindarte tareas contamos con una comunidad en facebook donde podrás comunicarte con cualquier alumno para practicar</div>
                         </div>
                     </div>
                     <div class="card text-left">
@@ -504,7 +517,7 @@ $precioCurso = '$' . $value . ' ARS';
                                 <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">#4 ¿Incluye Certificado o Diploma?</button></h5>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample" style="">
-                            <div class="card-body">Una vez termines el curso podés solicitarnos gratis el Certificado oficial de Cursado.</div>
+                            <div class="card-body">Una vez termines el curso podrás solicitarnos gratis el Certificado oficial de Cursado.</div>
                         </div>
                     </div>
                     <div class="card">
@@ -522,14 +535,14 @@ $precioCurso = '$' . $value . ' ARS';
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">#6 ¿Dan soporte?</button></h5>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="">
-                            <div class="card-body">Si damos soporte 24/7. Podés consultar cualquier duda en nuestro e-mail</div>
+                            <div class="card-body">Sí, damos soporte 24/7. Puedes consultar cualquier duda por e-mail</div>
                         </div>
                     </div>
                 </div>
                 <!--TEMARIO -->
                 <div class=" index2_services float_left pt-100 pb-100 " style="background-color:#d52d7a" >
                     <div class="container align-items-center justify-content-center rounded py-5" >
-                        <h2 class="text-center text-white pb-4 f-34" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0" style="text-shadow: 2px 2px 4px #333333;"> <i class="fas fa-lightbulb"></i> Mirá todo lo que vas a aprender</h2>						 
+                        <h2 class="text-center text-white pb-4 f-34" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0" style="text-shadow: 2px 2px 4px #333333;"> <i class="fas fa-lightbulb"></i> Mira todo lo que vas a aprender</h2>						 
                         <div class="row " >
                             <div class="col-lg-6 col-md-12 col-sm-12 col-12  mx-auto" >
                                 <div id="accordion" role="tablist ">
@@ -641,7 +654,7 @@ $precioCurso = '$' . $value . ' ARS';
                             <h1 class="font-weight-bold text-left" style="font-family: montserrat_black">Sumá Inglés a tu CV</h1>
                         </div>
                         <div class="feature-list mt-4">
-                            <p> • Pago por única vez en Pesos Argentinos (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
+                            <p> • Pago por única vez en pesos de tu país. (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
                             <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>       </div>
                         <div class="call-button mt-5">
                             <div class="row">
@@ -657,10 +670,34 @@ $precioCurso = '$' . $value . ' ARS';
                 </div>
             </div>
         </section>
-        
-        <?php include('../a-pages/timerFooter.php') ?>
+        <!-- MOBILE ALERT | Direcciona a la seccion de compra y tiene el temporizador de la oferta-->
+        <div class="container-fluid d-lg-none m-0 p-0" id="mobile-alert">
+            <div class="row m-0 p-0">
+                <div class="col-12 ">
+                    <div class="row">
+                        <div class="col-auto mt-2 mx-auto text-center  small-timer">
+                           <b>La oferta termina en </b><br><span id="temporizadorMobile"></span>
+                        </div>
+                    </div>      
+                </div>
+                <div class="col-9 col-sm-6 mx-auto py-1 m-0 p-0">
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                            <div class="precio-antes-p m-0">Antes <span class="tachado"><span id="precio-anterior-alerta"><?= $precioCursoOficial ?></span></span></div>
+                        </div>
+                        <div class="col-6 py-2 text-center">
+                            <div class="precio m-0"><?= $simbolo ?><span id="precio-nuevo-alerta"><?= $value ?></span> <?= $monedaOficial ?></div>
+                        </div>
+                    </div>
+                    <a href="checkout.php" class="btn btn-buy animate-hover py-2 mb-2 text-center ps-4">
+                        ¡Inscribirme Ahora! <i class="fas fa-chevron-right me-3 ps-2 animate-right-3"></i>
+                    </a>  
+                </div>
+            </div>
+        </div>
+        <!-- FIN MOBILE ALERT | Direcciona a la seccion de compra-->
 
-        <?php include('../a-pages/footerTM.php') ?>
+        <?php include('../a-pages/footer.php') ?>
 
         <script>
             fbq('track', 'ViewContent');
@@ -668,8 +705,27 @@ $precioCurso = '$' . $value . ' ARS';
         <script>
             fbq('trackCustom', 'visitas ingles');
         </script>
-        <script src="https://app.gandaweb.com/chat-script.js?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1"></script>
-        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-VE1K0ZKEG6');
+        </script>
+        <!-- Script AI de analytics -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-196494254-1');
+        </script>
     </body>
 
 </html>

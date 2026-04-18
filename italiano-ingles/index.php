@@ -1,31 +1,41 @@
 <?php
-$dirpage = '../';
-$idcurso = 'italiano_ingles';
+if (isset($_GET['test'])) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
 
+$dirpage = '../';
+$titulo = 'Aprende Ingles desde 0';
+$curso = 'italiano_ingles';
+
+require("../a-includes/Keys.php");
 include("../a-includes/funcionsDB.php");
 include("../a-includes/logicparametros.php");
+require ("../a-includes/Funciones.php");
 
-$curso = getCursoDetalle($idcurso);
+//echo 'curso = ' . $curso . '<br>';
+//echo 'moneda = ' . $moneda . '<br><br><br>';
+$productoC1 = getDataProducto($curso, $moneda);
+//echo "<pre>";
+//print_r($productoC1);
+//echo "</pre>";
 
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
+$monedaOficial = $productoC1['producto']['MONEDA'];
+$precioCursoOficial = Funciones::getFormatMoneda($productoC1['producto']['PRECIO'], $simbolo, $productoC1['producto']['MONEDA']);
+$value = $valPrecio = $productoC1['producto']['PRECIO_DESC'];
+$precioCurso = Funciones::getFormatMoneda($valPrecio, $simbolo, $productoC1['producto']['MONEDA']);
+$porcentaje = '50%';
+
+$urlCheckout = 'checkout.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php echo $curso['TITULO']; ?></title>
-        <?php include('../a-pages/headerTM.php') ?>
+        <title>Aprende Idiomas - Cursos Online</title>
+        <?php include('../a-pages/header.php') ?>
     </head>
     <body style="font-family: montserrat_regular;">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3NBJXZ"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        
-        <?php include('../a-pages/timer.php') ?>
-        
         <header>
             <div class="container">
                 <div class="row align-items-center">
@@ -69,7 +79,7 @@ $precioCurso = '$' . $value . ' ARS';
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;"><i class="fas fa-check-circle text-dark"></i> Otorgamos Certificado Oficial</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;-webkit-animation-delay: 0.3; -moz-animation-delay: 0.3; animation-delay: 0.3;"><i class="fas fa-check-circle text-dark"></i> Estudialo desde tu PC, notebook, tablet o Celular</li>
                             </ul>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#FF0000; color:black;font-family: montserrat_regular;"><strike>$14.998</strike><span class="font-weight-bold "> $9.999</span></h3>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#FF0000; color:black;font-family: montserrat_regular;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
                             <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Argentina. Éste precio es final y en Pesos Argentinos</p>
                         </div>
                         <div class="call-button mt-4">
@@ -720,7 +730,7 @@ $precioCurso = '$' . $value . ' ARS';
                         </div>
                         <div class="feature-list mt-4">
                             <p> • Pago por única vez en Pesos Argentinos (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike>$14.999</strike><span class="font-weight-bold "> $9.999</span></h3>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
                         </div>
                         <div class="call-button mt-5">
                             <div class="row">
@@ -736,10 +746,8 @@ $precioCurso = '$' . $value . ' ARS';
                 </div>
             </div>
         </section>
-        
-        <?php include('../a-pages/timerFooter.php') ?>
-        
-        <?php include('../a-pages/footerTM.php') ?>
+
+        <?php include('../a-pages/footer.php') ?>
 
         <script>
             fbq('track', 'ViewContent');
@@ -747,5 +755,62 @@ $precioCurso = '$' . $value . ' ARS';
         <script>
             fbq('trackCustom', 'visitas italiano');
         </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+
+        <!-- FEDE PIXEL FB ADS PREVENTIVO 20-10-2023 -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-VE1K0ZKEG6');
+        </script>
+        <!-- Script AI de analytics -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-196494254-1');
+        </script>
+        <script>
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '851421198669354');
+            fbq('init', '177917573796998');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"
+                       /></noscript>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=177917573796998&ev=PageView&noscript=1"
+                       /></noscript>			   
+
+        <!-- End Facebook Pixel Code --> 
     </body>
 </html>

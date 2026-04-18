@@ -1,42 +1,43 @@
 <?php
+if (isset($_GET['test'])) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
+
 $dirpage = '../';
-$idcurso = 'italiano_b1';
+$titulo = 'Aprende Ingles desde 0';
+$curso = 'italiano_b1';
+
+require("../a-includes/Keys.php");
 include("../a-includes/funcionsDB.php");
 include("../a-includes/logicparametros.php");
-$curso = getCursoDetalle($idcurso);
+require ("../a-includes/Funciones.php");
 
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
+//echo 'curso = ' . $curso . '<br>';
+//echo 'moneda = ' . $moneda . '<br><br><br>';
+$productoC1 = getDataProducto($curso, $moneda, $country_code);
+//echo "<pre>";
+//print_r($productoC1);
+//echo "</pre>";
+$simbolo = $productoC1['producto']['SIMBOLO'];
 
+$monedaOficial = $productoC1['producto']['MONEDA'];
+$precioCursoOficial = Funciones::getFormatMoneda($productoC1['producto']['PRECIO'], $simbolo, $productoC1['producto']['MONEDA']);
+$value = $valPrecio = $productoC1['producto']['PRECIO_DESC'];
+$precioCurso = Funciones::getFormatMoneda($valPrecio, $simbolo, $productoC1['producto']['MONEDA']);
+$porcentaje = '50%';
+
+$urlCheckout = 'checkout.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Aprende Idiomas - Cursos Online</title>
-        <?php include('../a-pages/headerTM.php') ?>
-                                <link rel="stylesheet" href="https://app.gandaweb.com/chat-style.css?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1">
-        <style>
-            @media (max-width: 600px) {
-                .chat-container {
-    position: fixed;
-    bottom: 150px;
-    right: 0px;
-    left: 0px;
-    width: 100%;
-    font-weight: bolder;
-}
-}
-
-
-        </style>
+        <?php include('../a-pages/header.php') ?>
     </head>
 
     <body style="font-family: montserrat_regular;">
-        
-        <?php include('../a-pages/timer.php') ?>
-        
         <header>
             <div class="container">
                 <div class="row align-items-center">
@@ -75,14 +76,14 @@ $precioCurso = '$' . $value . ' ARS';
                             <ul class="font-weight-light" style="font-family: montserrat_light ;">
                                 <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> + 23 clases paso a paso!</li>
                                 <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Nivel B1</li>
-								<li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Sirve para Ciudadanía Italiana</li>
-								<li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Mira el curso desde cualquier dispositivo!</li>
+                                <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Sirve para Ciudadanía Italiana</li>
+                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Mira el curso desde cualquier dispositivo!</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Ayuda de los profesores online </li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;"><i class="fas fa-check-circle text-dark"></i> Otorgamos Certificado Oficial</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;-webkit-animation-delay: 0.3; -moz-animation-delay: 0.3; animation-delay: 0.3;"><i class="fas fa-check-circle text-dark"></i> Estudialo desde tu PC, notebook, tablet o Celular</li>
                             </ul>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike>$19.998</strike><span class="font-weight-bold "> $9.999</span></h3>
-                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Argentina. Éste precio es final y en Pesos Argentinos</p>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike><?= $precioCursoOficial ?></strike><span class="ont-weight-bold "> <?= $precioCurso ?></span></h3>
+                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Latina. Éste precio es final y moneda local.</p>
                         </div>
                         <div class="call-button mt-4">
                             <div class="row">
@@ -117,8 +118,8 @@ $precioCurso = '$' . $value . ' ARS';
                 <div class="row">
                     <div class="mx-auto col-md-12">
                         <h1 class="text-white " style="font-family: montserrat_black">La mejor forma de aprender italiano a nivel mundial</h1>
-						<p>
-						<h1 class="text-white " style="font-family: montserrat_black">Realizando este curso estás preparado para solicitar Ciudadanía Italiana</h1>
+                        <p>
+                        <h1 class="text-white " style="font-family: montserrat_black">Realizando este curso estás preparado para solicitar Ciudadanía Italiana</h1>
                     </div>
                 </div>
             </div>
@@ -308,7 +309,7 @@ $precioCurso = '$' . $value . ' ARS';
                     <h2 class="mt-2 mb-1 pb-3 text-dark " style="font-family: montserrat_bold"><i class="fa fa-question-circle" aria-hidden="true">&nbsp;</i>Preguntas Frecuentes&nbsp;</h2>
                 </div>
                 <div class="accordion mt-4" id="accordionExample">
-                <div class="card">
+                    <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0" style="">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">#1 ¿Dan soporte?</button></h5>
@@ -380,30 +381,30 @@ $precioCurso = '$' . $value . ' ARS';
                                     <div class="card-body">
                                         <div class=" show ">
                                             <br>
-													<li>Lezione n1- L'imperfetto.</li>
-                                                    <li>Lezione n2 - la famiglia e le relazioni</li>
-                                                    <li>Lezione n3- il condizionale semplice e composto</li>
-                                                    <li>lezione n4- le professioni</li>
-                                                    <li>Lezione n5 - Los pronombres reflexivos y recíprocos</li>
-													<li>Lezione n6- La comida y la cocina italiana</li>                                                    
-                                                    <li>Lezione n7- El uso de los pronombres directos e indirectos</li>
-                                                    <li>Lezione n8 - il corpo umano e la salute</li>
-                                                    <li>Lezione n9 - I pronomi relativi</li>
-                                                    <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 1</li>
-													<li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
-													<li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
-                                                    <li>Lezione n12- I pronomi interrogativi</li>
-                                                    <li>Lezione n13 - la natura e l'ambiente</li>
-                                                    <li>Lezione n14- I verbi modali</li>
-                                                    <li>Lezione n15- i paesi e le culture straniere</li>
-                                                    <li>Lezione n16- La voce passiva</li>
-                                                    <li>Lezione n17- I verbi pronominali</li>
-                                                    <li>Lezione n18- I mezzi di comunicazione e le tecnologie. Espressioni colloquiali</li>
-                                                    <li>Lezione n19- i comparativi e i superlativi</li>
-                                                    <li>Lezione n20- cinema e musica</li>
-													<li>Lezione n21- Eventi culturali e festività locali</li>
-													<li>Lezione n22- L'uso delle congiunzioni</li>
-													<li>Lezione n23- i tempi verbali</li>
+                                            <li>Lezione n1- L'imperfetto.</li>
+                                            <li>Lezione n2 - la famiglia e le relazioni</li>
+                                            <li>Lezione n3- il condizionale semplice e composto</li>
+                                            <li>lezione n4- le professioni</li>
+                                            <li>Lezione n5 - Los pronombres reflexivos y recíprocos</li>
+                                            <li>Lezione n6- La comida y la cocina italiana</li>                                                    
+                                            <li>Lezione n7- El uso de los pronombres directos e indirectos</li>
+                                            <li>Lezione n8 - il corpo umano e la salute</li>
+                                            <li>Lezione n9 - I pronomi relativi</li>
+                                            <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 1</li>
+                                            <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
+                                            <li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
+                                            <li>Lezione n12- I pronomi interrogativi</li>
+                                            <li>Lezione n13 - la natura e l'ambiente</li>
+                                            <li>Lezione n14- I verbi modali</li>
+                                            <li>Lezione n15- i paesi e le culture straniere</li>
+                                            <li>Lezione n16- La voce passiva</li>
+                                            <li>Lezione n17- I verbi pronominali</li>
+                                            <li>Lezione n18- I mezzi di comunicazione e le tecnologie. Espressioni colloquiali</li>
+                                            <li>Lezione n19- i comparativi e i superlativi</li>
+                                            <li>Lezione n20- cinema e musica</li>
+                                            <li>Lezione n21- Eventi culturali e festività locali</li>
+                                            <li>Lezione n22- L'uso delle congiunzioni</li>
+                                            <li>Lezione n23- i tempi verbali</li>
                                             <br>
                                             <br>
                                         </div>
@@ -484,18 +485,18 @@ $precioCurso = '$' . $value . ' ARS';
                                             <div class="card-body">
                                                 <div class=" show ">
                                                     <br>
-													<li>Lezione n1- L'imperfetto.</li>
+                                                    <li>Lezione n1- L'imperfetto.</li>
                                                     <li>Lezione n2 - la famiglia e le relazioni</li>
                                                     <li>Lezione n3- il condizionale semplice e composto</li>
                                                     <li>lezione n4- le professioni</li>
                                                     <li>Lezione n5 - Los pronombres reflexivos y recíprocos</li>
-													<li>Lezione n6- La comida y la cocina italiana</li>                                                    
+                                                    <li>Lezione n6- La comida y la cocina italiana</li>                                                    
                                                     <li>Lezione n7- El uso de los pronombres directos e indirectos</li>
                                                     <li>Lezione n8 - il corpo umano e la salute</li>
                                                     <li>Lezione n9 - I pronomi relativi</li>
                                                     <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 1</li>
-													<li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
-													<li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
+                                                    <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
+                                                    <li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
                                                     <li>Lezione n12- I pronomi interrogativi</li>
                                                     <li>Lezione n13 - la natura e l'ambiente</li>
                                                     <li>Lezione n14- I verbi modali</li>
@@ -505,10 +506,10 @@ $precioCurso = '$' . $value . ' ARS';
                                                     <li>Lezione n18- I mezzi di comunicazione e le tecnologie. Espressioni colloquiali</li>
                                                     <li>Lezione n19- i comparativi e i superlativi</li>
                                                     <li>Lezione n20- cinema e musica</li>
-													<li>Lezione n21- Eventi culturali e festività locali</li>
-													<li>Lezione n22- L'uso delle congiunzioni</li>
-													<li>Lezione n23- i tempi verbali</li>
-                                          			<br>
+                                                    <li>Lezione n21- Eventi culturali e festività locali</li>
+                                                    <li>Lezione n22- L'uso delle congiunzioni</li>
+                                                    <li>Lezione n23- i tempi verbali</li>
+                                                    <br>
                                                     <br>
                                                     <a href="" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Querés más conocimientos? Mira el nivel 2 👉 </b></a>
                                                 </div>
@@ -547,8 +548,8 @@ $precioCurso = '$' . $value . ' ARS';
                         </div>
                         <div class="feature-list mt-4">
                             <p> • Sirve para aplicar para la CIUDADANÍA ITALIANA
-							<p> • Pago por única vez en Pesos Argentinos (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike>$19.998</strike><span class="font-weight-bold "> $9.999</span></h3>
+                            <p> • Pago por única vez en moneda local (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
                         </div>
                         <div class="call-button mt-5">
                             <div class="row">
@@ -564,11 +565,9 @@ $precioCurso = '$' . $value . ' ARS';
                 </div>
             </div>
         </section>
-        
-        <?php include('../a-pages/timerFooter.php') ?>
-        
-        <?php include('../a-pages/footerTM.php') ?>
-        
+
+        <?php include('../a-pages/footer.php') ?>
+
         <script>
             fbq('track', 'ViewContent');
         </script>
@@ -577,6 +576,8 @@ $precioCurso = '$' . $value . ' ARS';
         </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+
+        <!-- FEDE PIXEL FB ADS PREVENTIVO 20-10-2023 -->
         <script>
             window.dataLayer = window.dataLayer || [];
 
@@ -596,6 +597,39 @@ $precioCurso = '$' . $value . ' ARS';
             gtag('js', new Date());
             gtag('config', 'UA-196494254-1');
         </script>
-        <script src="https://app.gandaweb.com/chat-script.js?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1"></script>
+        <script>
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '851421198669354');
+            fbq('init', '177917573796998');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"
+                       /></noscript>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=177917573796998&ev=PageView&noscript=1"
+                       /></noscript>			   
+
+        <!-- End Facebook Pixel Code --> 
     </body>
 </html>

@@ -1,45 +1,42 @@
 <?php
+if (isset($_GET['test'])) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
+
 $dirpage = '../';
-$idcurso = 'italiano_inicial';
+$titulo = 'Aprende Ingles desde 0';
+$curso = 'italiano_a2';
+
+require("../a-includes/Keys.php");
 include("../a-includes/funcionsDB.php");
 include("../a-includes/logicparametros.php");
-$curso = getCursoDetalle($idcurso);
+require ("../a-includes/Funciones.php");
 
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
+//echo 'curso = ' . $curso . '<br>';
+//echo 'moneda = ' . $moneda . '<br><br><br>';
+$productoC1 = getDataProducto($curso, $moneda, $country_code);
+//echo "<pre>";
+//print_r($productoC1);
+//echo "</pre>";
+$simbolo = $productoC1['producto']['SIMBOLO'];
 
+$monedaOficial = $productoC1['producto']['MONEDA'];
+$precioCursoOficial = Funciones::getFormatMoneda($productoC1['producto']['PRECIO'], $simbolo, $productoC1['producto']['MONEDA']);
+$value = $valPrecio = $productoC1['producto']['PRECIO_DESC'];
+$precioCurso = Funciones::getFormatMoneda($valPrecio, $simbolo, $productoC1['producto']['MONEDA']);
+$porcentaje = '50%';
+
+$urlCheckout = 'checkout.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php echo $curso['TITULO']; ?></title>
-        <?php include('../a-pages/headerTM.php') ?>
-                <link rel="stylesheet" href="https://app.gandaweb.com/chat-style.css?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1">
-        <style>
-            @media (max-width: 600px) {
-                .chat-container {
-    position: fixed;
-    bottom: 150px;
-    right: 0px;
-    left: 0px;
-    width: 100%;
-    font-weight: bolder;
-}
-}
-
-
-        </style>
+        <title>Aprende Idiomas - Cursos Online</title>
+        <?php include('../a-pages/header.php') ?>
     </head>
     <body style="font-family: montserrat_regular;">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3NBJXZ"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        
-        <?php include('../a-pages/timer.php') ?>
-        
         <header>
             <div class="container">
                 <div class="row align-items-center">
@@ -78,13 +75,13 @@ $precioCurso = '$' . $value . ' ARS';
                             <ul class="font-weight-light" style="font-family: montserrat_light ;">
                                 <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> + 20 clases paso a paso!</li>
                                 <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Sirve para Ciudadanía Italiana</li>
-								<li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Mira el curso desde cualquier dispositivo!</li>
+                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Mira el curso desde cualquier dispositivo!</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Ayuda de los profesores online </li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;"><i class="fas fa-check-circle text-dark"></i> Otorgamos Certificado Oficial</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;-webkit-animation-delay: 0.3; -moz-animation-delay: 0.3; animation-delay: 0.3;"><i class="fas fa-check-circle text-dark"></i> Estudialo desde tu PC, notebook, tablet o Celular</li>
                             </ul>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike>$15.997</strike><span class="font-weight-bold "> $7.999</span></h3>
-                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Argentina. Éste precio es final y en Pesos Argentinos</p>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
+                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Latina. Éste precio es final y moneda local.</p>
                         </div>
                         <div class="call-button mt-4">
                             <div class="row">
@@ -388,28 +385,28 @@ $precioCurso = '$' . $value . ' ARS';
                                     <div class="card-body">
                                         <div class=" show ">
                                             <br>
-													<li>Lezione n1 - I mezzi di trasporto</li>
-                                                    <li>Lezione n1 parte 2- I mezzi di trasporto</li>
-                                                    <li>Lezione n2- il futuro semplice</li>
-                                                    <li>Lezione n3- gli avverbi di modo, tempo e quantità</li>
-                                                    <li>Lezione n4- Le congiunzioni coordinanti e subordinanti</li>
-                                                    <li>Lezione n5 - gli hobby</li>
-													<li>Lezione n6- il verbo esserci</li>                                                    
-                                                    <li>Lezione n7 Gli sport - parte 2</li>
-                                                    <li>Lezione n8 - i verbi andare e venire</li>
-                                                    <li>Lezione n9- Il tempo e le stagioni dell anno</li>
-                                                    <li>Lezione n10- I verbi sentire e ascoltare</li>
-													<li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
-													<li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
-                                                    <li>Lezione n12- verbo guardare, osservare e vedere</li>
-                                                    <li>Lezione n13- Esprimere opinione, desiderio e bisogno</li>
-                                                    <li>Lezione n14- i verbi essere o stare</li>
-                                                    <li>Lezione n15- verbi succedere, avvenire, capitare e accadere</li>
-                                                    <li>Lezione n16 - descripción de personas</li>
-                                                    <li>Lezione n17 - la casa</li>
-                                                    <li>Lezione n18- il non e il non, forma de responder preguntas</li>
-                                                    <li>Lezione n19 – il hotel o l_albergo</li>
-                                                    <li>Lezione n20- I servizi</li>
+                                            <li>Lezione n1 - I mezzi di trasporto</li>
+                                            <li>Lezione n1 parte 2- I mezzi di trasporto</li>
+                                            <li>Lezione n2- il futuro semplice</li>
+                                            <li>Lezione n3- gli avverbi di modo, tempo e quantità</li>
+                                            <li>Lezione n4- Le congiunzioni coordinanti e subordinanti</li>
+                                            <li>Lezione n5 - gli hobby</li>
+                                            <li>Lezione n6- il verbo esserci</li>                                                    
+                                            <li>Lezione n7 Gli sport - parte 2</li>
+                                            <li>Lezione n8 - i verbi andare e venire</li>
+                                            <li>Lezione n9- Il tempo e le stagioni dell anno</li>
+                                            <li>Lezione n10- I verbi sentire e ascoltare</li>
+                                            <li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
+                                            <li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
+                                            <li>Lezione n12- verbo guardare, osservare e vedere</li>
+                                            <li>Lezione n13- Esprimere opinione, desiderio e bisogno</li>
+                                            <li>Lezione n14- i verbi essere o stare</li>
+                                            <li>Lezione n15- verbi succedere, avvenire, capitare e accadere</li>
+                                            <li>Lezione n16 - descripción de personas</li>
+                                            <li>Lezione n17 - la casa</li>
+                                            <li>Lezione n18- il non e il non, forma de responder preguntas</li>
+                                            <li>Lezione n19 – il hotel o l_albergo</li>
+                                            <li>Lezione n20- I servizi</li>
                                             <br>
                                             <br>
                                         </div>
@@ -496,13 +493,13 @@ $precioCurso = '$' . $value . ' ARS';
                                                     <li>Lezione n3- gli avverbi di modo, tempo e quantità</li>
                                                     <li>Lezione n4- Le congiunzioni coordinanti e subordinanti</li>
                                                     <li>Lezione n5 - gli hobby</li>
-													<li>Lezione n6- il verbo esserci</li>                                                    
+                                                    <li>Lezione n6- il verbo esserci</li>                                                    
                                                     <li>Lezione n7 Gli sport - parte 2</li>
                                                     <li>Lezione n8 - i verbi andare e venire</li>
                                                     <li>Lezione n9- Il tempo e le stagioni dell anno</li>
                                                     <li>Lezione n10- I verbi sentire e ascoltare</li>
-													<li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
-													<li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
+                                                    <li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
+                                                    <li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
                                                     <li>Lezione n12- verbo guardare, osservare e vedere</li>
                                                     <li>Lezione n13- Esprimere opinione, desiderio e bisogno</li>
                                                     <li>Lezione n14- i verbi essere o stare</li>
@@ -512,7 +509,7 @@ $precioCurso = '$' . $value . ' ARS';
                                                     <li>Lezione n18- il non e il non, forma de responder preguntas</li>
                                                     <li>Lezione n19 – il hotel o l_albergo</li>
                                                     <li>Lezione n20- I servizi</li>
-                                          			<br>
+                                                    <br>
                                                     <br>
                                                     <a href="" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Querés más conocimientos? Mira el nivel 2 👉 </b></a>
                                                 </div>
@@ -551,8 +548,8 @@ $precioCurso = '$' . $value . ' ARS';
                         </div>
                         <div class="feature-list mt-4">
                             <p> • Sirve para aplicar para la CIUDADANÍA ITALIANA
-							<p> • Pago por única vez en Pesos Argentinos (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike>$15.997</strike><span class="font-weight-bold "> $7.999</span></h3>
+                            <p> • Pago por única vez en moneda local (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
                         </div>
                         <div class="call-button mt-5">
                             <div class="row">
@@ -568,18 +565,71 @@ $precioCurso = '$' . $value . ' ARS';
                 </div>
             </div>
         </section>
-        
-        <?php include('../a-pages/timerFooter.php') ?>
-        
-        <?php include('../a-pages/footerTM.php') ?>
+
+        <?php include('../a-pages/footer.php') ?>
 
         <script>
             fbq('track', 'ViewContent');
         </script>
-        
         <script>
             fbq('trackCustom', 'visitas italiano');
         </script>
-                <script src="https://app.gandaweb.com/chat-script.js?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+
+        <!-- FEDE PIXEL FB ADS PREVENTIVO 20-10-2023 -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-VE1K0ZKEG6');
+        </script>
+        <!-- Script AI de analytics -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-196494254-1');
+        </script>
+        <script>
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '851421198669354');
+            fbq('init', '177917573796998');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"
+                       /></noscript>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=177917573796998&ev=PageView&noscript=1"
+                       /></noscript>			   
+
+        <!-- End Facebook Pixel Code --> 
     </body>
 </html>

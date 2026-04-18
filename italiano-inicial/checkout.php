@@ -1,27 +1,37 @@
 <?php
-$dirpage = '../';
+$titulo = 'Realizar compra';
+$dirpage = '../'; // Esta variable tiene como valor la dirección de la raiz del proyecto
+$curso = 'italiano_inicial'; // Variable que contiene el id del curso a visualizar
 
-$idcurso = 'italiano_inicial';
-include("../a-includes/funcionsDB.php");
+include("../a-includes/funcionsDBStripe.php");
 include("../a-includes/logicparametros.php");
-$data = getCursoDetalleCheckout($idcurso);
-$curso = $data['producto'];
+require ("../a-includes/Funciones.php");
 
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioDescuento = $value;
-$precioCursoDescuento = '$' . $value . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
-$diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value) . ' ARS';
+$producto = getDataProductoCheckout($curso, $moneda, $country_code);
+if (isset($_GET['test']) && $_GET['test'] == 1) {
+    echo "<pre>";
+    print_r($producto);
+    echo "</pre>";
+}
 
+$simbolo = $producto['producto']['SIMBOLO'];
+$precio = Funciones::getFormatMoneda($producto['producto']['PRECIO'], $simbolo, $producto['producto']['MONEDA']);
+$moneda = $producto['producto']['MONEDA'];
+
+$valPrecio = floatval($producto['producto']['PRECIO']);
+$valPrecioOferta = floatval($producto['producto']['PRECIO_DESC']);
+$valPrecioDescuento = floatval($valPrecio - $valPrecioOferta);
+$precioOferta = Funciones::getFormatMoneda($valPrecioOferta, $simbolo, $producto['producto']['MONEDA']);
+$precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $producto['producto']['MONEDA']);
 ?>
+<!
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Carrito <?php echo $curso['TITULO']; ?></title>
-        <?php include('../a-pages/headerTM.php') ?>
-        <style> .whatsap-flotante {
+        <title>Tu Carrito </title>
+        <?php include('../a-pages/header.php') ?>
+        <style> 
+            .whatsap-flotante {
                 bottom:10px;
                 right:4px;
                 position: fixed;
@@ -63,11 +73,13 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
             }
 
         </style>
+
+
     </head>
+
     <body style="font-family: montserrat_regular;">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3NBJXZ"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
         <!-- Website Header -->
         <header  class="bg-white ">
             <div class="container">
@@ -84,8 +96,8 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                 <div class="row">
                     <div class="col-md-4  mr-auto order-2 order-md-1"> <img class="img-fluid d-block" src="img/italiana2.jpg"> </div>
                     <div class="px-md-5 p-3 d-flex flex-column align-items-start justify-content-center col-md-7 order-1 order-md-2" style="color:white">
-                        <h1 style="font-family: montserrat">Estás a un paso!</h1>
-                        <h1 style="font-family: montserrat_bold;">Accedé hoy y obtené acceso ilimitado</h1> 
+                        <h1 style="font-family: montserrat">Estas a un paso!</h1>
+                        <h1 style="font-family: montserrat_bold;">Accede hoy y obtén acceso ilimitado</h1> 
                         <div class="row text-muted">
                         </div>
                     </div>
@@ -99,49 +111,46 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                     <div class="col-md-5 mx-auto  my-auto" style="padding: 80px 20px;">
                         <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Resumen</b></span> </h4>
                         <?php
-                        foreach ($data['pack'] as $c => $item) {
-                            $precioItem = $item['PRECIO'];
+                        foreach ($producto['pack'] as $upsell) {
+                            $precioItem = $upsell['PRECIO'];
                             ?>
-                            <div class="p-3 mb-3 text-dark" style="border-style: dashed;border-width:2px;border-color: darkgray;background-color: rgba(255, 234, 118, 0.3); ">
-                                <i class="fas fa-arrow-alt-circle-right text-danger blink text-dark"></i> 
-                                <input class="check-producto-paquete" type="checkbox" id="up_<?= $item['ID_ABRE_PACK'] ?>" value="<?= $item['ID_ABRE_PACK'] ?>"/>
-                                <input id="id_up_<?= $item['ID_ABRE_PACK'] ?>" value="<?= $item['ID_UPSELL'] ?>" hidden=""/>
-                                <?= str_replace('{#MONTO}', ('$' . $precioItem . ' ARG'), $item['TITULO_2']) ?>
-                                <p class="mt-2  px-3 text-dark">
-                                    <?= str_replace('{#MONTO}', ('$' . $precioItem . ' ARG'), $item['DESCRIPCION']) ?>
-                                </p>
+                            <div class="p-3 mb-3" style="color:black; border-style: dashed;border-width:2px;;background-color: rgba(255, 234, 118, 0.3); "> 
+                                <i class="fas fa-arrow-alt-circle-right text-danger blink"></i> 
+                                <input type="checkbox" id="up_<?= $upsell['ID_ABRE'] ?>" value="<?= $upsell['ID_ABRE'] ?>" class="check-producto-paquete"> 
+                                <b><?= str_replace('{#MONTO}', Funciones::getFormatMoneda($precioItem, $simbolo, $upsell['MONEDA']), $upsell['TITULO']) ?></b>
+                                <p class="mt-2  px-3 "><?= str_replace('{#MONTO}', Funciones::getFormatMoneda($precioItem, $simbolo, $upsell['MONEDA']), $upsell['DESCRIPCION']) ?>
                             </div>
-                            <?php
-                        }
-                        ?> 
+                        <?php } ?>
 
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between">
                                 <div>
                                     <h6 class="my-0 text-dark">Curso de Italiano Inicial </h6> <small class="text-muted">De por vida</small>
-                                </div> <span class="text-muted"><?= $precioCursoOficial ?></span>
+                                </div> 
+                                <span class="text-muted"><?= $precio ?></span>
+                            </li>
+
+
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div>
+                                    <h6 class="my-0 text-danger"><b>Oferta 🔥</b></h6> <small class="text-muted"></small>
+                                </div> <span class="text-danger">- <?= $precioDescuento ?></span>
                             </li>
                             <?php
-                            foreach ($data['pack'] as $c => $item) {
+                            foreach ($producto['pack'] as $c => $item) {
                                 $precioItem = $item['PRECIO'];
                                 ?>
-                                <li class="list-group-item d-flex justify-content-between" id="item_<?= $item['ID_ABRE_PACK'] ?>" style="">
-                                    <input type="number" id="<?= $item['ID_ABRE_PACK'] ?>_item_price" value="<?= $precioItem ?>" hidden>
+                                <li class="list-group-item d-flex justify-content-between" id="item_<?= $item['ID_ABRE'] ?>" style="">
+                                    <input type="number" id="<?= $item['ID_ABRE'] ?>_item_price" value="<?= $precioItem ?>" hidden>
                                     <div>
-                                        <h6 class="my-0 text-success font-weight-bold"><b><?= $item['TITULO_1'] ?></b></h6> <small class="text-muted">De por vida</small>
-                                    </div> <span class="text-muted"><?= '$' . $precioItem . ' ARS' ?></span>
+                                        <h6 class="my-0 text-success font-weight-bold"><b><?= $item['NOMBRE'] ?></b></h6> <small class="text-muted">De por vida</small>
+                                    </div> <span class="text-muted"><?= Funciones::getFormatMoneda($precioItem, $simbolo, $item['MONEDA']) ?></span>
                                 </li>
                                 <?php
                             }
                             ?>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <div>
-                                    <h6 class="my-0 text-danger"><b>Promo 🔥</b></h6> <small class="text-muted"></small>
-                                </div> <span class="text-danger">- <?= $diferencia ?></span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between text-dark"> <span>Total</span>
-                                <b id="total_price"><?= $precioCurso ?></b>
-                            </li>
+                            <li class="list-group-item d-flex justify-content-between text-dark"> <span>Total</span> <b id="total_price"><?= $precioOferta ?><br></b></li>
+
                         </ul>
 
 
@@ -152,7 +161,9 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                             <div class="col-md-12 text-dark">
                                 <p class="mt-3 pb-2" style="font-family: montserrat_bold;"> ¿Por qué elegir Aprende Idiomas? </p>
                                 <ul>
-                                    <li> <i class="fas fa-check-square " style="color:#33B628;"></i> +45 clases</li>
+                                    <li> <i class="fas fa-check-square " style="color:#33B628;"></i> Descarga el curso y míralo sin conexión!</li>
+                                    <li> <i class="fas fa-check-square " style="color:#33B628;"></i> +30 Clases</li>
+									<li> <i class="fas fa-check-square " style="color:#33B628;"></i> +200 Ejercicios</li>
                                     <li> <i class="fas fa-check-square " style="color:#33B628;"></i> Acceso ilimitado</li>
                                     <li> <i class="fas fa-check-square " style="color:#33B628;"></i> Soporte 24 horas ante cualquier duda</li>
                                     <li><i class="fas fa-check-square " style="color:#33B628;"></i> Grupo privado de alumnos</li>
@@ -185,7 +196,7 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                                         <i class="fa fa-star"></i>
                                     </div>
                                     <div class="blockquote-footer">
-                                        <b>Gaston Benitez</b>, Ciudad de Buenos Aires</div>
+                                        <b>Gaston Benitez</b>, Ciudad de México</div>
                                 </div>
                                 <hr>
                                 <div class=" mb-0 text-dark">
@@ -198,7 +209,7 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                                         <i class="fa fa-star"></i>
                                     </div>
                                     <div class="blockquote-footer">
-                                        <b>Mica Vanesa</b>, Cordoba</div>
+                                        <b>Mica Vanesa</b>, Colombia</div>
                                 </div>
                             </div>
 
@@ -209,18 +220,7 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
 
                     <div class="col-md-6 order-md-2 my-auto col-xl-5 " id="arriba" >
 
-                        <div class="col-md-10 mx-auto text-dark rounded pb-5 py-5 px-md-4 px-xs-2 px-sm-2  bg-white mt-3" >
-                            <div class="text-center ">  <img class="img-fluid " src="img/securityjpg.jpg"></div>
-                            <div class="row">
-                                <div class=" mx-auto mt-3">     
-                                    <p class="text-center">Tu detalles contacto están seguros</p>
-                                </div>
-                                <div class="mx-auto mt-md-2">
-                                    <h5 class="mx-auto pb-md-3 mt-4 text-center" style="font-family: montserrat_bold;"><i class="fas fa-arrow-alt-circle-right text-success blink"></i><b> ¿Dónde querés recibir el curso?</b></h5>       
-                                </div>
-                            </div>
-                            <?php include('../a-pages/form.php') ?>
-                        </div>
+                        <?php include('../a-pages/form.php') ?>
                     </div>
 
                 </div>
@@ -247,7 +247,7 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-dark">
-                            <h3 style="font-family:montserrat_bold">¿Querés hablar con nosotros? ¡Escribinos ahora!</h3>
+                            <h3 style="font-family:montserrat_bold">¿Quieres hablar con nosotros? ¡Escríbenos ahora!</h3>
                             <hr>
                         </div>
                     </div>
@@ -263,25 +263,102 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                 </div>
             </div>
 
-            <?php include('../a-pages/footerTM.php') ?>
-            
+            <?php include('../a-pages/footer.php') ?>
+
+            <script src="../libraries/js/checkout-stripe.js"></script>
+            <script src="https://js.stripe.com/v3/"></script>
             <!-- upsell -->
             <script>
-            <?php
-            foreach ($data['pack'] as $c => $item) {
-                if($item['PRECIO'] > 0){
-                echo '$("#item_' . $item['ID_ABRE_PACK'] . '").attr("style", "display: none!important");';
+<?php
+foreach ($producto['pack'] as $c => $item) {
+    echo '$("#item_' . $item['ID_ABRE'] . '").attr("style", "display: none!important");';
+}
+?>
+                $(".check-producto-paquete").on("click", function () {
+                    var inputs = new Array();
+                    inputs = $("#pack").val().split('|');
+                    var idProducto = $(this).val();
+
+                    var amount = parseFloat($("#amount").val());
+                    var amountPack = parseFloat($("#" + idProducto + "_item_price").val());
+
+                    if ($(this).is(":checked")) {
+                        $("#item_" + idProducto + "").attr('style', '');
+                        amount += amountPack;
+                        inputs.push(idProducto);
+                    } else {
+                        $("#item_" + idProducto + "").attr('style', 'display: none!important');
+                        inputs = inputs.filter(function (elem) {
+                            return elem != idProducto;
+                        });
+                        amount -= amountPack;
+                    }
+                    $("#pack").val(inputs.join("|"));
+                    $("#amount").val(parseFloat(amount).toFixed(1));
+                    $("#total_price").html($('#simbolo').val() + getFloatValue(amount) + ' ' + $('#moneda').val());
+
+                    inputs = $("#pack").val().split('|');
+                    var arrayUpsell = inputs.sort();
+                    var idCodeUpsell = '';
+                    arrayUpsell.forEach(function (element) {
+                        idCodeUpsell += ('' + element + '');
+                    });
+                    //console.log(arrayUpsell);
+                    //console.log(idCodeUpsell);
+                    $("#pack").val(arrayUpsell.join('|'));
+                });
+
+                $('#curso').val('<?= $curso ?>');
+
+                function getFloatValue(value) {
+                    var monto = parseFloat(Math.round(value * 100) / 100) + '';
+                    var m1 = Array.from(monto.split('.'));
+                    var m2 = Array.from(m1[0]);
+                    m2 = m2.reverse();
+                    var strValA = '';
+                    var cont = 0;
+                    for (var i = 0; i < m2.length; i++) {
+                        cont++;
+                        strValA += (m2[i] + '');
+                        if (cont == 3 && i < m2.length - 1) {
+                            strValA += ',';
+                            cont = 0;
+                        }
+                    }
+                    m2 = Array.from(strValA);
+                    m2 = m2.reverse();
+                    var textval = '';
+                    for (var i = 0; i < m2.length; i++) {
+                        textval += m2[i] + '';
+                    }
+                    return textval;
                 }
-            }
-            ?>
             </script>
-            <script src="../a-libraries/js/checkoutv3.js?t=1"></script>
-            
-            <script>
-                new WOW().init();
-            </script>
+
             <script>
                 fbq('track', 'AddToCart');
+            </script>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'G-VE1K0ZKEG6');
+            </script>
+            <!-- Script AI de analytics -->
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-196494254-1');
             </script>
     </body>
 

@@ -1,41 +1,43 @@
 <?php
+if (isset($_GET['test'])) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
+
 $dirpage = '../';
-$idcurso = 'italiano_pack_experto';
+$titulo = 'Aprende Ingles desde 0';
+$curso = 'italiano_pack_experto';
+
+require("../a-includes/Keys.php");
 include("../a-includes/funcionsDB.php");
 include("../a-includes/logicparametros.php");
-$curso = getCursoDetalle($idcurso);
+require ("../a-includes/Funciones.php");
 
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
+//echo 'curso = ' . $curso . '<br>';
+//echo 'moneda = ' . $moneda . '<br><br><br>';
+$productoC1 = getDataProducto($curso, $moneda, $country_code);
+//echo "<pre>";
+//print_r($productoC1);
+//echo "</pre>";
+$simbolo = $productoC1['producto']['SIMBOLO'];
 
+$monedaOficial = $productoC1['producto']['MONEDA'];
+$precioCursoOficial = Funciones::getFormatMoneda($productoC1['producto']['PRECIO'], $simbolo, $productoC1['producto']['MONEDA']);
+$value = $valPrecio = $productoC1['producto']['PRECIO_DESC'];
+$precioCurso = Funciones::getFormatMoneda($valPrecio, $simbolo, $productoC1['producto']['MONEDA']);
+$porcentaje = '50%';
+
+$urlCheckout = 'checkout.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Aprende Idiomas - Curso de Italiano Pack Experto</title>
-        <?php include('../a-pages/headerTM.php') ?>
-                                <link rel="stylesheet" href="https://app.gandaweb.com/chat-style.css?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1">
-        <style>
-            @media (max-width: 600px) {
-                .chat-container {
-    position: fixed;
-    bottom: 150px;
-    right: 0px;
-    left: 0px;
-    width: 100%;
-    font-weight: bolder;
-}
-}
-
-
-        </style>
+        <?php include('../a-pages/header.php') ?>
     </head>
 
     <body style="font-family: montserrat_regular;">
-        
-        <?php include('../a-pages/timer.php') ?>
         <header>
             <div class="container">
                 <div class="row align-items-center">
@@ -74,16 +76,16 @@ $precioCurso = '$' . $value . ' ARS';
                             <ul class="font-weight-light" style="font-family: montserrat_light ;">
                                 <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> + 80 clases paso a paso desde cero!</li>
                                 <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Pack experto todos los niveles</li>
-								<li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Sirve para Ciudadanía Italiana</li>
-								<li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Mira el curso desde cualquier dispositivo!</li>
+                                <li class="wow fadeIn  animated" data-wow-delay="0.1" style="visibility: visible;-webkit-animation-delay: 0.1; -moz-animation-delay: 0.1; animation-delay: 0.1;"><i class="fas fa-check-circle text-dark"></i> Sirve para Ciudadanía Italiana</li>
+                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Mira el curso desde cualquier dispositivo!</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Acceso para siempre al curso</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Ayuda de los profesores online </li>
-								<li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Exámen al finalizar a cada nivel </li>
+                                <li class="wow fadeIn animated" data-wow-delay="0.2" style="visibility: visible;-webkit-animation-delay: 0.2; -moz-animation-delay: 0.2; animation-delay: 0.2;"> <i class="fas fa-check-circle text-dark"></i> Exámen al finalizar a cada nivel </li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;"><i class="fas fa-check-circle text-dark"></i> Otorgamos Certificado Oficial</li>
                                 <li class="wow fadeIn animated" data-wow-delay="0.3" style="visibility: visible;-webkit-animation-delay: 0.3; -moz-animation-delay: 0.3; animation-delay: 0.3;"><i class="fas fa-check-circle text-dark"></i> Estudialo desde tu PC, notebook, tablet o Celular</li>
                             </ul>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike>$25.998</strike><span class="font-weight-bold "> $12.999</span></h3>
-                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Argentina. Éste precio es final y en Pesos Argentinos</p>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-success text-white" style="background-color:#f3c910; color:black;font-family: montserrat_regular;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
+                            <p style="font-family: montserrat_bold">Aprende Idiomas es una empresa Latina. Éste precio es final y moneda local.</p>
                         </div>
                         <div class="call-button mt-4">
                             <div class="row">
@@ -118,8 +120,8 @@ $precioCurso = '$' . $value . ' ARS';
                 <div class="row">
                     <div class="mx-auto col-md-12">
                         <h1 class="text-white " style="font-family: montserrat_black">La mejor forma de aprender italiano a nivel mundial</h1>
-						<p>
-						<h1 class="text-white " style="font-family: montserrat_black">Realizando este curso estás preparado para solicitar Ciudadanía Italiana</h1>
+                        <p>
+                        <h1 class="text-white " style="font-family: montserrat_black">Realizando este curso estás preparado para solicitar Ciudadanía Italiana</h1>
                     </div>
                 </div>
             </div>
@@ -158,13 +160,13 @@ $precioCurso = '$' . $value . ' ARS';
                     <div class="col-md-6 offset-lg-1 d-flex flex-column justify-content-center py-4">
                         <h2 class="my-3 mx-auto mx-md-1 mt-5 mt-md-1" style="font-family: montserrat_bold"> <b>Vas a aprender:</b></h2>
                         <ul class="mx-auto mx-md-1 lead">
-							<li><i class="fas fa-check text-body" style="color:#f3c910;"></i><b> Contenido de los niveles: A1, A2 y B1. Estos niveles son los solicitado para aplicar en CIUDADANÍA ITALIANA</b></li>
+                            <li><i class="fas fa-check text-body" style="color:#f3c910;"></i><b> Contenido de los niveles: A1, A2 y B1. Estos niveles son los solicitado para aplicar en CIUDADANÍA ITALIANA</b></li>
                             <li><i class="fas fa-check text-body" style="color:#f3c910;"></i> Todos los tiempos verbales</li>
                             <li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Gramática desde nivel inicial a avanzado</li>
                             <li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Pronombres</li>
                             <li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Vocabulario avanzado para conversar</li>
                             <li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Lecturas</li>
-							<li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Examen por nivel</li>
+                            <li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Examen por nivel</li>
                             <li><i class="fas fa-check text-dark" style="color:#f3c910;"></i> Ejercicios y mucho más!</li>
                         </ul>
                     </div>
@@ -383,98 +385,98 @@ $precioCurso = '$' . $value . ' ARS';
                                     <div class="card-body">
                                         <div class=" show ">
                                             <br>	
-													<b><li>Nivel A1</li></b>
-													<li>Clase 1 – Introducción al italiano</li>
-                                                    <li>Clase 2 – Pronunciación</li>
-                                                    <li>Clase 3 – Comprensión de texto</li>
-                                                    <li>Clase 4 – Pronombres personales</li>
-                                                    <li>Clase 5 – Verbo essere</li>
-                                                    <li>Clase 6 – Saluti</li>
-                                                    <li>Clase 7 – Presentación</li>
-                                                    <li>Clase 8 – Conociendo italia</li>
-                                                    <li>Clase 9 – Sustantivo</li>
-                                                    <li>Clase 10 – Eccezioni</li>
-                                                    <li>Clase 11 – Artículo determinativo</li>
-                                                    <li>Clase 12 – Esercizi</li>
-                                                    <li>Clase 13 – Articoli indeterminativi</li>
-                                                    <li>Clase 14 – La Famiglia</li>
-                                                    <li>Clase 15 – I Numeri</li>
-                                                    <li>Clase 16 – Come Dire l´orario</li>
-                                                    <li>Clase 17 – Il Calendario</li>
-                                                    <li>Clase 18 – Presente</li>
-                                                    <li>Clase 19 – Verbo avere</li>
-                                                    <li>Clase 20 – Verbi Irregolari</li>
-                                                    <li>Clase 21 – Il Meteo</li>
-                                                    <li>Clase 22 – Aggettivi</li>
-                                                    <li>Clase 23 – Lectura</li>
-                                                    <li>Clase 24 – Comparativi e superlativi</li>
-                                                    <li>Clase 25 – Il colori</li>
-                                                    <li>Clase 26 – Preposiciones</li>
-                                                    <li>Clase 27 – Preposiciones articuladas</li>
-                                                    <li>Clase 28 – Hobby</li>
-                                                    <li>Clase 29 – Lectura 2</li>
-                                                    <li>Clase 30 – Pronombres</li>
-                                                    <li>Clase 31 – El cuerpo humano</li>
-                                                    <li>Clase 32 – La casa</li>
-                                                    <li>Clase 33 – Las comidas y el restaurante</li>
-													<li>Clase 34 – Lectura 3</li>
-													<li>Clase 35 – Presente continuo</li>
-													<li>Clase 36 – La ciudad</li>
-													<li>Clase 37 – Viajes y vacaciones</li>
-													<li>Clase 38 – Medios de comunicación</li>
-													<li>Clase 39 – Redes sociales</li>
-													<li>Clase 40 – Adjetivos y pronombres posesivos</li>
-													<li>Clase 41 – Passato prossimo</li>
-													<li>Clase 42 – Lectura 4</li>
-													<li>Clase 43 – Essercizi</li>
-													<b><li>Nivel A2</li></b>
-													<li>Lezione n1 - I mezzi di trasporto</li>
-                                                    <li>Lezione n1 parte 2- I mezzi di trasporto</li>
-                                                    <li>Lezione n2- il futuro semplice</li>
-                                                    <li>Lezione n3- gli avverbi di modo, tempo e quantità</li>
-                                                    <li>Lezione n4- Le congiunzioni coordinanti e subordinanti</li>
-                                                    <li>Lezione n5 - gli hobby</li>
-													<li>Lezione n6- il verbo esserci</li>                                                    
-                                                    <li>Lezione n7 Gli sport - parte 2</li>
-                                                    <li>Lezione n8 - i verbi andare e venire</li>
-                                                    <li>Lezione n9- Il tempo e le stagioni dell anno</li>
-                                                    <li>Lezione n10- I verbi sentire e ascoltare</li>
-													<li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
-													<li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
-                                                    <li>Lezione n12- verbo guardare, osservare e vedere</li>
-                                                    <li>Lezione n13- Esprimere opinione, desiderio e bisogno</li>
-                                                    <li>Lezione n14- i verbi essere o stare</li>
-                                                    <li>Lezione n15- verbi succedere, avvenire, capitare e accadere</li>
-                                                    <li>Lezione n16 - descripción de personas</li>
-                                                    <li>Lezione n17 - la casa</li>
-                                                    <li>Lezione n18- il non e il non, forma de responder preguntas</li>
-                                                    <li>Lezione n19 – il hotel o l_albergo</li>
-                                                    <li>Lezione n20- I servizi</li>							
-													<b><li>Nivel B1</li></b>
-													<li>Lezione n1- L'imperfetto.</li>
-                                                    <li>Lezione n2 - la famiglia e le relazioni</li>
-                                                    <li>Lezione n3- il condizionale semplice e composto</li>
-                                                    <li>lezione n4- le professioni</li>
-                                                    <li>Lezione n5 - Los pronombres reflexivos y recíprocos</li>
-													<li>Lezione n6- La comida y la cocina italiana</li>                                                    
-                                                    <li>Lezione n7- El uso de los pronombres directos e indirectos</li>
-                                                    <li>Lezione n8 - il corpo umano e la salute</li>
-                                                    <li>Lezione n9 - I pronomi relativi</li>
-                                                    <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 1</li>
-													<li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
-													<li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
-                                                    <li>Lezione n12- I pronomi interrogativi</li>
-                                                    <li>Lezione n13 - la natura e l'ambiente</li>
-                                                    <li>Lezione n14- I verbi modali</li>
-                                                    <li>Lezione n15- i paesi e le culture straniere</li>
-                                                    <li>Lezione n16- La voce passiva</li>
-                                                    <li>Lezione n17- I verbi pronominali</li>
-                                                    <li>Lezione n18- I mezzi di comunicazione e le tecnologie. Espressioni colloquiali</li>
-                                                    <li>Lezione n19- i comparativi e i superlativi</li>
-                                                    <li>Lezione n20- cinema e musica</li>
-													<li>Lezione n21- Eventi culturali e festività locali</li>
-													<li>Lezione n22- L'uso delle congiunzioni</li>
-													<li>Lezione n23- i tempi verbali</li>
+                                            <b><li>Nivel A1</li></b>
+                                            <li>Clase 1 – Introducción al italiano</li>
+                                            <li>Clase 2 – Pronunciación</li>
+                                            <li>Clase 3 – Comprensión de texto</li>
+                                            <li>Clase 4 – Pronombres personales</li>
+                                            <li>Clase 5 – Verbo essere</li>
+                                            <li>Clase 6 – Saluti</li>
+                                            <li>Clase 7 – Presentación</li>
+                                            <li>Clase 8 – Conociendo italia</li>
+                                            <li>Clase 9 – Sustantivo</li>
+                                            <li>Clase 10 – Eccezioni</li>
+                                            <li>Clase 11 – Artículo determinativo</li>
+                                            <li>Clase 12 – Esercizi</li>
+                                            <li>Clase 13 – Articoli indeterminativi</li>
+                                            <li>Clase 14 – La Famiglia</li>
+                                            <li>Clase 15 – I Numeri</li>
+                                            <li>Clase 16 – Come Dire l´orario</li>
+                                            <li>Clase 17 – Il Calendario</li>
+                                            <li>Clase 18 – Presente</li>
+                                            <li>Clase 19 – Verbo avere</li>
+                                            <li>Clase 20 – Verbi Irregolari</li>
+                                            <li>Clase 21 – Il Meteo</li>
+                                            <li>Clase 22 – Aggettivi</li>
+                                            <li>Clase 23 – Lectura</li>
+                                            <li>Clase 24 – Comparativi e superlativi</li>
+                                            <li>Clase 25 – Il colori</li>
+                                            <li>Clase 26 – Preposiciones</li>
+                                            <li>Clase 27 – Preposiciones articuladas</li>
+                                            <li>Clase 28 – Hobby</li>
+                                            <li>Clase 29 – Lectura 2</li>
+                                            <li>Clase 30 – Pronombres</li>
+                                            <li>Clase 31 – El cuerpo humano</li>
+                                            <li>Clase 32 – La casa</li>
+                                            <li>Clase 33 – Las comidas y el restaurante</li>
+                                            <li>Clase 34 – Lectura 3</li>
+                                            <li>Clase 35 – Presente continuo</li>
+                                            <li>Clase 36 – La ciudad</li>
+                                            <li>Clase 37 – Viajes y vacaciones</li>
+                                            <li>Clase 38 – Medios de comunicación</li>
+                                            <li>Clase 39 – Redes sociales</li>
+                                            <li>Clase 40 – Adjetivos y pronombres posesivos</li>
+                                            <li>Clase 41 – Passato prossimo</li>
+                                            <li>Clase 42 – Lectura 4</li>
+                                            <li>Clase 43 – Essercizi</li>
+                                            <b><li>Nivel A2</li></b>
+                                            <li>Lezione n1 - I mezzi di trasporto</li>
+                                            <li>Lezione n1 parte 2- I mezzi di trasporto</li>
+                                            <li>Lezione n2- il futuro semplice</li>
+                                            <li>Lezione n3- gli avverbi di modo, tempo e quantità</li>
+                                            <li>Lezione n4- Le congiunzioni coordinanti e subordinanti</li>
+                                            <li>Lezione n5 - gli hobby</li>
+                                            <li>Lezione n6- il verbo esserci</li>                                                    
+                                            <li>Lezione n7 Gli sport - parte 2</li>
+                                            <li>Lezione n8 - i verbi andare e venire</li>
+                                            <li>Lezione n9- Il tempo e le stagioni dell anno</li>
+                                            <li>Lezione n10- I verbi sentire e ascoltare</li>
+                                            <li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
+                                            <li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
+                                            <li>Lezione n12- verbo guardare, osservare e vedere</li>
+                                            <li>Lezione n13- Esprimere opinione, desiderio e bisogno</li>
+                                            <li>Lezione n14- i verbi essere o stare</li>
+                                            <li>Lezione n15- verbi succedere, avvenire, capitare e accadere</li>
+                                            <li>Lezione n16 - descripción de personas</li>
+                                            <li>Lezione n17 - la casa</li>
+                                            <li>Lezione n18- il non e il non, forma de responder preguntas</li>
+                                            <li>Lezione n19 – il hotel o l_albergo</li>
+                                            <li>Lezione n20- I servizi</li>							
+                                            <b><li>Nivel B1</li></b>
+                                            <li>Lezione n1- L'imperfetto.</li>
+                                            <li>Lezione n2 - la famiglia e le relazioni</li>
+                                            <li>Lezione n3- il condizionale semplice e composto</li>
+                                            <li>lezione n4- le professioni</li>
+                                            <li>Lezione n5 - Los pronombres reflexivos y recíprocos</li>
+                                            <li>Lezione n6- La comida y la cocina italiana</li>                                                    
+                                            <li>Lezione n7- El uso de los pronombres directos e indirectos</li>
+                                            <li>Lezione n8 - il corpo umano e la salute</li>
+                                            <li>Lezione n9 - I pronomi relativi</li>
+                                            <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 1</li>
+                                            <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
+                                            <li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
+                                            <li>Lezione n12- I pronomi interrogativi</li>
+                                            <li>Lezione n13 - la natura e l'ambiente</li>
+                                            <li>Lezione n14- I verbi modali</li>
+                                            <li>Lezione n15- i paesi e le culture straniere</li>
+                                            <li>Lezione n16- La voce passiva</li>
+                                            <li>Lezione n17- I verbi pronominali</li>
+                                            <li>Lezione n18- I mezzi di comunicazione e le tecnologie. Espressioni colloquiali</li>
+                                            <li>Lezione n19- i comparativi e i superlativi</li>
+                                            <li>Lezione n20- cinema e musica</li>
+                                            <li>Lezione n21- Eventi culturali e festività locali</li>
+                                            <li>Lezione n22- L'uso delle congiunzioni</li>
+                                            <li>Lezione n23- i tempi verbali</li>
                                             <br>
                                             <br>
                                         </div>
@@ -563,8 +565,8 @@ $precioCurso = '$' . $value . ' ARS';
                                             <div class="card-body">
                                                 <div class=" show ">
                                                     <br>
-													<b><li>Nivel A1</li></b>
-													<li>Clase 1 – Introducción al italiano</li>
+                                                    <b><li>Nivel A1</li></b>
+                                                    <li>Clase 1 – Introducción al italiano</li>
                                                     <li>Clase 2 – Pronunciación</li>
                                                     <li>Clase 3 – Comprensión de texto</li>
                                                     <li>Clase 4 – Pronombres personales</li>
@@ -597,30 +599,30 @@ $precioCurso = '$' . $value . ' ARS';
                                                     <li>Clase 31 – El cuerpo humano</li>
                                                     <li>Clase 32 – La casa</li>
                                                     <li>Clase 33 – Las comidas y el restaurante</li>
-													<li>Clase 34 – Lectura 3</li>
-													<li>Clase 35 – Presente continuo</li>
-													<li>Clase 36 – La ciudad</li>
-													<li>Clase 37 – Viajes y vacaciones</li>
-													<li>Clase 38 – Medios de comunicación</li>
-													<li>Clase 39 – Redes sociales</li>
-													<li>Clase 40 – Adjetivos y pronombres posesivos</li>
-													<li>Clase 41 – Passato prossimo</li>
-													<li>Clase 42 – Lectura 4</li>
-													<li>Clase 43 – Essercizi</li>
-													<b><li>Nivel A2</li></b>
-													<li>Lezione n1 - I mezzi di trasporto</li>
+                                                    <li>Clase 34 – Lectura 3</li>
+                                                    <li>Clase 35 – Presente continuo</li>
+                                                    <li>Clase 36 – La ciudad</li>
+                                                    <li>Clase 37 – Viajes y vacaciones</li>
+                                                    <li>Clase 38 – Medios de comunicación</li>
+                                                    <li>Clase 39 – Redes sociales</li>
+                                                    <li>Clase 40 – Adjetivos y pronombres posesivos</li>
+                                                    <li>Clase 41 – Passato prossimo</li>
+                                                    <li>Clase 42 – Lectura 4</li>
+                                                    <li>Clase 43 – Essercizi</li>
+                                                    <b><li>Nivel A2</li></b>
+                                                    <li>Lezione n1 - I mezzi di trasporto</li>
                                                     <li>Lezione n1 parte 2- I mezzi di trasporto</li>
                                                     <li>Lezione n2- il futuro semplice</li>
                                                     <li>Lezione n3- gli avverbi di modo, tempo e quantità</li>
                                                     <li>Lezione n4- Le congiunzioni coordinanti e subordinanti</li>
                                                     <li>Lezione n5 - gli hobby</li>
-													<li>Lezione n6- il verbo esserci</li>                                                    
+                                                    <li>Lezione n6- il verbo esserci</li>                                                    
                                                     <li>Lezione n7 Gli sport - parte 2</li>
                                                     <li>Lezione n8 - i verbi andare e venire</li>
                                                     <li>Lezione n9- Il tempo e le stagioni dell anno</li>
                                                     <li>Lezione n10- I verbi sentire e ascoltare</li>
-													<li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
-													<li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
+                                                    <li>Lezione n11- descrivere attività quotidiane, i gusti e le preferenze</li>
+                                                    <li>Lezione n11 parte 2 – descrivere attività quotidiane, i gusti</li>
                                                     <li>Lezione n12- verbo guardare, osservare e vedere</li>
                                                     <li>Lezione n13- Esprimere opinione, desiderio e bisogno</li>
                                                     <li>Lezione n14- i verbi essere o stare</li>
@@ -630,19 +632,19 @@ $precioCurso = '$' . $value . ' ARS';
                                                     <li>Lezione n18- il non e il non, forma de responder preguntas</li>
                                                     <li>Lezione n19 – il hotel o l_albergo</li>
                                                     <li>Lezione n20- I servizi</li>							
-													<b><li>Nivel B1</li></b>
-													<li>Lezione n1- L'imperfetto.</li>
+                                                    <b><li>Nivel B1</li></b>
+                                                    <li>Lezione n1- L'imperfetto.</li>
                                                     <li>Lezione n2 - la famiglia e le relazioni</li>
                                                     <li>Lezione n3- il condizionale semplice e composto</li>
                                                     <li>lezione n4- le professioni</li>
                                                     <li>Lezione n5 - Los pronombres reflexivos y recíprocos</li>
-													<li>Lezione n6- La comida y la cocina italiana</li>                                                    
+                                                    <li>Lezione n6- La comida y la cocina italiana</li>                                                    
                                                     <li>Lezione n7- El uso de los pronombres directos e indirectos</li>
                                                     <li>Lezione n8 - il corpo umano e la salute</li>
                                                     <li>Lezione n9 - I pronomi relativi</li>
                                                     <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 1</li>
-													<li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
-													<li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
+                                                    <li>Lezione n10- Gli aggettivi possessivi e dimostrativi parte 2</li>
+                                                    <li>Lezione n11-Ropa y moda expresiones lingüísticas</li>
                                                     <li>Lezione n12- I pronomi interrogativi</li>
                                                     <li>Lezione n13 - la natura e l'ambiente</li>
                                                     <li>Lezione n14- I verbi modali</li>
@@ -652,10 +654,10 @@ $precioCurso = '$' . $value . ' ARS';
                                                     <li>Lezione n18- I mezzi di comunicazione e le tecnologie. Espressioni colloquiali</li>
                                                     <li>Lezione n19- i comparativi e i superlativi</li>
                                                     <li>Lezione n20- cinema e musica</li>
-													<li>Lezione n21- Eventi culturali e festività locali</li>
-													<li>Lezione n22- L'uso delle congiunzioni</li>
-													<li>Lezione n23- i tempi verbali</li>
-                                          			<br>
+                                                    <li>Lezione n21- Eventi culturali e festività locali</li>
+                                                    <li>Lezione n22- L'uso delle congiunzioni</li>
+                                                    <li>Lezione n23- i tempi verbali</li>
+                                                    <br>
                                                     <br>
                                                     <a href="" class="sc-roll hvr-sweep-to-top  wow flipInX animated text-dark" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;"><b>Querés más conocimientos? Mira el nivel 2 👉 </b></a>
                                                 </div>
@@ -694,8 +696,8 @@ $precioCurso = '$' . $value . ' ARS';
                         </div>
                         <div class="feature-list mt-4">
                             <p> • Aplicable para la CIUDADANÍA ITALIANA
-							<p> • Pago por única vez en Pesos Argentinos (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
-                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike>$25.998</strike><span class="font-weight-bold "> $12.999</span></h3>
+                            <p> • Pago por única vez en moneda local (sin suscripciones ni pagos mensuales). <br>• Garantía de devolución de 7 días</p>
+                            <h3 class="mt-md-4 p-2 mt-3 col-8 col-md-6 text-center bg-danger text-white" style="background-color:#f3c910; color:black;font-family: montserrat_bold;"><strike><?= $precioCursoOficial ?></strike><span class="font-weight-bold "> <?= $precioCurso ?></span></h3>
                         </div>
                         <div class="call-button mt-5">
                             <div class="row">
@@ -711,11 +713,9 @@ $precioCurso = '$' . $value . ' ARS';
                 </div>
             </div>
         </section>
-        
-        <?php include('../a-pages/timerFooter.php') ?>
-        
-        <?php include('../a-pages/footerTM.php') ?>
-        
+
+        <?php include('../a-pages/footer.php') ?>
+
         <script>
             fbq('track', 'ViewContent');
         </script>
@@ -724,6 +724,8 @@ $precioCurso = '$' . $value . ' ARS';
         </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
+
+        <!-- FEDE PIXEL FB ADS PREVENTIVO 20-10-2023 -->
         <script>
             window.dataLayer = window.dataLayer || [];
 
@@ -743,6 +745,39 @@ $precioCurso = '$' . $value . ' ARS';
             gtag('js', new Date());
             gtag('config', 'UA-196494254-1');
         </script>
-        <script src="https://app.gandaweb.com/chat-script.js?token=CGKGG7HKmfYbL41AoIAaY6j5s6x38ThcBOddfhd7BPIgpVYbqOHdugFlP2c1"></script>
+        <script>
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '851421198669354');
+            fbq('init', '177917573796998');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"
+                       /></noscript>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=177917573796998&ev=PageView&noscript=1"
+                       /></noscript>			   
+
+        <!-- End Facebook Pixel Code --> 
     </body>
 </html>

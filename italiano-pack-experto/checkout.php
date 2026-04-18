@@ -1,19 +1,28 @@
 <?php
-$dirpage = '../';
+$titulo = 'Realizar compra';
+$dirpage = '../'; // Esta variable tiene como valor la dirección de la raiz del proyecto
+$curso = 'italiano_pack_experto'; // Variable que contiene el id del curso a visualizar
 
-$idcurso = 'italiano_pack_experto';
-include("../a-includes/funcionsDB.php");
+include("../a-includes/funcionsDBStripe.php");
 include("../a-includes/logicparametros.php");
-$data = getCursoDetalleCheckout($idcurso);
-$curso = $data['producto'];
+require ("../a-includes/Funciones.php");
 
-//PRECIO_UNITARIO
-$value = $curso['PRECIO_UNITARIO'];
-$precioCursoOficial = '$' . intval(($value / $curso['PORCENTAJE_DES']) * 100) . ' ARS';
-$precioDescuento = $value;
-$precioCursoDescuento = '$' . $value . ' ARS';
-$precioCurso = '$' . $value . ' ARS';
-$diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value) . ' ARS';
+$producto = getDataProductoCheckout($curso, $moneda, $country_code);
+if (isset($_GET['test']) && $_GET['test'] == 1) {
+    echo "<pre>";
+    print_r($producto);
+    echo "</pre>";
+}
+
+$simbolo = $producto['producto']['SIMBOLO'];
+$precio = Funciones::getFormatMoneda($producto['producto']['PRECIO'], $simbolo, $producto['producto']['MONEDA']);
+$moneda = $producto['producto']['MONEDA'];
+
+$valPrecio = floatval($producto['producto']['PRECIO']);
+$valPrecioOferta = floatval($producto['producto']['PRECIO_DESC']);
+$valPrecioDescuento = floatval($valPrecio - $valPrecioOferta);
+$precioOferta = Funciones::getFormatMoneda($valPrecioOferta, $simbolo, $producto['producto']['MONEDA']);
+$precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $producto['producto']['MONEDA']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,51 +109,47 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                     <div class="col-md-5 mx-auto  my-auto" style="padding: 80px 20px;">
                         <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Resumen</b></span> </h4>
                         <?php
-                        foreach ($data['pack'] as $c => $item) {
-                            $precioItem = $item['PRECIO'];
+                        foreach ($producto['pack'] as $upsell) {
+                            $precioItem = $upsell['PRECIO'];
                             ?>
-                            <div class="p-3 mb-3 text-dark" style="border-style: dashed;border-width:2px;border-color: darkgray;background-color: rgba(255, 234, 118, 0.3); ">
-                                <i class="fas fa-arrow-alt-circle-right text-danger blink text-dark"></i> 
-                                <input class="check-producto-paquete" type="checkbox" id="up_<?= $item['ID_ABRE_PACK'] ?>" value="<?= $item['ID_ABRE_PACK'] ?>"/>
-                                <input id="id_up_<?= $item['ID_ABRE_PACK'] ?>" value="<?= $item['ID_UPSELL'] ?>" hidden=""/>
-                                <?= str_replace('{#MONTO}', ('$' . $precioItem . ' ARG'), $item['TITULO_2']) ?>
-                                <p class="mt-2  px-3 text-dark">
-                                    <?= str_replace('{#MONTO}', ('$' . $precioItem . ' ARG'), $item['DESCRIPCION']) ?>
-                                </p>
+                            <div class="p-3 mb-3" style="color:black; border-style: dashed;border-width:2px;;background-color: rgba(255, 234, 118, 0.3); "> 
+                                <i class="fas fa-arrow-alt-circle-right text-danger blink"></i> 
+                                <input type="checkbox" id="up_<?= $upsell['ID_ABRE'] ?>" value="<?= $upsell['ID_ABRE'] ?>" class="check-producto-paquete"> 
+                                <b><?= str_replace('{#MONTO}', Funciones::getFormatMoneda($precioItem, $simbolo, $upsell['MONEDA']), $upsell['TITULO']) ?></b>
+                                <p class="mt-2  px-3 "><?= str_replace('{#MONTO}', Funciones::getFormatMoneda($precioItem, $simbolo, $upsell['MONEDA']), $upsell['DESCRIPCION']) ?>
                             </div>
-                            <?php
-                        }
-                        ?> 
+                        <?php } ?>
 
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between">
                                 <div>
-                                    <h6 class="my-0 text-dark">Curso de Italiano Pack Experto </h6> <small class="text-muted">Acceso online</small>
-                                </div> <span class="text-muted"><?= $precioCursoOficial ?></span>
+                                    <h6 class="my-0 text-dark">Pack Experto Italiano A1 A2 y B1 </h6> <small class="text-muted">De por vida</small>
+                                </div> 
+                                <span class="text-muted"><?= $precio ?></span>
+                            </li>
+
+
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div>
+                                    <h6 class="my-0 text-danger"><b>Oferta 🔥</b></h6> <small class="text-muted"></small>
+                                </div> <span class="text-danger">- <?= $precioDescuento ?></span>
                             </li>
                             <?php
-                            foreach ($data['pack'] as $c => $item) {
+                            foreach ($producto['pack'] as $c => $item) {
                                 $precioItem = $item['PRECIO'];
                                 ?>
-                                <li class="list-group-item d-flex justify-content-between" id="item_<?= $item['ID_ABRE_PACK'] ?>" style="">
-                                    <input type="number" id="<?= $item['ID_ABRE_PACK'] ?>_item_price" value="<?= $precioItem ?>" hidden>
+                                <li class="list-group-item d-flex justify-content-between" id="item_<?= $item['ID_ABRE'] ?>" style="">
+                                    <input type="number" id="<?= $item['ID_ABRE'] ?>_item_price" value="<?= $precioItem ?>" hidden>
                                     <div>
-                                        <h6 class="my-0 text-success font-weight-bold"><b><?= $item['TITULO_1'] ?></b></h6> <small class="text-muted">De por vida</small>
-                                    </div> <span class="text-muted"><?= '$' . $precioItem . ' ARS' ?></span>
+                                        <h6 class="my-0 text-success font-weight-bold"><b><?= $item['NOMBRE'] ?></b></h6> <small class="text-muted">De por vida</small>
+                                    </div> <span class="text-muted"><?= Funciones::getFormatMoneda($precioItem, $simbolo, $item['MONEDA']) ?></span>
                                 </li>
                                 <?php
                             }
                             ?>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <div>
-                                    <h6 class="my-0 text-danger"><b>Promo 🔥</b></h6> <small class="text-muted"></small>
-                                </div> <span class="text-danger">- <?= $diferencia ?></span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between text-dark"> <span>Total</span>
-                                <b id="total_price"><?= $precioCurso ?></b>
-                            </li>
-                        </ul>
+                            <li class="list-group-item d-flex justify-content-between text-dark"> <span>Total</span> <b id="total_price"><?= $precioOferta ?><br></b></li>
 
+                        </ul>
 
                         <p class="text-left mt-2 ml-1  text-dark">• Pago por única vez.</p>
                         <hr>
@@ -246,7 +251,6 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
             <br>
             <br>
             <br>
-            
             <div class="py-5 text-center">
                 <div class="container">
                     <div class="row">
@@ -266,24 +270,83 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
                     </div>
                 </div>
             </div>
-                        
-            <?php include('../a-pages/footer.php') ?>
             
+            <?php include('../a-pages/footer.php') ?>
+
+            <script src="../libraries/js/checkout-stripe.js"></script>
+            <script src="https://js.stripe.com/v3/"></script>
             <!-- upsell -->
             <script>
-            <?php
-            foreach ($data['pack'] as $c => $item) {
-                if($item['PRECIO'] > 0){
-                echo '$("#item_' . $item['ID_ABRE_PACK'] . '").attr("style", "display: none!important");';
+<?php
+foreach ($producto['pack'] as $c => $item) {
+    echo '$("#item_' . $item['ID_ABRE'] . '").attr("style", "display: none!important");';
+}
+?>
+                $(".check-producto-paquete").on("click", function () {
+                    var inputs = new Array();
+                    inputs = $("#pack").val().split('|');
+                    var idProducto = $(this).val();
+
+                    var amount = parseFloat($("#amount").val());
+                    var amountPack = parseFloat($("#" + idProducto + "_item_price").val());
+
+                    if ($(this).is(":checked")) {
+                        $("#item_" + idProducto + "").attr('style', '');
+                        amount += amountPack;
+                        inputs.push(idProducto);
+                    } else {
+                        $("#item_" + idProducto + "").attr('style', 'display: none!important');
+                        inputs = inputs.filter(function (elem) {
+                            return elem != idProducto;
+                        });
+                        amount -= amountPack;
+                    }
+                    $("#pack").val(inputs.join("|"));
+                    $("#amount").val(parseFloat(amount).toFixed(1));
+                    $("#total_price").html($('#simbolo').val() + getFloatValue(amount) + ' ' + $('#moneda').val());
+
+                    inputs = $("#pack").val().split('|');
+                    var arrayUpsell = inputs.sort();
+                    var idCodeUpsell = '';
+                    arrayUpsell.forEach(function (element) {
+                        idCodeUpsell += ('' + element + '');
+                    });
+                    //console.log(arrayUpsell);
+                    //console.log(idCodeUpsell);
+                    $("#pack").val(arrayUpsell.join('|'));
+                });
+
+                $('#curso').val('<?= $curso ?>');
+
+                function getFloatValue(value) {
+                    var monto = parseFloat(Math.round(value * 100) / 100) + '';
+                    var m1 = Array.from(monto.split('.'));
+                    var m2 = Array.from(m1[0]);
+                    m2 = m2.reverse();
+                    var strValA = '';
+                    var cont = 0;
+                    for (var i = 0; i < m2.length; i++) {
+                        cont++;
+                        strValA += (m2[i] + '');
+                        if (cont == 3 && i < m2.length - 1) {
+                            strValA += ',';
+                            cont = 0;
+                        }
+                    }
+                    m2 = Array.from(strValA);
+                    m2 = m2.reverse();
+                    var textval = '';
+                    for (var i = 0; i < m2.length; i++) {
+                        textval += m2[i] + '';
+                    }
+                    return textval;
                 }
-            }
-            ?>
             </script>
-            <script src="../a-libraries/js/checkoutv3.js?t=1"></script>
+
             <script>
                 fbq('track', 'AddToCart');
             </script>
-            
+
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
             <script>
@@ -299,7 +362,8 @@ $diferencia = '$' . (intval(($value / $curso['PORCENTAJE_DES']) * 100) - $value)
             <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag() {
-                    dataLayer.push(arguments);}
+                    dataLayer.push(arguments);
+                }
                 gtag('js', new Date());
 
                 gtag('config', 'UA-196494254-1');

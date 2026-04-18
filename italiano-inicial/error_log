@@ -1,1129 +1,298 @@
-[02-Aug-2023 13:02:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('104.164.173.181', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Aug-2023 13:02:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.245', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Aug-2023 13:02:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.149', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Aug-2023 13:03:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('62.73.100.133', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Aug-2023 13:16:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.10', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Aug-2023 13:16:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.1', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Aug-2023 13:16:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'aprendee_neuro_couch_admin'@'localhost' to database 'aprendee_neuro_couch' in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.8', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[05-Aug-2023 02:56:10 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=579288 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('170.51.168.173', 'italiano_inicia...', '{"ip":"170.51.1...', '{"_ga_VE1K0ZKEG...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-
-Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(3 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[06-Aug-2023 01:12:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.1', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[06-Aug-2023 01:12:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.6', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[06-Aug-2023 01:12:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.120', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[06-Aug-2023 17:16:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.179.75.2', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[07-Aug-2023 21:08:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.19.97.185', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[07-Aug-2023 22:10:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.225.146.32', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[10-Aug-2023 01:18:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.104.200.42', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[10-Aug-2023 22:58:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.123.223.155', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[11-Aug-2023 12:14:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.141.134.183', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[14-Aug-2023 18:50:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.19.97.185', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[15-Aug-2023 22:36:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('138.121.81.70', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[16-Aug-2023 01:00:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('201.252.101.195', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[17-Aug-2023 14:39:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.120', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[23-Aug-2023 13:08:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.114.129.114', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[24-Aug-2023 22:05:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('186.148.126.74', 'italiano_inicia...', '{"message":"You...', '{"_fbp":"fb.1.1...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[24-Aug-2023 22:05:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.117.160.84', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[24-Aug-2023 22:11:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.115.230.64', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Aug-2023 17:49:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('186.158.228.71', 'italiano_inicia...', '{"ip":"186.158....', '[]')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Aug-2023 17:49:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.158.228.71', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Aug-2023 22:33:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.48.252.16', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Aug-2023 22:33:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.3.51.229', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Aug-2023 22:35:58 UTC] PHP Warning:  Division by zero in /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php on line 10
-[29-Aug-2023 00:31:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('179.62.59.150', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[29-Aug-2023 00:31:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.7.16.60', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[29-Aug-2023 17:02:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.220.149.6', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[29-Aug-2023 17:02:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.220.149.19', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Sep-2023 11:22:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.124.176.202', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Sep-2023 11:23:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.124.176.202', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[06-Sep-2023 12:22:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.231.76.60', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[06-Sep-2023 12:22:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.128.104.81', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[09-Sep-2023 02:54:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('138.117.16.131', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[18-Sep-2023 02:53:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.12.29.117', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[18-Sep-2023 15:24:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.9.128.34', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[27-Sep-2023 02:00:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('157.55.39.12', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[27-Sep-2023 21:00:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.171.249.116', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[29-Sep-2023 17:39:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.139.61.189', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[29-Sep-2023 19:54:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.143.134.131', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[03-Oct-2023 19:13:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.93.208.16', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[04-Oct-2023 12:07:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.12.57.36', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[04-Oct-2023 20:07:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.157.49.151', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[04-Oct-2023 20:44:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.117.92.108', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[04-Oct-2023 20:44:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.117.92.108', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[07-Oct-2023 03:00:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.79.2', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[08-Oct-2023 23:09:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.46.71.201', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[13-Oct-2023 11:59:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.137.131.234', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[16-Oct-2023 12:03:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.47.200.113', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[16-Oct-2023 12:03:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.47.200.113', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[31-Oct-2023 20:01:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.84.76.20', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Nov-2023 00:17:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.227.21.3', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Nov-2023 00:18:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('179.62.60.213', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[17-Nov-2023 12:18:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.160.8.133', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[17-Nov-2023 12:38:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('173.252.79.10', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[17-Nov-2023 13:10:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.7', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[17-Nov-2023 13:10:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('69.63.184.117', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[17-Nov-2023 13:25:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.189.218.83', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Dec-2023 22:33:15 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=2787645 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('104.164.173.53', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-
-Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.c in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Dec-2023 22:33:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.105', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Dec-2023 22:33:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('154.28.229.80', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[07-Dec-2023 16:39:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.249.66.160', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[13-Dec-2023 18:12:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.127.198.20', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[15-Dec-2023 12:04:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.112.139.45', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Dec-2023 15:08:18 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=3245659 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(83): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(6): getCursoDetalle('italiano_inicia...')
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:05:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:05:39 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:05:39 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:05:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:07:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:08:35 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:10:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 348
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 383
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 389
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 390
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 398
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 399
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 410
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 451
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 459
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 460
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 461
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 463
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Undefined offset: 0 in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[27-Sep-2023 01:15:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDBStripe.php on line 464
+[02-Jan-2024 00:43:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('173.252.127.9', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[02-Jan-2024 00:43:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('173.252.127.12', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[02-Jan-2024 00:43:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('173.252.127.16', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[02-Jan-2024 00:43:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('173.252.127.116', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[12-Jan-2024 13:58:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.48.103.15', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[12-Jan-2024 13:58:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(38): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(51): insertIP('186.48.103.15', 'italiano_inicia...', '{"ip":"186.48.1...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[15-Jan-2024 17:24:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('187.190.185.246', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[16-Jan-2024 00:38:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.155.13.86', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[16-Jan-2024 00:38:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.155.13.86', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[16-Jan-2024 00:38:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.155.13.86', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[16-Jan-2024 00:38:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.155.13.86', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[17-Jan-2024 01:47:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.50.70.21', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[17-Jan-2024 01:47:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('201.239.29.197', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[17-Jan-2024 02:55:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('181.162.255.87', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[19-Jan-2024 22:59:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('186.81.100.246', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[25-Jan-2024 02:55:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(47): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/includes/logicparametros.php(43): getIP('191.156.177.205', 'italiano_inicia...')
+#3 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(14): include('/home/aprendee/...')
+#4 {main}
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[02-Apr-2024 12:39:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
+Stack trace:
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(95): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(19): getDataProducto('italiano_inicia...', NULL, 'CL')
 #3 {main}
-
-Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4
+[01-Oct-2024 02:46:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
 Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(83): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(6): getCursoDetalle('italiano_inicia...')
+#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
+#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(95): OpenCon()
+#2 /home/aprendee/aprende-idiomas.com/latam/italiano-inicial/index.php(19): getDataProducto('italiano_inicia...', NULL, 'US')
 #3 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Dec-2023 15:08:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('190.16.105.161', 'italiano_inicia...', '{"ip":"190.16.1...', '{"_ga_VE1K0ZKEG...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[28-Dec-2023 15:08:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.16.105.161', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[30-Dec-2023 22:36:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.170.10.228', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[30-Dec-2023 22:36:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.170.10.228', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[30-Dec-2023 22:36:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.170.10.228', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Jan-2024 19:21:06 UTC] PHP Warning:  Division by zero in /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php on line 10
-[01-Jan-2024 19:28:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('152.168.28.54', 'italiano_inicia...', '{"ip":"152.168....', '{"_fbp":"fb.1.1...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[01-Jan-2024 20:29:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.227.174.31', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 00:13:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.29.136.111', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:38:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.19.22.175', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:38:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.19.22.175', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:53:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.137.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:53:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.137.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:53:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.137.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:54:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.137.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:54:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.137.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 02:55:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.137.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 11:26:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.3.113.102', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 11:26:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.3.113.102', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 11:26:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('200.3.113.102', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 11:40:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.210.249.134', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 12:11:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.141.197.110', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:03:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('186.141.197.110', 'italiano_inicia...', '{"ip":"186.141....', '{"_fbc":"fb.1.1...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:04:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('186.141.197.110', 'italiano_inicia...', '{"ip":"186.141....', '{"_ga_VE1K0ZKEG...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:05:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.13.59.72', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:05:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.13.59.72', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:05:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.13.59.72', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:05:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.13.59.72', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:09:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('151.36.88.151', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:11:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('151.36.88.151', 'italiano_inicia...', '{"ip":"151.36.8...', '{"_fbp":"fb.1.1...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:11:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('151.36.88.151', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:25:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('206.1.67.171', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:25:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('206.1.67.171', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 14:26:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.18.106.30', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:45:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('170.239.28.247', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:46:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('170.239.28.247', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:46:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('170.239.28.247', 'italiano_inicia...', '{"ip":"170.239....', '[]')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:46:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('170.239.28.247', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:56:21 UTC] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): Error while reading greeting packet. PID=4149719 in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.3.50.86', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-
-Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/ in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:56:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.3.50.86', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:56:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.137.161.105', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 15:56:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.137.161.105', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:00:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.3.50.86', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:00:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.3.50.86', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:13:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.249.79.37', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/checkout.php(6): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:24:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('179.29.135.20', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:24:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('179.29.135.20', 'italiano_inicia...', '{"ip":"179.29.1...', '{"_ga_VE1K0ZKEG...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:25:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('179.29.135.20', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:27:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('193.186.4.203', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:27:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.166.170.230', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:28:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.166.170.230', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:29:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.166.170.230', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:29:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('193.186.4.209', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:30:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('193.186.4.209', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:30:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.166.170.230', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:34:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('193.186.4.209', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:34:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.166.170.230', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:44:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('186.157.123.154', 'italiano_inicia...', '{"ip":"186.157....', '{"_fbp":"fb.1.1...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:45:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.157.123.154', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 16:46:18 UTC] PHP Warning:  Division by zero in /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php on line 10
-[02-Jan-2024 16:49:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('45.227.36.27', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 17:42:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('66.249.79.75', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 17:49:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(38): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(62): insertIP('170.238.126.30', 'italiano_inicia...', '{"ip":"170.238....', '{"_fbc":"fb.1.1...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:16:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('186.19.110.8', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:33:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.183.80.96', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:34:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.183.80.96', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:34:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.183.80.96', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:39:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.168.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:39:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.168.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[02-Jan-2024 18:40:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('181.168.108.41', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[22-Jan-2024 16:47:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php:8
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/a-includes/conexion.php(8): PDO->__construct('mysql:host=loca...', 'aprendee_neuro_...', 'juHy?Lc5(2ju')
-#1 /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php(47): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php(55): getIP('190.5.184.252', 'italiano_inicia...')
-#3 /home/aprendee/aprende-idiomas.com/italiano-inicial/index.php(5): include('/home/aprendee/...')
-#4 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/a-includes/conexion.php on line 8
-[03-Apr-2024 04:32:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php:1) in /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php on line 6
-[08-Apr-2024 18:29:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/aprendee/aprende-idiomas.com/a-includes/funcionsDB.php:1) in /home/aprendee/aprende-idiomas.com/a-includes/logicparametros.php on line 6
+  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4

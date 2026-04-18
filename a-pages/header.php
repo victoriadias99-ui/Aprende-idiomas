@@ -21,23 +21,47 @@
 <link href="<?= $dirpage ?>vendor/css/hover.css" rel="stylesheet">
 <!-- Website Fonts -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
-<!-- Pinterest Tag --><script>!function(e){if(!window.pintrk){window.pintrk = function () {window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
-  n=window.pintrk;n.queue=[],n.version="3.0";var
-  t=document.createElement("script");t.async=!0,t.src=e;var
-  r=document.getElementsByTagName("script")[0];
-  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");pintrk('load', '2613919052836', {em: '<user_email_address>'});pintrk('page');</script><noscript><img height="1" width="1" style="display:none;" alt=""
-  src="https://ct.pinterest.com/v3/?event=init&tid=2613919052836&pd[em]=<hashed_email_address>&noscript=1" /></noscript><!-- end Pinterest Tag -->
-  <script>
- pintrk('track', 'pagevisit');
-</script>
-<?php
-$currentUrl = $_SERVER['REQUEST_URI'];
+<style>
+    #banner-timer{
+        background-color: black;
+        color: wheat;
+    }
+    #banner-timer h5{
+        text-align: center;
+        font-weight: 700;
+    }
 
-if (strpos($currentUrl, 'checkout') !== false) {
-  echo "<script>
-  pintrk('track', 'AddToCart');
- </script>";
-}
 
-?>
+    #mobile-alert {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-black-main);
+        color: #fff;
+        z-index: 15;
+        animation: fadeIn 0.5s ease;
+        background-color: black;
+    }
 
+    @media screen and (min-width:341px){
+        #mobile-alert  {
+            display: block;
+        }
+        #mobile-alert .precio-antes-p{
+            font-size: 0.8em;
+        }
+        #mobile-alert .precio{
+            font-size: 1em;
+            color: #fff;
+        }
+        #mobile-alert   .btn-buy{
+            font-size: 0.9em;
+                background-color: #f3c910;
+    width: 100%;
+    font-weight: bolder;
+        }
+
+    }
+</style>
