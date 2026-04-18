@@ -698,6 +698,7 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
             <li><span class="check">✓</span> Preparación CILS / CELI B1</li>
             <li><span class="check">✓</span> Apto requisito ciudadanía</li>
 <li><span class="check">✓</span> Certificado oficial</li>
+                    <li><span class="check">✓</span> Duración: 30 días</li>
         </ul>
     </aside>
 

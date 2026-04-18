@@ -699,6 +699,7 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
             <li><span class="check">✓</span> Soporte 24hs ante dudas</li>
             <li><span class="check">✓</span> Grupo privado de alumnos</li>
             <li><span class="check">✓</span> Certificado oficial al finalizar</li>
+                    <li><span class="check">✓</span> Duración: 30 días</li>
         </ul>
     </aside>
 
