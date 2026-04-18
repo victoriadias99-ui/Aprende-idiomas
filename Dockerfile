@@ -16,7 +16,7 @@ RUN install-php-extensions \
 WORKDIR /app/public
 COPY . /app/public/
 
-# Railway proporciona $PORT dinamicamente. Sintaxis de Caddy
-# ({$VAR:default}) se resuelve en runtime, a diferencia de ENV
-# con expansion de shell que se evalua solo en build time.
-ENV SERVER_NAME=":{$PORT:80}"
+# El puerto se configura via la env var SERVER_NAME del servicio
+# en Railway (sintaxis de Railway: ${{PORT}}) no aqui, porque ENV
+# en Dockerfile se evalua en build-time donde $PORT no existe.
+EXPOSE 80
