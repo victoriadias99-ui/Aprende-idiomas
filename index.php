@@ -1648,7 +1648,7 @@ a[href*="wa.me"],
         <article class="course-card it" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/italiana1.jpg" alt="Italiano A1">
+                <img src="img/curso-italiano-inicial.svg" alt="Italiano A1">
             </div>
             <div class="course-body">
                 <h3>Italiano A1</h3>
@@ -1664,7 +1664,7 @@ a[href*="wa.me"],
         <article class="course-card it" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/italiano-a2.jpg" alt="Italiano A2">
+                <img src="img/curso-italiano-a2.svg" alt="Italiano A2">
             </div>
             <div class="course-body">
                 <h3>Italiano A2</h3>
@@ -1712,7 +1712,7 @@ a[href*="wa.me"],
         <article class="course-card fr" data-lang="fr">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇫🇷</span> Francés</span>
-                <img src="img/frances1.png" alt="Francés">
+                <img src="img/curso-frances.svg" alt="Francés">
             </div>
             <div class="course-body">
                 <h3>Francés Inicial</h3>
@@ -1728,7 +1728,7 @@ a[href*="wa.me"],
         <article class="course-card pack" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ Pack 2x1</span>
-                <img src="img/pack.jpg" alt="Pack Italiano + Inglés">
+                <img src="img/curso-italiano-ingles.svg" alt="Pack Italiano + Inglés">
             </div>
             <div class="course-body">
                 <h3>Pack Italiano + Inglés</h3>
@@ -1744,7 +1744,7 @@ a[href*="wa.me"],
         <article class="course-card de" data-lang="de">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇩🇪</span> Alemán</span>
-                <img src="img/aleman1.png" alt="Alemán">
+                <img src="img/curso-aleman.svg" alt="Alemán">
             </div>
             <div class="course-body">
                 <h3>Alemán</h3>
@@ -1760,7 +1760,7 @@ a[href*="wa.me"],
         <article class="course-card ja" data-lang="ja">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇯🇵</span> Japonés</span>
-                <img src="img/japon.png" alt="Japonés">
+                <img src="img/curso-japones.svg" alt="Japonés">
             </div>
             <div class="course-body">
                 <h3>Japonés</h3>

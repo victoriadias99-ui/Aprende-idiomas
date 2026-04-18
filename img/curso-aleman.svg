@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgDe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".5" stop-color="#dd0000"/>
+      <stop offset="1" stop-color="#ffce00"/>
+    </linearGradient>
+    <radialGradient id="glowDe" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgDe)"/>
+  <circle cx="300" cy="290" r="280" fill="url(#glowDe)"/>
+
+  <!-- sparkles -->
+  <g fill="#fff" opacity=".85">
+    <circle cx="90" cy="110" r="4"/>
+    <circle cx="520" cy="140" r="5"/>
+    <circle cx="100" cy="500" r="4"/>
+  </g>
+
+  <!-- Brandenburg Gate silhouette -->
+  <g transform="translate(300 340)">
+    <ellipse cx="0" cy="170" rx="200" ry="14" fill="#000" opacity=".35"/>
+
+    <!-- Quadriga (chariot on top) -->
+    <g transform="translate(0 -160)" fill="#1a1a26" stroke="#0a0a0f" stroke-width="2">
+      <rect x="-25" y="0" width="50" height="18" rx="2"/>
+      <!-- driver -->
+      <circle cx="-10" cy="-10" r="5"/>
+      <rect x="-12" y="-7" width="4" height="12"/>
+      <!-- horses stylized -->
+      <path d="M 30 5 Q 45 -8 40 12 L 32 12 Z"/>
+      <path d="M 40 5 Q 55 -8 50 12 L 42 12 Z"/>
+      <path d="M 50 5 Q 65 -8 60 12 L 52 12 Z"/>
+      <path d="M 60 5 Q 75 -8 70 12 L 62 12 Z"/>
+    </g>
+
+    <!-- entablature (top horizontal slab) -->
+    <rect x="-180" y="-140" width="360" height="32" fill="#e0d9c0" stroke="#0a0a0f" stroke-width="5"/>
+    <rect x="-180" y="-130" width="360" height="4" fill="#0a0a0f" opacity=".3"/>
+
+    <!-- 6 columns -->
+    <g fill="#f2ebcf" stroke="#0a0a0f" stroke-width="4">
+      <rect x="-170" y="-108" width="30" height="270"/>
+      <rect x="-110" y="-108" width="30" height="270"/>
+      <rect x="-50" y="-108" width="30" height="270"/>
+      <rect x="20" y="-108" width="30" height="270"/>
+      <rect x="80" y="-108" width="30" height="270"/>
+      <rect x="140" y="-108" width="30" height="270"/>
+    </g>
+    <!-- column flutes -->
+    <g stroke="#b8a878" stroke-width="1.5" opacity=".6">
+      <line x1="-160" y1="-100" x2="-160" y2="155"/>
+      <line x1="-100" y1="-100" x2="-100" y2="155"/>
+      <line x1="-40" y1="-100" x2="-40" y2="155"/>
+      <line x1="30" y1="-100" x2="30" y2="155"/>
+      <line x1="90" y1="-100" x2="90" y2="155"/>
+      <line x1="150" y1="-100" x2="150" y2="155"/>
+    </g>
+    <!-- base -->
+    <rect x="-185" y="155" width="370" height="15" fill="#e0d9c0" stroke="#0a0a0f" stroke-width="4"/>
+  </g>
+
+  <!-- Speech bubble "Hallo!" -->
+  <g transform="translate(430 120)">
+    <path d="M0 0 H100 Q120 0 120 20 V50 Q120 70 100 70 H30 L10 88 L14 70 Q0 68 0 50 Z" fill="#fff" stroke="#0a0a0f" stroke-width="5"/>
+    <text x="60" y="46" text-anchor="middle" font-family="system-ui, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#dd0000">Hallo!</text>
+  </g>
+
+  <!-- A1 badge -->
+  <g transform="translate(120 150)">
+    <circle r="55" fill="#fff" stroke="#0a0a0f" stroke-width="5"/>
+    <text y="-6" text-anchor="middle" font-family="system-ui, Arial" font-size="11" font-weight="800" fill="#dd0000" letter-spacing="1.5">NIVEL</text>
+    <text y="24" text-anchor="middle" font-family="system-ui, Arial Black" font-size="32" font-weight="900" fill="#000">A1</text>
+  </g>
+</svg>
