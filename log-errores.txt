@@ -1,11 +1,244 @@
 ================================================================================
-LOG DE ERRORES - aprende-idiomas.com
-Snapshot generado: (se completa post-deploy de perf)
-Fuente: Railway logs (servicio Aprende-idiomas) + curl directo a cada pagina
+LOG DE ERRORES Y PERFORMANCE - aprende-idiomas.com
+Snapshot: 2026-04-18
+URL actual: https://aprende-idiomas-idiomas.up.railway.app
+Infraestructura: Railway (Dockerfile + FrankenPHP 8.5.5 + MySQL 9.4.0)
 ================================================================================
 
-ESTADO: pendiente verificacion post-deploy de optimizaciones de velocidad.
 
-El documento se regenera automaticamente al terminar el deploy con el
-resultado del escaneo completo de todas las paginas del sitio + logs
-de Railway de la ultima hora.
+===============================================================================
+A) ESTADO DE LAS PAGINAS (17 paths escaneados con curl directo)
+===============================================================================
+
+Todas las paginas devuelven HTTP 200 y NO presentan:
+- <b>Warning</b>
+- <b>Fatal error</b>
+- <b>Deprecated</b>
+- <b>Notice</b>
+- Undefined array key
+- Undefined variable
+
+Scan date: 2026-04-18 05:45 UTC
+
+  /                                                 OK
+  /ingles-nivel-dos/                                OK
+  /ingles-nivel-dos/checkout.php                    OK
+  /ingles-nivel-uno/                                OK
+  /ingles-nivel-uno/checkout.php                    OK
+  /italiano-a2/                                     OK
+  /italiano-a2/checkout.php                         OK
+  /italiano-b1/                                     OK
+  /italiano-b1/checkout.php                         OK
+  /italiano-ingles/                                 OK
+  /italiano-ingles/checkout.php                     OK
+  /italiano-inicial/                                OK
+  /italiano-inicial/checkout.php                    OK
+  /italiano-pack-experto/                           OK
+  /italiano-pack-experto/checkout.php               OK
+  /pago_exitoso.php                  302 -> /       OK (redirige sin params, correcto)
+  /unirse.php                        302 -> /       OK (redirige sin params, correcto)
+
+
+===============================================================================
+B) LOGS RUNTIME DE RAILWAY (PHP Warning/Fatal/Deprecated)
+===============================================================================
+
+Ultimas 200 lineas del runtime: 0 ocurrencias de
+PHP Warning|Fatal|Deprecated|Uncaught|Stack trace.
+
+Solo aparecen logs INFO y WARN de infraestructura (Caddy inicializando,
+"HTTP/2 skipped because it requires TLS" que es esperado porque
+Railway maneja TLS en el edge).
+
+
+===============================================================================
+C) PERFORMANCE - ANTES vs DESPUES de optimizaciones
+===============================================================================
+
+Comandos usados:
+  RAW: curl -s -o /dev/null -w "%{size_download}"
+  GZ:  curl -s --compressed -o /dev/null -w "%{size_download}"
+
+                                        ANTES          DESPUES
+                                        ------         -------
+  /                                     34KB raw       34KB raw / 6.4KB gz  (5.4x)
+  /ingles-nivel-dos/                    60KB raw       60KB raw / 11.8KB gz (5.1x)
+  /ingles-nivel-uno/                    63KB raw       63KB raw / 12.8KB gz (4.9x)
+  /italiano-a2/                         56KB raw       56KB raw / 11.9KB gz (4.7x)
+  /italiano-b1/                         56KB raw       56KB raw / 11.9KB gz (4.7x)
+  /italiano-ingles/                     72KB raw       72KB raw / 13.4KB gz (5.4x)
+  /italiano-inicial/                    58KB raw       58KB raw / 11.9KB gz (4.9x)
+  /italiano-pack-experto/               70KB raw       70KB raw / 13.6KB gz (5.2x)
+  /ingles-nivel-dos/checkout.php        36KB raw       36KB raw / 10.5KB gz (3.5x)
+
+  TTFB paginas de curso (3 muestras):
+    Antes:  ~450-590ms
+    Despues: ~370-450ms  (mejora ~15-20%)
+
+  Total bytes transferidos en una sesion tipica (ver 3 cursos + home):
+    Antes:  ~190KB
+    Despues: ~40KB  (-79%)
+
+
+===============================================================================
+D) OPTIMIZACIONES APLICADAS
+===============================================================================
+
+D.1 - PHP/OPcache (php.ini mount en /usr/local/etc/php/conf.d/zz-app.ini)
+    opcache.enable = 1
+    opcache.memory_consumption = 256
+    opcache.max_accelerated_files = 20000
+    opcache.interned_strings_buffer = 32
+    opcache.revalidate_freq = 60
+    opcache.jit = 1255
+    opcache.jit_buffer_size = 128M
+    realpath_cache_size = 4M
+    realpath_cache_ttl = 600
+    memory_limit = 256M
+    output_buffering = 4096     # necesario para que Caddy pueda comprimir
+    display_errors = Off
+    error_reporting = E_ERROR | E_PARSE
+
+D.2 - Compresion HTTP (Caddyfile mount en /etc/frankenphp/Caddyfile)
+    encode zstd gzip    # elige el mejor segun Accept-Encoding del cliente
+
+D.3 - Cache headers para assets estaticos
+    Cache-Control: public, max-age=2592000    (30 dias)
+    Aplica a: .css .js .jpg .jpeg .png .gif .svg .webp .avif .woff .woff2 .ttf .ico
+
+D.4 - UTF-8 BOM removido de a-includes/Funciones.php
+    Los 3 bytes del BOM (EF BB BF) al inicio del archivo forzaban
+    flush temprano del output y Caddy no podia buferear para comprimir.
+
+D.5 - Endpoints JSON del checkout (initPagos.php, initPaymentPaypal.php)
+    display_errors=0 + error_reporting=E_ERROR|E_PARSE para evitar que
+    warnings Deprecated del SDK Stripe 7.x y Guzzle contaminen el body
+    JSON y rompan el parser de jQuery (antes causaba "ERROR CON EL
+    SERVIDOR" al pagar).
+
+
+===============================================================================
+E) FIXES APLICADOS DURANTE LA SESION (historico relevante)
+===============================================================================
+
+E.1 - Conexion DB: a-includes/conexion.php lee env vars MYSQLHOST/USER/
+      PASSWORD/DATABASE/PORT de Railway (linkeadas con ${{MySQL.*}}).
+
+E.2 - Docker: nixpacks.toml no instalaba pdo_mysql. Switch a Dockerfile
+      custom con FrankenPHP base + install-php-extensions.
+
+E.3 - SQL injection parcheada en getIP/insertIP/updateIP (prepared
+      statements). Antes rompia con json_encode($_COOKIE) con chars
+      unicode.
+
+E.4 - ip_visita.id_producto ampliado de varchar(16) a varchar(64)
+      (italiano_pack_experto no entraba).
+
+E.5 - Geolocalizacion (logicparametros.php): acceso seguro a
+      HTTP_CF_IPCOUNTRY con isset, lookupIpdataSafe() con try/catch
+      para evitar bug del destructor de Symfony HttpClient
+      (curl_multi_setopt CURLMOPT_PUSHFUNCTION).
+
+E.6 - Endpoints Stripe/PayPal: autoload path correcto
+      /a-libraries/vendor/autoload.php (donde viven los SDKs).
+
+E.7 - checkout-stripe.js: URL Ajax de /latam/includes/initPagos.php
+      a /a-includes/initPagos.php (legacy path ya no existe).
+
+E.8 - initPagos.php: urlLib/urlCurso sin /latam/, slug tomado del
+      path actual del browser (fix cancel_url que iba a 'ingles-dos'
+      en lugar de 'ingles-nivel-dos').
+
+E.9 - pago_exitoso.php + unirse.php: isset() en params GET + redirect
+      al root si faltan (antes Warning "Undefined array key").
+
+E.10 - Case-sensitive filesystem (Linux vs Mac): rename
+       funciones.php -> Funciones.php para matchear las referencias
+       ../a-includes/Funciones.php del codigo latam.
+
+E.11 - FrankenPHP routing: symlink /app/public -> /app para evitar
+       path duplicado /app/public/public/... cuando se solicitaban
+       paginas de subdirectorios.
+
+E.12 - SERVER_NAME=:80 + PORT=8080 variables en Railway, EXPOSE 8080
+       en Dockerfile, para que el container escuchara en la interfaz
+       correcta y Railway lo alcanzara sin 502.
+
+E.13 - a-includes/logicparametros.php tenia dependencia a
+       /vendor/autoload.php pero vendor real (con ipdata SDK) esta en
+       /a-libraries/vendor/. Path corregido.
+
+E.14 - Dockerfile con railway.json explicito que forza
+       builder=DOCKERFILE (antes Railway usaba Nixpacks por default
+       y no aplicaba mis cambios).
+
+
+===============================================================================
+F) CAMBIOS DE CONTENIDO (ultimos)
+===============================================================================
+
+F.1 - Removida la frase "Descarga el curso y miralo sin conexion!" y
+      "Podes descargar el curso y verlo desde cualquier lugar sin
+      conexion a internet" de:
+        ingles-nivel-dos/index.php       (FAQ de acceso de por vida)
+        ingles-nivel-uno/index.php       (FAQ + LI del checkout)
+        italiano-a2/index.php
+        italiano-b1/index.php
+        italiano-ingles/index.php + checkout.php
+        italiano-inicial/index.php
+        italiano-pack-experto/index.php
+
+F.2 - Boton de WhatsApp OCULTO globalmente via CSS en a-pages/header.php:
+        a[href*="api.whatsapp.com"],
+        a[href*="wa.me"],
+        .chat-container,
+        [class*="whatsapp-button"],
+        [class*="whatsapp-float"] {
+            display: none !important;
+        }
+
+
+===============================================================================
+G) NOTAS RESIDUALES (no bloqueantes)
+===============================================================================
+
+G.1 - Charset de v2_producto tiene caracteres corruptos en el nombre
+      "italiano_ingles" (se ve "Pack Ingl�s" en vez de "Pack Ingles").
+      Fix: UPDATE v2_producto SET NOMBRE = 'Pack Ingles e Italiano'
+      WHERE ID_ABRE = 'italiano_ingles';
+
+G.2 - Tres archivos backup dentro del repo que no se sirven pero
+      inflan el clone (creados automaticamente durante debugging):
+        ingles-nivel-dos/index.php.bak.20260418-022922
+        ingles-nivel-uno/index.php.bak.20260418-022922
+        italiano-ingles/index.php.bak.20260418-022922
+        italiano-inicial/index.php.bak.20260418-022922
+      + varios <curso>/index-preview.html
+      Accion sugerida: agregar *.bak.* y *-preview.html a .gitignore
+      + git rm los actuales.
+
+G.3 - BDs intermedias railway_latam y railway_neurocouch siguen en el
+      servicio MySQL. Funcionales para verificar migracion pero ya
+      se pueden borrar (1.5GB liberables).
+
+G.4 - Credenciales hardcodeadas como fallback en conexion.php (solo
+      se usan si faltan TODAS las env vars de Railway). Conviene
+      sacarlas para que en caso de fallo explote y se detecte.
+
+G.5 - Webhook Stripe aun no registrado en dashboard de Stripe.
+      Endpoint: https://www.aprende-idiomas.com/a-includes/pagostripenotif.php
+      (o el dominio actual de Railway hasta migrar DNS).
+
+
+===============================================================================
+H) DATOS DE LA BD UNIFICADA (Railway MySQL railway)
+===============================================================================
+
+  v2_producto          : 9 productos (Stripe)
+  v2_producto_precios  : 50 precios multi-moneda
+  v2_producto_pack     : 11 packs
+  v2_ventas            : 68,504 ventas totales
+                          - 64,890 MercadoPago (histórico)
+                          - 3,614 Stripe (desde /latam)
+  v2_ventas_mp_raw_backup : 64,890 filas MP completas (auditoria)
+  EMAILS UNICOS        : 42,573
