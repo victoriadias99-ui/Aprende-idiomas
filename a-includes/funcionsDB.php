@@ -29,23 +29,29 @@ function getTimer($_ip, $idCurso, $timezone) {
 
 function updateIP($_ip, $idCurso, $count, $cache = null) {
     $cnx = OpenCon();
-    $consulta = "UPDATE `ip_visita` SET `visitas` = $count, `cache` = '" . ($cache == null ? '' : $cache) . "' WHERE `ip` = '$_ip' and `id_producto` ='" . $idCurso ."'";
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("UPDATE `ip_visita` SET `visitas` = ?, `cache` = ? WHERE `ip` = ? AND `id_producto` = ?");
+    $stmt->bindValue(1, $count, PDO::PARAM_INT);
+    $stmt->bindValue(2, $cache == null ? '' : $cache, PDO::PARAM_STR);
+    $stmt->bindValue(3, $_ip, PDO::PARAM_STR);
+    $stmt->bindValue(4, $idCurso, PDO::PARAM_STR);
     $stmt->execute();
 }
 
 function insertIP($_ip, $idCurso, $data = null, $cache = null) {
     $cnx = OpenCon();
-    $consulta = "INSERT INTO `ip_visita`(`ip`, `id_producto`, `data`, `cache`) VALUES ('$_ip', '$idCurso', '" . ($data == null ? '' : $data) . "', '" . ($cache == null ? '' : $cache) . "')";
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("INSERT INTO `ip_visita`(`ip`, `id_producto`, `data`, `cache`) VALUES (?, ?, ?, ?)");
+    $stmt->bindValue(1, $_ip, PDO::PARAM_STR);
+    $stmt->bindValue(2, $idCurso, PDO::PARAM_STR);
+    $stmt->bindValue(3, $data == null ? '' : $data, PDO::PARAM_STR);
+    $stmt->bindValue(4, $cache == null ? '' : $cache, PDO::PARAM_STR);
     $stmt->execute();
 }
 
 function getIP($_ip, $idCurso) {
-    $consulta = "SELECT * FROM `ip_visita` WHERE `ip` = '$_ip' and `id_producto` ='" . $idCurso ."'";
-
     $cnx = OpenCon();
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("SELECT * FROM `ip_visita` WHERE `ip` = ? AND `id_producto` = ?");
+    $stmt->bindValue(1, $_ip, PDO::PARAM_STR);
+    $stmt->bindValue(2, $idCurso, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
