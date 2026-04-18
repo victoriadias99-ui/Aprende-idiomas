@@ -487,6 +487,99 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
+    
+        /* Language visual (replaces broken hero image) */
+        .co-hero-viz{
+            position:relative;
+            aspect-ratio:4/3;
+            border-radius:var(--r-lg);
+            overflow:hidden;
+            background:linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+            box-shadow:var(--shadow-3);
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            padding:28px;
+            color:#fff;
+            text-align:center;
+        }
+        .co-hero-viz-bg{
+            position:absolute;
+            inset:0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(236,19,137,.35), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0,182,237,.35), transparent 55%);
+            pointer-events:none;
+        }
+        .co-hero-viz > *{position:relative;z-index:1}
+        .co-hero-viz-flag{
+            font-size:clamp(3rem, 7vw, 5rem);
+            line-height:1;
+            margin-bottom:10px;
+            filter:drop-shadow(0 12px 24px rgba(0,0,0,.3));
+            animation:vizBob 5s cubic-bezier(.2,.8,.2,1) infinite;
+        }
+        @keyframes vizBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        .co-hero-viz-greeting{
+            font-family:'Sora','Inter',sans-serif;
+            font-size:clamp(1.6rem, 3.2vw, 2.4rem);
+            font-weight:900;
+            letter-spacing:-0.03em;
+            background:linear-gradient(135deg, #ffffff, #ffffff95);
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+            margin-bottom:18px;
+        }
+        .co-hero-viz-words{
+            display:flex;
+            gap:6px;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-bottom:16px;
+        }
+        .co-hero-viz-words span{
+            padding:5px 12px;
+            background:rgba(255,255,255,.12);
+            border:1px solid rgba(255,255,255,.22);
+            border-radius:999px;
+            font-size:.82rem;
+            font-weight:700;
+            font-family:'Sora','Inter',sans-serif;
+            letter-spacing:.02em;
+            backdrop-filter:blur(6px);
+            -webkit-backdrop-filter:blur(6px);
+        }
+        .co-hero-viz-tag{
+            display:inline-block;
+            padding:7px 14px;
+            background:linear-gradient(135deg, #ec1389, #00b6ed);
+            color:#fff;
+            border-radius:999px;
+            font-size:.72rem;
+            font-weight:800;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            box-shadow:0 8px 20px rgba(236,19,137,.35);
+        }
+        @media (prefers-reduced-motion:reduce){
+            .co-hero-viz-flag{animation:none}
+        }
+    
+        .co-nav-back{
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+            font-size:.86rem;
+            font-weight:600;
+            color:var(--ink-soft);
+            padding:8px 14px;
+            border-radius:999px;
+            transition:all .2s var(--ease);
+            text-decoration:none;
+        }
+        .co-nav-back:hover{color:var(--ink);background:var(--bg-soft)}
     </style>
 </head>
 <body>
@@ -495,14 +588,27 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
 <nav class="co-nav">
     <div class="co-nav-inner">
         <a href="../" class="co-logo"><img src="../img/logo.jpg" alt="Aprende Idiomas"></a>
-        <span class="co-secure">🔒 Checkout seguro</span>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+            <a href="/italiano-ingles/" class="co-nav-back">← Volver al curso</a>
+            <span class="co-secure">🔒 Checkout seguro</span>
+        </div>
     </div>
 </nav>
 
 <!-- TOP course hero -->
 <section class="co-top">
     <div class="co-top-inner">
-        <img src="img/pack.jpg" alt="Pack Italiano + Inglés">
+        <div class="co-hero-viz">
+            <div class="co-hero-viz-bg"></div>
+            <div class="co-hero-viz-flag">🇮🇹🇺🇸</div>
+            <div class="co-hero-viz-greeting">Ciao + Hello!</div>
+            <div class="co-hero-viz-words">
+                <span class="w1">2x1</span>
+                <span class="w2">Combo</span>
+                <span class="w3">Pack</span>
+            </div>
+            <div class="co-hero-viz-tag">✦ Pack Ita+Ing</div>
+        </div>
         <div>
             <div class="co-top-badge">🇮🇹🇺🇸 Italiano + Inglés</div>
             <h1>Estás a un paso.<br><span class="grad">Pack Italiano + Inglés</span></h1>
@@ -645,8 +751,7 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
 <footer class="co-footer">
     <img src="../img/logo.jpg" alt="Aprende Idiomas">
     <p>© 2026 Aprende Idiomas · Hecho con cariño en Buenos Aires</p>
-    <p><a href="mailto:aprende.idiomas.latam@gmail.com" style="color: var(--pink); font-weight: 600;">aprende.idiomas.latam@gmail.com</a></p>
-</footer>
+    </footer>
 
 <!-- Scripts (preservar) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -736,5 +841,7 @@ gtag('config','UA-196494254-1');
 </script>
 
 <script src="/libraries/js/cookie-banner.js" defer></script>
+<!-- CHAT_IA_WIDGET -->
+<?php include(dirname(__FILE__) . "/../a-includes/chat-widget.php"); ?>
 </body>
 </html>

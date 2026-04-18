@@ -1257,5 +1257,7 @@
 </script>
 
 <script src="/libraries/js/cookie-banner.js" defer></script>
+<!-- CHAT_IA_WIDGET -->
+<?php include(dirname(__FILE__) . "/../a-includes/chat-widget.php"); ?>
 </body>
 </html>

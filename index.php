@@ -2147,5 +2147,7 @@ a[href*="wa.me"],
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196494254-1"></script>
 
 <script src="/libraries/js/cookie-banner.js" defer></script>
+<!-- CHAT_IA_WIDGET -->
+<?php include(__DIR__ . "/a-includes/chat-widget.php"); ?>
 </body>
 </html>

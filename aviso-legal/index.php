@@ -183,5 +183,7 @@ footer a{color:var(--pink);font-weight:600}
     <div class="footer-bottom">© 2026 NEMTOR LLC · Todos los derechos reservados</div>
 </footer>
 
+<!-- CHAT_IA_WIDGET -->
+<?php include(dirname(__FILE__) . "/../a-includes/chat-widget.php"); ?>
 </body>
 </html>

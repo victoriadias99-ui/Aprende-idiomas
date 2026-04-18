@@ -27,7 +27,7 @@
     <form class="text-center" id="procederPagoForm">
         <div class="row ">
         <div class="mb-35 d-flex flex-wrap justify-content-between align-items-center">
-            <img src="../img/front_pay.png" class="img-fluid mx-auto">
+            <img src="../img/credit-cards-footer.png" alt="Métodos de pago aceptados" class="img-fluid mx-auto" style="max-height:32px;opacity:.85">
 
 <h5 class="mx-auto pb-md-3 mt-4 text-center" style="font-family: montserrat_bold;"><i class="fas fa-arrow-alt-circle-right text-success blink"></i><b> ¿Dónde querés recibir el curso?</b></h5>        </div>
         </div>
@@ -88,7 +88,7 @@
                     echo '<div class="col-md-12 p-0 m-md-0 ml-2 mr-2 mb-2">';
                     echo '<div style="width:100%;" id="payment-strype"  class="btn-payment-cuadrado p-1 mb-md-1">';
                     echo '<input class="check-payment" type="radio" name="opcion-pago-strype" id="id-tarjeta-payment-strype" value="strype" style="visibility: hidden; display:none;"> ';
-                    echo '<img src="../img/creditcard.png" alt="method" class="">';
+                    echo '<span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:24px;background:linear-gradient(135deg,#ec1389,#00b6ed);border-radius:4px;font-size:.85rem;margin-right:8px;color:#fff">💳</span>';
                     echo 'Tarjeta de crédito/débito';
                     echo '</div></div>';
                     /*
