@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgPk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec1389"/>
+      <stop offset="1" stop-color="#6e1dd4"/>
+    </linearGradient>
+    <linearGradient id="cardA1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f3f3f6"/>
+    </linearGradient>
+    <linearGradient id="cardA2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd24a"/>
+      <stop offset="1" stop-color="#e69a00"/>
+    </linearGradient>
+    <linearGradient id="cardB1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ec1389"/>
+      <stop offset="1" stop-color="#a3006b"/>
+    </linearGradient>
+    <radialGradient id="glowPk" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgPk)"/>
+  <circle cx="300" cy="290" r="280" fill="url(#glowPk)"/>
+
+  <!-- sparkles -->
+  <g fill="#fff" opacity=".85">
+    <path d="M 90 110 l 4 9 9 1 -7 7 2 10 -8 -5 -8 5 2 -10 -7 -7 9 -1 z"/>
+    <path d="M 510 160 l 3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1 z"/>
+    <circle cx="120" cy="480" r="4"/>
+    <circle cx="480" cy="460" r="5"/>
+    <circle cx="60" cy="300" r="3"/>
+    <circle cx="540" cy="310" r="3"/>
+  </g>
+
+  <!-- Discount burst -->
+  <g transform="translate(500 150)">
+    <path d="M0 -50 L10 -22 L38 -32 L28 -4 L56 6 L28 16 L38 42 L10 34 L0 62 L-10 34 L-38 42 L-28 16 L-56 6 L-28 -4 L-38 -32 L-10 -22 Z" fill="#ffd24a" stroke="#0a0a0f" stroke-width="4"/>
+    <text x="0" y="4" text-anchor="middle" font-family="system-ui, Arial Black, sans-serif" font-size="22" font-weight="900" fill="#0a0a0f">3x2</text>
+    <text x="0" y="22" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="10" font-weight="800" fill="#0a0a0f" letter-spacing="1">PACK</text>
+  </g>
+
+  <!-- Italian flag ribbon top-left -->
+  <g transform="translate(60 80) rotate(-18)">
+    <rect width="22" height="70" fill="#008c45"/>
+    <rect x="22" width="22" height="70" fill="#f4f5f0"/>
+    <rect x="44" width="22" height="70" fill="#cd212a"/>
+  </g>
+
+  <!-- 3 stacked level cards (A1, A2, B1 progression) -->
+  <g transform="translate(300 340)">
+    <!-- shadow platform -->
+    <ellipse cx="0" cy="140" rx="180" ry="18" fill="#000" opacity=".25"/>
+
+    <!-- Card A1 (back, tilted left) -->
+    <g transform="translate(-120 -40) rotate(-10)">
+      <rect x="-60" y="-90" width="120" height="180" rx="14" fill="url(#cardA1)" stroke="#0a0a0f" stroke-width="5"/>
+      <rect x="-60" y="-90" width="120" height="40" rx="14" fill="#008c45"/>
+      <rect x="-60" y="-65" width="120" height="5" fill="#f4f5f0"/>
+      <text x="0" y="14" text-anchor="middle" font-family="system-ui, Arial Black" font-size="46" font-weight="900" fill="#0a0a0f">A1</text>
+      <text x="0" y="40" text-anchor="middle" font-family="system-ui, Arial" font-size="10" font-weight="800" fill="#5a5d72" letter-spacing="1.5">INICIAL</text>
+      <g transform="translate(0 70)" fill="#0a0a0f">
+        <circle cx="0" cy="0" r="3"/>
+      </g>
+    </g>
+
+    <!-- Card A2 (middle, behind front) -->
+    <g transform="translate(0 -60)">
+      <rect x="-70" y="-100" width="140" height="200" rx="16" fill="url(#cardA2)" stroke="#0a0a0f" stroke-width="5"/>
+      <rect x="-70" y="-100" width="140" height="46" rx="16" fill="#f4f5f0"/>
+      <rect x="-70" y="-72" width="140" height="5" fill="#cd212a"/>
+      <text x="0" y="26" text-anchor="middle" font-family="system-ui, Arial Black" font-size="58" font-weight="900" fill="#0a0a0f">A2</text>
+      <text x="0" y="54" text-anchor="middle" font-family="system-ui, Arial" font-size="11" font-weight="800" fill="#0a0a0f" letter-spacing="1.5">INTERMEDIO</text>
+      <g transform="translate(0 82)" fill="#0a0a0f">
+        <circle cx="-8" cy="0" r="3"/>
+        <circle cx="8" cy="0" r="3"/>
+      </g>
+    </g>
+
+    <!-- Card B1 (front, tilted right) -->
+    <g transform="translate(120 -20) rotate(10)">
+      <rect x="-60" y="-90" width="120" height="180" rx="14" fill="url(#cardB1)" stroke="#0a0a0f" stroke-width="5"/>
+      <rect x="-60" y="-90" width="120" height="40" rx="14" fill="#fff"/>
+      <rect x="-60" y="-65" width="120" height="5" fill="#ec1389" opacity=".4"/>
+      <text x="0" y="14" text-anchor="middle" font-family="system-ui, Arial Black" font-size="46" font-weight="900" fill="#fff">B1</text>
+      <text x="0" y="40" text-anchor="middle" font-family="system-ui, Arial" font-size="10" font-weight="800" fill="#fff" letter-spacing="1.5">AVANZADO</text>
+      <g transform="translate(0 70)" fill="#fff">
+        <circle cx="-8" cy="0" r="3"/>
+        <circle cx="0" cy="0" r="3"/>
+        <circle cx="8" cy="0" r="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

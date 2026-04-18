@@ -1680,7 +1680,7 @@ a[href*="wa.me"],
         <article class="course-card it" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/italiano-b1.jpg" alt="Italiano B1">
+                <img src="img/curso-italiano-b1.svg" alt="Italiano B1" loading="lazy">
             </div>
             <div class="course-body">
                 <h3>Italiano B1</h3>
@@ -1696,7 +1696,7 @@ a[href*="wa.me"],
         <article class="course-card pack" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ Pack</span>
-                <img src="img/italiano-pack.jpg" alt="Pack Italiano">
+                <img src="img/curso-italiano-pack.svg" alt="Pack Italiano Avanzado" loading="lazy">
             </div>
             <div class="course-body">
                 <h3>Pack Italiano Avanzado</h3>
