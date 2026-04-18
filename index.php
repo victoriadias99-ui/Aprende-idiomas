@@ -4,6 +4,16 @@ include("./a-includes/logicparametros.php");
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<style>
+/* Ocultar botones/widgets de WhatsApp en todo el sitio */
+a[href*="api.whatsapp.com"],
+a[href*="wa.me"],
+.chat-container,
+[class*="whatsapp-button"],
+[class*="whatsapp-float"] {
+    display: none !important;
+}
+</style>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || [];
