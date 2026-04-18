@@ -1876,24 +1876,27 @@ a[href*="wa.me"],
     </div>
     <div class="reasons-grid">
         <div class="reason">
-            <img src="img/8.jpg" alt="Impulso profesional">
+            <img src="img/beneficio-impulso-profesional.svg" alt="Impulso profesional" loading="lazy">
             <div class="reason-content">
                 <div class="reason-num">— 01</div>
                 <h3>Impulso profesional</h3>
+                <p class="reason-desc">Más oportunidades laborales y mejores salarios cuando dominás un idioma global.</p>
             </div>
         </div>
         <div class="reason">
-            <img src="img/7.jpg" alt="Viajar sin límites">
+            <img src="img/beneficio-viajar-sin-limites.svg" alt="Viajar sin límites" loading="lazy">
             <div class="reason-content">
                 <div class="reason-num">— 02</div>
                 <h3>Viajar sin límites</h3>
+                <p class="reason-desc">Cuando dominás el idioma universal no tenés límites y viajás sin preocupaciones.</p>
             </div>
         </div>
         <div class="reason">
-            <img src="img/6.jpg" alt="Amigos internacionales">
+            <img src="img/beneficio-amigos-internacionales.svg" alt="Amigos internacionales" loading="lazy">
             <div class="reason-content">
                 <div class="reason-num">— 03</div>
                 <h3>Amigos internacionales</h3>
+                <p class="reason-desc">Qué mejor que hacer amigos en todo el mundo y ampliar tu círculo cultural.</p>
             </div>
         </div>
     </div>
