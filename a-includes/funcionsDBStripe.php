@@ -339,13 +339,9 @@ function getDataProducto($curso, $moneda, $pais = null) {
 
 function getDataProductoCheckout($curso, $moneda, $pais = null) {
     $p = getDataProducto($curso, $moneda, $pais);
-    
-    $moneda = $p['producto']['MONEDA'];
-    $pais = $p['producto']['PAIS'];
-    
-    if ($pais != null) {
-        $moneda = $p['producto']['MONEDA'];
-    }
+
+    $moneda = isset($p['producto']['MONEDA']) ? $p['producto']['MONEDA'] : $moneda;
+    $pais = isset($p['producto']['PAIS']) ? $p['producto']['PAIS'] : null;
     $cnx = OpenCon();
     $consulta = "SELECT * FROM v2_producto_pack where ID_ABRE=?;";
     $stmt = $cnx->prepare($consulta);
