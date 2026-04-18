@@ -5,7 +5,7 @@ if(isset($_GET['test'])){
     error_reporting(E_ALL);
 }
 
-require_once '../vendor/autoload.php';
+require_once dirname(__DIR__) . '/a-libraries/vendor/autoload.php';
 
 use PayPal\Rest\ApiContext;
 use PayPal\Auth\OAuthTokenCredential;
@@ -38,8 +38,11 @@ if($moneda == 'ARS'){
 $producto = $r['producto'];
 $dataPack = $r['pack'];
 $precioPago = $producto['PRECIO_DESC'];
-$urlLib = 'https://' . $_SERVER['HTTP_HOST'] . '/latam/';
-$urlCurso = 'https://' . $_SERVER['HTTP_HOST'] . '/latam/' . $producto['ID_ABRE'] . '/';
+// Rutas base tras plegar /latam al root
+$urlLib = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+// urlCurso apunta al slug URL-friendly del curso (ID_ABRE usa _, path usa -)
+$slugCurso = isset($_GET['slug']) && $_GET['slug'] !== '' ? $_GET['slug'] : str_replace('_', '-', $producto['ID_ABRE']);
+$urlCurso = 'https://' . $_SERVER['HTTP_HOST'] . '/' . $slugCurso . '/';
 if(isset($_GET['test'])){
     echo "<pre>";
     print_r($_GET);
@@ -75,7 +78,7 @@ switch ($metodoPago) {
 
         // Set redirect URLs
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl($urlLib . 'includes/initPaymentPaypal.php')
+        $redirectUrls->setReturnUrl($urlLib . 'a-includes/initPaymentPaypal.php')
                 ->setCancelUrl($urlCurso . 'checkhout.php?curso=' . $producto['ID_ABRE']);
         
         $precioTotal = $precioPago;

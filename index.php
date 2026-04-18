@@ -80,22 +80,22 @@
                         <div class="card-header"><a class="mobile-menu-link active" href="/">Inicio</a></div>
                     </div>
                     <div class="card">
-                        <div class="card-header"><a class="mobile-menu-link active" href="/latam/ingles-nivel-uno/">Inglés Nivel 1</a></div>
+                        <div class="card-header"><a class="mobile-menu-link active" href="/ingles-nivel-uno/">Inglés Nivel 1</a></div>
                     </div>
                     <div class="card">
-                    <div class="card-header"><a class="mobile-menu-link active" href="/latam/ingles-nivel-dos/">Inglés Nivel 2</a></div>
+                    <div class="card-header"><a class="mobile-menu-link active" href="/ingles-nivel-dos/">Inglés Nivel 2</a></div>
                     </div>
                     <div class="card">
-                    <div class="card-header"><a class="mobile-menu-link active" href="/latam/italiano-inicial/">Italiano A1</a></div>
+                    <div class="card-header"><a class="mobile-menu-link active" href="/italiano-inicial/">Italiano A1</a></div>
                     </div>
 					<div class="card">
-                    <div class="card-header"><a class="mobile-menu-link active" href="/latam/italiano-a2/">Italiano A2</a></div>
+                    <div class="card-header"><a class="mobile-menu-link active" href="/italiano-a2/">Italiano A2</a></div>
                     </div>
 					<div class="card">
-                    <div class="card-header"><a class="mobile-menu-link active" href="/latam/italiano-b1/">Italiano B1</a></div>
+                    <div class="card-header"><a class="mobile-menu-link active" href="/italiano-b1/">Italiano B1</a></div>
                     </div>
 					<div class="card">
-                    <div class="card-header"><a class="mobile-menu-link active" href="/latam/italiano-pack-experto/">Italiano Experto</a></div>
+                    <div class="card-header"><a class="mobile-menu-link active" href="/italiano-pack-experto/">Italiano Experto</a></div>
                     </div>
                     <div class="card">
                     </div>
@@ -125,13 +125,13 @@
                         <!-- Home-->
                         <li class="nav-item mega-dropdown-toggle active"><a class="nav-link" href="/">Inicio</a>
                         </li>
-                        <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/ingles-nivel-uno/">Inglés Nivel 1</a>
+                        <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/ingles-nivel-uno/">Inglés Nivel 1</a>
                         </li>
-                        <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/ingles-nivel-dos/">Inglés Nivel 2</a>  </li>
-                        <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/italiano-inicial/">Italiano A1</a></li>
-						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/italiano-a2/">Italiano A2</a></li>
-						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/italiano-b1/">Italiano B1</a></li>
-						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/italiano-pack-experto/">Italiano Experto</a></li>
+                        <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/ingles-nivel-dos/">Inglés Nivel 2</a>  </li>
+                        <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/italiano-inicial/">Italiano A1</a></li>
+						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/italiano-a2/">Italiano A2</a></li>
+						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/italiano-b1/">Italiano B1</a></li>
+						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/italiano-pack-experto/">Italiano Experto</a></li>
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://buy.stripe.com/eVa8zAfn27Xiaje9AA">Suscripción Mensual</a></li>
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://buy.stripe.com/aEUg0UdTX5id8es002">Suscripción Anual</a></li>
 					 <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://academia.aprende-idiomas.com/">Iniciar Sesion</a></li>
@@ -255,7 +255,7 @@
                             <h5 class="portfolio-title text-center">Desde cero<br></h5>
                         </div>
                         <div class="card-footer">
-                            <div><a class="tag-link" href="/latam/ingles-nivel-uno/">Sin requisitos previos, ideal para principiantes que comienzan desde cero: el lenguaje más solicitado por las empresas.<br></a> <a class="btn btn-lg btn-block" href="/latam/ingles-nivel-uno/" style="background-color:#23AFFA; color:white;" target="_blank">👉 Ver Curso</a></div>
+                            <div><a class="tag-link" href="/ingles-nivel-uno/">Sin requisitos previos, ideal para principiantes que comienzan desde cero: el lenguaje más solicitado por las empresas.<br></a> <a class="btn btn-lg btn-block" href="/ingles-nivel-uno/" style="background-color:#23AFFA; color:white;" target="_blank">👉 Ver Curso</a></div>
                             <div class="portfolio-meta"> </div>
                         </div>
                     </div>
@@ -266,7 +266,7 @@
                             <h5 class="portfolio-title text-center">Inglés Nivel 2</h5>
                         </div>
                         <div class="card-footer">
-                            <div><a class="tag-link" href="/latam/ingles-nivel-dos/" target="_blank">Profundiza tus conocimientos siguiendo el nivel 2. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/latam/ingles-nivel-dos/" target="_blank" style="background-color:#23AFFA; color:white;">👉 Ver Curso</a></div>
+                            <div><a class="tag-link" href="/ingles-nivel-dos/" target="_blank">Profundiza tus conocimientos siguiendo el nivel 2. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/ingles-nivel-dos/" target="_blank" style="background-color:#23AFFA; color:white;">👉 Ver Curso</a></div>
                         </div>
                     </div>
                 </div>
@@ -286,7 +286,7 @@
                             <h5 class="portfolio-title text-center">Italiano nivel inicial A1</h5>
                         </div>
                         <div class="card-footer">
-                            <div><a class="tag-link" href="/latam/italiano-inicial/" target="_blank">Comenzá desde cero a estudiar este increíble idioma del amor. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/latam/italiano-inicial/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
+                            <div><a class="tag-link" href="/italiano-inicial/" target="_blank">Comenzá desde cero a estudiar este increíble idioma del amor. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/italiano-inicial/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
                         </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                             <h5 class="portfolio-title text-center">Italiano nivel intermedio A2</h5>
                         </div>
                         <div class="card-footer">
-                            <div><a class="tag-link" href="/latam/italiano-a2/" target="_blank">Nivel Intermedio. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/latam/italiano-a2/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
+                            <div><a class="tag-link" href="/italiano-a2/" target="_blank">Nivel Intermedio. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/italiano-a2/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
                         </div>
                     </div>
                 </div>
@@ -306,7 +306,7 @@
                             <h5 class="portfolio-title text-center">Italiano nivel avanzado B1</h5>
                         </div>
                         <div class="card-footer">
-                            <div><a class="tag-link" href="/latam/italiano-b1/" target="_blank">Si estas buscando realizar ciudadanía italiana tenes que estar preparado con este nivel B1. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/latam/italiano-b1/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
+                            <div><a class="tag-link" href="/italiano-b1/" target="_blank">Si estas buscando realizar ciudadanía italiana tenes que estar preparado con este nivel B1. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/italiano-b1/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
                         </div>
                     </div>
                 </div>
@@ -316,7 +316,7 @@
                             <h5 class="portfolio-title text-center">Pack Italiano Avanzado</h5>
                         </div>
                         <div class="card-footer">
-                            <div><a class="tag-link" href="/latam/italiano-pack-experto/" target="_blank">Si comenzás desde cero y queres llegar a un nivel avanzado este curso es para vos, estan los 3 niveles en descuento. Apto para ciudadanía Italiana. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/latam/italiano-pack-experto/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
+                            <div><a class="tag-link" href="/italiano-pack-experto/" target="_blank">Si comenzás desde cero y queres llegar a un nivel avanzado este curso es para vos, estan los 3 niveles en descuento. Apto para ciudadanía Italiana. Podes ver el temario en el siguiente link.<br></a><a class="btn btn-lg btn-block" href="/italiano-pack-experto/" target="_blank" style="background-color:#FF0000; color:white;">👉 Ver Curso</a></div>
                         </div>
                     </div>
                 </div>

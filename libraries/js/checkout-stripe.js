@@ -55,7 +55,7 @@ if (!wizard.validate({errorPlacement: function (error, element) {}}).element("#e
             $("#btn-pagos").attr('style', 'display: none');
             $("#espera-pagos").attr('style', 'display: block');
             $.ajax({
-                url: "/latam/includes/initPagos.php",
+                url: "/a-includes/initPagos.php",
                 type: "get",
                 dataType: 'json',
                 data: {
