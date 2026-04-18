@@ -1181,7 +1181,7 @@
         </details>
         <details class="faq-item">
             <summary>¿Qué métodos de pago aceptan?</summary>
-            <div class="faq-body">Tarjetas de crédito y débito internacionales vía Stripe (Visa, Mastercard, Amex). Para MercadoPago en pesos argentinos, escribinos a aprende.idiomas.latam@gmail.com.</div>
+            <div class="faq-body">Tarjetas de crédito y débito internacionales vía Stripe (Visa, Mastercard, Amex).</div>
         </details>
         <details class="faq-item">
             <summary>¿Necesito algún conocimiento previo?</summary>
@@ -1212,7 +1212,6 @@
     <div class="footer-inner">
         <img src="../img/logo.jpg" alt="Aprende Idiomas">
         <p>Cursos online de idiomas. Aprendé a tu ritmo, con certificado oficial y comunidad activa.</p>
-        <p><a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a></p>
         <div class="footer-bottom">© 2026 Aprende Idiomas · Hecho con cariño en Buenos Aires</div>
     </div>
 </footer>
