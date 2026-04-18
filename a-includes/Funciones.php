@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class Funciones {
     static function getFormatMoneda($val, $simbolo ,$moneda){
         $v1 = explode('.', $val . '');
