@@ -309,8 +309,86 @@ a[href*="wa.me"],
                 color: #fff;
                 cursor: pointer;
                 font-size: 1.2rem;
+                border: 0;
             }
         }
+
+        /* ===== MOBILE DRAWER ===== */
+        .mobile-drawer {
+            position: fixed; inset: 0;
+            background: rgba(10, 10, 15, .6);
+            z-index: 9998;
+            opacity: 0; visibility: hidden;
+            transition: opacity .25s ease, visibility .25s ease;
+            backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+        }
+        .mobile-drawer.open { opacity: 1; visibility: visible; }
+        .mobile-drawer-panel {
+            position: absolute; top: 0; right: 0;
+            width: min(86vw, 380px); height: 100%;
+            background: #fff;
+            transform: translateX(100%);
+            transition: transform .28s cubic-bezier(.4, 0, .2, 1);
+            overflow-y: auto;
+            padding: 24px 22px 40px;
+            box-shadow: -8px 0 40px rgba(0, 0, 0, .2);
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .mobile-drawer.open .mobile-drawer-panel { transform: translateX(0); }
+        .mobile-drawer-head {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 14px; padding-bottom: 14px;
+            border-bottom: 1px solid var(--line);
+        }
+        .mobile-drawer-head img { width: 40px; height: 40px; border-radius: 10px; }
+        .mobile-drawer-close {
+            background: #f3f3f6; border: 0;
+            width: 38px; height: 38px; border-radius: 50%;
+            cursor: pointer; font-size: 18px; color: var(--ink-soft);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .mobile-drawer a, .mobile-drawer details {
+            display: block; padding: 13px 14px;
+            color: var(--ink); text-decoration: none;
+            font-weight: 600; font-size: 15px;
+            border-radius: 10px;
+            transition: background .15s;
+        }
+        .mobile-drawer a:hover, .mobile-drawer a:active { background: var(--pink-soft); color: var(--pink); }
+        .mobile-drawer details {
+            padding: 0;
+        }
+        .mobile-drawer details summary {
+            padding: 13px 14px; cursor: pointer; border-radius: 10px;
+            list-style: none; display: flex; align-items: center; justify-content: space-between;
+            font-weight: 600;
+        }
+        .mobile-drawer details summary::-webkit-details-marker { display: none; }
+        .mobile-drawer details summary::after {
+            content: "▾"; color: var(--ink-soft); transition: transform .2s;
+        }
+        .mobile-drawer details[open] summary::after { transform: rotate(180deg); }
+        .mobile-drawer details[open] summary { background: var(--pink-soft); color: var(--pink); }
+        .mobile-drawer details .sub {
+            padding: 6px 0 10px 14px;
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .mobile-drawer details .sub a {
+            font-size: 14px; font-weight: 500; color: var(--ink-soft); padding: 10px 12px;
+        }
+        .mobile-drawer details .sub a:hover { color: var(--pink); }
+        .mobile-drawer .md-cta {
+            background: var(--ink); color: #fff !important; text-align: center;
+            padding: 14px; border-radius: 12px; margin-top: 12px;
+        }
+        .mobile-drawer .md-cta:hover { background: var(--pink); }
+        .mobile-drawer .md-subs {
+            background: linear-gradient(135deg, var(--pink), var(--cyan));
+            color: #fff !important; text-align: center;
+            padding: 14px; border-radius: 12px; margin-top: 6px;
+            font-weight: 700;
+        }
+        body.drawer-open { overflow: hidden; }
 
         /* ===== HERO ===== */
         .hero {
@@ -1527,9 +1605,65 @@ a[href*="wa.me"],
 
             <li><a href="https://academia.aprende-idiomas.com/" class="nav-cta">Iniciar sesión</a></li>
         </ul>
-        <div class="nav-burger" aria-label="Menú">☰</div>
+        <button type="button" class="nav-burger" aria-label="Menú" aria-controls="mobile-drawer" aria-expanded="false" onclick="abrirDrawer();">☰</button>
     </div>
 </nav>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" onclick="if(event.target===this){cerrarDrawer();}">
+    <nav class="mobile-drawer-panel" aria-label="Menú móvil">
+        <div class="mobile-drawer-head">
+            <img src="img/logo.jpg" alt="Aprende Idiomas">
+            <button type="button" class="mobile-drawer-close" aria-label="Cerrar menú" onclick="cerrarDrawer();">✕</button>
+        </div>
+        <a href="/">Inicio</a>
+        <details>
+            <summary><span>🇺🇸 Inglés</span></summary>
+            <div class="sub">
+                <a href="/ingles-nivel-uno/">Nivel 1 · Desde cero</a>
+                <a href="/ingles-nivel-dos/">Nivel 2 · Intermedio</a>
+            </div>
+        </details>
+        <details>
+            <summary><span>🇮🇹 Italiano</span></summary>
+            <div class="sub">
+                <a href="/italiano-inicial/">A1 · Inicial</a>
+                <a href="/italiano-a2/">A2 · Intermedio</a>
+                <a href="/italiano-b1/">B1 · Avanzado</a>
+                <a href="/italiano-pack-experto/">✦ Pack Experto A1+A2+B1</a>
+                <a href="/italiano-ingles/">✦ Pack Italiano + Inglés</a>
+            </div>
+        </details>
+        <a href="/frances/">🇫🇷 Francés</a>
+        <a href="/aleman/">🇩🇪 Alemán</a>
+        <a href="/japones/">🇯🇵 Japonés</a>
+        <a href="#" class="md-subs" onclick="event.preventDefault(); cerrarDrawer(); setTimeout(function(){document.getElementById('modal-suscripcion').style.display='flex';}, 280);">✦ Suscripción · USD 2/mes</a>
+        <a href="https://academia.aprende-idiomas.com/" class="md-cta">Iniciar sesión</a>
+    </nav>
+</div>
+
+<script>
+(function(){
+    window.abrirDrawer = function(){
+        var d = document.getElementById('mobile-drawer');
+        var b = document.querySelector('.nav-burger');
+        if (d) { d.classList.add('open'); document.body.classList.add('drawer-open'); }
+        if (b) { b.setAttribute('aria-expanded', 'true'); }
+    };
+    window.cerrarDrawer = function(){
+        var d = document.getElementById('mobile-drawer');
+        var b = document.querySelector('.nav-burger');
+        if (d) { d.classList.remove('open'); document.body.classList.remove('drawer-open'); }
+        if (b) { b.setAttribute('aria-expanded', 'false'); }
+    };
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') {
+            var d = document.getElementById('mobile-drawer');
+            if (d && d.classList.contains('open')) cerrarDrawer();
+        }
+    });
+})();
+</script>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
