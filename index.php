@@ -211,6 +211,76 @@ a[href*="wa.me"],
         }
         .nav-links a:hover { color: var(--pink); background: var(--pink-soft); }
         .nav-links a.active { color: var(--ink); font-weight: 700; }
+
+        /* ===== Nav dropdowns ===== */
+        .nav-flag { font-size: .95rem; margin-right: 4px; line-height: 1; }
+        .caret { font-size: .7rem; margin-left: 4px; opacity: .5; transition: transform .25s var(--ease); }
+        .has-dropdown { position: relative; }
+        .has-dropdown > a { display: inline-flex !important; align-items: center; }
+        .has-dropdown:hover > a .caret,
+        .has-dropdown:focus-within > a .caret { transform: rotate(-180deg); opacity: 1; }
+        .nav-drop {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            min-width: 280px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 20px 48px rgba(10,10,15,.14), 0 4px 12px rgba(10,10,15,.06);
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s var(--ease);
+            z-index: 1001;
+        }
+        .nav-drop::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0; right: 0;
+            height: 14px;
+        }
+        .has-dropdown:hover .nav-drop,
+        .has-dropdown:focus-within .nav-drop {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+        .nav-drop-item {
+            display: flex !important;
+            flex-direction: column;
+            padding: 10px 14px !important;
+            border-radius: 10px !important;
+            text-decoration: none !important;
+        }
+        .nav-drop-item:hover { background: var(--pink-soft) !important; color: var(--ink) !important; }
+        .nav-drop-item .nav-drop-title {
+            font-size: .92rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.2;
+        }
+        .nav-drop-item:hover .nav-drop-title { color: var(--pink); }
+        .nav-drop-item .nav-drop-desc {
+            font-size: .78rem;
+            font-weight: 400;
+            color: var(--ink-soft);
+            margin-top: 3px;
+            line-height: 1.3;
+        }
+        .nav-drop-item.featured {
+            background: linear-gradient(135deg, var(--pink-soft), var(--cyan-soft));
+        }
+        .nav-drop-item.featured .nav-drop-title {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
         .nav-cta {
             background: var(--ink) !important;
             color: #fff !important;
@@ -510,6 +580,190 @@ a[href*="wa.me"],
         .lang-pill.all { background: var(--ink); color: #fff; border-color: var(--ink); }
         .lang-pill.all:hover, .lang-pill.all.active { background: var(--ink); color: #fff; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(10,10,15,.32); }
         .lang-pill.all .greet { color: rgba(255,255,255,.6); border-left-color: rgba(255,255,255,.15); }
+        .lang-pill.subs {
+            background: var(--gradient);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 8px 20px rgba(236,19,137,.28);
+            font-weight: 700;
+        }
+        .lang-pill.subs:hover { background: var(--gradient); color: #fff; transform: translateY(-3px); box-shadow: 0 16px 36px rgba(236,19,137,.45); }
+        .lang-pill.subs .greet { color: rgba(255,255,255,.75); border-left-color: rgba(255,255,255,.25); font-weight: 600; }
+        .lang-pill.subs .flag { font-size: 1rem; }
+
+        /* ===== Modal Suscripción ===== */
+        .subs-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: subsFadeIn .25s var(--ease);
+        }
+        .subs-modal[hidden] { display: none; }
+        .subs-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,10,15,.6);
+            backdrop-filter: blur(6px);
+            cursor: pointer;
+        }
+        .subs-modal-box {
+            position: relative;
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px 40px 28px;
+            max-width: 760px;
+            width: 100%;
+            box-shadow: 0 32px 80px rgba(0,0,0,.4);
+            animation: subsSlideUp .35s var(--ease);
+        }
+        @keyframes subsFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes subsSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .subs-modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: var(--bg-soft);
+            color: var(--ink-soft);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s var(--ease);
+            font-family: inherit;
+            line-height: 1;
+        }
+        .subs-modal-close:hover { background: var(--ink); color: #fff; }
+        .subs-modal-head { text-align: center; margin-bottom: 24px; }
+        .subs-modal-eyebrow {
+            display: inline-block;
+            background: var(--gradient);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .subs-modal-head h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.03em;
+        }
+        .subs-modal-head p { color: var(--ink-soft); font-size: .95rem; }
+        .subs-modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .subs-option {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 22px;
+            border: 2px solid var(--line);
+            border-radius: 18px;
+            background: #fff;
+            color: var(--ink);
+            text-decoration: none;
+            transition: all .25s var(--ease);
+        }
+        .subs-option:hover {
+            transform: translateY(-3px);
+            border-color: var(--ink);
+            box-shadow: var(--shadow-2);
+        }
+        .subs-option.featured {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--pink);
+            box-shadow: 0 12px 28px rgba(236,19,137,.28);
+        }
+        .subs-option.featured:hover {
+            border-color: var(--pink);
+            box-shadow: 0 20px 40px rgba(236,19,137,.4);
+            transform: translateY(-5px);
+        }
+        .subs-option-badge {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: .68rem;
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .subs-option-label {
+            font-family: 'Sora', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .subs-option-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 6px; }
+        .subs-option-price .amt {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .subs-option.featured .subs-option-price .amt {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .subs-option-price .per {
+            font-size: .9rem;
+            color: var(--ink-soft);
+            font-weight: 600;
+        }
+        .subs-option.featured .subs-option-price .per { color: rgba(255,255,255,.6); }
+        .subs-option-desc {
+            font-size: .85rem;
+            color: var(--ink-soft);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        .subs-option.featured .subs-option-desc { color: rgba(255,255,255,.75); }
+        .subs-option-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            font-size: .88rem;
+            color: var(--pink);
+            margin-top: auto;
+        }
+        .subs-option.featured .subs-option-cta { color: #fff; }
+        .subs-modal-foot {
+            text-align: center;
+            font-size: .78rem;
+            color: var(--ink-soft);
+            margin-top: 22px;
+        }
+        @media (max-width: 640px) {
+            .subs-modal-box { padding: 32px 22px 22px; }
+            .subs-modal-grid { grid-template-columns: 1fr; }
+        }
+        body.subs-open { overflow: hidden; }
 
         /* Filter animation */
         .course-card.is-hidden { display: none !important; }
@@ -1224,12 +1478,69 @@ a[href*="wa.me"],
         <a href="/" class="nav-logo"><img src="img/logo.jpg" alt="Aprende Idiomas"></a>
         <ul class="nav-links">
             <li><a href="/" class="active">Inicio</a></li>
-            <li><a href="/ingles-nivel-uno/">Inglés</a></li>
-            <li><a href="/italiano-inicial/">Italiano</a></li>
-            <li><a href="/frances/">Francés</a></li>
-            <li><a href="/aleman/">Alemán</a></li>
-            <li><a href="/japones/">Japonés</a></li>
-            <li><a href="#suscripciones">Suscripciones</a></li>
+
+            <li class="has-dropdown">
+                <a href="/ingles-nivel-uno/"><span class="nav-flag">🇺🇸</span>Inglés <span class="caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="/ingles-nivel-uno/" class="nav-drop-item">
+                        <span class="nav-drop-title">Nivel 1 · Desde cero</span>
+                        <span class="nav-drop-desc">Principiantes sin base previa</span>
+                    </a>
+                    <a href="/ingles-nivel-dos/" class="nav-drop-item">
+                        <span class="nav-drop-title">Nivel 2 · Intermedio</span>
+                        <span class="nav-drop-desc">Profundizá tus conocimientos</span>
+                    </a>
+                </div>
+            </li>
+
+            <li class="has-dropdown">
+                <a href="/italiano-inicial/"><span class="nav-flag">🇮🇹</span>Italiano <span class="caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="/italiano-inicial/" class="nav-drop-item">
+                        <span class="nav-drop-title">A1 · Inicial</span>
+                        <span class="nav-drop-desc">Desde cero</span>
+                    </a>
+                    <a href="/italiano-a2/" class="nav-drop-item">
+                        <span class="nav-drop-title">A2 · Intermedio</span>
+                        <span class="nav-drop-desc">Continuación del A1</span>
+                    </a>
+                    <a href="/italiano-b1/" class="nav-drop-item">
+                        <span class="nav-drop-title">B1 · Avanzado</span>
+                        <span class="nav-drop-desc">Apto ciudadanía italiana</span>
+                    </a>
+                    <a href="/italiano-pack-experto/" class="nav-drop-item">
+                        <span class="nav-drop-title">✦ Pack Experto A1+A2+B1</span>
+                        <span class="nav-drop-desc">Los 3 niveles con descuento</span>
+                    </a>
+                    <a href="/italiano-ingles/" class="nav-drop-item">
+                        <span class="nav-drop-title">✦ Pack Italiano + Inglés</span>
+                        <span class="nav-drop-desc">2 idiomas al precio de uno</span>
+                    </a>
+                </div>
+            </li>
+
+            <li><a href="/frances/"><span class="nav-flag">🇫🇷</span>Francés</a></li>
+            <li><a href="/aleman/"><span class="nav-flag">🇩🇪</span>Alemán</a></li>
+            <li><a href="/japones/"><span class="nav-flag">🇯🇵</span>Japonés</a></li>
+
+            <li class="has-dropdown">
+                <a href="/suscripcion/">Suscripción <span class="caret">▾</span></a>
+                <div class="nav-drop">
+                    <a href="/suscripcion/#mensual" class="nav-drop-item">
+                        <span class="nav-drop-title">Plan Mensual · USD 4/mes</span>
+                        <span class="nav-drop-desc">Flexibilidad · cancelás cuando quieras</span>
+                    </a>
+                    <a href="/suscripcion/#anual" class="nav-drop-item featured">
+                        <span class="nav-drop-title">★ Plan Anual · USD 2/mes</span>
+                        <span class="nav-drop-desc">Ahorrás 50% · USD 24 al año</span>
+                    </a>
+                    <a href="/suscripcion/" class="nav-drop-item">
+                        <span class="nav-drop-title">Ver landing completa →</span>
+                        <span class="nav-drop-desc">Todos los detalles del plan</span>
+                    </a>
+                </div>
+            </li>
+
             <li><a href="https://academia.aprende-idiomas.com/" class="nav-cta">Iniciar sesión</a></li>
         </ul>
         <div class="nav-burger" aria-label="Menú">☰</div>
@@ -1276,6 +1587,36 @@ a[href*="wa.me"],
         <button type="button" data-filter="fr" class="lang-pill fr"><span class="flag">🇫🇷</span> Francés <span class="greet">Bonjour!</span></button>
         <button type="button" data-filter="de" class="lang-pill de"><span class="flag">🇩🇪</span> Alemán <span class="greet">Hallo!</span></button>
         <button type="button" data-filter="ja" class="lang-pill ja"><span class="flag">🇯🇵</span> Japonés <span class="greet">こんにちは</span></button>
+        <button type="button" data-action="subs" class="lang-pill subs" aria-haspopup="dialog" aria-controls="subs-modal"><span class="flag">✦</span> Suscripción <span class="greet">All-Access</span></button>
+    </div>
+
+    <!-- Modal Suscripción -->
+    <div class="subs-modal" id="subs-modal" role="dialog" aria-modal="true" aria-labelledby="subs-modal-title" hidden>
+        <div class="subs-modal-backdrop" data-close></div>
+        <div class="subs-modal-box">
+            <button class="subs-modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="subs-modal-head">
+                <span class="subs-modal-eyebrow">✦ Suscripción All-Access</span>
+                <h3 id="subs-modal-title">Elegí tu plan</h3>
+                <p>Acceso ilimitado a los 5 idiomas · +15 cursos · Certificado oficial</p>
+            </div>
+            <div class="subs-modal-grid">
+                <a href="/suscripcion/#mensual" class="subs-option">
+                    <div class="subs-option-label">Plan Mensual</div>
+                    <div class="subs-option-price"><span class="amt">USD 4</span><span class="per">/mes</span></div>
+                    <div class="subs-option-desc">Flexibilidad total · Cancelás cuando quieras</div>
+                    <span class="subs-option-cta">Ver plan →</span>
+                </a>
+                <a href="/suscripcion/#anual" class="subs-option featured">
+                    <div class="subs-option-badge">★ Más popular · Ahorrás 50%</div>
+                    <div class="subs-option-label">Plan Anual</div>
+                    <div class="subs-option-price"><span class="amt">USD 2</span><span class="per">/mes</span></div>
+                    <div class="subs-option-desc">Pago único anual · USD 24 al año</div>
+                    <span class="subs-option-cta">Ver plan →</span>
+                </a>
+            </div>
+            <p class="subs-modal-foot">🔒 Pago seguro vía Stripe · Garantía de 7 días</p>
+        </div>
     </div>
 </section>
 
@@ -1726,12 +2067,12 @@ a[href*="wa.me"],
     </div>
 </footer>
 
-<!-- Filter de cursos por idioma -->
+<!-- Filter de cursos por idioma + Modal suscripción -->
 <script>
 (function() {
-    var pills = document.querySelectorAll('#lang-filters .lang-pill');
+    // ===== Filtros =====
+    var pills = document.querySelectorAll('#lang-filters .lang-pill[data-filter]');
     var cards = document.querySelectorAll('.courses-grid .course-card');
-    if (!pills.length || !cards.length) return;
 
     function applyFilter(filter) {
         cards.forEach(function(card) {
@@ -1751,12 +2092,36 @@ a[href*="wa.me"],
         pill.addEventListener('click', function() {
             var filter = this.getAttribute('data-filter');
             applyFilter(filter);
-            // Scroll suave al catálogo
             var target = document.getElementById('cursos');
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
+    });
+
+    // ===== Modal Suscripción =====
+    var modal = document.getElementById('subs-modal');
+    var opener = document.querySelector('.lang-pill[data-action="subs"]');
+    if (!modal || !opener) return;
+
+    function openModal() {
+        modal.hidden = false;
+        document.body.classList.add('subs-open');
+    }
+    function closeModal() {
+        modal.hidden = true;
+        document.body.classList.remove('subs-open');
+    }
+
+    opener.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+    });
+
+    modal.querySelectorAll('[data-close]').forEach(function(el) {
+        el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
     });
 })();
 </script>
