@@ -1523,23 +1523,7 @@ a[href*="wa.me"],
             <li><a href="/aleman/"><span class="nav-flag">🇩🇪</span>Alemán</a></li>
             <li><a href="/japones/"><span class="nav-flag">🇯🇵</span>Japonés</a></li>
 
-            <li class="has-dropdown">
-                <a href="/suscripcion/">Suscripción <span class="caret">▾</span></a>
-                <div class="nav-drop">
-                    <a href="/suscripcion/#mensual" class="nav-drop-item">
-                        <span class="nav-drop-title">Plan Mensual · USD 4/mes</span>
-                        <span class="nav-drop-desc">Flexibilidad · cancelás cuando quieras</span>
-                    </a>
-                    <a href="/suscripcion/#anual" class="nav-drop-item featured">
-                        <span class="nav-drop-title">★ Plan Anual · USD 2/mes</span>
-                        <span class="nav-drop-desc">Ahorrás 50% · USD 24 al año</span>
-                    </a>
-                    <a href="/suscripcion/" class="nav-drop-item">
-                        <span class="nav-drop-title">Ver landing completa →</span>
-                        <span class="nav-drop-desc">Todos los detalles del plan</span>
-                    </a>
-                </div>
-            </li>
+            <li><a href="/suscripcion/">Suscripción</a></li>
 
             <li><a href="https://academia.aprende-idiomas.com/" class="nav-cta">Iniciar sesión</a></li>
         </ul>
