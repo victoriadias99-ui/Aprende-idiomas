@@ -390,6 +390,12 @@ a[href*="wa.me"],
         }
         body.drawer-open { overflow: hidden; }
 
+        /* Modal suscripcion planes: stack en mobile */
+        @media (max-width: 560px) {
+            .sus-planes-grid { grid-template-columns: 1fr !important; }
+            #modal-suscripcion > div { padding: 28px 20px !important; }
+        }
+
         /* ===== HERO ===== */
         .hero {
             position: relative;
@@ -2277,7 +2283,7 @@ a[href*="wa.me"],
             <h2 style="margin:0 0 10px;font-size:30px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;line-height:1.15;">Elegí tu plan</h2>
             <p style="margin:0 0 26px;color:#5a5d72;font-size:15px;line-height:1.5;">Acceso ilimitado a los 5 idiomas · +15 cursos · Certificado oficial</p>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+            <div class="sus-planes-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
                 <!-- PLAN MENSUAL -->
                 <div onclick="avanzarPasoSus('mensual')" style="cursor:pointer;background:#fff;border:1.5px solid rgba(10,10,15,.1);border-radius:20px;padding:24px 18px;text-align:left;transition:all .2s;" onmouseover="this.style.borderColor='#ec1389';this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='rgba(10,10,15,.1)';this.style.transform='translateY(0)';">
                     <div style="font-weight:700;color:#0a0a0f;margin-bottom:6px;text-align:center;">Plan Mensual</div>
