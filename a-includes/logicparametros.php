@@ -1,6 +1,5 @@
 <?php
 require_once  dirname(__DIR__) . '/a-libraries/vendor/autoload.php';
-$country_code = trim($_SERVER["HTTP_CF_IPCOUNTRY"]);
 
 /*
 // Verificar si la URL actual no contiene '/latam' después del dominio
