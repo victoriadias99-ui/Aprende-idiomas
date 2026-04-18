@@ -16,5 +16,7 @@ RUN install-php-extensions \
 WORKDIR /app/public
 COPY . /app/public/
 
-# Railway proporciona $PORT; exponemos el servidor en ese puerto
-ENV SERVER_NAME=":${PORT:-80}"
+# Railway proporciona $PORT dinamicamente. Sintaxis de Caddy
+# ({$VAR:default}) se resuelve en runtime, a diferencia de ENV
+# con expansion de shell que se evalua solo en build time.
+ENV SERVER_NAME=":{$PORT:80}"
