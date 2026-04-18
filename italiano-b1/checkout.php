@@ -426,6 +426,23 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
         @media (max-width: 720px) {
             .co-badges { grid-template-columns: 1fr; }
         }
+/* CHAT_TRUST_V2_CSS */
+        .co-badge .ico-svg {
+            width: 72px; height: 80px;
+            margin: 0 auto 12px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .co-badge .ico-svg svg { width: 100%; height: 100%; }
+        .co-footer-links {
+            margin-top: 10px;
+            display: flex; flex-wrap: wrap; gap: 8px;
+            justify-content: center;
+            font-size: .85rem;
+        }
+        .co-footer-links a { color: var(--ink-soft); text-decoration: underline; }
+        .co-footer-links a:hover { color: var(--primary); }
+        .co-footer-links span { color: var(--line-strong); }
+
 
         /* Testimonials */
         .co-testimonials {
@@ -639,8 +656,7 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
             <li>
                 <div>
                     <div class="item-name">Italiano B1</div>
-                    <div class="item-desc">Acceso de por vida</div>
-                </div>
+</div>
                 <span class="item-price"><?= $precio ?></span>
             </li>
 
@@ -681,8 +697,7 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
             <li><span class="check">✓</span> Periodo ipotetico</li>
             <li><span class="check">✓</span> Preparación CILS / CELI B1</li>
             <li><span class="check">✓</span> Apto requisito ciudadanía</li>
-            <li><span class="check">✓</span> Acceso de por vida</li>
-            <li><span class="check">✓</span> Certificado oficial</li>
+<li><span class="check">✓</span> Certificado oficial</li>
         </ul>
     </aside>
 
@@ -700,18 +715,41 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
 <!-- BADGES -->
 <section class="co-badges">
     <div class="co-badge">
-        <div class="ico">🔒</div>
+        <div class="ico-svg" aria-hidden="true">
+            <svg viewBox="0 0 64 72" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#2b2b2b" d="M32 2 4 12v22c0 17 12 30 28 36 16-6 28-19 28-36V12L32 2z"/>
+                <path fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M18 34l10 10 18-20"/>
+            </svg>
+        </div>
         <h4>Protegemos tu privacidad</h4>
         <p>Tus datos están encriptados end-to-end con Stripe.</p>
     </div>
     <div class="co-badge">
-        <div class="ico">🛡️</div>
+        <div class="ico-svg" aria-hidden="true">
+            <svg viewBox="0 0 72 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="4" width="60" height="18" rx="2" fill="#2b2b2b"/>
+                <text x="36" y="17" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">SSL 256-B</text>
+                <path fill="none" stroke="#2b2b2b" stroke-width="5" d="M20 36v-6a16 16 0 0 1 32 0v6"/>
+                <rect x="12" y="34" width="48" height="36" rx="3" fill="#2b2b2b"/>
+                <circle cx="36" cy="50" r="4" fill="#fff"/>
+                <rect x="34" y="52" width="4" height="10" fill="#fff"/>
+                <rect x="10" y="64" width="52" height="10" fill="#2b2b2b"/>
+                <text x="36" y="72" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#fff" text-anchor="middle">SECURE SITE</text>
+            </svg>
+        </div>
         <h4>Tus datos están seguros</h4>
-        <p>No compartimos tu información con terceros. Nunca.</p>
+        <p>Conexión cifrada SSL 256-bit en todo el sitio.</p>
     </div>
     <div class="co-badge">
-        <div class="ico">✓</div>
-        <h4>Garantía 100%</h4>
+        <div class="ico-svg" aria-hidden="true">
+            <svg viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="28" r="22" fill="#2b2b2b"/>
+                <circle cx="32" cy="28" r="12" fill="none" stroke="#fff" stroke-width="4"/>
+                <path fill="#2b2b2b" d="M16 46l-8 28 14-6 10 10 8-28z"/>
+                <path fill="#2b2b2b" d="M48 46l8 28-14-6-10 10-8-28z"/>
+            </svg>
+        </div>
+        <h4>Garantía de satisfacción 100%</h4>
         <p>7 días de garantía sin vueltas. Te devolvemos el 100%.</p>
     </div>
 </section>
@@ -751,6 +789,13 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
 <footer class="co-footer">
     <img src="../img/logo.jpg" alt="Aprende Idiomas">
     <p>© 2026 Aprende Idiomas · Hecho con cariño en Buenos Aires</p>
+    <nav class="co-footer-links">
+        <a href="/aviso-legal/">Términos y condiciones</a>
+        <span>·</span>
+        <a href="/politicas-de-privacidad/">Política de privacidad</a>
+        <span>·</span>
+        <a href="/politicas-de-cookies/">Política de cookies</a>
+    </nav>
     </footer>
 
 <!-- Scripts (preservar) -->

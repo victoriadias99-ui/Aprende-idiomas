@@ -952,9 +952,7 @@ $urlCheckout = 'checkout.php';
             <ul class="feat-list">
                 <li><span class="check">✓</span> +25 clases paso a paso</li>
                 <li><span class="check">✓</span> +200 ejercicios prácticos</li>
-                <li><span class="check">✓</span> Descarga sin internet</li>
-                <li><span class="check">✓</span> Acceso de por vida</li>
-                <li><span class="check">✓</span> Soporte de profes online</li>
+<li><span class="check">✓</span> Soporte de profes online</li>
                 <li><span class="check">✓</span> Certificado oficial</li>
             </ul>
 
@@ -1042,12 +1040,7 @@ $urlCheckout = 'checkout.php';
             <h3>Comunidad online</h3>
             <p>Espacio exclusivo para que practiques italiano con otros alumnos y profes.</p>
         </div>
-        <div class="benefit">
-            <img src="img/acceso.jpg" alt="Acceso" class="benefit-img">
-            <h3>Acceso de por vida</h3>
-            <p>El curso queda para siempre. Hacelo a tu ritmo, sin horarios, cuando quieras.</p>
-        </div>
-    </div>
+</div>
 </section>
 
 <!-- ============ TEMARIO ============ -->
@@ -1210,8 +1203,7 @@ $urlCheckout = 'checkout.php';
             <p>Pago único en moneda local. Sin suscripciones ni pagos mensuales. Garantía de devolución de 7 días.</p>
             <ul>
                 <li>+25 clases paso a paso</li>
-                <li>Acceso de por vida</li>
-                <li>Certificado oficial incluido</li>
+<li>Certificado oficial incluido</li>
                 <li>Soporte personalizado por email</li>
             </ul>
             <div class="price-block">

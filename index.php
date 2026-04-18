@@ -1846,12 +1846,7 @@ a[href*="wa.me"],
             <h3>Comunidad online</h3>
             <p>Un espacio para que practiques con otros alumnos y resuelvas dudas con los profes.</p>
         </div>
-        <div class="benefit">
-            <img src="img/acceso.jpg" alt="Acceso" class="benefit-img">
-            <h3>Acceso de por vida</h3>
-            <p>Cada curso queda disponible siempre, para que lo hagas a tu ritmo y lo revises cuantas veces quieras.</p>
-        </div>
-    </div>
+</div>
 </section>
 
 
