@@ -501,11 +501,23 @@ a[href*="wa.me"],
             padding-left: 10px;
             border-left: 1px solid var(--line);
         }
-        .lang-pill.en:hover { border-color: var(--lang-en); color: var(--lang-en); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(29,78,216,.18); }
-        .lang-pill.it:hover { border-color: var(--lang-it); color: var(--lang-it); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(21,128,61,.18); }
-        .lang-pill.fr:hover { border-color: var(--lang-fr); color: var(--lang-fr); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(79,70,229,.18); }
-        .lang-pill.de:hover { border-color: var(--lang-de); color: var(--lang-de); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(217,119,6,.18); }
-        .lang-pill.ja:hover { border-color: var(--lang-ja); color: var(--lang-ja); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(190,18,60,.18); }
+        .lang-pill { font-family: inherit; letter-spacing: -0.01em; cursor: pointer; }
+        .lang-pill.en:hover, .lang-pill.en.active { border-color: var(--lang-en); color: var(--lang-en); background: var(--lang-en-soft); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(29,78,216,.18); }
+        .lang-pill.it:hover, .lang-pill.it.active { border-color: var(--lang-it); color: var(--lang-it); background: var(--lang-it-soft); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(21,128,61,.18); }
+        .lang-pill.fr:hover, .lang-pill.fr.active { border-color: var(--lang-fr); color: var(--lang-fr); background: var(--lang-fr-soft); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(79,70,229,.18); }
+        .lang-pill.de:hover, .lang-pill.de.active { border-color: var(--lang-de); color: var(--lang-de); background: var(--lang-de-soft); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(217,119,6,.18); }
+        .lang-pill.ja:hover, .lang-pill.ja.active { border-color: var(--lang-ja); color: var(--lang-ja); background: var(--lang-ja-soft); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(190,18,60,.18); }
+        .lang-pill.all { background: var(--ink); color: #fff; border-color: var(--ink); }
+        .lang-pill.all:hover, .lang-pill.all.active { background: var(--ink); color: #fff; transform: translateY(-3px); box-shadow: 0 12px 28px rgba(10,10,15,.32); }
+        .lang-pill.all .greet { color: rgba(255,255,255,.6); border-left-color: rgba(255,255,255,.15); }
+
+        /* Filter animation */
+        .course-card.is-hidden { display: none !important; }
+        .course-card { animation: cardFadeIn .35s var(--ease); }
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
         /* ===== Section heading ===== */
         .section-head {
@@ -1257,12 +1269,217 @@ a[href*="wa.me"],
 <!-- ============ LOGO BAR ============ -->
 <section class="logo-bar">
     <div class="logo-bar-label">5 idiomas para elegir</div>
-    <div class="lang-pills">
-        <a href="/ingles-nivel-uno/" class="lang-pill en"><span class="flag">🇺🇸</span> Inglés <span class="greet">Hello!</span></a>
-        <a href="/italiano-inicial/" class="lang-pill it"><span class="flag">🇮🇹</span> Italiano <span class="greet">Ciao!</span></a>
-        <a href="/frances/" class="lang-pill fr"><span class="flag">🇫🇷</span> Francés <span class="greet">Bonjour!</span></a>
-        <a href="/aleman/" class="lang-pill de"><span class="flag">🇩🇪</span> Alemán <span class="greet">Hallo!</span></a>
-        <a href="/japones/" class="lang-pill ja"><span class="flag">🇯🇵</span> Japonés <span class="greet">こんにちは</span></a>
+    <div class="lang-pills" id="lang-filters">
+        <button type="button" data-filter="all" class="lang-pill all active"><span class="flag">✦</span> Todos <span class="greet">los cursos</span></button>
+        <button type="button" data-filter="en" class="lang-pill en"><span class="flag">🇺🇸</span> Inglés <span class="greet">Hello!</span></button>
+        <button type="button" data-filter="it" class="lang-pill it"><span class="flag">🇮🇹</span> Italiano <span class="greet">Ciao!</span></button>
+        <button type="button" data-filter="fr" class="lang-pill fr"><span class="flag">🇫🇷</span> Francés <span class="greet">Bonjour!</span></button>
+        <button type="button" data-filter="de" class="lang-pill de"><span class="flag">🇩🇪</span> Alemán <span class="greet">Hallo!</span></button>
+        <button type="button" data-filter="ja" class="lang-pill ja"><span class="flag">🇯🇵</span> Japonés <span class="greet">こんにちは</span></button>
+    </div>
+</section>
+
+<!-- ============ CURSOS ============ -->
+<section class="courses" id="cursos">
+    <div class="section-head">
+        <div class="eyebrow cyan">Catálogo</div>
+        <h2>Nuestros cursos</h2>
+        <p>Elegí el idioma que va a cambiar tu vida. Todos incluyen certificado, comunidad y acceso de por vida.</p>
+    </div>
+    <div class="courses-grid">
+
+        <article class="course-card en" data-lang="en">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
+                <img src="img/producto1.jpg" alt="Inglés Nivel 1">
+            </div>
+            <div class="course-body">
+                <h3>Inglés Nivel 1</h3>
+                <div class="level">Desde cero · Principiantes</div>
+                <p>Sin requisitos previos. Ideal para quienes comienzan desde cero con el idioma más solicitado por las empresas.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">10 módulos</span>
+                <a href="/ingles-nivel-uno/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card en" data-lang="en">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
+                <img src="img/producto2.jpg" alt="Inglés Nivel 2">
+            </div>
+            <div class="course-body">
+                <h3>Inglés Nivel 2</h3>
+                <div class="level">Intermedio</div>
+                <p>Profundizá tus conocimientos siguiendo el nivel 2. Mirá el temario completo en el siguiente link.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">10 módulos</span>
+                <a href="/ingles-nivel-dos/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card it" data-lang="it">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
+                <img src="img/italiana1.jpg" alt="Italiano A1">
+            </div>
+            <div class="course-body">
+                <h3>Italiano A1</h3>
+                <div class="level">Inicial</div>
+                <p>Comenzá desde cero con el idioma del amor. Ideal para quienes están dando los primeros pasos.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">Nivel A1</span>
+                <a href="/italiano-inicial/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card it" data-lang="it">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
+                <img src="img/italiano-a2.jpg" alt="Italiano A2">
+            </div>
+            <div class="course-body">
+                <h3>Italiano A2</h3>
+                <div class="level">Intermedio</div>
+                <p>Continuá tu camino con el nivel intermedio. Mirá el temario completo en el siguiente link.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">Nivel A2</span>
+                <a href="/italiano-a2/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card it" data-lang="it">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
+                <img src="img/italiano-b1.jpg" alt="Italiano B1">
+            </div>
+            <div class="course-body">
+                <h3>Italiano B1</h3>
+                <div class="level">Avanzado · Apto ciudadanía</div>
+                <p>Si buscás ciudadanía italiana, este es el nivel que necesitás. Apto B1.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">Nivel B1</span>
+                <a href="/italiano-b1/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card pack" data-lang="it">
+            <div class="course-img-wrap">
+                <span class="course-badge">✦ Pack</span>
+                <img src="img/italiano-pack.jpg" alt="Pack Italiano">
+            </div>
+            <div class="course-body">
+                <h3>Pack Italiano Avanzado</h3>
+                <div class="level">A1 + A2 + B1 con descuento</div>
+                <p>Los 3 niveles con descuento. De cero a avanzado. Apto ciudadanía italiana.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">3 niveles</span>
+                <a href="/italiano-pack-experto/" class="course-cta">Ver pack →</a>
+            </div>
+        </article>
+
+        <article class="course-card fr" data-lang="fr">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇫🇷</span> Francés</span>
+                <img src="img/frances1.png" alt="Francés">
+            </div>
+            <div class="course-body">
+                <h3>Francés Inicial</h3>
+                <div class="level">Desde cero</div>
+                <p>Comenzá desde cero con uno de los idiomas más elegantes del mundo. Mirá el temario completo.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">Nivel inicial</span>
+                <a href="/frances/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card pack" data-lang="it">
+            <div class="course-img-wrap">
+                <span class="course-badge">✦ Pack 2x1</span>
+                <img src="img/pack.jpg" alt="Pack Italiano + Inglés">
+            </div>
+            <div class="course-body">
+                <h3>Pack Italiano + Inglés</h3>
+                <div class="level">2 idiomas, precio especial</div>
+                <p>Aprovechá estudiar 2 idiomas al precio de uno. Pack ideal para acelerar tu aprendizaje.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">2 idiomas</span>
+                <a href="/italiano-ingles/" class="course-cta">Ver pack →</a>
+            </div>
+        </article>
+
+        <article class="course-card de" data-lang="de">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇩🇪</span> Alemán</span>
+                <img src="img/aleman1.png" alt="Alemán">
+            </div>
+            <div class="course-body">
+                <h3>Alemán</h3>
+                <div class="level">Inicial</div>
+                <p>El idioma más hablado de Europa. Mirá el temario completo del curso.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">Nivel inicial</span>
+                <a href="/aleman/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card ja" data-lang="ja">
+            <div class="course-img-wrap">
+                <span class="course-badge"><span class="flag">🇯🇵</span> Japonés</span>
+                <img src="img/japon.png" alt="Japonés">
+            </div>
+            <div class="course-body">
+                <h3>Japonés</h3>
+                <div class="level">Inicial</div>
+                <p>Sumergite en una de las culturas más fascinantes del mundo. Mirá el temario completo.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">Nivel inicial</span>
+                <a href="/japones/" class="course-cta">Ver curso →</a>
+            </div>
+        </article>
+
+        <article class="course-card all" data-lang="all" id="suscripciones">
+            <div class="course-img-wrap">
+                <span class="course-badge">✦ All-Access</span>
+                <img src="img/idiomas.jpg" alt="Suscripción Mensual">
+            </div>
+            <div class="course-body">
+                <h3>Suscripción Mensual</h3>
+                <div class="level">USD 4 / mes · Todo incluido</div>
+                <p>Acceso completo a todos los niveles de inglés, italiano, alemán y japonés.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">USD 4/mes</span>
+                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="course-cta">Suscribirse →</a>
+            </div>
+        </article>
+
+        <article class="course-card all" data-lang="all">
+            <div class="course-img-wrap">
+                <span class="course-badge" style="background: var(--cyan);">✦ Mejor precio</span>
+                <img src="img/idiomas.jpg" alt="Suscripción Anual">
+            </div>
+            <div class="course-body">
+                <h3>Suscripción Anual</h3>
+                <div class="level">USD 2 / mes · Plan recomendado</div>
+                <p>El plan más conveniente. Acceso ilimitado a todos los idiomas durante un año entero.</p>
+            </div>
+            <div class="course-foot">
+                <span class="course-price">USD 24/año</span>
+                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="course-cta">Suscribirse →</a>
+            </div>
+        </article>
+
     </div>
 </section>
 
@@ -1312,209 +1529,6 @@ a[href*="wa.me"],
     </div>
 </section>
 
-<!-- ============ CURSOS ============ -->
-<section class="courses" id="cursos">
-    <div class="section-head">
-        <div class="eyebrow cyan">Catálogo</div>
-        <h2>Nuestros cursos</h2>
-        <p>Elegí el idioma que va a cambiar tu vida. Todos incluyen certificado, comunidad y acceso de por vida.</p>
-    </div>
-    <div class="courses-grid">
-
-        <article class="course-card en">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
-                <img src="img/producto1.jpg" alt="Inglés Nivel 1">
-            </div>
-            <div class="course-body">
-                <h3>Inglés Nivel 1</h3>
-                <div class="level">Desde cero · Principiantes</div>
-                <p>Sin requisitos previos. Ideal para quienes comienzan desde cero con el idioma más solicitado por las empresas.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">10 módulos</span>
-                <a href="/ingles-nivel-uno/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card en">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
-                <img src="img/producto2.jpg" alt="Inglés Nivel 2">
-            </div>
-            <div class="course-body">
-                <h3>Inglés Nivel 2</h3>
-                <div class="level">Intermedio</div>
-                <p>Profundizá tus conocimientos siguiendo el nivel 2. Mirá el temario completo en el siguiente link.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">10 módulos</span>
-                <a href="/ingles-nivel-dos/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card it">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/italiana1.jpg" alt="Italiano A1">
-            </div>
-            <div class="course-body">
-                <h3>Italiano A1</h3>
-                <div class="level">Inicial</div>
-                <p>Comenzá desde cero con el idioma del amor. Ideal para quienes están dando los primeros pasos.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">Nivel A1</span>
-                <a href="/italiano-inicial/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card it">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/italiano-a2.jpg" alt="Italiano A2">
-            </div>
-            <div class="course-body">
-                <h3>Italiano A2</h3>
-                <div class="level">Intermedio</div>
-                <p>Continuá tu camino con el nivel intermedio. Mirá el temario completo en el siguiente link.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">Nivel A2</span>
-                <a href="/italiano-a2/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card it">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇮🇹</span> Italiano</span>
-                <img src="img/italiano-b1.jpg" alt="Italiano B1">
-            </div>
-            <div class="course-body">
-                <h3>Italiano B1</h3>
-                <div class="level">Avanzado · Apto ciudadanía</div>
-                <p>Si buscás ciudadanía italiana, este es el nivel que necesitás. Apto B1.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">Nivel B1</span>
-                <a href="/italiano-b1/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card pack">
-            <div class="course-img-wrap">
-                <span class="course-badge">✦ Pack</span>
-                <img src="img/italiano-pack.jpg" alt="Pack Italiano">
-            </div>
-            <div class="course-body">
-                <h3>Pack Italiano Avanzado</h3>
-                <div class="level">A1 + A2 + B1 con descuento</div>
-                <p>Los 3 niveles con descuento. De cero a avanzado. Apto ciudadanía italiana.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">3 niveles</span>
-                <a href="/italiano-pack-experto/" class="course-cta">Ver pack →</a>
-            </div>
-        </article>
-
-        <article class="course-card fr">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇫🇷</span> Francés</span>
-                <img src="img/frances1.png" alt="Francés">
-            </div>
-            <div class="course-body">
-                <h3>Francés Inicial</h3>
-                <div class="level">Desde cero</div>
-                <p>Comenzá desde cero con uno de los idiomas más elegantes del mundo. Mirá el temario completo.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">Nivel inicial</span>
-                <a href="/frances/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card pack">
-            <div class="course-img-wrap">
-                <span class="course-badge">✦ Pack 2x1</span>
-                <img src="img/pack.jpg" alt="Pack Italiano + Inglés">
-            </div>
-            <div class="course-body">
-                <h3>Pack Italiano + Inglés</h3>
-                <div class="level">2 idiomas, precio especial</div>
-                <p>Aprovechá estudiar 2 idiomas al precio de uno. Pack ideal para acelerar tu aprendizaje.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">2 idiomas</span>
-                <a href="/italiano-ingles/" class="course-cta">Ver pack →</a>
-            </div>
-        </article>
-
-        <article class="course-card de">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇩🇪</span> Alemán</span>
-                <img src="img/aleman1.png" alt="Alemán">
-            </div>
-            <div class="course-body">
-                <h3>Alemán</h3>
-                <div class="level">Inicial</div>
-                <p>El idioma más hablado de Europa. Mirá el temario completo del curso.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">Nivel inicial</span>
-                <a href="/aleman/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card ja">
-            <div class="course-img-wrap">
-                <span class="course-badge"><span class="flag">🇯🇵</span> Japonés</span>
-                <img src="img/japon.png" alt="Japonés">
-            </div>
-            <div class="course-body">
-                <h3>Japonés</h3>
-                <div class="level">Inicial</div>
-                <p>Sumergite en una de las culturas más fascinantes del mundo. Mirá el temario completo.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">Nivel inicial</span>
-                <a href="/japones/" class="course-cta">Ver curso →</a>
-            </div>
-        </article>
-
-        <article class="course-card all" id="suscripciones">
-            <div class="course-img-wrap">
-                <span class="course-badge">✦ All-Access</span>
-                <img src="img/idiomas.jpg" alt="Suscripción Mensual">
-            </div>
-            <div class="course-body">
-                <h3>Suscripción Mensual</h3>
-                <div class="level">USD 4 / mes · Todo incluido</div>
-                <p>Acceso completo a todos los niveles de inglés, italiano, alemán y japonés.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">USD 4/mes</span>
-                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="course-cta">Suscribirse →</a>
-            </div>
-        </article>
-
-        <article class="course-card all">
-            <div class="course-img-wrap">
-                <span class="course-badge" style="background: var(--cyan);">✦ Mejor precio</span>
-                <img src="img/idiomas.jpg" alt="Suscripción Anual">
-            </div>
-            <div class="course-body">
-                <h3>Suscripción Anual</h3>
-                <div class="level">USD 2 / mes · Plan recomendado</div>
-                <p>El plan más conveniente. Acceso ilimitado a todos los idiomas durante un año entero.</p>
-            </div>
-            <div class="course-foot">
-                <span class="course-price">USD 24/año</span>
-                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="course-cta">Suscribirse →</a>
-            </div>
-        </article>
-
-    </div>
-</section>
 
 <!-- ============ PLAN EMPRESAS ============ -->
 <section class="empresas">
@@ -1651,16 +1665,6 @@ a[href*="wa.me"],
     </div>
 </section>
 
-<!-- ============ WHATSAPP ============ -->
-<section class="whatsapp">
-    <h2>¿Tenés dudas? Escribinos por WhatsApp</h2>
-    <p>Lunes a viernes de 9 a 18 hs.</p>
-    <a target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=5491164402284&text=Hola!%20Te%20escribo%20por%20el%20Curso%20de%20Inglés" class="whatsapp-btn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Escribinos por WhatsApp
-    </a>
-</section>
-
 <!-- ============ PROFESORES ============ -->
 <section class="profesores">
     <div class="profesores-inner">
@@ -1721,6 +1725,41 @@ a[href*="wa.me"],
         </div>
     </div>
 </footer>
+
+<!-- Filter de cursos por idioma -->
+<script>
+(function() {
+    var pills = document.querySelectorAll('#lang-filters .lang-pill');
+    var cards = document.querySelectorAll('.courses-grid .course-card');
+    if (!pills.length || !cards.length) return;
+
+    function applyFilter(filter) {
+        cards.forEach(function(card) {
+            var lang = card.getAttribute('data-lang') || 'all';
+            if (filter === 'all' || lang === filter || lang === 'all') {
+                card.classList.remove('is-hidden');
+            } else {
+                card.classList.add('is-hidden');
+            }
+        });
+        pills.forEach(function(p) {
+            p.classList.toggle('active', p.getAttribute('data-filter') === filter);
+        });
+    }
+
+    pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+            var filter = this.getAttribute('data-filter');
+            applyFilter(filter);
+            // Scroll suave al catálogo
+            var target = document.getElementById('cursos');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+</script>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE1K0ZKEG6"></script>
