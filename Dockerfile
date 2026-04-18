@@ -17,6 +17,6 @@ WORKDIR /app/public
 COPY . /app/public/
 
 # El puerto se configura via la env var SERVER_NAME del servicio
-# en Railway (sintaxis de Railway: ${{PORT}}) no aqui, porque ENV
-# en Dockerfile se evalua en build-time donde $PORT no existe.
-EXPOSE 80
+# en Railway. Usamos 8080 porque Railway routea a ese puerto por
+# defecto cuando no hay target port explicito seteado.
+EXPOSE 8080
