@@ -2,20 +2,31 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Suscripción All-Access · Todos los idiomas desde USD 2/mes | Aprende Idiomas</title>
-    <meta name="description" content="Acceso ilimitado a todos los cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Certificado oficial, comunidad activa y acceso de por vida.">
+    <title>Suscripción All-Access · 5 idiomas desde USD 2/mes | Aprende Idiomas</title>
+    <meta name="description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Certificado oficial. Cancelás cuando quieras.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../fav/favicon-16x16.png">
+    <link rel="icon" href="../fav/favicon.ico">
+    <link rel="manifest" href="../fav/site.webmanifest">
     <meta name="theme-color" content="#0a0a0f">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Suscripción All-Access · 5 idiomas desde USD 2/mes">
+    <meta property="og:description" content="Acceso ilimitado a inglés, italiano, francés, alemán y japonés. Certificado oficial. Cancelás cuando quieras.">
+    <meta property="og:image" content="../img/logo.jpg">
+    <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* Aprende Idiomas — Landing Suscripción */
+        /* ============================================================
+           APRENDE IDIOMAS · Landing Suscripción conversion-optimized
+           Plans ABOVE the fold · Minimal friction · Strong anchoring
+           ============================================================ */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
 
@@ -29,6 +40,7 @@
             --ink: #0a0a0f;
             --ink-2: #1f2030;
             --ink-soft: #5a5d72;
+            --muted: #9598ad;
             --bg: #ffffff;
             --bg-soft: #f8f8fb;
             --line: rgba(10, 10, 15, 0.08);
@@ -68,25 +80,18 @@
         a { color: inherit; text-decoration: none; transition: all .2s var(--ease); }
         img { max-width: 100%; display: block; }
 
-        /* ===== URGENCY BAR ===== */
+        /* ============ URGENCY BAR ============ */
         .urgency-bar {
             background: var(--ink);
             color: #fff;
-            padding: 10px 16px;
+            padding: 9px 16px;
             text-align: center;
-            font-size: .86rem;
+            font-size: .85rem;
             font-weight: 600;
-            letter-spacing: .01em;
             position: relative;
             overflow: hidden;
         }
-        .urgency-bar::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--gradient);
-            opacity: .12;
-        }
+        .urgency-bar::before { content: ''; position: absolute; inset: 0; background: var(--gradient); opacity: .12; }
         .urgency-bar-inner {
             position: relative;
             display: inline-flex;
@@ -102,7 +107,7 @@
             background: var(--gradient);
             padding: 4px 12px;
             border-radius: 999px;
-            font-size: .72rem;
+            font-size: .7rem;
             font-weight: 800;
             letter-spacing: .1em;
             text-transform: uppercase;
@@ -118,21 +123,20 @@
             display: inline-flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(255,255,255,.08);
-            border: 1px solid rgba(255,255,255,.12);
+            background: rgba(255,255,255,.1);
             border-radius: 6px;
             padding: 3px 7px;
-            min-width: 34px;
+            min-width: 32px;
             line-height: 1;
         }
-        .countdown .box b { font-size: .92rem; font-weight: 800; color: #fff; }
-        .countdown .box i { font-size: .56rem; font-weight: 500; font-style: normal; color: rgba(255,255,255,.5); text-transform: uppercase; margin-top: 2px; letter-spacing: .08em; }
+        .countdown .box b { font-size: .88rem; font-weight: 800; color: #fff; }
+        .countdown .box i { font-size: .54rem; font-weight: 500; font-style: normal; color: rgba(255,255,255,.5); text-transform: uppercase; margin-top: 2px; letter-spacing: .08em; }
 
-        /* ===== NAV ===== */
+        /* ============ NAV ============ */
         .nav {
             position: sticky;
             top: 0;
-            background: rgba(255,255,255,.85);
+            background: rgba(255,255,255,.9);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             border-bottom: 1px solid var(--line);
@@ -147,8 +151,8 @@
             justify-content: space-between;
             gap: 16px;
         }
-        .nav-logo img { max-height: 48px; width: auto; }
-        .nav-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .nav-logo img { max-height: 46px; width: auto; }
+        .nav-actions { display: flex; gap: 10px; align-items: center; }
         .nav-back {
             display: inline-flex;
             align-items: center;
@@ -171,14 +175,14 @@
         }
         .nav-cta:hover { color: #fff; transform: translateY(-1px); box-shadow: 0 16px 40px rgba(236,19,137,.45); }
 
-        /* ===== HERO ===== */
+        /* ============ HERO — PLANS UPFRONT ============ */
         .hero {
             position: relative;
-            padding: 80px 0 60px;
+            padding: 56px 0 80px;
             overflow: hidden;
             background:
-                radial-gradient(ellipse 70% 60% at 80% 10%, rgba(0,182,237,.18), transparent 60%),
-                radial-gradient(ellipse 60% 50% at 10% 90%, rgba(236,19,137,.18), transparent 60%),
+                radial-gradient(ellipse 70% 60% at 80% 10%, rgba(0,182,237,.14), transparent 60%),
+                radial-gradient(ellipse 60% 50% at 10% 100%, rgba(236,19,137,.14), transparent 60%),
                 #fff;
         }
         .hero::after {
@@ -189,18 +193,20 @@
                 linear-gradient(rgba(10,10,15,.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(10,10,15,.04) 1px, transparent 1px);
             background-size: 56px 56px;
-            mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-            -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+            mask-image: radial-gradient(ellipse at center, #000 20%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 70%);
             pointer-events: none;
         }
         .hero-inner {
             position: relative;
             z-index: 1;
-            max-width: 1040px;
+            max-width: 1080px;
             margin: 0 auto;
             padding: 0 24px;
             text-align: center;
         }
+
+        /* Hero intro */
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -208,20 +214,20 @@
             background: var(--gradient);
             color: #fff;
             border-radius: 999px;
-            padding: 8px 18px 8px 12px;
-            font-size: .78rem;
+            padding: 7px 16px 7px 12px;
+            font-size: .76rem;
             font-weight: 800;
             letter-spacing: .08em;
             text-transform: uppercase;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             box-shadow: var(--shadow-pink);
         }
         .hero h1 {
-            font-size: clamp(2.4rem, 5.6vw, 4.6rem);
-            font-weight: 800;
+            font-size: clamp(2.2rem, 5.2vw, 4.2rem);
+            font-weight: 900;
             line-height: 0.98;
             letter-spacing: -0.045em;
-            margin-bottom: 22px;
+            margin-bottom: 16px;
             text-wrap: balance;
         }
         .hero h1 .grad {
@@ -231,135 +237,236 @@
             color: transparent;
         }
         .hero-sub {
-            font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+            font-size: clamp(1rem, 1.5vw, 1.18rem);
             color: var(--ink-soft);
-            line-height: 1.6;
-            margin: 0 auto 24px;
-            max-width: 720px;
+            line-height: 1.55;
+            margin: 0 auto 20px;
+            max-width: 640px;
         }
         .hero-sub b { color: var(--ink); }
-        .hero-flags {
+        .hero-social {
             display: inline-flex;
             align-items: center;
             gap: 14px;
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 999px;
-            padding: 10px 20px;
-            font-weight: 600;
-            font-size: .92rem;
-            margin-bottom: 36px;
-            box-shadow: var(--shadow-1);
-        }
-        .hero-flags .flags { display: inline-flex; gap: 4px; font-size: 1.3rem; }
-        .hero-flags .sep { color: var(--line-strong); margin: 0 2px; }
-        .hero-cta-row {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .hero-trust {
-            font-size: .86rem;
+            font-size: .88rem;
             color: var(--ink-soft);
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            justify-content: center;
-            flex-wrap: wrap;
+            margin-bottom: 36px;
         }
-        .hero-trust span { display: inline-flex; align-items: center; gap: 6px; }
-        .hero-trust b { color: var(--ink); }
+        .hero-social .rating-stars { color: #fbbf24; letter-spacing: 1.5px; font-size: .95rem; }
+        .hero-social b { color: var(--ink); }
+        .hero-social .dot { color: var(--line-strong); }
 
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px 30px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all .25s var(--ease);
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-            white-space: nowrap;
-            text-align: center;
+        /* ============ PLANS — CENTERED AT TOP ============ */
+        .plans {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 880px;
+            margin: 0 auto;
         }
-        .btn-primary {
-            background: var(--gradient);
-            color: #fff;
-            box-shadow: var(--shadow-pink);
+        .plan {
+            background: #fff;
+            border: 2px solid var(--line);
+            border-radius: var(--r-xl);
+            padding: 36px 32px 28px;
+            position: relative;
+            transition: all .35s var(--ease);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
         }
-        .btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 20px 48px rgba(236,19,137,.5); }
-        .btn-ink {
+        .plan:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-3);
+        }
+        .plan.featured {
             background: var(--ink);
             color: #fff;
+            border-color: var(--pink);
+            box-shadow: var(--shadow-pink);
+            transform: scale(1.02);
         }
-        .btn-ink:hover { background: var(--pink); color: #fff; transform: translateY(-2px); }
-        .btn-light {
-            background: #fff;
-            color: var(--ink);
-            border: 1.5px solid var(--line-strong);
-            box-shadow: var(--shadow-1);
-        }
-        .btn-light:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--ink); }
-        .btn-arrow::after { content: '→'; font-weight: 400; transition: transform .2s var(--ease); }
-        .btn:hover.btn-arrow::after { transform: translateX(3px); }
-
-        /* ===== STATS ROW ===== */
-        .stats-row {
-            max-width: 1040px;
-            margin: 48px auto 0;
-            padding: 24px 28px;
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: var(--r-lg);
-            box-shadow: var(--shadow-2);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
-            position: relative;
-            z-index: 2;
-        }
-        .stat-item { text-align: center; position: relative; }
-        .stat-item + .stat-item::before {
+        .plan.featured:hover { transform: scale(1.02) translateY(-6px); }
+        .plan.featured::after {
             content: '';
             position: absolute;
-            left: -7px; top: 20%; bottom: 20%;
-            width: 1px;
-            background: var(--line);
+            inset: 0;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(236,19,137,.16), transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(0,182,237,.16), transparent 55%);
+            border-radius: var(--r-xl);
+            pointer-events: none;
         }
-        .stat-num {
-            font-family: 'Sora', sans-serif;
-            font-size: 1.8rem;
+        .plan > * { position: relative; z-index: 1; }
+        .plan-badge {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: .7rem;
             font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            box-shadow: var(--shadow-pink);
+            white-space: nowrap;
+        }
+        .plan-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        .plan-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+        .plan.featured .plan-title { color: #fff; }
+        .plan-save-tag {
+            font-size: .72rem;
+            font-weight: 800;
+            color: var(--pink);
+            background: var(--pink-soft);
+            padding: 3px 9px;
+            border-radius: 999px;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+        .plan.featured .plan-save-tag {
+            background: rgba(236,19,137,.22);
+            color: #ffb3dc;
+        }
+        .plan-desc { font-size: .88rem; color: var(--ink-soft); margin-bottom: 18px; }
+        .plan.featured .plan-desc { color: rgba(255,255,255,.68); }
+        .plan-price {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+        .plan-price .currency { font-size: 1.1rem; font-weight: 700; color: var(--ink-soft); }
+        .plan.featured .plan-price .currency { color: rgba(255,255,255,.7); }
+        .plan-price .amount {
+            font-family: 'Sora', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+        }
+        .plan.featured .plan-price .amount {
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            line-height: 1;
-            letter-spacing: -0.02em;
         }
-        .stat-lbl { font-size: .76rem; color: var(--ink-soft); margin-top: 6px; font-weight: 600; letter-spacing: .04em; }
-        @media (max-width: 640px) {
-            .stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .stat-item + .stat-item::before { display: none; }
+        .plan-price .period { font-size: .95rem; color: var(--ink-soft); font-weight: 600; }
+        .plan.featured .plan-price .period { color: rgba(255,255,255,.65); }
+        .plan-billing { font-size: .82rem; color: var(--ink-soft); margin-bottom: 16px; }
+        .plan.featured .plan-billing { color: rgba(255,255,255,.55); }
+        .plan-anchor {
+            font-size: .82rem;
+            color: var(--ink-soft);
+            margin-bottom: 22px;
+            line-height: 1.4;
+        }
+        .plan.featured .plan-anchor { color: rgba(255,255,255,.65); }
+        .plan-anchor s { opacity: .7; }
+        .plan-anchor b { color: var(--pink); font-weight: 800; }
+        .plan.featured .plan-anchor b { color: #ffb3dc; }
+        .plan-features { list-style: none; margin-bottom: 24px; flex: 1; }
+        .plan-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            padding: 5px 0;
+            font-size: .92rem;
+            color: var(--ink-2);
+        }
+        .plan.featured .plan-features li { color: rgba(255,255,255,.9); }
+        .plan-features .check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px; height: 18px;
+            background: var(--success);
+            color: #fff;
+            border-radius: 50%;
+            font-size: .64rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .plan.featured .plan-features .check {
+            background: var(--gradient);
+        }
+        .plan-cta {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: .98rem;
+            transition: all .25s var(--ease);
+            font-family: inherit;
+            border: none;
+            cursor: pointer;
+        }
+        .plan-cta.primary { background: var(--ink); color: #fff; }
+        .plan-cta.primary:hover { background: var(--pink); color: #fff; transform: translateY(-2px); box-shadow: var(--shadow-2); }
+        .plan-cta.featured {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: var(--shadow-pink);
+        }
+        .plan-cta.featured:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(236,19,137,.5); color: #fff; }
+        .plan-guarantee {
+            margin-top: 10px;
+            text-align: center;
+            font-size: .74rem;
+            color: var(--ink-soft);
+        }
+        .plan.featured .plan-guarantee { color: rgba(255,255,255,.55); }
+
+        @media (max-width: 720px) {
+            .plans { grid-template-columns: 1fr; gap: 28px; }
+            .plan.featured { transform: none; order: -1; }
+            .plan.featured:hover { transform: translateY(-4px); }
         }
 
-        /* ===== SECTION HEAD ===== */
+        /* Trust row — below plans */
+        .trust-row {
+            max-width: 780px;
+            margin: 32px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            font-size: .85rem;
+            color: var(--ink-soft);
+            padding: 16px 24px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            box-shadow: var(--shadow-1);
+        }
+        .trust-row span { display: inline-flex; align-items: center; gap: 6px; }
+        .trust-row b { color: var(--ink); }
+
+        /* ============ VALUE PROOF (bento idiomas) ============ */
+        .value { padding: 100px 24px; background: var(--bg-soft); }
         .section-head {
             text-align: center;
             max-width: 760px;
             margin: 0 auto 48px;
-            padding: 0 24px;
         }
         .section-head .eyebrow {
             display: inline-block;
-            font-size: .78rem;
+            font-size: .76rem;
             font-weight: 700;
             color: var(--pink);
             background: var(--pink-soft);
@@ -370,8 +477,8 @@
             border-radius: 999px;
         }
         .section-head h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 16px;
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            margin-bottom: 14px;
             line-height: 1.05;
             letter-spacing: -0.04em;
         }
@@ -381,24 +488,22 @@
             background-clip: text;
             color: transparent;
         }
-        .section-head p { font-size: 1.05rem; color: var(--ink-soft); line-height: 1.6; }
+        .section-head p { font-size: 1.02rem; color: var(--ink-soft); line-height: 1.6; }
 
-        /* ===== INCLUYE - language bento ===== */
-        .includes { padding: 100px 24px; background: var(--bg-soft); }
         .lang-bento {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 16px;
+            gap: 14px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .l-card {
             position: relative;
             border-radius: var(--r-lg);
-            padding: 32px 28px;
+            padding: 28px 24px;
             color: #fff;
             overflow: hidden;
-            min-height: 200px;
+            min-height: 180px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -415,25 +520,23 @@
             position: absolute;
             top: -40%;
             right: -20%;
-            width: 300px;
-            height: 300px;
+            width: 280px;
+            height: 280px;
             border-radius: 50%;
             background: rgba(255,255,255,.1);
             filter: blur(40px);
         }
         .l-card > * { position: relative; z-index: 1; }
-        .l-card .flag { font-size: 2.6rem; line-height: 1; margin-bottom: 12px; }
-        .l-card h3 { color: #fff; font-size: 1.5rem; margin-bottom: 6px; }
-        .l-card p { color: rgba(255,255,255,.75); font-size: .88rem; line-height: 1.5; }
-        .l-card .levels {
-            display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px;
-        }
+        .l-card .flag { font-size: 2.2rem; line-height: 1; margin-bottom: 10px; }
+        .l-card h3 { color: #fff; font-size: 1.35rem; margin-bottom: 6px; }
+        .l-card p { color: rgba(255,255,255,.75); font-size: .85rem; line-height: 1.5; }
+        .l-card .levels { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
         .l-card .levels span {
             background: rgba(255,255,255,.15);
-            border: 1px solid rgba(255,255,255,.25);
+            border: 1px solid rgba(255,255,255,.22);
             padding: 3px 10px;
             border-radius: 999px;
-            font-size: .72rem;
+            font-size: .7rem;
             font-weight: 600;
         }
         @media (max-width: 860px) {
@@ -442,276 +545,133 @@
             .l-card.ja { grid-column: span 2; }
         }
 
-        /* ===== PRICING (2 buttons in middle) ===== */
-        .pricing {
+        /* ============ ANCHORING — separate vs together ============ */
+        .anchor {
             padding: 100px 24px;
-            position: relative;
-            background:
-                radial-gradient(ellipse at top left, rgba(236,19,137,.08), transparent 50%),
-                radial-gradient(ellipse at bottom right, rgba(0,182,237,.08), transparent 50%),
-                #fff;
+            background: #fff;
         }
-        .pricing-inner { max-width: 980px; margin: 0 auto; }
-        .pricing-grid {
+        .anchor-inner {
+            max-width: 960px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 48px;
+            gap: 20px;
         }
-        .plan {
+        .anchor-card {
             background: #fff;
             border: 2px solid var(--line);
-            border-radius: var(--r-xl);
-            padding: 44px 36px;
+            border-radius: var(--r-lg);
+            padding: 32px 28px;
             position: relative;
-            transition: all .35s var(--ease);
-            display: flex;
-            flex-direction: column;
         }
-        .plan:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-3);
+        .anchor-card.strike { opacity: .95; }
+        .anchor-card.strike::before {
+            content: '❌';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 1.2rem;
+            opacity: .5;
         }
-        .plan.featured {
+        .anchor-card.win {
             background: var(--ink);
-            color: #fff;
             border-color: var(--pink);
+            color: #fff;
             box-shadow: var(--shadow-pink);
-            transform: scale(1.03);
         }
-        .plan.featured::after {
-            content: '';
+        .anchor-card.win::before {
+            content: '✓';
             position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 80% 20%, rgba(236,19,137,.18), transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(0,182,237,.18), transparent 55%);
-            border-radius: var(--r-xl);
-            pointer-events: none;
-        }
-        .plan > * { position: relative; z-index: 1; }
-        .plan-badge {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 14px;
+            right: 16px;
             background: var(--gradient);
             color: #fff;
-            padding: 6px 16px;
-            border-radius: 999px;
-            font-size: .72rem;
-            font-weight: 800;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-            box-shadow: var(--shadow-pink);
-            white-space: nowrap;
-        }
-        .plan-title {
-            font-family: 'Sora', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-        .plan.featured .plan-title { color: #fff; }
-        .plan-desc { font-size: .94rem; color: var(--ink-soft); margin-bottom: 24px; }
-        .plan.featured .plan-desc { color: rgba(255,255,255,.7); }
-        .plan-price {
-            display: flex;
-            align-items: baseline;
-            gap: 6px;
-            margin-bottom: 6px;
-        }
-        .plan-price .currency { font-size: 1.4rem; font-weight: 600; color: var(--ink-soft); }
-        .plan.featured .plan-price .currency { color: rgba(255,255,255,.7); }
-        .plan-price .amount {
-            font-family: 'Sora', sans-serif;
-            font-size: 4.2rem;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1;
-        }
-        .plan.featured .plan-price .amount {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .plan-price .period { font-size: 1rem; color: var(--ink-soft); font-weight: 600; }
-        .plan.featured .plan-price .period { color: rgba(255,255,255,.7); }
-        .plan-billing { font-size: .88rem; color: var(--ink-soft); margin-bottom: 16px; }
-        .plan.featured .plan-billing { color: rgba(255,255,255,.6); }
-        .plan-save {
-            display: inline-block;
-            background: var(--pink-soft);
-            color: var(--pink);
-            padding: 5px 12px;
-            border-radius: 999px;
-            font-size: .78rem;
-            font-weight: 700;
-            margin-bottom: 22px;
-        }
-        .plan.featured .plan-save {
-            background: rgba(236,19,137,.22);
-            color: #ffb3dc;
-        }
-        .plan-features { list-style: none; margin-bottom: 32px; flex: 1; }
-        .plan-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 7px 0;
-            font-size: .95rem;
-            color: var(--ink-2);
-        }
-        .plan.featured .plan-features li { color: rgba(255,255,255,.92); }
-        .plan-features .check {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-size: 1rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 20px; height: 20px;
-            background: var(--success);
-            color: #fff;
-            border-radius: 50%;
-            font-size: .7rem;
             font-weight: 800;
-            flex-shrink: 0;
-            margin-top: 2px;
         }
-        .plan.featured .plan-features .check {
-            background: var(--gradient);
-            box-shadow: 0 4px 12px rgba(236,19,137,.4);
+        .anchor-card h4 {
+            font-size: 1.05rem;
+            margin-bottom: 14px;
+            color: var(--ink);
         }
-        .plan-cta {
-            display: block;
-            text-align: center;
-            padding: 16px;
-            border-radius: 999px;
-            font-weight: 800;
-            font-size: 1rem;
-            transition: all .25s var(--ease);
-            font-family: inherit;
-            border: none;
-            cursor: pointer;
-        }
-        .plan-cta.primary { background: var(--ink); color: #fff; }
-        .plan-cta.primary:hover { background: var(--gradient); color: #fff; transform: translateY(-2px); }
-        .plan-cta.featured {
-            background: var(--gradient);
-            color: #fff;
-            box-shadow: var(--shadow-pink);
-        }
-        .plan-cta.featured:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(236,19,137,.45); color: #fff; }
-        .plan-guarantee {
-            margin-top: 14px;
-            text-align: center;
-            font-size: .78rem;
+        .anchor-card.win h4 { color: #fff; }
+        .anchor-card ul { list-style: none; margin-bottom: 18px; }
+        .anchor-card li {
+            padding: 7px 0;
+            font-size: .9rem;
             color: var(--ink-soft);
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            border-bottom: 1px dashed var(--line);
         }
-        .plan.featured .plan-guarantee { color: rgba(255,255,255,.6); }
-
-        @media (max-width: 780px) {
-            .pricing-grid { grid-template-columns: 1fr; gap: 32px; }
-            .plan.featured { transform: none; }
+        .anchor-card.win li { color: rgba(255,255,255,.8); border-color: rgba(255,255,255,.1); }
+        .anchor-card li:last-child { border-bottom: none; }
+        .anchor-card li b { color: var(--ink); font-weight: 700; white-space: nowrap; }
+        .anchor-card.win li b { color: #fff; }
+        .anchor-card .total {
+            padding: 14px 0 0;
+            border-top: 2px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
         }
-
-        /* ===== COMPARISON ===== */
-        .compare { padding: 100px 24px; background: var(--bg-soft); }
-        .compare-table {
-            max-width: 880px;
-            margin: 0 auto;
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: var(--r-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-1);
+        .anchor-card.win .total { border-color: rgba(255,255,255,.2); }
+        .anchor-card .total-label {
+            font-size: .88rem;
+            color: var(--ink-soft);
+            font-weight: 600;
         }
-        .compare-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            padding: 18px 24px;
-            border-bottom: 1px solid var(--line);
-            align-items: center;
-        }
-        .compare-row:last-child { border-bottom: none; }
-        .compare-row.header {
-            background: var(--ink);
-            color: #fff;
+        .anchor-card.win .total-label { color: rgba(255,255,255,.7); }
+        .anchor-card .total-amt {
             font-family: 'Sora', sans-serif;
-            font-weight: 700;
-            padding: 20px 24px;
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: var(--ink);
+            letter-spacing: -0.03em;
         }
-        .compare-row.header .col-b {
-            text-align: center;
-            background: var(--gradient);
-            border-radius: 12px;
-            padding: 8px 0;
-            font-size: .95rem;
-            position: relative;
+        .anchor-card.strike .total-amt {
+            color: var(--ink-soft);
+            text-decoration: line-through;
         }
-        .compare-row.header .col-a { text-align: center; }
-        .compare-row .col-feat { font-size: .95rem; color: var(--ink-2); font-weight: 500; }
-        .compare-row .col-a, .compare-row .col-b { text-align: center; font-size: .95rem; }
-        .compare-row .check { color: var(--success); font-size: 1.2rem; font-weight: 800; }
-        .compare-row .cross { color: var(--ink-soft); opacity: .3; font-size: 1.1rem; }
-        @media (max-width: 600px) {
-            .compare-row { grid-template-columns: 1.5fr 1fr 1fr; padding: 14px 16px; font-size: .88rem; }
-            .compare-row .col-feat { font-size: .82rem; }
-        }
-
-        /* ===== COMMUNITY ===== */
-        .community {
-            padding: 100px 24px;
-            background: var(--ink);
-            color: #fff;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .community::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 30% 30%, rgba(236,19,137,.20), transparent 55%),
-                radial-gradient(circle at 70% 70%, rgba(0,182,237,.20), transparent 55%);
-            pointer-events: none;
-        }
-        .community-inner { position: relative; z-index: 1; max-width: 960px; margin: 0 auto; }
-        .community h2 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 16px; }
-        .community h2 .grad {
+        .anchor-card.win .total-amt {
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        .community p { color: rgba(255,255,255,.75); font-size: 1.1rem; line-height: 1.6; margin-bottom: 32px; }
-        .community-features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 40px;
+        .anchor-savings {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 1.1rem;
+            color: var(--ink-2);
         }
-        .community-feat {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.1);
-            padding: 24px;
-            border-radius: var(--r);
-            backdrop-filter: blur(10px);
-            text-align: left;
-        }
-        .community-feat .ico {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+        .anchor-savings .big {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             display: block;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 6px;
         }
-        .community-feat h4 { color: #fff; font-size: 1.05rem; margin-bottom: 6px; }
-        .community-feat p { color: rgba(255,255,255,.7); font-size: .88rem; margin: 0; }
-        @media (max-width: 700px) {
-            .community-features { grid-template-columns: 1fr; }
+        @media (max-width: 720px) {
+            .anchor-inner { grid-template-columns: 1fr; }
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonials { padding: 100px 24px; }
+        /* ============ TESTIMONIALS ============ */
+        .testimonials { padding: 100px 24px; background: var(--bg-soft); }
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -723,7 +683,7 @@
             background: #fff;
             border: 1px solid var(--line);
             border-radius: var(--r-lg);
-            padding: 28px;
+            padding: 26px;
             transition: all .35s var(--ease);
         }
         .testimonial:hover {
@@ -731,21 +691,11 @@
             box-shadow: var(--shadow-2);
             border-color: var(--pink);
         }
-        .testimonial-stars {
-            color: #fbbf24;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
-        }
-        .testimonial-text {
-            color: var(--ink-2);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 22px;
-        }
+        .testimonial-stars { color: #fbbf24; font-size: .95rem; letter-spacing: 2px; margin-bottom: 12px; }
+        .testimonial-text { color: var(--ink-2); font-size: .98rem; line-height: 1.55; margin-bottom: 20px; }
         .testimonial-author { display: flex; align-items: center; gap: 12px; }
         .testimonial-avatar {
-            width: 44px; height: 44px;
+            width: 42px; height: 42px;
             border-radius: 50%;
             background: var(--gradient);
             color: #fff;
@@ -754,69 +704,80 @@
             justify-content: center;
             font-family: 'Sora', sans-serif;
             font-weight: 700;
-            font-size: .95rem;
+            font-size: .92rem;
         }
-        .testimonial-name { font-weight: 700; font-size: .95rem; }
-        .testimonial-loc { color: var(--ink-soft); font-size: .82rem; }
+        .testimonial-name { font-weight: 700; font-size: .92rem; }
+        .testimonial-loc { color: var(--ink-soft); font-size: .8rem; }
         @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
 
-        /* ===== GUARANTEE ===== */
-        .guarantee {
-            padding: 80px 24px;
-            background: var(--bg-soft);
-        }
+        /* ============ GUARANTEE ============ */
+        .guarantee { padding: 80px 24px; }
         .guarantee-inner {
             max-width: 860px;
             margin: 0 auto;
-            background: #fff;
+            background: linear-gradient(135deg, var(--pink-soft), var(--cyan-soft));
             border: 2px solid var(--pink);
             border-radius: var(--r-xl);
-            padding: 48px 40px;
-            position: relative;
-            box-shadow: var(--shadow-2);
+            padding: 44px 40px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .guarantee-seal {
-            width: 72px; height: 72px;
+            width: 76px; height: 76px;
             background: var(--gradient);
             color: #fff;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 16px;
+            font-size: 2.2rem;
             box-shadow: var(--shadow-pink);
+            flex-shrink: 0;
         }
-        .guarantee h3 { font-size: 1.8rem; margin-bottom: 10px; }
-        .guarantee p { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.65; max-width: 620px; margin: 0 auto; }
+        .guarantee-text { text-align: left; flex: 1; min-width: 260px; }
+        .guarantee-text h3 { font-size: 1.5rem; margin-bottom: 6px; }
+        .guarantee-text p { color: var(--ink-soft); font-size: .95rem; line-height: 1.55; }
+        .guarantee-text h3 .grad {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        @media (max-width: 600px) {
+            .guarantee-inner { padding: 32px 24px; }
+            .guarantee-text { text-align: center; }
+        }
 
-        /* ===== FAQ ===== */
+        /* ============ FAQ ============ */
         .faq { padding: 100px 24px; }
         .faq-inner { max-width: 820px; margin: 0 auto; }
         .faq-item {
             background: #fff;
             border: 1px solid var(--line);
             border-radius: var(--r);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             overflow: hidden;
             transition: all .25s var(--ease);
         }
         .faq-item[open] {
             border-color: var(--pink);
-            box-shadow: var(--shadow-2);
+            box-shadow: var(--shadow-1);
         }
         .faq-item summary {
             list-style: none;
             cursor: pointer;
-            padding: 20px 24px;
+            padding: 18px 22px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 16px;
             font-family: 'Sora', sans-serif;
             font-weight: 700;
-            font-size: 1.02rem;
+            font-size: .98rem;
             color: var(--ink);
         }
         .faq-item summary::-webkit-details-marker { display: none; }
@@ -830,23 +791,23 @@
         }
         .faq-item[open] summary::after { transform: rotate(45deg); }
         .faq-item .faq-body {
-            padding: 0 24px 22px;
+            padding: 0 22px 20px;
             color: var(--ink-soft);
-            font-size: .96rem;
+            font-size: .94rem;
             line-height: 1.65;
         }
 
-        /* ===== FINAL CTA ===== */
+        /* ============ FINAL CTA ============ */
         .final-cta {
             padding: 100px 24px;
             background: linear-gradient(180deg, var(--bg-soft), #fff);
         }
         .final-cta-inner {
-            max-width: 1000px;
+            max-width: 960px;
             margin: 0 auto;
             background: var(--ink);
             border-radius: var(--r-xl);
-            padding: 72px 56px;
+            padding: 60px 48px;
             color: #fff;
             text-align: center;
             position: relative;
@@ -857,51 +818,58 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 30% 30%, rgba(236,19,137,.25), transparent 55%),
-                radial-gradient(circle at 70% 70%, rgba(0,182,237,.25), transparent 55%);
+                radial-gradient(circle at 30% 30%, rgba(236,19,137,.24), transparent 55%),
+                radial-gradient(circle at 70% 70%, rgba(0,182,237,.24), transparent 55%);
             pointer-events: none;
         }
         .final-cta-inner > * { position: relative; z-index: 1; }
         .final-cta h2 {
             color: #fff;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 16px;
+            font-size: clamp(1.9rem, 3.8vw, 2.6rem);
+            margin-bottom: 14px;
             letter-spacing: -0.04em;
         }
-        .final-cta p {
-            color: rgba(255,255,255,.75);
-            font-size: 1.1rem;
-            margin-bottom: 36px;
-            max-width: 620px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .final-cta-btns {
-            display: flex;
+        .final-cta p { color: rgba(255,255,255,.75); font-size: 1.05rem; margin-bottom: 28px; max-width: 620px; margin-left: auto; margin-right: auto; }
+        .final-cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+            gap: 8px;
+            padding: 15px 26px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: .96rem;
+            transition: all .25s var(--ease);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            white-space: nowrap;
         }
+        .btn-primary {
+            background: var(--gradient);
+            color: #fff;
+            box-shadow: var(--shadow-pink);
+        }
+        .btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 20px 48px rgba(236,19,137,.5); }
+        .btn-light { background: #fff; color: var(--ink); }
+        .btn-light:hover { transform: translateY(-2px); color: var(--ink); }
         .final-cta-trust {
-            font-size: .86rem;
+            font-size: .82rem;
             color: rgba(255,255,255,.55);
             display: inline-flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
             flex-wrap: wrap;
             justify-content: center;
         }
         .final-cta-trust b { color: #fff; }
-        @media (max-width: 700px) {
-            .final-cta-inner { padding: 48px 28px; }
-        }
 
-        /* ===== FOOTER ===== */
+        /* ============ FOOTER ============ */
         footer {
             background: var(--ink);
-            color: rgba(255,255,255,.7);
-            padding: 60px 24px 32px;
+            color: rgba(255,255,255,.65);
+            padding: 56px 24px 28px;
             position: relative;
         }
         footer::before {
@@ -914,20 +882,20 @@
         }
         .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
         .footer-inner img {
-            max-height: 56px;
-            margin: 0 auto 20px;
+            max-height: 52px;
+            margin: 0 auto 18px;
             background: #fff;
-            padding: 10px 14px;
+            padding: 9px 14px;
             border-radius: var(--r-sm);
         }
-        .footer-inner p { color: rgba(255,255,255,.55); font-size: .88rem; margin-bottom: 16px; }
+        .footer-inner p { color: rgba(255,255,255,.5); font-size: .86rem; margin-bottom: 12px; }
         .footer-inner a { color: var(--pink); font-weight: 600; }
         .footer-bottom {
             border-top: 1px solid rgba(255,255,255,.08);
-            padding-top: 20px;
-            margin-top: 32px;
-            font-size: .8rem;
-            color: rgba(255,255,255,.4);
+            padding-top: 18px;
+            margin-top: 26px;
+            font-size: .78rem;
+            color: rgba(255,255,255,.35);
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -940,11 +908,11 @@
 </head>
 <body>
 
-<!-- ============ URGENCY BAR ============ -->
+<!-- URGENCY BAR -->
 <div class="urgency-bar">
     <div class="urgency-bar-inner">
         <span class="urgency-flash">🔥 Promo de lanzamiento</span>
-        <span>Ahorrás <b>50%</b> con el plan anual · Oferta termina en</span>
+        <span>Ahorrás <b>50%</b> con el plan anual · Termina en</span>
         <span class="countdown" id="countdown">
             <span class="box"><b id="cd-d">01</b><i>d</i></span>
             <span class="box"><b id="cd-h">23</b><i>h</i></span>
@@ -954,76 +922,125 @@
     </div>
 </div>
 
-<!-- ============ NAV ============ -->
+<!-- NAV -->
 <nav class="nav">
     <div class="nav-inner">
         <a href="../" class="nav-logo"><img src="../img/logo.jpg" alt="Aprende Idiomas"></a>
         <div class="nav-actions">
             <a href="../" class="nav-back">← Volver al inicio</a>
-            <a href="#planes" class="nav-cta">✦ Ver planes</a>
+            <a href="#planes" class="nav-cta">✦ Empezar ahora</a>
         </div>
     </div>
 </nav>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
+<!-- HERO WITH PLANS AT TOP -->
+<section class="hero" id="planes">
     <div class="hero-inner">
-        <div class="hero-eyebrow">✦ Acceso ilimitado · All-Access</div>
-        <h1>5 idiomas, todos los niveles, <span class="grad">un solo precio</span></h1>
-        <p class="hero-sub">Acceso durante un año a <b>inglés, italiano, francés, alemán y japonés</b>. Todos los niveles, todos los cursos nuevos que agreguemos, desde <b>USD 2 al mes</b>.</p>
-        <div class="hero-flags">
-            <span class="flags">🇺🇸 🇮🇹 🇫🇷 🇩🇪 🇯🇵</span>
-            <span class="sep">·</span>
-            <span>+15 cursos incluidos</span>
-        </div>
-        <div class="hero-cta-row">
-            <a href="#planes" class="btn btn-primary btn-arrow">Ver planes</a>
-            <a href="#incluye" class="btn btn-light">Qué incluye</a>
-        </div>
-        <div class="hero-trust">
-            <span>🔒 Pago seguro vía Stripe</span>
-            <span>✦ Garantía <b>7 días</b></span>
-            <span>⚡ Cancelás cuando quieras</span>
+        <div class="hero-eyebrow">✦ Acceso ilimitado · 5 idiomas</div>
+        <h1>Hablá <span class="grad">5 idiomas</span> por el precio de un café al mes</h1>
+        <p class="hero-sub">Acceso ilimitado a <b>inglés, italiano, francés, alemán y japonés</b>. Todos los niveles, todos los cursos nuevos, desde <b>USD 2/mes</b>. Cancelás cuando quieras.</p>
+        <div class="hero-social">
+            <span class="rating-stars">★★★★★</span>
+            <span><b>4.9/5</b> · +1.000 suscriptores</span>
+            <span class="dot">·</span>
+            <span>🔒 Pago seguro Stripe</span>
         </div>
 
-        <div class="stats-row">
-            <div class="stat-item"><div class="stat-num">5</div><div class="stat-lbl">Idiomas</div></div>
-            <div class="stat-item"><div class="stat-num">+15</div><div class="stat-lbl">Cursos</div></div>
-            <div class="stat-item"><div class="stat-num">+1.000</div><div class="stat-lbl">Suscriptores</div></div>
-            <div class="stat-item"><div class="stat-num">4.9★</div><div class="stat-lbl">Reseñas</div></div>
+        <!-- PLANS CENTRADOS ARRIBA -->
+        <div class="plans">
+
+            <!-- Plan Mensual -->
+            <div class="plan">
+                <div class="plan-head">
+                    <h3 class="plan-title">Mensual</h3>
+                    <span class="plan-save-tag">Sin permanencia</span>
+                </div>
+                <p class="plan-desc">Ideal para probar sin compromiso</p>
+                <div class="plan-price">
+                    <span class="currency">USD</span>
+                    <span class="amount">4</span>
+                    <span class="period">/mes</span>
+                </div>
+                <p class="plan-billing">Facturado todos los meses</p>
+                <p class="plan-anchor">Equivalente a <b>USD 48/año</b></p>
+                <ul class="plan-features">
+                    <li><span class="check">✓</span> Acceso a los 5 idiomas</li>
+                    <li><span class="check">✓</span> Todos los niveles</li>
+                    <li><span class="check">✓</span> Certificado oficial</li>
+                    <li><span class="check">✓</span> Comunidad + soporte</li>
+                    <li><span class="check">✓</span> Cancelás cuando quieras</li>
+                </ul>
+                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="plan-cta primary">Empezar mensual</a>
+                <p class="plan-guarantee">🔒 Stripe · Garantía 7 días</p>
+            </div>
+
+            <!-- Plan Anual -->
+            <div class="plan featured">
+                <span class="plan-badge">★ Elegido por 9 de cada 10</span>
+                <div class="plan-head">
+                    <h3 class="plan-title">Anual</h3>
+                    <span class="plan-save-tag">Ahorrás USD 24</span>
+                </div>
+                <p class="plan-desc">El plan más conveniente · 50% OFF</p>
+                <div class="plan-price">
+                    <span class="currency">USD</span>
+                    <span class="amount">2</span>
+                    <span class="period">/mes</span>
+                </div>
+                <p class="plan-billing">USD 24 al año · Pago único</p>
+                <p class="plan-anchor"><s>USD 48/año</s> ahora <b>USD 24/año</b></p>
+                <ul class="plan-features">
+                    <li><span class="check">✓</span> Todo lo del mensual</li>
+                    <li><span class="check">✓</span> <b>50% de descuento</b></li>
+                    <li><span class="check">✓</span> 12 meses asegurados</li>
+                    <li><span class="check">✓</span> Prioridad en soporte</li>
+                    <li><span class="check">✓</span> Renovación cancelable</li>
+                </ul>
+                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="plan-cta featured">Empezar plan anual →</a>
+                <p class="plan-guarantee">🔒 Stripe · Garantía 7 días</p>
+            </div>
+
+        </div>
+
+        <!-- Trust row below plans -->
+        <div class="trust-row">
+            <span>🔒 <b>Pago Stripe</b></span>
+            <span>🛡️ Garantía <b>7 días</b></span>
+            <span>⚡ Cancelás cuando quieras</span>
+            <span>📜 Certificado <b>oficial</b></span>
         </div>
     </div>
 </section>
 
-<!-- ============ QUÉ INCLUYE - bento idiomas ============ -->
-<section class="includes" id="incluye">
+<!-- VALUE PROOF -->
+<section class="value">
     <div class="section-head">
         <div class="eyebrow">Qué incluye</div>
-        <h2>Todo lo que necesitás para <span class="grad">hablar 5 idiomas</span></h2>
-        <p>Una suscripción, acceso ilimitado. Más de 15 cursos entre los 5 idiomas.</p>
+        <h2>Los <span class="grad">5 idiomas más solicitados</span>, todos incluidos</h2>
+        <p>Una suscripción, +15 cursos entre todos los idiomas. Sin costos ocultos ni sorpresas.</p>
     </div>
     <div class="lang-bento">
         <div class="l-card en">
             <div>
                 <div class="flag">🇺🇸</div>
                 <h3>Inglés</h3>
-                <p>El idioma más hablado del mundo. Desde cero hasta nivel intermedio.</p>
+                <p>El idioma más hablado del mundo. De cero al intermedio.</p>
             </div>
-            <div class="levels"><span>Nivel 1 · Desde cero</span><span>Nivel 2 · Intermedio</span></div>
+            <div class="levels"><span>Nivel 1</span><span>Nivel 2</span></div>
         </div>
         <div class="l-card it">
             <div>
                 <div class="flag">🇮🇹</div>
                 <h3>Italiano</h3>
-                <p>Desde cero al B1. Apto para ciudadanía italiana.</p>
+                <p>Desde cero al B1. Apto ciudadanía italiana.</p>
             </div>
-            <div class="levels"><span>A1 Inicial</span><span>A2 Intermedio</span><span>B1 Avanzado</span></div>
+            <div class="levels"><span>A1</span><span>A2</span><span>B1</span></div>
         </div>
         <div class="l-card fr">
             <div>
                 <div class="flag">🇫🇷</div>
                 <h3>Francés</h3>
-                <p>La lengua del amor. Perfecto para viajes y cultura.</p>
+                <p>Elegancia, cultura y viajes.</p>
             </div>
             <div class="levels"><span>Inicial</span></div>
         </div>
@@ -1031,7 +1048,7 @@
             <div>
                 <div class="flag">🇩🇪</div>
                 <h3>Alemán</h3>
-                <p>El idioma más hablado de Europa. Clave para trabajo y estudios.</p>
+                <p>El idioma más hablado de Europa.</p>
             </div>
             <div class="levels"><span>Inicial</span></div>
         </div>
@@ -1039,168 +1056,67 @@
             <div>
                 <div class="flag">🇯🇵</div>
                 <h3>Japonés</h3>
-                <p>Una de las culturas más fascinantes del mundo.</p>
+                <p>Una de las culturas más fascinantes.</p>
             </div>
             <div class="levels"><span>Inicial</span></div>
         </div>
     </div>
 </section>
 
-<!-- ============ PRICING — 2 botones en el medio ============ -->
-<section class="pricing" id="planes">
+<!-- ANCHORING — separate vs together -->
+<section class="anchor">
     <div class="section-head">
-        <div class="eyebrow">Elegí tu plan</div>
-        <h2>Empezá hoy por el <span class="grad">precio de un café</span></h2>
-        <p>Dos opciones simples. Ambas con acceso ilimitado y garantía de 7 días.</p>
+        <div class="eyebrow">Comparativa de valor</div>
+        <h2>Mirá <span class="grad">cuánto ahorrás</span> con la suscripción</h2>
+        <p>Si los comprás por separado, pagás mucho más. Con la suscripción, todo incluido.</p>
     </div>
-    <div class="pricing-inner">
-        <div class="pricing-grid">
-
-            <!-- Plan Mensual -->
-            <div class="plan">
-                <h3 class="plan-title">Mensual</h3>
-                <p class="plan-desc">Flexibilidad total. Cancelás cuando quieras.</p>
-                <div class="plan-price">
-                    <span class="currency">USD</span>
-                    <span class="amount">4</span>
-                    <span class="period">/mes</span>
-                </div>
-                <p class="plan-billing">Facturado mensualmente · Sin permanencia</p>
-                <span class="plan-save">Sin compromiso</span>
-                <ul class="plan-features">
-                    <li><span class="check">✓</span> Acceso a los 5 idiomas</li>
-                    <li><span class="check">✓</span> Todos los niveles (A1 → B1)</li>
-                    <li><span class="check">✓</span> Nuevos cursos incluidos</li>
-                    <li><span class="check">✓</span> Certificado oficial</li>
-                    <li><span class="check">✓</span> Comunidad de alumnos</li>
-                    <li><span class="check">✓</span> Cancelás cuando quieras</li>
-                </ul>
-                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="plan-cta primary">Suscribirme mensual</a>
-                <p class="plan-guarantee">🔒 Pago seguro · Stripe · Garantía 7 días</p>
+    <div class="anchor-inner">
+        <div class="anchor-card strike">
+            <h4>Comprando cursos por separado</h4>
+            <ul>
+                <li><span>Inglés N1 + N2</span><b>USD 80</b></li>
+                <li><span>Italiano A1 + A2 + B1</span><b>USD 120</b></li>
+                <li><span>Francés Inicial</span><b>USD 40</b></li>
+                <li><span>Alemán Inicial</span><b>USD 40</b></li>
+                <li><span>Japonés Inicial</span><b>USD 40</b></li>
+            </ul>
+            <div class="total">
+                <span class="total-label">Total</span>
+                <span class="total-amt">USD 320</span>
             </div>
-
-            <!-- Plan Anual -->
-            <div class="plan featured">
-                <span class="plan-badge">★ Más popular · Ahorrás 50%</span>
-                <h3 class="plan-title">Anual</h3>
-                <p class="plan-desc">El plan más conveniente. Pagás una vez al año.</p>
-                <div class="plan-price">
-                    <span class="currency">USD</span>
-                    <span class="amount">2</span>
-                    <span class="period">/mes</span>
-                </div>
-                <p class="plan-billing">USD 24 al año · Equivalente a USD 2/mes</p>
-                <span class="plan-save">✦ Ahorrás USD 24 vs mensual</span>
-                <ul class="plan-features">
-                    <li><span class="check">✓</span> Todo lo del plan mensual</li>
-                    <li><span class="check">✓</span> <b>50% de descuento</b> vs mensual</li>
-                    <li><span class="check">✓</span> Acceso por 12 meses completos</li>
-                    <li><span class="check">✓</span> Sin sorpresas, pago único anual</li>
-                    <li><span class="check">✓</span> Renovación automática (cancelable)</li>
-                    <li><span class="check">✓</span> Prioridad en soporte</li>
-                </ul>
-                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="plan-cta featured">Empezar plan anual →</a>
-                <p class="plan-guarantee">🔒 Pago seguro · Stripe · Garantía 7 días</p>
-            </div>
-
         </div>
+        <div class="anchor-card win">
+            <h4>Suscripción Anual All-Access</h4>
+            <ul>
+                <li><span>Inglés N1 + N2</span><b>Incluido</b></li>
+                <li><span>Italiano A1 + A2 + B1</span><b>Incluido</b></li>
+                <li><span>Francés Inicial</span><b>Incluido</b></li>
+                <li><span>Alemán Inicial</span><b>Incluido</b></li>
+                <li><span>Japonés Inicial</span><b>Incluido</b></li>
+            </ul>
+            <div class="total">
+                <span class="total-label">Total anual</span>
+                <span class="total-amt">USD 24</span>
+            </div>
+        </div>
+    </div>
+    <div class="anchor-savings">
+        <span class="big">Ahorrás USD 296</span>
+        <span>(92% de descuento) cuando elegís la suscripción anual</span>
     </div>
 </section>
 
-<!-- ============ COMPARISON ============ -->
-<section class="compare">
-    <div class="section-head">
-        <div class="eyebrow">Mensual vs Anual</div>
-        <h2>¿Por qué el <span class="grad">anual conviene</span>?</h2>
-    </div>
-    <div class="compare-table">
-        <div class="compare-row header">
-            <div class="col-feat">Incluye</div>
-            <div class="col-a">Mensual</div>
-            <div class="col-b">Anual</div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Precio mensual efectivo</div>
-            <div class="col-a">USD 4/mes</div>
-            <div class="col-b"><b>USD 2/mes</b></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Ahorro anual</div>
-            <div class="col-a">—</div>
-            <div class="col-b"><b>USD 24</b></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Acceso a todos los idiomas</div>
-            <div class="col-a"><span class="check">✓</span></div>
-            <div class="col-b"><span class="check">✓</span></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Nuevos cursos incluidos</div>
-            <div class="col-a"><span class="check">✓</span></div>
-            <div class="col-b"><span class="check">✓</span></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Certificado oficial</div>
-            <div class="col-a"><span class="check">✓</span></div>
-            <div class="col-b"><span class="check">✓</span></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Comunidad y soporte</div>
-            <div class="col-a"><span class="check">✓</span></div>
-            <div class="col-b"><span class="check">✓</span></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Prioridad en soporte</div>
-            <div class="col-a"><span class="cross">—</span></div>
-            <div class="col-b"><span class="check">✓</span></div>
-        </div>
-        <div class="compare-row">
-            <div class="col-feat">Garantía de devolución</div>
-            <div class="col-a">7 días</div>
-            <div class="col-b"><b>7 días</b></div>
-        </div>
-    </div>
-</section>
-
-<!-- ============ COMMUNITY ============ -->
-<section class="community">
-    <div class="community-inner">
-        <div class="section-head" style="margin-bottom: 32px;">
-            <div class="eyebrow" style="background: rgba(236,19,137,.15); color: #ff7ec1;">Comunidad</div>
-            <h2 style="color: #fff;">⚡️ Sumate a una <span class="grad">comunidad activa</span></h2>
-            <p style="color: rgba(255,255,255,.7);">Más de 1.000 alumnos practicando idiomas juntos. Profes disponibles para consultas y ejercicios en vivo.</p>
-        </div>
-        <div class="community-features">
-            <div class="community-feat">
-                <span class="ico">💬</span>
-                <h4>Grupo activo</h4>
-                <p>Practicá escritura y resolvé dudas con otros alumnos todos los días.</p>
-            </div>
-            <div class="community-feat">
-                <span class="ico">🎓</span>
-                <h4>Profes online</h4>
-                <p>Consultás por email y resolvemos dudas en menos de 24 horas.</p>
-            </div>
-            <div class="community-feat">
-                <span class="ico">🎉</span>
-                <h4>Eventos mensuales</h4>
-                <p>Encuentros virtuales con profesores y material exclusivo para suscriptores.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
+<!-- TESTIMONIALS -->
 <section class="testimonials">
     <div class="section-head">
-        <div class="eyebrow">Reseñas</div>
-        <h2>+1.000 <span class="grad">suscriptores felices</span></h2>
-        <p>4.9★ promedio en reseñas reales de alumnos que llevan meses con nosotros.</p>
+        <div class="eyebrow">Reseñas verificadas</div>
+        <h2>+1.000 alumnos <span class="grad">ya eligieron</span> la suscripción</h2>
+        <p>4.9★ promedio en reseñas reales. Alumnos que cumplen meses con nosotros.</p>
     </div>
     <div class="testimonials-grid">
         <div class="testimonial">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"Por USD 2 al mes aprendo italiano e inglés. Es regalado. Ya renové para el segundo año."</p>
+            <p class="testimonial-text">"Pago USD 2/mes y aprendo italiano e inglés. Vale 10 veces más. Ya renové por un año más."</p>
             <div class="testimonial-author">
                 <span class="testimonial-avatar">CR</span>
                 <div><div class="testimonial-name">Camila Rodríguez</div><div class="testimonial-loc">Buenos Aires</div></div>
@@ -1208,7 +1124,7 @@
         </div>
         <div class="testimonial">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"Empecé por el italiano y terminé haciendo el inglés también. La suscripción se aprovecha mil veces."</p>
+            <p class="testimonial-text">"Empecé por italiano y terminé haciendo inglés también. Por ese precio no tenía sentido no aprovecharlo."</p>
             <div class="testimonial-author">
                 <span class="testimonial-avatar">MG</span>
                 <div><div class="testimonial-name">Martín Gómez</div><div class="testimonial-loc">Córdoba</div></div>
@@ -1216,124 +1132,93 @@
         </div>
         <div class="testimonial">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"Increíble la cantidad de contenido. Vale mucho más de lo que pagás, siempre hay un curso nuevo."</p>
-            <div class="testimonial-author">
-                <span class="testimonial-avatar">SF</span>
-                <div><div class="testimonial-name">Sofía Fernández</div><div class="testimonial-loc">Mendoza</div></div>
-            </div>
-        </div>
-        <div class="testimonial">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"Preparando la ciudadanía italiana con el B1. Es el mejor plan calidad/precio que encontré online."</p>
+            <p class="testimonial-text">"Me preparé el B1 para ciudadanía italiana con el plan anual. Calidad + precio imbatible."</p>
             <div class="testimonial-author">
                 <span class="testimonial-avatar">RG</span>
                 <div><div class="testimonial-name">Raúl Genovese</div><div class="testimonial-loc">Rosario</div></div>
             </div>
         </div>
-        <div class="testimonial">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"La comunidad es lo mejor. Practicás con gente de todo Latinoamérica todos los días."</p>
-            <div class="testimonial-author">
-                <span class="testimonial-avatar">PL</span>
-                <div><div class="testimonial-name">Patricia Loredo</div><div class="testimonial-loc">Lima</div></div>
-            </div>
-        </div>
-        <div class="testimonial">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"5 idiomas por el precio de uno. Es un robo para ustedes, un regalo para nosotros."</p>
-            <div class="testimonial-author">
-                <span class="testimonial-avatar">DM</span>
-                <div><div class="testimonial-name">Damián Moretti</div><div class="testimonial-loc">Montevideo</div></div>
-            </div>
-        </div>
     </div>
 </section>
 
-<!-- ============ GUARANTEE ============ -->
+<!-- GUARANTEE -->
 <section class="guarantee">
     <div class="guarantee-inner">
         <div class="guarantee-seal">🛡️</div>
-        <h3>Garantía de <span style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">7 días</span> sin vueltas</h3>
-        <p>Si en los primeros 7 días sentís que no es para vos, te devolvemos el 100% del dinero. Sin preguntas ni formularios. Escribinos y listo.</p>
+        <div class="guarantee-text">
+            <h3>Garantía de <span class="grad">7 días sin vueltas</span></h3>
+            <p>Si en los primeros 7 días no te gusta, te devolvemos el 100%. Sin preguntas, sin formularios. Escribinos y listo.</p>
+        </div>
     </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- FAQ -->
 <section class="faq">
     <div class="section-head">
         <div class="eyebrow">FAQ</div>
         <h2>Preguntas frecuentes</h2>
     </div>
     <div class="faq-inner">
-        <details class="faq-item">
+        <details class="faq-item" open>
             <summary>¿Qué incluye la suscripción?</summary>
-            <div class="faq-body">Acceso ilimitado a todos los cursos de inglés (Nivel 1 + Nivel 2), italiano (A1, A2 y B1), francés inicial, alemán inicial y japonés inicial. Además, cualquier curso nuevo que agreguemos queda incluido sin costo extra.</div>
+            <div class="faq-body">Acceso ilimitado a todos los cursos: inglés (N1 + N2), italiano (A1 + A2 + B1), francés inicial, alemán inicial y japonés inicial. Nuevos cursos se agregan sin costo extra.</div>
         </details>
         <details class="faq-item">
-            <summary>¿Cuál es la diferencia entre mensual y anual?</summary>
-            <div class="faq-body">El plan mensual te cobra USD 4 todos los meses, podés cancelar cuando quieras. El plan anual te cobra USD 24 una sola vez al año, lo que equivale a USD 2/mes — un 50% más barato. Ambos incluyen el mismo contenido.</div>
+            <summary>¿Mensual o anual? ¿Cuál me conviene?</summary>
+            <div class="faq-body">Si querés probar sin compromiso, el mensual (USD 4/mes). Si ya estás decidido, el anual (USD 2/mes efectivo, pagás USD 24 al año y ahorrás 50%). Ambos incluyen lo mismo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Puedo cancelar cuando quiera?</summary>
-            <div class="faq-body">Sí, siempre. La suscripción se gestiona vía Stripe y podés cancelar desde tu cuenta en un clic. Seguís teniendo acceso hasta el final del período pagado, sin penalidades.</div>
+            <div class="faq-body">Sí, siempre. Gestionás la cancelación desde Stripe en un clic. Seguís teniendo acceso hasta el final del período ya pagado. Sin penalidades.</div>
         </details>
         <details class="faq-item">
-            <summary>¿Hay garantía de devolución?</summary>
-            <div class="faq-body">Sí. Tenés 7 días desde la contratación para pedir reintegro completo si el curso no es lo que esperabas. Sin preguntas, sin vueltas.</div>
+            <summary>¿Tengo garantía si no me gusta?</summary>
+            <div class="faq-body">Sí, 7 días de garantía. Si no estás conforme, te devolvemos el 100% del dinero. Sin preguntas.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cómo recibo el certificado?</summary>
-            <div class="faq-body">Al completar un curso, nos escribís por email y te enviamos el Certificado Oficial en PDF sin costo adicional. Mientras seas suscriptor activo, podés pedirlo para cada curso que completes.</div>
-        </details>
-        <details class="faq-item">
-            <summary>¿Los nuevos cursos están incluidos?</summary>
-            <div class="faq-body">Sí. Todo curso nuevo que lancemos (por ejemplo, niveles superiores de francés o alemán) queda automáticamente disponible en tu suscripción, sin pagar más.</div>
+            <div class="faq-body">Al completar cada curso, nos escribís por email y te enviamos el Certificado Oficial en PDF gratis. Podés pedirlo por cada curso que completes mientras seas suscriptor.</div>
         </details>
         <details class="faq-item">
             <summary>¿Qué métodos de pago aceptan?</summary>
-            <div class="faq-body">Aceptamos tarjetas de crédito y débito internacionales a través de Stripe (Visa, Mastercard, American Express). Para pagos en pesos argentinos vía MercadoPago, escribinos a aprende.idiomas.latam@gmail.com.</div>
+            <div class="faq-body">Tarjetas de crédito y débito internacionales vía Stripe (Visa, Mastercard, Amex). Para MercadoPago en pesos argentinos, escribinos a aprende.idiomas.latam@gmail.com.</div>
         </details>
         <details class="faq-item">
             <summary>¿Necesito algún conocimiento previo?</summary>
-            <div class="faq-body">No. Todos los cursos empiezan desde cero. También tenés niveles intermedios y avanzados si ya tenés base. Avanzás a tu ritmo, sin horarios.</div>
-        </details>
-        <details class="faq-item">
-            <summary>¿Cómo funciona la comunidad?</summary>
-            <div class="faq-body">Tenés acceso a un grupo online donde podés practicar con otros alumnos todos los días, resolver dudas con los profes y recibir material exclusivo. Es gratis mientras seas suscriptor.</div>
+            <div class="faq-body">No. Todos los cursos empiezan desde cero. También tenés niveles intermedios y avanzados si ya tenés base.</div>
         </details>
     </div>
 </section>
 
-<!-- ============ FINAL CTA ============ -->
+<!-- FINAL CTA -->
 <section class="final-cta">
     <div class="final-cta-inner">
-        <div class="hero-eyebrow" style="margin-bottom: 24px;">✦ 5 idiomas · USD 2/mes</div>
-        <h2>Empezá hoy mismo</h2>
-        <p>+1.000 personas ya aprovechan su suscripción all-access. Garantía de 7 días, cancelás cuando quieras.</p>
+        <h2>Empezá hoy. <span style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Hablá 5 idiomas este año</span>.</h2>
+        <p>+1.000 personas ya están aprendiendo. Garantía 7 días, cancelás cuando quieras.</p>
         <div class="final-cta-btns">
             <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="btn btn-primary">✦ Plan anual · USD 2/mes</a>
             <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="btn btn-light">Plan mensual · USD 4</a>
         </div>
         <div class="final-cta-trust">
-            <span>🔒 Pago Stripe</span>
-            <span>✦ Garantía <b>7 días</b></span>
+            <span>🔒 Stripe</span>
+            <span>🛡️ Garantía <b>7 días</b></span>
             <span>⚡ Cancelás cuando quieras</span>
         </div>
     </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-inner">
         <img src="../img/logo.jpg" alt="Aprende Idiomas">
-        <p>Cursos online de idiomas. Aprendé a tu ritmo, desde tu casa, con certificado oficial y comunidad activa.</p>
+        <p>Cursos online de idiomas. Aprendé a tu ritmo, con certificado oficial y comunidad activa.</p>
         <p><a href="mailto:aprende.idiomas.latam@gmail.com">aprende.idiomas.latam@gmail.com</a></p>
         <div class="footer-bottom">© 2026 Aprende Idiomas · Hecho con cariño en Buenos Aires</div>
     </div>
 </footer>
 
-<!-- Countdown script -->
 <script>
+// Countdown
 (function() {
     var end = new Date();
     end.setDate(end.getDate() + 2);
