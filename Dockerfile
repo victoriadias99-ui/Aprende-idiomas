@@ -12,10 +12,9 @@ RUN install-php-extensions \
     gd \
     zip
 
-WORKDIR /app
-COPY . /app/
-
-# Caddyfile custom (root=/app en lugar del default /app/public)
-COPY Caddyfile /etc/frankenphp/Caddyfile
+# Copiamos el codigo a /app/public porque es el docroot default
+# de FrankenPHP. WORKDIR /app/public para el COPY.
+WORKDIR /app/public
+COPY . /app/public/
 
 EXPOSE 8080
