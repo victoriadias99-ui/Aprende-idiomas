@@ -12,11 +12,10 @@ RUN install-php-extensions \
     gd \
     zip
 
-# FrankenPHP sirve desde /app/public por defecto
-WORKDIR /app/public
-COPY . /app/public/
+WORKDIR /app
+COPY . /app/
 
-# El puerto se configura via la env var SERVER_NAME del servicio
-# en Railway. Usamos 8080 porque Railway routea a ese puerto por
-# defecto cuando no hay target port explicito seteado.
+# Caddyfile custom (root=/app en lugar del default /app/public)
+COPY Caddyfile /etc/frankenphp/Caddyfile
+
 EXPOSE 8080

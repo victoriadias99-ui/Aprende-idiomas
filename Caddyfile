@@ -1,0 +1,16 @@
+{
+	# FrankenPHP global config
+	frankenphp
+	order php_server before file_server
+}
+
+# Railway inyecta el puerto via la env var SERVER_NAME/PORT.
+# Caddy resuelve {$PORT:80} en runtime a diferencia de Docker ENV.
+:{$PORT:80} {
+	# El proyecto tiene index.php en la raiz y subdirectorios
+	# tipo /ingles-nivel-dos/index.php — servimos desde /app.
+	root * /app
+
+	# Maneja /curso/ redirect a /curso/index.php + archivos estaticos
+	php_server
+}
