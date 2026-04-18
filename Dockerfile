@@ -12,9 +12,12 @@ RUN install-php-extensions \
     gd \
     zip
 
-# Copiamos el codigo a /app/public porque es el docroot default
-# de FrankenPHP. WORKDIR /app/public para el COPY.
-WORKDIR /app/public
-COPY . /app/public/
+# Eliminar el /app/public vacio de la imagen base, copiar codigo
+# directo a /app y symlinkear /app/public -> /app para que
+# FrankenPHP encuentre los archivos con su default SCRIPT_FILENAME.
+RUN rm -rf /app/public
+WORKDIR /app
+COPY . /app/
+RUN ln -s /app /app/public
 
 EXPOSE 8080
