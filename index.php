@@ -1571,7 +1571,7 @@ a[href*="wa.me"],
         <button type="button" data-filter="fr" class="lang-pill fr"><span class="flag">🇫🇷</span> Francés <span class="greet">Bonjour!</span></button>
         <button type="button" data-filter="de" class="lang-pill de"><span class="flag">🇩🇪</span> Alemán <span class="greet">Hallo!</span></button>
         <button type="button" data-filter="ja" class="lang-pill ja"><span class="flag">🇯🇵</span> Japonés <span class="greet">こんにちは</span></button>
-        <button type="button" data-action="subs" class="lang-pill subs" aria-haspopup="dialog" aria-controls="subs-modal"><span class="flag">✦</span> Suscripción <span class="greet">All-Access</span></button>
+        <button type="button" onclick="document.getElementById('modal-suscripcion').style.display='flex'" class="lang-pill subs"><span class="flag">✦</span> Suscripción <span class="greet">All-Access</span></button>
     </div>
 
     <!-- Modal Suscripción -->
@@ -1616,7 +1616,7 @@ a[href*="wa.me"],
         <article class="course-card en" data-lang="en">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
-                <img src="img/producto1.jpg" alt="Inglés Nivel 1">
+                <img src="img/curso-ingles-uno.svg" alt="Inglés Nivel 1">
             </div>
             <div class="course-body">
                 <h3>Inglés Nivel 1</h3>
@@ -1632,7 +1632,7 @@ a[href*="wa.me"],
         <article class="course-card en" data-lang="en">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇺🇸</span> Inglés</span>
-                <img src="img/producto2.jpg" alt="Inglés Nivel 2">
+                <img src="img/curso-ingles-dos.svg" alt="Inglés Nivel 2">
             </div>
             <div class="course-body">
                 <h3>Inglés Nivel 2</h3>
@@ -1776,7 +1776,7 @@ a[href*="wa.me"],
         <article class="course-card all" data-lang="all" id="suscripciones">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ All-Access</span>
-                <img src="img/idiomas.jpg" alt="Suscripción Mensual">
+                <img src="img/suscripcion-mensual.svg" alt="Suscripción Mensual">
             </div>
             <div class="course-body">
                 <h3>Suscripción Mensual</h3>
@@ -1792,7 +1792,7 @@ a[href*="wa.me"],
         <article class="course-card all" data-lang="all">
             <div class="course-img-wrap">
                 <span class="course-badge" style="background: var(--cyan);">✦ Mejor precio</span>
-                <img src="img/idiomas.jpg" alt="Suscripción Anual">
+                <img src="img/suscripcion-anual.svg" alt="Suscripción Anual">
             </div>
             <div class="course-body">
                 <h3>Suscripción Anual</h3>
