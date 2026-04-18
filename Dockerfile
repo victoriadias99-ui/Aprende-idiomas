@@ -12,9 +12,11 @@ RUN install-php-extensions \
     gd \
     zip
 
-# Eliminar el /app/public vacio de la imagen base, copiar codigo
-# directo a /app y symlinkear /app/public -> /app para que
-# FrankenPHP encuentre los archivos con su default SCRIPT_FILENAME.
+# Copiar configs de performance ANTES del source para cachear el layer
+COPY Caddyfile /etc/frankenphp/Caddyfile
+COPY php.ini /usr/local/etc/php/conf.d/zz-app.ini
+
+# Source del proyecto
 RUN rm -rf /app/public
 WORKDIR /app
 COPY . /app/

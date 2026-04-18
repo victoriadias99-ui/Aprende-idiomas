@@ -1,0 +1,32 @@
+{
+	frankenphp
+	order php_server before file_server
+}
+
+{$SERVER_NAME:localhost} {
+	log {
+		output stderr
+		format console
+	}
+
+	root * /app/public
+
+	# Compression: zstd preferred, gzip as fallback
+	encode zstd gzip
+
+	# Long cache for static assets (images, fonts, css, js)
+	# Browser revalida con ETag pero no re-descarga si no cambio
+	@static {
+		path *.css *.js *.jpg *.jpeg *.png *.gif *.svg *.webp *.avif *.woff *.woff2 *.ttf *.ico
+	}
+	header @static Cache-Control "public, max-age=2592000"
+
+	# No cache para respuestas PHP dinamicas (precio depende de geo, etc.)
+	@dynamic {
+		path *.php /
+	}
+	header @dynamic Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+
+	# Serve PHP + static files
+	php_server
+}
