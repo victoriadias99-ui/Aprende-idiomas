@@ -14,11 +14,26 @@
 	# Compression primero (antes de cualquier otra respuesta)
 	encode zstd gzip
 
+	# Redirect URLs de Railway (*.up.railway.app) al dominio canonico
+	# Evita contenido duplicado para SEO
+	@railway header_regexp Host .*\.up\.railway\.app$
+	redir @railway https://www.aprende-idiomas.com{uri} 301
+
+	# Redirect apex (sin www) al www canonico — backup por si Cloudflare Worker falla
+	@apex header Host aprende-idiomas.com
+	redir @apex https://www.aprende-idiomas.com{uri} 301
+
 	# Long cache para assets estaticos
 	@static {
 		path *.css *.js *.jpg *.jpeg *.png *.gif *.svg *.webp *.avif *.woff *.woff2 *.ttf *.ico
 	}
 	header @static Cache-Control "public, max-age=2592000"
+
+	# Short cache para XML/TXT (sitemap, robots)
+	@seo {
+		path *.xml *.txt
+	}
+	header @seo Cache-Control "public, max-age=3600"
 
 	# Serve PHP + static files
 	php_server
