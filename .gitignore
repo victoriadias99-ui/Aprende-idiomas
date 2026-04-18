@@ -1,0 +1,14 @@
+.DS_Store
+.claude/
+
+# SQL dumps (no commitear al repo)
+*.sql
+backup.sql
+
+# Logs
+error_log
+**/error_log
+
+# Editor
+.vscode/
+.idea/
