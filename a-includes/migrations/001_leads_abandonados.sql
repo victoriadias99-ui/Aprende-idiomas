@@ -1,0 +1,34 @@
+-- ============================================================
+-- Tabla: leads_abandonados
+-- Proposito: Capturar emails del checkout ANTES de que el usuario
+-- complete la compra. Si abandona, queda disponible para recovery.
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS `leads_abandonados` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `EMAIL` VARCHAR(200) NOT NULL,
+    `NOMBRE` VARCHAR(100) DEFAULT NULL,
+    `APELLIDO` VARCHAR(100) DEFAULT NULL,
+    `CURSO` VARCHAR(100) DEFAULT NULL,
+    `PAIS` VARCHAR(10) DEFAULT NULL,
+    `MONEDA` VARCHAR(10) DEFAULT NULL,
+    `PRECIO` DECIMAL(10,2) DEFAULT NULL,
+    `IP` VARCHAR(50) DEFAULT NULL,
+    `USER_AGENT` VARCHAR(500) DEFAULT NULL,
+    `URL_CHECKOUT` VARCHAR(200) DEFAULT NULL,
+    `FECHA` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `FECHA_UPDATE` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `RECOVERY_EMAIL_ENVIADO` TINYINT(1) DEFAULT 0,
+    `FECHA_RECOVERY_ENVIO` DATETIME DEFAULT NULL,
+    `RECOVERY_EMAIL_ABIERTO` TINYINT(1) DEFAULT 0,
+    `RECOVERY_EMAIL_CLICKEADO` TINYINT(1) DEFAULT 0,
+    `CONVERTIDO` TINYINT(1) DEFAULT 0,
+    `FECHA_CONVERSION` DATETIME DEFAULT NULL,
+    `ID_VENTA` INT DEFAULT NULL,
+    INDEX `idx_email` (`EMAIL`),
+    INDEX `idx_curso` (`CURSO`),
+    INDEX `idx_convertido` (`CONVERTIDO`),
+    INDEX `idx_recovery` (`RECOVERY_EMAIL_ENVIADO`, `CONVERTIDO`),
+    INDEX `idx_fecha` (`FECHA`),
+    UNIQUE KEY `unq_email_curso` (`EMAIL`, `CURSO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
