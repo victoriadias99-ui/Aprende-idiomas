@@ -18,9 +18,11 @@ if (isset($arrayStatus[$data->event_type])) {
 $id = $data->resource->parent_payment;
     
 $cnx = OpenCon();
-$consulta = "UPDATE `v2_ventas` SET `DATA`= '" . $bodyReceived . "', `STATUS`= '" . $arrayStatus[$data->event_type] . "', `test`= '" . $data->event_type . "' WHERE `ID_PAGO` = ?";
-$stmt = $cnx->prepare($consulta);
-$stmt->bindValue(1, $id, PDO::PARAM_STR);
+$stmt = $cnx->prepare("UPDATE `v2_ventas` SET `DATA`= ?, `STATUS`= ?, `test`= ? WHERE `ID_PAGO` = ?");
+$stmt->bindValue(1, $bodyReceived, PDO::PARAM_STR);
+$stmt->bindValue(2, $arrayStatus[$data->event_type] ?? 'UNKNOWN', PDO::PARAM_STR);
+$stmt->bindValue(3, $data->event_type, PDO::PARAM_STR);
+$stmt->bindValue(4, $id, PDO::PARAM_STR);
 $stmt->execute();
 
 $dataProducto = getDataPaymentEbanx($id);

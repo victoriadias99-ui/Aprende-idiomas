@@ -1,7 +1,0 @@
-[16-Mar-2024 02:54:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php:4
-Stack trace:
-#0 /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php(4): PDO->__construct('mysql:host=loca...', 'aprendee_idioma...', 'aprendee_idioma...')
-#1 /home/aprendee/aprende-idiomas.com/latam/includes/funcionsDB.php(95): OpenCon()
-#2 /home/aprendee/aprende-idiomas.com/latam/italiano-ingles/index.php(19): getDataProducto('italiano_ingles', NULL)
-#3 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/latam/includes/conexion.php on line 4

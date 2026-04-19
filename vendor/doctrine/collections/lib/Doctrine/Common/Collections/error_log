@@ -1,8 +1,0 @@
-[07-Apr-2026 03:40:57 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Collections\Collection' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/collections/lib/Doctrine/Common/Collections/AbstractLazyCollection.php:30
-Stack trace:
-#0 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/collections/lib/Doctrine/Common/Collections/AbstractLazyCollection.php on line 30
-[07-Apr-2026 03:40:58 UTC] PHP Fatal error:  Uncaught Error: Interface 'Doctrine\Common\Collections\Collection' not found in /home/aprendee/aprende-idiomas.com/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php:39
-Stack trace:
-#0 {main}
-  thrown in /home/aprendee/aprende-idiomas.com/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php on line 39

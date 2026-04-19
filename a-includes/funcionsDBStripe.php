@@ -31,23 +31,27 @@ function getTimer($_ip, $idCurso, $timezone) {
 
 function updateIP($_ip, $idCurso, $count) {
     $cnx = OpenCon();
-    $consulta = "UPDATE `ip_visita` SET `visitas` = $count WHERE `ip` = '$_ip' and `id_producto` ='" . $idCurso . "'";
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("UPDATE `ip_visita` SET `visitas` = ? WHERE `ip` = ? AND `id_producto` = ?");
+    $stmt->bindValue(1, (int)$count, PDO::PARAM_INT);
+    $stmt->bindValue(2, $_ip, PDO::PARAM_STR);
+    $stmt->bindValue(3, $idCurso, PDO::PARAM_STR);
     $stmt->execute();
 }
 
 function insertIP($_ip, $idCurso, $data = null) {
     $cnx = OpenCon();
-    $consulta = "INSERT INTO `ip_visita`(`ip`, `id_producto`, `data`) VALUES ('$_ip', '$idCurso', '" . ($data == null ? '' : $data) . "')";
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("INSERT INTO `ip_visita`(`ip`, `id_producto`, `data`) VALUES (?, ?, ?)");
+    $stmt->bindValue(1, $_ip, PDO::PARAM_STR);
+    $stmt->bindValue(2, $idCurso, PDO::PARAM_STR);
+    $stmt->bindValue(3, $data === null ? '' : $data, PDO::PARAM_STR);
     $stmt->execute();
 }
 
 function getIP($_ip, $idCurso) {
-    $consulta = "SELECT * FROM `ip_visita` WHERE `ip` = '$_ip' and `id_producto` ='" . $idCurso . "'";
-
     $cnx = OpenCon();
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("SELECT * FROM `ip_visita` WHERE `ip` = ? AND `id_producto` = ?");
+    $stmt->bindValue(1, $_ip, PDO::PARAM_STR);
+    $stmt->bindValue(2, $idCurso, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -96,7 +100,7 @@ function updVentaStripe($idPagoOld, $tipopago, $producto, $upsell, $idPago, $mon
             . "`CORREO`=?,"
             . "`STATUS`=?,"
             . "`DATA`=? "
-            . "WHERE ID_PAGO = '" . $idPagoOld . "'";
+            . "WHERE ID_PAGO = ?";
     $stmt = $cnx->prepare($consulta);
     $stmt->bindValue(1, $tipopago, PDO::PARAM_STR);
     $stmt->bindValue(2, $producto, PDO::PARAM_STR);
@@ -109,6 +113,7 @@ function updVentaStripe($idPagoOld, $tipopago, $producto, $upsell, $idPago, $mon
     $stmt->bindValue(9, $correo, PDO::PARAM_STR);
     $stmt->bindValue(10, $status, PDO::PARAM_STR);
     $stmt->bindValue(11, $data, PDO::PARAM_STR);
+    $stmt->bindValue(12, $idPagoOld, PDO::PARAM_STR);
     $stmt->execute();
 
     // Si la venta quedo CONFIRMADA/APROBADA, marcar el lead como convertido

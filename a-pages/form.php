@@ -44,7 +44,7 @@
             <?= $test == 1 ? '<br>pais:' : '' ?><input style="width: 100%" id="pais" name="pais" value="<?= $country ?>" <?= $test == 1 ? '' : 'hidden' ?> <?= $test == 1 ? '' : 'hidden' ?>>
             <?= $test == 1 ? '<br>curso:' : '' ?><input style="width: 100%" id="curso" value="<?= $curso ?>" <?= $test == 1 ? '' : 'hidden' ?>>
             <?= $test == 1 ? '<br>pack:' : '' ?><input style="width: 100%" id="pack" value="<?= $curso ?>" <?= $test == 1 ? '' : 'hidden' ?>>
-            <?= $test == 1 ? '<br>amount:' : '' ?><input style="width: 100%" id="amount" value="<?= (isset($_GET['testprecio']) ? $_GET['testprecio'] : $valPrecioOferta) ?>" <?= $test == 1 ? '' : 'hidden' ?>/>
+            <?= $test == 1 ? '<br>amount:' : '' ?><input style="width: 100%" id="amount" value="<?= htmlspecialchars((string)(isset($_GET['testprecio']) ? $_GET['testprecio'] : $valPrecioOferta), ENT_QUOTES, 'UTF-8') ?>" <?= $test == 1 ? '' : 'hidden' ?>/>
             <?= $test == 1 ? '<br>metodoPago:' : '' ?><input style="width: 100%" id="metodoPago" value="" <?= $test == 1 ? '' : 'hidden' ?>/>
             
             

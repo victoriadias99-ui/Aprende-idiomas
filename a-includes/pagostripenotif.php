@@ -20,9 +20,10 @@ if ($_GET['p'] == 'latam') {
     ];
 
     $cnx = OpenCon();
-    $consulta = "UPDATE `v2_ventas` SET `DATA`= '" . $bodyReceived . "', `STATUS`= '" . $arrayStatus[$data->type] . "' WHERE `ID_PAGO` = ?";
-    $stmt = $cnx->prepare($consulta);
-    $stmt->bindValue(1, $data->data->object->metadata->order_id, PDO::PARAM_STR);
+    $stmt = $cnx->prepare("UPDATE `v2_ventas` SET `DATA`= ?, `STATUS`= ? WHERE `ID_PAGO` = ?");
+    $stmt->bindValue(1, $bodyReceived, PDO::PARAM_STR);
+    $stmt->bindValue(2, $arrayStatus[$data->type] ?? 'UNKNOWN', PDO::PARAM_STR);
+    $stmt->bindValue(3, $data->data->object->metadata->order_id, PDO::PARAM_STR);
     $stmt->execute();
 
     $dataProducto = getDataPaymentEbanx($data->data->object->metadata->order_id);

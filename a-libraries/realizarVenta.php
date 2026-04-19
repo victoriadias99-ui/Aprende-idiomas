@@ -53,8 +53,10 @@ $ip = explode(',', str_replace(' ', '', $ip))[0];
 
 try {
     $cnx = OpenCon();
-    $consulta = "UPDATE `ip_visita` SET `correo` = '$email' WHERE `ip` = '$ip' and `id_producto` ='" . $_GET['curso'] . "'";
-    $stmt = $cnx->prepare($consulta);
+    $stmt = $cnx->prepare("UPDATE `ip_visita` SET `correo` = ? WHERE `ip` = ? AND `id_producto` = ?");
+    $stmt->bindValue(1, $email, PDO::PARAM_STR);
+    $stmt->bindValue(2, $ip, PDO::PARAM_STR);
+    $stmt->bindValue(3, $_GET['curso'], PDO::PARAM_STR);
     $stmt->execute();
 
     $auto_num = new auto_num($cnx, $curso);
