@@ -124,7 +124,7 @@ include("./a-includes/logicparametros.php");
                     <div class="card-header"><a class="mobile-menu-link active" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848797c88f01879c2724c401d4">Suscripción Anual</a></div>
                     </div>
 					<div class="card">
-                    <div class="card-header"><a class="mobile-menu-link active" href="https://academia.aprende-idiomas.com/">Iniciar Sesion</a></div>
+                    <div class="card-header"><a class="mobile-menu-link active" href="https://academia-idiomas.up.railway.app/">Iniciar Sesion</a></div>
                     </div>
 					
                 </div>
@@ -156,7 +156,7 @@ include("./a-includes/logicparametros.php");
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/japones/">Japonés</a></li>
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://buy.stripe.com/fZeg0UeY12610M0003">Suscripción Mensual</a></li>
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://buy.stripe.com/aEUg0UdTX5id8es002">Suscripción Anual</a></li>
-					   <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://academia.aprende-idiomas.com/">Iniciar Sesion</a></li>
+					   <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://academia-idiomas.up.railway.app/">Iniciar Sesion</a></li>
                         
 						<!--<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/ingles-nivel-dos/">Pack Completo Inglés</a>   </li> -->
 

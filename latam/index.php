@@ -134,7 +134,7 @@
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="/latam/italiano-pack-experto/">Italiano Experto</a></li>
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://buy.stripe.com/eVa8zAfn27Xiaje9AA">Suscripción Mensual</a></li>
 						<li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://buy.stripe.com/aEUg0UdTX5id8es002">Suscripción Anual</a></li>
-					 <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://academia.aprende-idiomas.com/">Iniciar Sesion</a></li>
+					 <li class="nav-item mega-dropdown-toggle"><a class="nav-link" href="https://academia-idiomas.up.railway.app/">Iniciar Sesion</a></li>
                     </ul>
                     <div>
                         <ul class="navbar-buttons d-inline-block align-middle">
