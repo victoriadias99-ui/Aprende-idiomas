@@ -1,0 +1,8 @@
+.git
+.gitignore
+.DS_Store
+.claude
+*.sql
+error_log
+**/error_log
+node_modules

@@ -6,7 +6,7 @@
             </div>
 
             <div class="col-md-3">
-                <img src="<?= $dirpage ?>img/securityjpg.jpg" alt="security" class="img-fluid d-inline">
+                <img src="<?= $dirpage ?>img/front_pay.png" alt="security" class="img-fluid d-inline">
             </div>
             <div class="col-md-2">
                 <div class="footer-links">
@@ -67,20 +67,9 @@
 <script src="<?= $dirpage ?>vendor/jquery/app.js"></script>
 <script src="<?= $dirpage ?>vendor/jquery/mailcheck.js"></script>
 <script src="<?= $dirpage ?>vendor/lib/form-validation/jquery.validate.min.js"></script>
+<script src="<?= $dirpage ?>js/temporizador.js?t=1"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const whatsappLink = document.querySelector('a[href*="api.whatsapp.com/send"]');
-    if (whatsappLink) {
-        console.log("Hola 1");
-        const outerContainer = whatsappLink.closest('.py-5.text-center');
-        if (outerContainer) {
-        outerContainer.style.display = 'none';
-        }
-    }
-    });
-
-
     !function (f, b, e, v, n, t, s)
     {
         if (f.fbq)
@@ -103,7 +92,7 @@
     }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '851421198669354');
-	fbq('init', '177917573796998');
+    fbq('init', '177917573796998');
     fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
@@ -111,6 +100,7 @@
                /></noscript>
 <noscript><img height="1" width="1" style="display:none"
                src="https://www.facebook.com/tr?id=177917573796998&ev=PageView&noscript=1"
-               /></noscript>			   
-			   
+               /></noscript>
+               
+               
 <!-- End Facebook Pixel Code --> 

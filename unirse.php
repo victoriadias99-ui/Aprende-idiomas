@@ -6,6 +6,10 @@ if (isset($_GET['test'])) {
 }
 
 $dirpage = '';
+if (!isset($_GET['idVenta']) || $_GET['idVenta'] === '') {
+    header('Location: /');
+    exit;
+}
 $_idVenta = $_GET['idVenta'];
 include("a-includes/funcionsDB.php");
 $venta = getVenta($_idVenta);
@@ -71,20 +75,17 @@ if (isset($_GET['test'])) {
                             <hr>
                         </div>
                         <p class="lead mt-5" style=""><b>Leer con atención:</b></p>
-                        <p class="">📧 En minutos vas a recibir un e-mail. Allí vas a ver las instrucciones para ver el curso (si no lo encontrás, revisá la sección No Deseados/Spam)<br></p>
-                        <h4 class="mt-5">✅ <b>Datos de acceso</b></h4>
-						<h4 class="mt-5">Usuario: El email que colocaste en el formulario de compra.</h4>
-						<h4 class="mt-5">Contraseña: idiomas</h4>
-						<p class=""><b>La contraseña la podes restablecer al ingresar al sitio web</b></p>
-						<hr>
-						<a href="https://academia.aprende-idiomas.com/">Ingresar</a>
+                        <p class="">📧 En minutos vas a recibir un e-mail. Allí vas a ver las instrucciones para descargar el curso (si no lo encontrás, revisá la sección No Deseados/Spam)<br></p>
+                        <h4 class="mt-5">✅ ¡Novedad!</h4>
+                        <p class="">Para ver el curso debes ingresar a nuestra academia <a href="https://academia.aprende-idiomas.com/">Ingresar</a> con tu correo. All� se encuentran todos los videos para que puedas cursar :).</p>
+
                         <hr>
                         <?php
                         foreach ($jsonUrlGrupos as $key => $value){
                             echo '<a class="btn btn-block btn-lg py-4 btn-outline-light" target="_blank" style="background-color:#e6007e;" href="' . $value . '"><b>EMPEZAR EL CURSO "' . strtoupper($key) . '" &nbsp;</b>👉</a>';
                         }
                         ?>
-                        
+                        <p class="">Una vez enviada la solicitud de ingreso al grupo, puede tomar hasta 24hs tu aprobación. Para acelerar el proceso respondé el e-mail que te enviamos lo antes posible.</p>
                     </div>
                 </div>
             </div>

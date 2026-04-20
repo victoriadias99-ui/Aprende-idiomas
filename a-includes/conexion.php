@@ -26,12 +26,12 @@
 			}
 		}
 
+		// NO fallback con credenciales hardcodeadas.
+		// Si faltan variables de entorno, fallamos con error claro.
 		if (!$host || !$user || !$db) {
-			$host = 'localhost';
-			$user = 'aprendee_neuro_couch_admin';
-			$pass = 'juHy?Lc5(2ju';
-			$db   = 'aprendee_neuro_couch';
-			$port = '3306';
+			http_response_code(503);
+			error_log('[conexion] Missing DB env vars (MYSQLHOST/USER/DB or MYSQL_URL)');
+			throw new RuntimeException('Database configuration missing. Set MYSQLHOST/MYSQLUSER/MYSQLPASSWORD/MYSQLDATABASE or MYSQL_URL env vars.');
 		}
 
 		$dsn = "mysql:host={$host};port={$port};dbname={$db};charset=utf8mb4";

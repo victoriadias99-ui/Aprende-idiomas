@@ -1,0 +1,103 @@
+{
+	frankenphp
+	order php_server before file_server
+}
+
+{$SERVER_NAME:localhost} {
+	log {
+		output stderr
+		format console
+	}
+
+	root * /app/public
+
+	# Compression primero (antes de cualquier otra respuesta)
+	encode zstd gzip
+
+	# Redirect URLs de Railway (*.up.railway.app) al dominio canonico
+	# Evita contenido duplicado para SEO
+	@railway header_regexp Host .*\.up\.railway\.app$
+	redir @railway https://www.aprende-idiomas.com{uri} 301
+
+	# Redirect apex (sin www) al www canonico — backup por si Cloudflare Worker falla
+	@apex header Host aprende-idiomas.com
+	redir @apex https://www.aprende-idiomas.com{uri} 301
+
+	# === SECURITY: bloquear acceso a archivos sensibles por nombre ===
+	@blockedFiles path_regexp (?i)^/(\.env|\.git|\.gitignore|\.htaccess|\.htpasswd|Dockerfile|Caddyfile|php\.ini|railway\.json|composer\.json|composer\.lock|package\.json|package-lock\.json|yarn\.lock|README|propagation|log-errores|error_log|backup|dump_|aprendee_)
+	respond @blockedFiles "Not Found" 404 {
+		close
+	}
+
+	# Bloquear archivos por extension peligrosa
+	@blockedExt path_regexp (?i)\.(sql|bak|bkp|swp|log|env|ini|toml|yml|yaml|lock|old|orig|save|tmp)$
+	respond @blockedExt "Not Found" 404 {
+		close
+	}
+
+	# Bloquear archivos de backup (.bak.<fecha>, ~tmp, etc.)
+	@blockedBak path_regexp (?i)(\.bak\.|\.old\.|~$|\.backup\.)
+	respond @blockedBak "Not Found" 404 {
+		close
+	}
+
+	# === Bloquear includes internos (whitelist de endpoints publicos expuestos) ===
+	# Permitir solo los endpoints que el frontend o webhooks necesitan
+	@internalPath {
+		path /a-includes/* /a-pages/* /_backup_mp/* /vendor/*
+		not path /a-includes/chat-ia.php
+		not path /a-includes/pagostripenotif.php
+		not path /a-includes/pagopaypalnotif.php
+	}
+	respond @internalPath "Not Found" 404 {
+		close
+	}
+
+	# Bloquear a-libraries excepto webhooks/endpoints publicos necesarios
+	@libraries {
+		path /a-libraries/*
+		not path /a-libraries/realizarVenta.php
+		not path /a-libraries/IPN_mp.php
+	}
+	respond @libraries "Not Found" 404 {
+		close
+	}
+
+	# Bloquear cache dirs
+	@cache path /cache/* /*/cache/*
+	respond @cache "Not Found" 404 {
+		close
+	}
+
+	# === Security headers ===
+	header {
+		# Forzar HTTPS un año
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		# Impedir framing (clickjacking)
+		X-Frame-Options "SAMEORIGIN"
+		# MIME sniffing off
+		X-Content-Type-Options "nosniff"
+		# Referrer limitado
+		Referrer-Policy "strict-origin-when-cross-origin"
+		# Permissions minimos
+		Permissions-Policy "camera=(), microphone=(), geolocation=(self), payment=(self)"
+		# Ocultar server/powered headers
+		-Server
+		-X-Powered-By
+	}
+
+	# Long cache para assets estaticos
+	@static {
+		path *.css *.js *.jpg *.jpeg *.png *.gif *.svg *.webp *.avif *.woff *.woff2 *.ttf *.ico
+	}
+	header @static Cache-Control "public, max-age=2592000"
+
+	# Short cache para XML/TXT (sitemap, robots)
+	@seo {
+		path *.xml *.txt
+	}
+	header @seo Cache-Control "public, max-age=3600"
+
+	# Serve PHP + static files
+	php_server
+}

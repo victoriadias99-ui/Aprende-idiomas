@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgIP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec1389"/>
+      <stop offset="1" stop-color="#6e1dd4"/>
+    </linearGradient>
+    <linearGradient id="capShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".6"/>
+    </linearGradient>
+    <radialGradient id="glowIP" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgIP)"/>
+  <circle cx="300" cy="300" r="260" fill="url(#glowIP)"/>
+  <!-- decorative stars -->
+  <g fill="#fff" opacity=".7">
+    <circle cx="90" cy="120" r="4"/>
+    <circle cx="510" cy="180" r="5"/>
+    <circle cx="120" cy="480" r="3"/>
+    <circle cx="480" cy="460" r="4"/>
+    <path d="M480 90l6 12 13 2-9 10 2 13-12-6-12 6 2-13-9-10 13-2z" opacity=".9"/>
+    <path d="M100 300l4 9 10 2-7 7 1 10-9-4-9 4 1-10-7-7 10-2z" opacity=".8"/>
+  </g>
+  <!-- graduation cap -->
+  <g transform="translate(300 295)">
+    <!-- shadow -->
+    <ellipse cx="0" cy="140" rx="140" ry="14" fill="#000" opacity=".25"/>
+    <!-- tassel string -->
+    <path d="M0 0 C 40 30 60 60 70 90 L 65 105" stroke="#ffd24a" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <circle cx="67" cy="115" r="14" fill="#ffd24a"/>
+    <!-- cap body (rectangle block under the mortarboard) -->
+    <path d="M-78 0 Q-78 -48 0 -48 Q78 -48 78 0 L78 42 Q78 78 0 78 Q-78 78 -78 42 Z" fill="#1a1a26"/>
+    <path d="M-78 14 Q0 46 78 14" stroke="#3d3d55" stroke-width="3" fill="none"/>
+    <!-- mortarboard (diamond on top) -->
+    <path d="M0 -120 L170 -30 L0 60 L-170 -30 Z" fill="#0a0a0f"/>
+    <path d="M0 -120 L170 -30 L0 60 L-170 -30 Z" fill="url(#capShine)" opacity=".15"/>
+    <!-- button on top -->
+    <circle cx="0" cy="-30" r="10" fill="#ffd24a"/>
+  </g>
+</svg>

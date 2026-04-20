@@ -5,48 +5,68 @@ if (isset($_GET['test'])) {
     error_reporting(E_ALL);
 }
 
-$dirpage = '';
-$_idVenta = $_GET['idVenta'];
-include("a-includes/funcionsDB.php");
-$venta = getVenta($_idVenta);
-$producto = getCursoDetalle($venta['CURSO']);
-$monto = $producto['PRECIO_UNITARIO'];
+include("a-includes/funcionsDBStripe.php");
 
-$productos = explode('|', $venta['CURSO']);
-$_p = [];
-foreach ($productos as $p) {
-    if ($venta['CURSO_P'] != $p) {
-        $upsells = getUpsells($venta['CURSO_P'], $p);
-        $_p[] = [
-            'id' => $upsells['ID_ABRE_PACK'],
-            'precio' => $upsells['PRECIO'],
-            'titulo' => $upsells['TITULO_1'],
-        ];
+$titulo = 'Pago exitoso';
+$dirpage = '';
+
+// Validacion de params: si falta id, la pagina se accedio sin venta real
+$_idVenta = isset($_GET['id']) ? $_GET['id'] : null;
+$_moneda = isset($_GET['moneda']) ? $_GET['moneda'] : 'ARS';
+if (!$_idVenta) {
+    header('Location: /');
+    exit;
+}
+$venta = getDataPaymentByID($_idVenta);
+if (!$venta) {
+    header('Location: /');
+    exit;
+}
+$producto = getDataProducto($venta['PRODUCTO'], $_moneda)['producto'];
+$productoUSD = getDataProducto($venta['PRODUCTO'], 'USD')['producto'];
+$totalUSD = $productoUSD['PRECIO_DESC'];
+$total = $producto['PRECIO_DESC'];
+$upsell = [];
+
+if ($venta['UPSELL'] != $venta['PRODUCTO']) {
+    $upsell = explode('|', $venta['UPSELL']);
+    $productoCheckout = getDataProductoCheckout($venta['PRODUCTO'], $_moneda);
+    foreach ($productoCheckout['pack'] as $item) {
+        if (in_array($item['ID_ABRE'], $upsell)) {
+            $total += $item['PRECIO'];
+            $_p[] = [
+                'id' => $item['ID_ABRE'],
+                'precio' => $item['PRECIO'],
+                'titulo' => $item['NOMBRE'],
+            ];
+        }
     }
 }
-if (isset($_GET['test-ads'])) {
+
+if (isset($_GET['test'])) {
+    echo "<pre style='background-color: white;'>";
+    print_r($productoCheckout);
+    echo "</pre>";
+}
+
+if (isset($_GET['test'])) {
     
     echo "<pre>";
     print_r($venta);
     echo "</pre>";
+    
     echo "<pre>";
     print_r($_p);
     echo "</pre>";
-
-    die();
 }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Pago Exitoso</title>
-        <?php include('a-pages/headerTMPE.php') ?>
+        <?php include('a-pages/header.php') ?>
     </head>
     <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3NBJXZ"
-                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- Website Header -->
         <header>
             <div class="container">
                 <div class="row align-items-center">
@@ -80,21 +100,23 @@ if (isset($_GET['test-ads'])) {
                         <div class="section-heading">
                             <h1 class="mt-5 text-dark pt-5"><b>¡Listo!&nbsp;&nbsp;</b>🙌
                                 <hr>
-                                <p class="lead">Tu pago se acreditó correctamente. ¡Te damos la bienvenida a <?= $producto['TITULO'] ?>! Para ver las instrucciones, clickeá el siguiente botón</p>
+                                <p class="lead">Tu pago se acreditó correctamente. ¡Te damos la bienvenida a <?= $producto['TITULO'] ?>!</p>
                             </h1>
-                            <a class="btn btn-block btn-lg py-4 btn-outline-light" style="background-color:#e6007e;" href="unirse.php?idVenta=<?= $_idVenta ?>"><b>Clickeame&nbsp;</b>👉</a>
+                            <p class="mb-3   mt-4 lead">El curso llegará a tu e-mail dentro de los próximos 5 minutos. Si no lo encuentras, revisa la sección no deseados/spam/otros</p>
+                            <div class=" mx-auto text-center mt-5">
+
+                                <div>
+                                    <a class="btn btn-block btn-lg btn-outline-light" style="background-color:#e6007e;" href="https://academia.aprende-idiomas.com/"><b>Ver el curso</b>👉</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <?php include('a-pages/footer.php');
-        if(isset($_GET['test-ads'])){
-            
-        } else {
-        ?>
-        <script>
+        <?php include('a-pages/footer.php') ?>
+                <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
                 dataLayer.push(arguments);
@@ -102,18 +124,14 @@ if (isset($_GET['test-ads'])) {
             gtag('js', new Date());
 
             gtag('event', 'purchase', {
-
-                'transaction_id': '<?= $_idVenta; ?>',
-                'value': <?= $monto; ?>,
-                'currency': 'ARS',
+                'transaction_id': '<?= $venta['ID']; ?>',
+                'value': <?=  $total; ?>,
+                'currency': '<?= $_GET['moneda']; ?>',
                 'items': [
-<?php
-$productoD = getCursoDetalle($venta['CURSO_P']);
-?>
                         {
-                            'item_name': '<?= $productoD['TITULO'] ?>',
-                            'item_id': '<?= $productoD['CURSO'] ?>',
-                            'price': <?= $productoD['PRECIO_UNITARIO'] ?>,
+                            'item_name': '<?= $productoCheckout['producto']['NOMBRE'] ?>',
+                            'item_id': '<?= $productoCheckout['producto']['ID_ABRE'] ?>',
+                            'price': <?= $productoCheckout['producto']['PRECIO_DESC'] ?>,
                             'quantity': 1
                         },
 <?php 
@@ -132,20 +150,12 @@ foreach ($_p as $prod):
 
         <script>
             fbq('track', 'Purchase', {
-                value: <?= $monto ?>,
-                currency: 'ARS',
-            }, {'eventID': '<?= $venta['CURSO'] . '-' . $_idVenta ?>'});
+                value: <?= $total ?>,
+                currency: '<?= $_GET['moneda'] ?>'
+            }, {eventID: '<?= $venta['ID'] ?>'});
         </script>
         <script>
-            fbq('trackCustom', 'pago-exitoso');
+            fbq('trackCustom', 'pago-exitoso', {eventID: '<?= $venta['ID'] ?>'});
         </script>
-        <script>
-            pintrk('track', 'checkout', {
-                value: <?= $monto ?>,
-                order_quantity: 1,
-                currency: 'ARS',
-            });
-        </script>
-        <?php  } ?>
     </body>
 </html>

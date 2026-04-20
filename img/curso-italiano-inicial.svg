@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgII" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#008c45"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="pastaBowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e8e8ee"/>
+    </linearGradient>
+    <radialGradient id="glowII" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgII)"/>
+  <circle cx="300" cy="290" r="280" fill="url(#glowII)"/>
+
+  <!-- Italian flag stripes background -->
+  <g opacity=".25">
+    <rect x="0" y="0" width="200" height="600" fill="#008c45"/>
+    <rect x="400" y="0" width="200" height="600" fill="#cd212a"/>
+  </g>
+
+  <!-- Speech bubble "Ciao!" -->
+  <g transform="translate(420 120)">
+    <path d="M0 0 H120 Q140 0 140 20 V50 Q140 70 120 70 H30 L10 88 L14 70 Q0 68 0 50 Z" fill="#fff" stroke="#0a0a0f" stroke-width="5"/>
+    <text x="70" y="46" text-anchor="middle" font-family="system-ui, Arial Black, sans-serif" font-size="24" font-weight="900" fill="#cd212a">Ciao!</text>
+  </g>
+
+  <!-- stars -->
+  <g fill="#fff" opacity=".85">
+    <path d="M 90 110 l 4 9 9 1 -7 7 2 10 -8 -5 -8 5 2 -10 -7 -7 9 -1 z"/>
+    <circle cx="110" cy="500" r="4"/>
+    <circle cx="500" cy="490" r="4"/>
+  </g>
+
+  <!-- Pasta bowl centerpiece -->
+  <g transform="translate(300 340)">
+    <ellipse cx="0" cy="90" rx="200" ry="20" fill="#000" opacity=".3"/>
+    <!-- plate -->
+    <ellipse rx="180" ry="45" fill="url(#pastaBowl)" stroke="#0a0a0f" stroke-width="6"/>
+    <ellipse rx="155" ry="32" fill="#fdeed0" stroke="#0a0a0f" stroke-width="3"/>
+    <!-- pasta/spaghetti swirl -->
+    <g stroke="#ffd24a" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M -100 -10 Q -40 -20 40 -15 Q 100 -10 140 -18"/>
+      <path d="M -110 -4 Q -30 -6 50 -4 Q 110 -2 130 -6"/>
+      <path d="M -100 4 Q -20 6 60 4 Q 120 6 138 2"/>
+      <path d="M -90 14 Q -20 18 50 14 Q 110 14 120 10"/>
+    </g>
+    <!-- tomato sauce dot -->
+    <circle cx="0" cy="-5" r="18" fill="#cd212a" stroke="#0a0a0f" stroke-width="3"/>
+    <!-- basil leaves -->
+    <path d="M-30 -20 Q -40 -30 -35 -15 Q -30 -12 -30 -20" fill="#16a34a" stroke="#0a0a0f" stroke-width="2"/>
+    <path d="M20 -24 Q 30 -34 28 -18 Q 22 -14 20 -24" fill="#16a34a" stroke="#0a0a0f" stroke-width="2"/>
+    <!-- steam -->
+    <g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".75">
+      <path d="M -40 -60 Q -30 -80 -40 -100 Q -50 -120 -40 -140"/>
+      <path d="M 0 -70 Q 10 -90 0 -110 Q -10 -130 0 -150"/>
+      <path d="M 40 -60 Q 50 -80 40 -100 Q 30 -120 40 -140"/>
+    </g>
+  </g>
+
+  <!-- A1 badge -->
+  <g transform="translate(120 150)">
+    <circle r="55" fill="#fff" stroke="#0a0a0f" stroke-width="5"/>
+    <text y="-6" text-anchor="middle" font-family="system-ui, Arial" font-size="11" font-weight="800" fill="#008c45" letter-spacing="1.5">NIVEL</text>
+    <text y="24" text-anchor="middle" font-family="system-ui, Arial Black" font-size="32" font-weight="900" fill="#008c45">A1</text>
+  </g>
+</svg>

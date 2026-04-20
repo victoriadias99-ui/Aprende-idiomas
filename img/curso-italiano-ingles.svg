@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgII2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec1389"/>
+      <stop offset="1" stop-color="#0074d4"/>
+    </linearGradient>
+    <radialGradient id="glowII2" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgII2)"/>
+  <circle cx="300" cy="300" r="280" fill="url(#glowII2)"/>
+
+  <g fill="#fff" opacity=".85">
+    <circle cx="90" cy="110" r="4"/>
+    <circle cx="510" cy="140" r="5"/>
+    <circle cx="100" cy="490" r="4"/>
+    <circle cx="500" cy="510" r="3"/>
+  </g>
+
+  <!-- PACK burst badge top -->
+  <g transform="translate(300 110)">
+    <path d="M0 -54 L10 -22 L42 -32 L32 0 L62 10 L32 20 L42 52 L10 44 L0 76 L-10 44 L-42 52 L-32 20 L-62 10 L-32 0 L-42 -32 L-10 -22 Z" fill="#ffd24a" stroke="#0a0a0f" stroke-width="4"/>
+    <text y="-4" text-anchor="middle" font-family="system-ui, Arial" font-size="11" font-weight="800" fill="#0a0a0f" letter-spacing="1">PACK</text>
+    <text y="18" text-anchor="middle" font-family="system-ui, Arial Black" font-size="20" font-weight="900" fill="#0a0a0f">2x1</text>
+  </g>
+
+  <!-- Two flags tilted toward each other -->
+  <!-- UK flag on left tilted right -->
+  <g transform="translate(180 340) rotate(-10)">
+    <!-- pole -->
+    <rect x="-78" y="-120" width="4" height="220" fill="#8c5e20" stroke="#0a0a0f" stroke-width="2"/>
+    <circle cx="-76" cy="-122" r="7" fill="#ffd24a" stroke="#0a0a0f" stroke-width="2"/>
+    <!-- flag rect -->
+    <g>
+      <rect x="-75" y="-120" width="160" height="100" fill="#012169" stroke="#0a0a0f" stroke-width="4"/>
+      <!-- white diagonals -->
+      <g clip-path="inset(0)">
+        <line x1="-75" y1="-120" x2="85" y2="-20" stroke="#fff" stroke-width="20"/>
+        <line x1="85" y1="-120" x2="-75" y2="-20" stroke="#fff" stroke-width="20"/>
+        <!-- red diagonals -->
+        <line x1="-75" y1="-120" x2="85" y2="-20" stroke="#cf142b" stroke-width="8"/>
+        <line x1="85" y1="-120" x2="-75" y2="-20" stroke="#cf142b" stroke-width="8"/>
+        <!-- white cross -->
+        <rect x="-75" y="-80" width="160" height="20" fill="#fff"/>
+        <rect x="-5" y="-120" width="20" height="100" fill="#fff"/>
+        <!-- red cross -->
+        <rect x="-75" y="-75" width="160" height="10" fill="#cf142b"/>
+        <rect x="0" y="-120" width="10" height="100" fill="#cf142b"/>
+      </g>
+      <rect x="-75" y="-120" width="160" height="100" fill="none" stroke="#0a0a0f" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- Italian flag on right tilted left -->
+  <g transform="translate(420 340) rotate(10)">
+    <rect x="-10" y="-120" width="4" height="220" fill="#8c5e20" stroke="#0a0a0f" stroke-width="2"/>
+    <circle cx="-8" cy="-122" r="7" fill="#ffd24a" stroke="#0a0a0f" stroke-width="2"/>
+    <g>
+      <rect x="-6" y="-120" width="55" height="100" fill="#008c45" stroke="#0a0a0f" stroke-width="4"/>
+      <rect x="49" y="-120" width="55" height="100" fill="#f4f5f0" stroke="#0a0a0f" stroke-width="4"/>
+      <rect x="104" y="-120" width="55" height="100" fill="#cd212a" stroke="#0a0a0f" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- PLUS in center -->
+  <g transform="translate(300 300)">
+    <circle r="45" fill="#fff" stroke="#0a0a0f" stroke-width="5"/>
+    <text y="18" text-anchor="middle" font-family="system-ui, Arial Black" font-size="52" font-weight="900" fill="#ec1389">+</text>
+  </g>
+
+  <!-- Speech bubbles bottom -->
+  <g transform="translate(170 480)">
+    <path d="M0 0 H90 Q110 0 110 18 V42 Q110 60 90 60 L20 60 L4 74 L8 60 Q0 58 0 42 Z" fill="#fff" stroke="#0a0a0f" stroke-width="3"/>
+    <text x="55" y="38" text-anchor="middle" font-family="system-ui, Arial Black" font-size="18" font-weight="900" fill="#012169">Hello!</text>
+  </g>
+  <g transform="translate(340 490)">
+    <path d="M110 0 H20 Q0 0 0 18 V42 Q0 60 20 60 L90 60 L106 74 L102 60 Q110 58 110 42 Z" fill="#fff" stroke="#0a0a0f" stroke-width="3"/>
+    <text x="55" y="38" text-anchor="middle" font-family="system-ui, Arial Black" font-size="18" font-weight="900" fill="#cd212a">Ciao!</text>
+  </g>
+</svg>

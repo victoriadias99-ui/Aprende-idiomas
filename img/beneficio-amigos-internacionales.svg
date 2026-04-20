@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgAI" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00b6ed"/>
+      <stop offset="1" stop-color="#ec1389"/>
+    </linearGradient>
+    <radialGradient id="glowAI" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="person1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd24a"/>
+      <stop offset="1" stop-color="#ff8a00"/>
+    </linearGradient>
+    <linearGradient id="person2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ec1389"/>
+      <stop offset="1" stop-color="#a3006b"/>
+    </linearGradient>
+    <linearGradient id="person3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fd18a"/>
+      <stop offset="1" stop-color="#18824d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgAI)"/>
+  <circle cx="300" cy="300" r="280" fill="url(#glowAI)"/>
+
+  <!-- stars / sparkles -->
+  <g fill="#fff" opacity=".7">
+    <circle cx="80" cy="110" r="4"/>
+    <circle cx="520" cy="140" r="5"/>
+    <circle cx="100" cy="500" r="3"/>
+    <circle cx="510" cy="500" r="4"/>
+  </g>
+
+  <!-- connection lines between people (dashed) -->
+  <g stroke="#fff" stroke-width="3" fill="none" opacity=".85" stroke-linecap="round" stroke-dasharray="4 8">
+    <path d="M 180 360 Q 300 280 420 360"/>
+    <path d="M 180 360 L 420 360"/>
+  </g>
+
+  <!-- Speech/chat bubbles above -->
+  <g transform="translate(230 140)">
+    <path d="M0 0 H100 Q120 0 120 20 V50 Q120 70 100 70 H30 L10 88 L14 70 Q0 68 0 50 Z" fill="#fff" stroke="#0a0a0f" stroke-width="4"/>
+    <text x="60" y="46" text-anchor="middle" font-family="system-ui, -apple-system, Arial" font-size="22" font-weight="800" fill="#ec1389">Hi!</text>
+  </g>
+  <g transform="translate(330 100)">
+    <path d="M120 0 H20 Q0 0 0 20 V48 Q0 68 20 68 H90 L110 86 L106 68 Q120 66 120 48 Z" fill="#fff" stroke="#0a0a0f" stroke-width="4"/>
+    <text x="60" y="44" text-anchor="middle" font-family="system-ui, -apple-system, Arial" font-size="20" font-weight="800" fill="#00b6ed">Ciao!</text>
+  </g>
+
+  <!-- 3 person avatars -->
+  <!-- left -->
+  <g transform="translate(180 390)">
+    <circle cy="-28" r="34" fill="url(#person1)" stroke="#0a0a0f" stroke-width="4"/>
+    <path d="M-50 60 Q-50 10 0 10 Q50 10 50 60 Z" fill="url(#person1)" stroke="#0a0a0f" stroke-width="4"/>
+    <!-- eyes -->
+    <circle cx="-11" cy="-30" r="3" fill="#0a0a0f"/>
+    <circle cx="11" cy="-30" r="3" fill="#0a0a0f"/>
+    <!-- smile -->
+    <path d="M-10 -18 Q0 -12 10 -18" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- center -->
+  <g transform="translate(300 380)">
+    <circle cy="-38" r="42" fill="url(#person2)" stroke="#0a0a0f" stroke-width="4"/>
+    <path d="M-62 70 Q-62 10 0 10 Q62 10 62 70 Z" fill="url(#person2)" stroke="#0a0a0f" stroke-width="4"/>
+    <circle cx="-14" cy="-40" r="4" fill="#fff"/>
+    <circle cx="14" cy="-40" r="4" fill="#fff"/>
+    <path d="M-13 -26 Q0 -18 13 -26" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- right -->
+  <g transform="translate(420 390)">
+    <circle cy="-28" r="34" fill="url(#person3)" stroke="#0a0a0f" stroke-width="4"/>
+    <path d="M-50 60 Q-50 10 0 10 Q50 10 50 60 Z" fill="url(#person3)" stroke="#0a0a0f" stroke-width="4"/>
+    <circle cx="-11" cy="-30" r="3" fill="#fff"/>
+    <circle cx="11" cy="-30" r="3" fill="#fff"/>
+    <path d="M-10 -18 Q0 -12 10 -18" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Heart sparkle -->
+  <path d="M300 260 c-6 -10 -22 -10 -22 4 c0 12 22 24 22 24 s22-12 22-24 c0-14 -16-14-22 -4 Z" fill="#ec1389" stroke="#0a0a0f" stroke-width="3"/>
+</svg>

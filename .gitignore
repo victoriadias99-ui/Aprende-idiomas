@@ -1,0 +1,45 @@
+.DS_Store
+.claude/
+
+# SQL dumps (no commitear al repo, EXCEPTO migraciones versionadas)
+*.sql
+!a-includes/migrations/*.sql
+backup.sql
+dump_*.sql
+aprendee_neuro_couch.sql
+
+# Logs
+error_log
+**/error_log
+log-errores.txt
+*.log
+
+# Backups automaticos del IDE / editores
+*.bak
+*.bak.*
+**/*.bak
+**/*.bak.*
+*.orig
+*.old
+*~
+*.swp
+*.swo
+
+# DNS/infra tokens
+propagation.txt
+
+# Cache del chat widget (runtime)
+a-includes/cache/*
+!a-includes/cache/.gitignore
+
+# Editor
+.vscode/
+.idea/
+
+# Docker volumes
+docker-volumes/
+
+# Entornos
+.env
+.env.local
+.env.*.local
