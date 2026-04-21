@@ -1209,7 +1209,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
     <div class="final-cta-inner">
-        <img src="img/ingles-producto.jpg" alt="Empezá hoy" class="final-cta-img">
+        <img src="img/ingles-producto.svg" alt="Inglés Nivel 1 — Sumá inglés a tu CV" class="final-cta-img">
         <div class="final-cta-content">
             <div class="hero-eyebrow">🇺🇸 Empezá hoy</div>
             <h2>Sumá inglés a tu CV</h2>
