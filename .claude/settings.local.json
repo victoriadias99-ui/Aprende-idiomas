@@ -29,7 +29,12 @@
       "Bash(curl -sS 'https://generativelanguage.googleapis.com/v1beta/models?key=AIzaSyBXRJyg7VsCq9s-KWM36nxjGJH7JjZFS6c')",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(m['name']\\) for m in d.get\\('models',[]\\) if 'image' in m['name'].lower\\(\\) or 'nano' in m['name'].lower\\(\\) or 'imagen' in m['name'].lower\\(\\)]\")",
       "Bash(python3 -c ' *)",
-      "Bash(curl -sS 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=AIzaSyBXRJyg7VsCq9s-KWM36nxjGJH7JjZFS6c' -H 'Content-Type: application/json' -d '{\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"A blue square on white background\"}]}],\"generationConfig\":{\"responseModalities\":[\"IMAGE\"]}}')"
+      "Bash(curl -sS 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=AIzaSyBXRJyg7VsCq9s-KWM36nxjGJH7JjZFS6c' -H 'Content-Type: application/json' -d '{\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"A blue square on white background\"}]}],\"generationConfig\":{\"responseModalities\":[\"IMAGE\"]}}')",
+      "Bash(curl -s --max-time 10 \"https://www.aprende-idiomas.com/img/suscripcion-anual.svg?t=$\\(date +%s\\)\")",
+      "Bash(awk '{print $1}')",
+      "Bash(curl -s --max-time 10 'https://www.aprende-idiomas.com/img/suscripcion-anual.svg?cb=__TRACKED_VAR__')",
+      "Bash(curl -sI --max-time 10 \"https://www.aprende-idiomas.com/img/suscripcion-anual.svg\")",
+      "Bash(curl -sI --max-time 10 https://www.aprende-idiomas.com/ingles-nivel-dos/img/curso-ingles-dos.svg)"
     ]
   }
 }
