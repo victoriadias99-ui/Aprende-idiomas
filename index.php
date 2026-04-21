@@ -1868,7 +1868,7 @@ a[href*="wa.me"],
         <article class="course-card fr" data-lang="fr">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇫🇷</span> Francés</span>
-                <img src="img/frances1.png" alt="Francés">
+                <img src="img/frances1.png?v=2" alt="Francés">
             </div>
             <div class="course-body">
                 <h3>Francés Inicial</h3>
