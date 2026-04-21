@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Pack Italiano + Inglés con Descuento 2x1 | Aprende Idiomas</title>
-    <meta name="description" content="Pack 2 idiomas al precio de uno. Italiano A1 + Inglés Nivel 1 con descuento. Certificado oficial y acceso de por vida.">
+    <meta name="description" content="Pack 2 idiomas al precio de uno. Italiano A1 + Inglés Nivel 1 con descuento. Certificado oficial y 30 días de acceso.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-ingles/">
     <meta name="keywords" content="pack italiano ingles, 2x1 idiomas, italiano e ingles, curso 2 idiomas descuento">
@@ -38,11 +38,11 @@ $urlCheckout = 'checkout.php';
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/italiano-ingles/">
     <meta property="og:title" content="Pack Italiano + Inglés 2x1 con Descuento | Aprende Idiomas">
-    <meta property="og:description" content="Pack 2 idiomas al precio de uno: Italiano A1 + Inglés Nivel 1 con descuento. Certificado oficial y acceso de por vida.">
+    <meta property="og:description" content="Pack 2 idiomas al precio de uno: Italiano A1 + Inglés Nivel 1 con descuento. Certificado oficial y 30 días de acceso.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pack Italiano + Inglés 2x1 con Descuento | Aprende Idiomas">
-    <meta name="twitter:description" content="Pack 2 idiomas al precio de uno: Italiano A1 + Inglés Nivel 1 con descuento. Certificado oficial y acceso de por vida.">
+    <meta name="twitter:description" content="Pack 2 idiomas al precio de uno: Italiano A1 + Inglés Nivel 1 con descuento. Certificado oficial y 30 días de acceso.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Pack Italiano + Inglés 2x1","description":"Pack de italiano A1 e inglés N1 con descuento 2x1. Dos idiomas al precio de uno.","url":"https://www.aprende-idiomas.com/italiano-ingles/","inLanguage":"es","teaches":["Italiano","Inglés"],"educationalLevel":"Beginner (A1)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT80H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1007,7 +1007,7 @@ $urlCheckout = 'checkout.php';
 <section class="prose">
     <div class="prose-inner">
         <p>Dos idiomas, un precio. Llevate el <b>italiano A1 + el inglés Nivel 1</b> con un descuento que no vas a encontrar comprándolos por separado. Una inversión doble que rinde el doble.</p>
-        <p>Pensado para quienes quieren <span class="highlight-text">duplicar oportunidades</span>. Estudiá los dos idiomas a tu ritmo, alternando o en paralelo. Acceso de por vida a ambos.</p>
+        <p>Pensado para quienes quieren <span class="highlight-text">duplicar oportunidades</span>. Estudiá los dos idiomas a tu ritmo, alternando o en paralelo. 30 días de acceso a ambos.</p>
         <div class="no-req">✦ Sin requisitos previos</div>
         <div class="prose-stats">
             <span class="stars">★★★★★</span>
@@ -1170,8 +1170,8 @@ $urlCheckout = 'checkout.php';
     </div>
     <div class="faq-inner">
         <details class="faq-item">
-            <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <summary>¿Por cuánto tiempo tengo acceso al curso?</summary>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar ambos cursos a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

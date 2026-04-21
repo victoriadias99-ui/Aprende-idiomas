@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Inglés Nivel 2 — Curso Online intermedio | Aprende Idiomas</title>
-    <meta name="description" content="Curso de inglés nivel 2 intermedio. Profundizá tu nivel con clases avanzadas. Certificado oficial y acceso de por vida.">
+    <meta name="description" content="Curso de inglés nivel 2 intermedio. Profundizá tu nivel con clases avanzadas. Certificado oficial y 30 días de acceso.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/ingles-nivel-dos/">
     <meta name="keywords" content="curso de ingles 2, ingles intermedio, ingles online nivel 2, curso ingles nivel 2">
@@ -38,11 +38,11 @@ $urlCheckout = 'checkout.php';
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/ingles-nivel-dos/">
     <meta property="og:title" content="Curso de Inglés Online Nivel 2 Intermedio | Aprende Idiomas">
-    <meta property="og:description" content="Curso de inglés nivel 2 intermedio online. Continuá tu nivel con clases avanzadas. Certificado oficial y acceso de por vida.">
+    <meta property="og:description" content="Curso de inglés nivel 2 intermedio online. Continuá tu nivel con clases avanzadas. Certificado oficial y 30 días de acceso.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Curso de Inglés Online Nivel 2 Intermedio | Aprende Idiomas">
-    <meta name="twitter:description" content="Curso de inglés nivel 2 intermedio online. Continuá tu nivel con clases avanzadas. Certificado oficial y acceso de por vida.">
+    <meta name="twitter:description" content="Curso de inglés nivel 2 intermedio online. Continuá tu nivel con clases avanzadas. Certificado oficial y 30 días de acceso.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Inglés Nivel 2 — Intermedio","description":"Curso de inglés nivel 2 intermedio online. Continuación del N1 para consolidar y avanzar.","url":"https://www.aprende-idiomas.com/ingles-nivel-dos/","inLanguage":"es","teaches":"Inglés","educationalLevel":"Intermediate (A2)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT40H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1181,7 +1181,7 @@ $urlCheckout = 'checkout.php';
     <div class="faq-inner">
         <details class="faq-item">
             <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

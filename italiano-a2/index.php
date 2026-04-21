@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Italiano A2 — Nivel Intermedio | Aprende Idiomas</title>
-    <meta name="description" content="Curso de italiano nivel A2 intermedio. Continuá tu camino tras el A1. Certificado oficial y acceso de por vida.">
+    <meta name="description" content="Curso de italiano nivel A2 intermedio. Continuá tu camino tras el A1. Certificado oficial y 30 días de acceso.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-a2/">
     <meta name="keywords" content="italiano a2, italiano intermedio, curso italiano a2, italiano online intermedio, aprender italiano a2">
@@ -38,11 +38,11 @@ $urlCheckout = 'checkout.php';
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/italiano-a2/">
     <meta property="og:title" content="Curso de Italiano A2 Intermedio Online | Aprende Idiomas">
-    <meta property="og:description" content="Curso de italiano nivel A2 intermedio 100% online. Continuá tu camino tras el A1 con clases, ejercicios y certificado oficial. Acceso de por vida.">
+    <meta property="og:description" content="Curso de italiano nivel A2 intermedio 100% online. Continuá tu camino tras el A1 con clases, ejercicios y certificado oficial. 30 días de acceso.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Curso de Italiano A2 Intermedio Online | Aprende Idiomas">
-    <meta name="twitter:description" content="Curso de italiano nivel A2 intermedio 100% online. Continuá tu camino tras el A1 con clases, ejercicios y certificado oficial. Acceso de por vida.">
+    <meta name="twitter:description" content="Curso de italiano nivel A2 intermedio 100% online. Continuá tu camino tras el A1 con clases, ejercicios y certificado oficial. 30 días de acceso.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Italiano A2 — Nivel Intermedio","description":"Curso de italiano A2 intermedio online. Continuación del nivel A1 para consolidar gramática, vocabulario y conversación.","url":"https://www.aprende-idiomas.com/italiano-a2/","inLanguage":"es","teaches":"Italiano","educationalLevel":"Intermediate (A2)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT40H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1183,7 +1183,7 @@ $urlCheckout = 'checkout.php';
     <div class="faq-inner">
         <details class="faq-item">
             <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

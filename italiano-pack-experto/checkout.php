@@ -697,7 +697,6 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
             <li><span class="check">✓</span> De cero a B1 avanzado</li>
             <li><span class="check">✓</span> Descuento vs comprarlos separado</li>
             <li><span class="check">✓</span> Apto ciudadanía italiana</li>
-            <li><span class="check">✓</span> Acceso de por vida a los 3</li>
             <li><span class="check">✓</span> Certificado por cada nivel</li>
                     <li><span class="check">✓</span> Duración: 30 días</li>
         </ul>

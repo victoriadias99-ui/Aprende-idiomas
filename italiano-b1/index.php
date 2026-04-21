@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Italiano B1 — Nivel Avanzado · Apto Ciudadanía | Aprende Idiomas</title>
-    <meta name="description" content="Curso de italiano B1 avanzado. Apto requisito para ciudadanía italiana. Certificado oficial y acceso de por vida.">
+    <meta name="description" content="Curso de italiano B1 avanzado. Apto requisito para ciudadanía italiana. Certificado oficial y 30 días de acceso.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-b1/">
     <meta name="keywords" content="italiano b1, italiano avanzado, italiano ciudadania, italiano ciudadania italiana, curso italiano b1, requisito italiano ciudadania">
@@ -38,11 +38,11 @@ $urlCheckout = 'checkout.php';
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/italiano-b1/">
     <meta property="og:title" content="Curso Italiano B1 Avanzado · Apto Ciudadanía Italiana | Aprende Idiomas">
-    <meta property="og:description" content="Curso de italiano B1 avanzado online. Apto como requisito de idioma para la ciudadanía italiana. Certificado oficial y acceso de por vida.">
+    <meta property="og:description" content="Curso de italiano B1 avanzado online. Apto como requisito de idioma para la ciudadanía italiana. Certificado oficial y 30 días de acceso.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Curso Italiano B1 Avanzado · Apto Ciudadanía Italiana | Aprende Idiomas">
-    <meta name="twitter:description" content="Curso de italiano B1 avanzado online. Apto como requisito de idioma para la ciudadanía italiana. Certificado oficial y acceso de por vida.">
+    <meta name="twitter:description" content="Curso de italiano B1 avanzado online. Apto como requisito de idioma para la ciudadanía italiana. Certificado oficial y 30 días de acceso.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Italiano B1 — Nivel Avanzado · Apto Ciudadanía","description":"Curso de italiano B1 avanzado online. Apto para cumplir el requisito de idioma exigido para la ciudadanía italiana.","url":"https://www.aprende-idiomas.com/italiano-b1/","inLanguage":"es","teaches":"Italiano","educationalLevel":"Upper-Intermediate (B1)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT50H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1182,8 +1182,8 @@ $urlCheckout = 'checkout.php';
     </div>
     <div class="faq-inner">
         <details class="faq-item">
-            <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <summary>¿Por cuánto tiempo tengo acceso al curso?</summary>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

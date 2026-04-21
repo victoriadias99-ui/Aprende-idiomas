@@ -40,11 +40,11 @@ a[href*="wa.me"],
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/">
     <meta property="og:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Alemán y Japonés">
-    <meta property="og:description" content="Academia online de idiomas. Cursos de italiano, inglés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
+    <meta property="og:description" content="Academia online de idiomas. Cursos de italiano, inglés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, duración de 30 días y precios en tu moneda.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Alemán y Japonés">
-    <meta name="twitter:description" content="Academia online de idiomas. Cursos de italiano, inglés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
+    <meta name="twitter:description" content="Academia online de idiomas. Cursos de italiano, inglés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, duración de 30 días y precios en tu moneda.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.aprende-idiomas.com/#organization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","sameAs":[]},{"@type":"WebSite","@id":"https://www.aprende-idiomas.com/#website","url":"https://www.aprende-idiomas.com/","name":"Aprende Idiomas","publisher":{"@id":"https://www.aprende-idiomas.com/#organization"},"inLanguage":"es"},{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","description":"Academia online de idiomas con cursos de italiano, inglés, alemán y japonés."}]}</script>
     <meta name="keywords" content="aprende ingles, cursos online de ingles, curso de ingles, saber ingles cursos, curso de italiano, cursos online de idiomas, aprende italiano, curso de aleman, curso de japones">
@@ -1691,10 +1691,10 @@ a[href*="wa.me"],
         <div class="hero-text">
             <div class="hero-eyebrow">
                 <span class="pulse"></span>
-                Cursos 100% online · Acceso de por vida
+                Cursos 100% online · Duración 30 días
             </div>
             <h1>Hablar otro idioma <span class="grad">cambia tu vida</span></h1>
-            <p class="hero-sub">Cursos online de inglés, italiano, alemán y japonés. Certificado oficial, comunidad activa y acceso ilimitado para que aprendas a tu ritmo.</p>
+            <p class="hero-sub">Cursos online de inglés, italiano, alemán y japonés. Certificado oficial, comunidad activa y acceso durante 30 días para que aprendas a tu ritmo.</p>
             <div class="hero-ctas">
                 <a href="#cursos" class="btn btn-pink btn-arrow">Ver todos los cursos</a>
                 <a href="#" class="btn btn-light" onclick="event.preventDefault(); document.getElementById('modal-suscripcion').style.display='flex'; return false;">Suscripción · USD 2/mes</a>
@@ -1762,7 +1762,7 @@ a[href*="wa.me"],
     <div class="section-head">
         <div class="eyebrow cyan">Catálogo</div>
         <h2>Nuestros cursos</h2>
-        <p>Elegí el idioma que va a cambiar tu vida. Todos incluyen certificado, comunidad y acceso de por vida.</p>
+        <p>Elegí el idioma que va a cambiar tu vida. Todos incluyen certificado, comunidad y 30 días de acceso.</p>
     </div>
     <div class="courses-grid">
 
@@ -1915,7 +1915,7 @@ a[href*="wa.me"],
         <article class="course-card ja" data-lang="ja">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇯🇵</span> Japonés</span>
-                <img src="img/japon.png?v=2" alt="Japonés">
+                <img src="img/japon.png?v=2" alt="Japonés" style="object-position: center 75%;">
             </div>
             <div class="course-body">
                 <h3>Japonés</h3>

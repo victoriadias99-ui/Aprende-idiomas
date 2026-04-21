@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Italiano A1 — Curso Online desde cero | Aprende Idiomas</title>
-    <meta name="description" content="Curso de italiano nivel inicial A1. Desde cero, 25 clases, 200+ ejercicios. Certificado oficial, comunidad y acceso de por vida.">
+    <meta name="description" content="Curso de italiano nivel inicial A1. Desde cero, 25 clases, 200+ ejercicios. Certificado oficial, comunidad y 30 días de acceso.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/italiano-inicial/">
     <meta name="keywords" content="curso de italiano, italiano online, italiano desde cero, italiano a1, aprender italiano, curso italiano principiantes, italiano para principiantes">
@@ -963,7 +963,7 @@ $urlCheckout = 'checkout.php';
         <div class="hero-content">
             <div class="hero-eyebrow">🇮🇹 Italiano · Nivel A1 · Desde cero</div>
             <h1>Aprendé italiano <span class="grad">desde cero</span></h1>
-            <p class="hero-sub">Curso online a distancia con +25 clases paso a paso, +200 ejercicios y acceso de por vida. Apto para iniciar tu camino hacia la ciudadanía italiana.</p>
+            <p class="hero-sub">Curso online a distancia con +25 clases paso a paso, +200 ejercicios y 30 días de acceso. Apto para iniciar tu camino hacia la ciudadanía italiana.</p>
 
             <ul class="feat-list">
                 <li><span class="check">✓</span> +25 clases paso a paso</li>
@@ -1184,7 +1184,7 @@ $urlCheckout = 'checkout.php';
     <div class="faq-inner">
         <details class="faq-item">
             <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

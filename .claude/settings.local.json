@@ -24,7 +24,12 @@
       "Bash(sips -g pixelWidth -g pixelHeight japon.png)",
       "Bash(cp suscripcion-mensual.svg suscripcion-mensual.backup.svg)",
       "Bash(curl -sS -o suscripcion-mensual.png \"https://export-download.canva.com/pUW7k/DAHHc-pUW7k/-1/0/0001-4681992587234955245.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260420%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260420T202249Z&X-Amz-Expires=33344&X-Amz-Signature=6e819fe3d6f9410e0695a8b93d0edc2fa69b2382ed784063ac00efcf721c1b78&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2021%20Apr%202026%2005%3A38%3A33%20GMT\")",
-      "Bash(sips -g pixelWidth -g pixelHeight suscripcion-mensual.png)"
+      "Bash(sips -g pixelWidth -g pixelHeight suscripcion-mensual.png)",
+      "Bash(export GEMINI_KEY=\"AIzaSyBXRJyg7VsCq9s-KWM36nxjGJH7JjZFS6c\")",
+      "Bash(curl -sS 'https://generativelanguage.googleapis.com/v1beta/models?key=AIzaSyBXRJyg7VsCq9s-KWM36nxjGJH7JjZFS6c')",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(m['name']\\) for m in d.get\\('models',[]\\) if 'image' in m['name'].lower\\(\\) or 'nano' in m['name'].lower\\(\\) or 'imagen' in m['name'].lower\\(\\)]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sS 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key=AIzaSyBXRJyg7VsCq9s-KWM36nxjGJH7JjZFS6c' -H 'Content-Type: application/json' -d '{\"contents\":[{\"role\":\"user\",\"parts\":[{\"text\":\"A blue square on white background\"}]}],\"generationConfig\":{\"responseModalities\":[\"IMAGE\"]}}')"
     ]
   }
 }

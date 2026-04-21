@@ -1009,7 +1009,7 @@ $urlCheckout = 'checkout.php';
 <section class="prose">
     <div class="prose-inner">
         <p>El pack más conveniente. Tres niveles completos (<b>A1, A2 y B1</b>) con un descuento importante respecto a comprarlos individualmente. La ruta completa para hablar italiano fluido y obtener la ciudadanía.</p>
-        <p>Empezás sin saber nada y terminás listo para el examen oficial. <span class="highlight-text">+90 clases en total</span>, +600 ejercicios y acceso de por vida.</p>
+        <p>Empezás sin saber nada y terminás listo para el examen oficial. <span class="highlight-text">+90 clases en total</span>, +600 ejercicios y 30 días de acceso.</p>
         <div class="no-req">✦ Sin requisitos previos</div>
         <div class="prose-stats">
             <span class="stars">★★★★★</span>
@@ -1182,8 +1182,8 @@ $urlCheckout = 'checkout.php';
     </div>
     <div class="faq-inner">
         <details class="faq-item">
-            <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <summary>¿Por cuánto tiempo tengo acceso al curso?</summary>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

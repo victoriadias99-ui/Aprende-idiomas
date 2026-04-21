@@ -125,7 +125,7 @@ footer a{color:var(--pink);font-weight:600}
 <h2>7. Condiciones de venta</h2>
 <p><strong>7.1. Precios y moneda.</strong> Los precios se muestran en la moneda local del usuario (detectada por país) o en USD según corresponda. NEMTOR LLC se reserva el derecho de modificar los precios sin previo aviso; las compras ya efectuadas no se verán afectadas.</p>
 <p><strong>7.2. Métodos de pago.</strong> Los pagos se procesan a través de <strong>Stripe</strong> (tarjetas internacionales) y <strong>MercadoPago</strong> (pagos en pesos argentinos). NEMTOR LLC no almacena datos de tarjetas de crédito.</p>
-<p><strong>7.3. Acceso "de por vida".</strong> El acceso "de por vida" se refiere a la vida útil del servicio mientras NEMTOR LLC mantenga operativa la plataforma. Ante cambios operacionales o cese de actividades, se notificará a los usuarios con antelación razonable.</p>
+<p><strong>7.3. Duración del acceso.</strong> La compra de un curso individual incluye <strong>30 días de acceso</strong> a los materiales desde la fecha de compra. Durante ese plazo el usuario puede ver las clases, hacer los ejercicios y descargar los recursos asociados. Las suscripciones mensuales y anuales otorgan acceso mientras el pago se encuentre al día.</p>
 
 <h2>8. Suscripciones</h2>
 <p><strong>8.1.</strong> Las suscripciones (mensual o anual) se cobran al inicio de cada período y se renuevan automáticamente hasta que el usuario las cancele.</p>

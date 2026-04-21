@@ -115,10 +115,10 @@ $rules = [
         'kw' => ['acceso', 'empezar', 'cuando empiezo', 'cuando comienza', 'cuando inicia', 'inmediato', 'despues del pago', 'despues de pagar', 'cuando puedo', 'fecha de inicio'],
         'reply' => "El acceso es inmediato: apenas se acredita el pago, recibís un email con tu usuario y contraseña para entrar al campus en https://academia.aprende-idiomas.com/. Podés empezar el mismo día y avanzar a tu ritmo."
     ],
-    // --- Duración / acceso de por vida ---
+    // --- Duración / 30 días de acceso ---
     [
-        'kw' => ['cuanto dura', 'duracion', 'tiempo del curso', 'tiempo de curso', 'meses dura', 'semanas dura', 'de por vida', 'para siempre', 'expira', 'vence', 'caduca', 'plazo'],
-        'reply' => "No tiene plazo: una vez que comprás, el acceso es de por vida. Avanzás a tu ritmo, sin fechas ni horarios fijos, y podés repasar las clases cuando quieras."
+        'kw' => ['cuanto dura', 'duracion', 'tiempo del curso', 'tiempo de curso', 'meses dura', 'semanas dura', 'de por vida', 'para siempre', 'expira', 'vence', 'caduca', 'plazo', '30 dias', 'treinta dias'],
+        'reply' => "Tenés 30 días de acceso desde la compra. Durante ese tiempo podés ver todas las clases y hacer los ejercicios a tu ritmo, cuando quieras. El curso está diseñado para completarse cómodamente en ese plazo."
     ],
     // --- Certificado ---
     [
@@ -148,7 +148,7 @@ $rules = [
     // --- Idiomas específicos ---
     [
         'kw' => ['ingles', 'english'],
-        'reply' => "Tenemos dos niveles de inglés:\n- Inglés Nivel Uno (A1, desde cero): /ingles-nivel-uno/\n- Inglés Nivel Dos (A2): /ingles-nivel-dos/\n\nAmbos son 100% online, acceso de por vida y certificado al terminar."
+        'reply' => "Tenemos dos niveles de inglés:\n- Inglés Nivel Uno (A1, desde cero): /ingles-nivel-uno/\n- Inglés Nivel Dos (A2): /ingles-nivel-dos/\n\nAmbos son 100% online, con 30 días de acceso y certificado al terminar."
     ],
     [
         'kw' => ['italiano'],

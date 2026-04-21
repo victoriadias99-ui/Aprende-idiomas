@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Inglés Nivel 1 — Curso Online desde cero | Aprende Idiomas</title>
-    <meta name="description" content="Curso de inglés nivel 1. Desde cero, +25 clases, +200 ejercicios. Certificado oficial, comunidad y acceso de por vida.">
+    <meta name="description" content="Curso de inglés nivel 1. Desde cero, +25 clases, +200 ejercicios. Certificado oficial, comunidad y 30 días de acceso.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/ingles-nivel-uno/">
     <meta name="keywords" content="curso de ingles, ingles online, ingles desde cero, ingles nivel 1, aprender ingles, curso ingles principiantes">
@@ -38,11 +38,11 @@ $urlCheckout = 'checkout.php';
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/ingles-nivel-uno/">
     <meta property="og:title" content="Curso de Inglés Online Nivel 1 desde Cero | Aprende Idiomas">
-    <meta property="og:description" content="Aprendé inglés online desde cero con el curso Nivel 1. +25 clases, +200 ejercicios, certificado oficial, soporte de profes y acceso de por vida.">
+    <meta property="og:description" content="Aprendé inglés online desde cero con el curso Nivel 1. +25 clases, +200 ejercicios, certificado oficial, soporte de profes y 30 días de acceso.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Curso de Inglés Online Nivel 1 desde Cero | Aprende Idiomas">
-    <meta name="twitter:description" content="Aprendé inglés online desde cero con el curso Nivel 1. +25 clases, +200 ejercicios, certificado oficial, soporte de profes y acceso de por vida.">
+    <meta name="twitter:description" content="Aprendé inglés online desde cero con el curso Nivel 1. +25 clases, +200 ejercicios, certificado oficial, soporte de profes y 30 días de acceso.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Inglés Nivel 1 — Curso Online desde cero","description":"Curso de inglés nivel 1 (A1) online para principiantes. +25 clases paso a paso, +200 ejercicios, certificado oficial.","url":"https://www.aprende-idiomas.com/ingles-nivel-uno/","inLanguage":"es","teaches":"Inglés","educationalLevel":"Beginner (A1)","provider":{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT40H"}}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -963,7 +963,7 @@ $urlCheckout = 'checkout.php';
         <div class="hero-content">
             <div class="hero-eyebrow">🇺🇸 Inglés · Nivel 1 · Desde cero</div>
             <h1>Aprendé inglés <span class="grad">desde cero</span></h1>
-            <p class="hero-sub">El idioma más solicitado del mundo. +25 clases paso a paso, +200 ejercicios y acceso de por vida. Mejorá tus oportunidades laborales y abrí puertas.</p>
+            <p class="hero-sub">El idioma más solicitado del mundo. +25 clases paso a paso, +200 ejercicios y 30 días de acceso. Mejorá tus oportunidades laborales y abrí puertas.</p>
 
             <ul class="feat-list">
                 <li><span class="check">✓</span> +25 clases paso a paso</li>
@@ -1019,7 +1019,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ APRENDERAS ============ -->
 <section class="learn">
     <div class="learn-inner">
-        <img src="img/curso-ingles-uno.svg" alt="Aprenderás inglés" class="learn-img">
+        <img src="img/producto1.jpg" alt="Aprenderás inglés" class="learn-img">
         <div class="learn-content">
             <div class="section-head">
                 <div class="eyebrow">Plan de estudio</div>
@@ -1180,8 +1180,8 @@ $urlCheckout = 'checkout.php';
     </div>
     <div class="faq-inner">
         <details class="faq-item">
-            <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <summary>¿Por cuánto tiempo tengo acceso al curso?</summary>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>
@@ -1209,7 +1209,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
     <div class="final-cta-inner">
-        <img src="img/curso-ingles-uno.svg" alt="Empezá hoy" class="final-cta-img">
+        <img src="img/ingles-producto.jpg" alt="Empezá hoy" class="final-cta-img">
         <div class="final-cta-content">
             <div class="hero-eyebrow">🇺🇸 Empezá hoy</div>
             <h2>Sumá inglés a tu CV</h2>

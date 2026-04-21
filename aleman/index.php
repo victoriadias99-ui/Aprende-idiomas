@@ -28,7 +28,7 @@ $urlCheckout = 'checkout.php';
 <head>
     <meta charset="utf-8">
     <title>Alemán — Curso Online desde cero | Aprende Idiomas</title>
-    <meta name="description" content="Curso de alemán nivel inicial. Desde cero, +26 clases, certificado oficial, comunidad y acceso de por vida.">
+    <meta name="description" content="Curso de alemán nivel inicial. Desde cero, +26 clases, certificado oficial, comunidad y 30 días de acceso.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">
@@ -947,7 +947,7 @@ $urlCheckout = 'checkout.php';
         <div class="hero-content">
             <div class="hero-eyebrow">🇩🇪 Alemán · Inicial · Desde cero</div>
             <h1>Aprendé alemán <span class="grad">desde cero</span></h1>
-            <p class="hero-sub">El idioma más hablado de Europa. Apto para trabajo, estudios universitarios y vivir en Alemania. +25 clases paso a paso, acceso de por vida.</p>
+            <p class="hero-sub">El idioma más hablado de Europa. Apto para trabajo, estudios universitarios y vivir en Alemania. +25 clases paso a paso, 30 días de acceso.</p>
 
             <ul class="feat-list">
                 <li><span class="check">✓</span> +25 clases paso a paso</li>
@@ -1163,7 +1163,7 @@ $urlCheckout = 'checkout.php';
     <div class="faq-inner">
         <details class="faq-item">
             <summary>¿Por cuánto tiempo lo tengo o lo puedo descargar?</summary>
-            <div class="faq-body">¡De por vida! Una vez que abones tendrás acceso para siempre.</div>
+            <div class="faq-body">Tenés 30 días de acceso desde la compra para completar el curso a tu ritmo.</div>
         </details>
         <details class="faq-item">
             <summary>¿Cuánto dura el curso?</summary>

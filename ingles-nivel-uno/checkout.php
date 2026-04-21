@@ -695,7 +695,6 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
         <ul class="co-feat">
             <li><span class="check">✓</span> +45 clases en video</li>
             <li><span class="check">✓</span> +100 ejercicios prácticos</li>
-            <li><span class="check">✓</span> Acceso ilimitado de por vida</li>
             <li><span class="check">✓</span> Soporte 24hs ante dudas</li>
             <li><span class="check">✓</span> Grupo privado de alumnos</li>
             <li><span class="check">✓</span> Certificado oficial al finalizar</li>
