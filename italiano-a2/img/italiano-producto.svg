@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" role="img" aria-label="Italiano A2 - Empezá hoy">
+  <defs>
+    <linearGradient id="bgA2p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#fce7f3"/>
+    </linearGradient>
+    <linearGradient id="brandA2p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec1389"/><stop offset="1" stop-color="#00b6ed"/>
+    </linearGradient>
+    <linearGradient id="greenA2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#009246"/><stop offset="1" stop-color="#006d33"/>
+    </linearGradient>
+    <radialGradient id="gA2p" cx=".5" cy=".45" r=".65">
+      <stop offset="0" stop-color="#ec1389" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ec1389" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sA2p" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="5"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" rx="40" fill="url(#bgA2p)"/>
+  <circle cx="300" cy="320" r="300" fill="url(#gA2p)"/>
+
+  <g opacity=".15">
+    <circle cx="90" cy="100" r="55" fill="#009246"/>
+    <circle cx="530" cy="500" r="70" fill="#ce2b37"/>
+  </g>
+
+  <g filter="url(#sA2p)">
+    <rect x="195" y="60" width="210" height="46" rx="23" fill="url(#brandA2p)"/>
+    <text x="300" y="89" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#fff" letter-spacing="1.3">✦ NIVEL A2</text>
+  </g>
+
+  <!-- Tarjeta con progreso de niveles A1 completado -> A2 activo -->
+  <g transform="translate(300 320)" filter="url(#sA2p)">
+    <rect x="-150" y="-140" width="300" height="280" rx="18" fill="#ffffff"/>
+    <text x="0" y="-105" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="14" font-weight="900" fill="#0a0a0f" letter-spacing="1.5">TU PROGRESO</text>
+    <line x1="-120" y1="-92" x2="120" y2="-92" stroke="#e5e7eb" stroke-width="1"/>
+
+    <!-- A1 completado -->
+    <g transform="translate(-110 -60)">
+      <circle cx="14" cy="14" r="18" fill="#009246"/>
+      <path d="M7 14 L12 19 L22 9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="46" y="12" font-family="'Sora', system-ui, sans-serif" font-size="14" font-weight="900" fill="#0a0a0f">A1 Inicial</text>
+      <text x="46" y="28" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#059669">✓ Completado</text>
+    </g>
+
+    <!-- A2 en curso -->
+    <g transform="translate(-110 0)">
+      <circle cx="14" cy="14" r="18" fill="url(#brandA2p)"/>
+      <text x="14" y="19" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="12" font-weight="900" fill="#fff">A2</text>
+      <text x="46" y="12" font-family="'Sora', system-ui, sans-serif" font-size="14" font-weight="900" fill="#0a0a0f">A2 Intermedio</text>
+      <text x="46" y="28" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ec1389">▶ En curso</text>
+      <!-- Progress bar -->
+      <rect x="46" y="36" width="180" height="6" rx="3" fill="#f3f4f6"/>
+      <rect x="46" y="36" width="115" height="6" rx="3" fill="url(#brandA2p)"/>
+    </g>
+
+    <!-- B1 -->
+    <g transform="translate(-110 60)">
+      <circle cx="14" cy="14" r="18" fill="#e5e7eb"/>
+      <text x="14" y="19" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="12" font-weight="900" fill="#9ca3af">B1</text>
+      <text x="46" y="12" font-family="'Sora', system-ui, sans-serif" font-size="14" font-weight="900" fill="#9ca3af">B1 Avanzado</text>
+      <text x="46" y="28" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#9ca3af">Próximo nivel</text>
+    </g>
+  </g>
+
+  <!-- Sello -->
+  <g transform="translate(490 195)" filter="url(#sA2p)">
+    <circle cx="0" cy="0" r="52" fill="#fff" stroke="url(#greenA2)" stroke-width="4"/>
+    <text x="0" y="-10" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="10" font-weight="900" fill="#009246" letter-spacing="1.5">CERTIFICATO</text>
+    <text x="0" y="14" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="22" font-weight="900" fill="#0a0a0f">A2</text>
+    <text x="0" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#5a5d72">oficial</text>
+  </g>
+
+  <g filter="url(#sA2p)">
+    <g transform="translate(55 250)"><rect x="0" y="0" width="110" height="42" rx="21" fill="#fff"/><path d="M20 42 L14 52 L28 42 Z" fill="#fff"/><text x="55" y="26" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="15" font-weight="900" fill="url(#brandA2p)">Bravo!</text></g>
+    <g transform="translate(55 440)"><rect x="0" y="0" width="120" height="42" rx="21" fill="#fff"/><text x="60" y="26" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="14" font-weight="900" fill="#0a0a0f">Dolce vita</text></g>
+  </g>
+
+  <text x="300" y="545" text-anchor="middle" font-family="'Sora', system-ui, sans-serif" font-size="22" font-weight="900" fill="#0a0a0f" letter-spacing="-0.3">Dominá el italiano A2</text>
+  <text x="300" y="572" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#5a5d72">Nivel intermedio · Certificado · 30 días de acceso</text>
+</svg>

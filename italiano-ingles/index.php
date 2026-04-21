@@ -1019,7 +1019,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ APRENDERAS ============ -->
 <section class="learn">
     <div class="learn-inner">
-        <img src="img/curso-italiano-ingles.svg" alt="Aprenderás italiano + inglés" class="learn-img">
+        <img src="../img/curso-italiano-ingles.svg" alt="Aprenderás italiano + inglés" class="learn-img">
         <div class="learn-content">
             <div class="section-head">
                 <div class="eyebrow">Plan de estudio</div>

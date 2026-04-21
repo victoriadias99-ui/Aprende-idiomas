@@ -988,7 +988,7 @@ $urlCheckout = 'checkout.php';
 
         <div class="hero-visual">
             <span class="hero-flag"><span class="flag-icon">🇮🇹</span> Ciao!</span>
-            <img src="img/curso-italiano-inicial.svg" alt="Curso de italiano A1" class="hero-img">
+            <img src="../img/curso-italiano-inicial.svg" alt="Curso de italiano A1" class="hero-img">
             <div class="hero-rating">
                 <div class="hero-rating-stars">★★★★★</div>
                 <div class="hero-rating-text"><b>4.9 de 5</b>+3.500 alumnos</div>
@@ -1021,7 +1021,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ APRENDERAS ============ -->
 <section class="learn">
     <div class="learn-inner">
-        <img src="img/curso-italiano-inicial.svg" alt="Aprenderás italiano" class="learn-img">
+        <img src="img/aprenderas-italiano.svg" alt="Aprenderás italiano" class="learn-img">
         <div class="learn-content">
             <div class="section-head">
                 <div class="eyebrow">Plan de estudio</div>
@@ -1212,7 +1212,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
     <div class="final-cta-inner">
-        <img src="img/curso-italiano-inicial.svg" alt="Suma italiano a tu CV" class="final-cta-img">
+        <img src="img/italiano-producto.svg" alt="Suma italiano a tu CV" class="final-cta-img">
         <div class="final-cta-content">
             <div class="hero-eyebrow">🇮🇹 Empezá hoy</div>
             <h2>Sumá italiano a tu CV</h2>
