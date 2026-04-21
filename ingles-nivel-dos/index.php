@@ -1019,7 +1019,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ APRENDERAS ============ -->
 <section class="learn">
     <div class="learn-inner">
-        <img src="img/curso-ingles-dos.svg" alt="Aprenderás inglés" class="learn-img">
+        <img src="img/aprenderas-ingles.svg" alt="Aprenderás inglés intermedio - Plan de estudio" class="learn-img">
         <div class="learn-content">
             <div class="section-head">
                 <div class="eyebrow">Plan de estudio</div>
@@ -1209,7 +1209,7 @@ $urlCheckout = 'checkout.php';
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta">
     <div class="final-cta-inner">
-        <img src="img/curso-ingles-dos.svg" alt="Empezá hoy" class="final-cta-img">
+        <img src="img/ingles-producto.svg" alt="Inglés Nivel 2 - Sumá inglés a tu CV" class="final-cta-img">
         <div class="final-cta-content">
             <div class="hero-eyebrow">🇺🇸 Empezá hoy</div>
             <h2>Sumá inglés a tu CV</h2>
