@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="bgSm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c6cff"/>
+      <stop offset="1" stop-color="#00b6ed"/>
+    </linearGradient>
+    <radialGradient id="globeM" cx=".3" cy=".3" r=".8">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e0e4ff"/>
+    </radialGradient>
+    <radialGradient id="glowSm" cx=".5" cy=".5" r=".6">
+      <stop offset="0" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="url(#bgSm)"/>
+  <circle cx="300" cy="290" r="280" fill="url(#glowSm)"/>
+
+  <!-- sparkles -->
+  <g fill="#fff" opacity=".8">
+    <path d="M 95 110 l 4 9 9 1 -7 7 2 10 -8 -5 -8 5 2 -10 -7 -7 9 -1 z"/>
+    <path d="M 510 155 l 3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1 z"/>
+    <circle cx="60" cy="310" r="3"/>
+    <circle cx="540" cy="340" r="4"/>
+  </g>
+
+  <!-- Orbit rings -->
+  <g stroke="#fff" stroke-width="2" fill="none" opacity=".35">
+    <ellipse cx="300" cy="300" rx="240" ry="80" transform="rotate(-15 300 300)"/>
+    <ellipse cx="300" cy="300" rx="230" ry="90" transform="rotate(15 300 300)"/>
+  </g>
+
+  <!-- Globe center -->
+  <g transform="translate(300 300)">
+    <circle r="150" fill="url(#globeM)" stroke="#0a0a0f" stroke-width="6"/>
+    <!-- flag tiles pattern inside globe -->
+    <defs>
+      <clipPath id="globeClipM">
+        <circle r="145"/>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#globeClipM)">
+      <!-- Row 1 -->
+      <rect x="-150" y="-120" width="60" height="40" fill="#ff4b4b"/>
+      <rect x="-90" y="-120" width="60" height="40" fill="#1e40af"/>
+      <rect x="-30" y="-120" width="60" height="40" fill="#fcd34d"/>
+      <rect x="30" y="-120" width="60" height="40" fill="#16a34a"/>
+      <rect x="90" y="-120" width="60" height="40" fill="#111827"/>
+      <!-- Row 2 -->
+      <rect x="-150" y="-80" width="60" height="40" fill="#fcd34d"/>
+      <rect x="-90" y="-80" width="60" height="40" fill="#fff"/>
+      <rect x="-30" y="-80" width="60" height="40" fill="#dc2626"/>
+      <rect x="30" y="-80" width="60" height="40" fill="#1e40af"/>
+      <rect x="90" y="-80" width="60" height="40" fill="#16a34a"/>
+      <!-- Row 3 -->
+      <rect x="-150" y="-40" width="60" height="40" fill="#16a34a"/>
+      <rect x="-90" y="-40" width="60" height="40" fill="#1e40af"/>
+      <rect x="-30" y="-40" width="60" height="40" fill="#fcd34d"/>
+      <rect x="30" y="-40" width="60" height="40" fill="#ec1389"/>
+      <rect x="90" y="-40" width="60" height="40" fill="#fff"/>
+      <!-- Row 4 -->
+      <rect x="-150" y="0" width="60" height="40" fill="#dc2626"/>
+      <rect x="-90" y="0" width="60" height="40" fill="#0c4a6e"/>
+      <rect x="-30" y="0" width="60" height="40" fill="#fff"/>
+      <rect x="30" y="0" width="60" height="40" fill="#16a34a"/>
+      <rect x="90" y="0" width="60" height="40" fill="#fcd34d"/>
+      <!-- Row 5 -->
+      <rect x="-150" y="40" width="60" height="40" fill="#111827"/>
+      <rect x="-90" y="40" width="60" height="40" fill="#fcd34d"/>
+      <rect x="-30" y="40" width="60" height="40" fill="#dc2626"/>
+      <rect x="30" y="40" width="60" height="40" fill="#1e40af"/>
+      <rect x="90" y="40" width="60" height="40" fill="#16a34a"/>
+      <!-- Row 6 -->
+      <rect x="-150" y="80" width="60" height="40" fill="#fff"/>
+      <rect x="-90" y="80" width="60" height="40" fill="#16a34a"/>
+      <rect x="-30" y="80" width="60" height="40" fill="#ec1389"/>
+      <rect x="30" y="80" width="60" height="40" fill="#fcd34d"/>
+      <rect x="90" y="80" width="60" height="40" fill="#0c4a6e"/>
+    </g>
+    <!-- curvature highlight -->
+    <ellipse rx="150" ry="150" fill="none" stroke="#0a0a0f" stroke-width="2" opacity=".4"/>
+    <path d="M -140 -40 Q 0 0 140 -40" stroke="#fff" stroke-width="3" fill="none" opacity=".5"/>
+    <circle r="150" fill="url(#glowSm)" opacity=".5"/>
+  </g>
+
+  <!-- "USD 4" circular badge -->
+  <g transform="translate(465 455)">
+    <circle r="58" fill="#fff" stroke="#0a0a0f" stroke-width="5"/>
+    <text y="-12" text-anchor="middle" font-family="system-ui, Arial" font-size="11" font-weight="800" fill="#5c6cff" letter-spacing="1.5">MENSUAL</text>
+    <text y="14" text-anchor="middle" font-family="system-ui, Arial Black" font-size="22" font-weight="900" fill="#0a0a0f">USD 4</text>
+    <text y="34" text-anchor="middle" font-family="system-ui, Arial" font-size="10" font-weight="700" fill="#5a5d72">/mes</text>
+  </g>
+
+  <!-- calendar icon -->
+  <g transform="translate(140 460)">
+    <rect x="-34" y="-30" width="68" height="62" rx="6" fill="#fff" stroke="#0a0a0f" stroke-width="4"/>
+    <rect x="-34" y="-30" width="68" height="14" rx="6" fill="#ec1389"/>
+    <rect x="-34" y="-20" width="68" height="4" fill="#ec1389"/>
+    <rect x="-26" y="-38" width="6" height="16" rx="2" fill="#0a0a0f"/>
+    <rect x="20" y="-38" width="6" height="16" rx="2" fill="#0a0a0f"/>
+    <text y="18" text-anchor="middle" font-family="system-ui, Arial Black" font-size="22" font-weight="900" fill="#0a0a0f">30</text>
+  </g>
+</svg>

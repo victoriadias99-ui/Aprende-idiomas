@@ -87,7 +87,7 @@ footer a{color:var(--pink);font-weight:600}
 
 <h2>1. Identificación y finalidad</h2>
 <p><strong>1.1.</strong> El presente aviso legal regula el acceso y uso del sitio web <a href="https://aprende-idiomas.com">aprende-idiomas.com</a>, operado por <strong>NEMTOR LLC</strong>, una compañía constituida bajo las leyes del Estado de Delaware, Estados Unidos.</p>
-<p><strong>1.2.</strong> Los servicios ofrecidos por NEMTOR LLC incluyen: venta de cursos online de idiomas (inglés, italiano, francés, alemán, japonés), gestión de suscripciones, administración de comunidades de alumnos y contenido formativo relacionado.</p>
+<p><strong>1.2.</strong> Los servicios ofrecidos por NEMTOR LLC incluyen: venta de cursos online de idiomas (inglés, italiano, alemán, japonés), gestión de suscripciones, administración de comunidades de alumnos y contenido formativo relacionado.</p>
 
 <h2>2. Términos de uso</h2>
 <p><strong>2.1. Aceptación.</strong> El acceso al sitio implica la aceptación automática y sin reservas de estos términos. Si no estás de acuerdo, por favor no utilices el sitio.</p>

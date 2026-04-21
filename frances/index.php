@@ -1,4 +1,9 @@
 <?php
+// Curso de Francés oculto temporalmente - pendiente de creación
+// Redirige al home para no mostrar la página incompleta
+header('Location: /', true, 302);
+exit;
+
 if(isset($_GET['test'])){
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);

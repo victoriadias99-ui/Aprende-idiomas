@@ -39,15 +39,15 @@ a[href*="wa.me"],
     <meta property="og:site_name" content="Aprende Idiomas">
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/">
-    <meta property="og:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Francés, Alemán y Japonés">
-    <meta property="og:description" content="Academia online de idiomas. Cursos de italiano, inglés, francés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
+    <meta property="og:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Alemán y Japonés">
+    <meta property="og:description" content="Academia online de idiomas. Cursos de italiano, inglés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Francés, Alemán y Japonés">
-    <meta name="twitter:description" content="Academia online de idiomas. Cursos de italiano, inglés, francés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
+    <meta name="twitter:title" content="Aprende Idiomas | Cursos Online de Italiano, Inglés, Alemán y Japonés">
+    <meta name="twitter:description" content="Academia online de idiomas. Cursos de italiano, inglés, alemán y japonés. Desde cero hasta avanzado. Certificado oficial, acceso de por vida y precios en tu moneda.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.aprende-idiomas.com/#organization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","sameAs":[]},{"@type":"WebSite","@id":"https://www.aprende-idiomas.com/#website","url":"https://www.aprende-idiomas.com/","name":"Aprende Idiomas","publisher":{"@id":"https://www.aprende-idiomas.com/#organization"},"inLanguage":"es"},{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","description":"Academia online de idiomas con cursos de italiano, inglés, francés, alemán y japonés."}]}</script>
-    <meta name="keywords" content="aprende ingles, cursos online de ingles, curso de ingles, saber ingles cursos, curso de italiano, cursos online de idiomas, curso de frances, aprende italiano, aprende frances">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.aprende-idiomas.com/#organization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","sameAs":[]},{"@type":"WebSite","@id":"https://www.aprende-idiomas.com/#website","url":"https://www.aprende-idiomas.com/","name":"Aprende Idiomas","publisher":{"@id":"https://www.aprende-idiomas.com/#organization"},"inLanguage":"es"},{"@type":"EducationalOrganization","name":"Aprende Idiomas","url":"https://www.aprende-idiomas.com/","logo":"https://www.aprende-idiomas.com/img/logo.jpg","description":"Academia online de idiomas con cursos de italiano, inglés, alemán y japonés."}]}</script>
+    <meta name="keywords" content="aprende ingles, cursos online de ingles, curso de ingles, saber ingles cursos, curso de italiano, cursos online de idiomas, aprende italiano, curso de aleman, curso de japones">
     <meta name="author" content="Aprende Idiomas">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
@@ -1619,7 +1619,6 @@ a[href*="wa.me"],
                 </div>
             </li>
 
-            <li><a href="/frances/"><span class="nav-flag">🇫🇷</span>Francés</a></li>
             <li><a href="/aleman/"><span class="nav-flag">🇩🇪</span>Alemán</a></li>
             <li><a href="/japones/"><span class="nav-flag">🇯🇵</span>Japonés</a></li>
 
@@ -1656,7 +1655,6 @@ a[href*="wa.me"],
                 <a href="/italiano-ingles/">✦ Pack Italiano + Inglés</a>
             </div>
         </details>
-        <a href="/frances/">🇫🇷 Francés</a>
         <a href="/aleman/">🇩🇪 Alemán</a>
         <a href="/japones/">🇯🇵 Japonés</a>
         <a href="#" class="md-subs" onclick="event.preventDefault(); cerrarDrawer(); setTimeout(function(){document.getElementById('modal-suscripcion').style.display='flex';}, 280);">✦ Suscripción · USD 2/mes</a>
@@ -1696,7 +1694,7 @@ a[href*="wa.me"],
                 Cursos 100% online · Acceso de por vida
             </div>
             <h1>Hablar otro idioma <span class="grad">cambia tu vida</span></h1>
-            <p class="hero-sub">Cursos online de inglés, italiano, francés, alemán y japonés. Certificado oficial, comunidad activa y acceso ilimitado para que aprendas a tu ritmo.</p>
+            <p class="hero-sub">Cursos online de inglés, italiano, alemán y japonés. Certificado oficial, comunidad activa y acceso ilimitado para que aprendas a tu ritmo.</p>
             <div class="hero-ctas">
                 <a href="#cursos" class="btn btn-pink btn-arrow">Ver todos los cursos</a>
                 <a href="#" class="btn btn-light" onclick="event.preventDefault(); document.getElementById('modal-suscripcion').style.display='flex'; return false;">Suscripción · USD 2/mes</a>
@@ -1719,12 +1717,11 @@ a[href*="wa.me"],
 
 <!-- ============ LOGO BAR ============ -->
 <section class="logo-bar">
-    <div class="logo-bar-label">5 idiomas para elegir</div>
+    <div class="logo-bar-label">4 idiomas para elegir</div>
     <div class="lang-pills" id="lang-filters">
         <button type="button" data-filter="all" class="lang-pill all active"><span class="flag">✦</span> Todos <span class="greet">los cursos</span></button>
         <button type="button" data-filter="en" class="lang-pill en"><span class="flag">🇺🇸</span> Inglés <span class="greet">Hello!</span></button>
         <button type="button" data-filter="it" class="lang-pill it"><span class="flag">🇮🇹</span> Italiano <span class="greet">Ciao!</span></button>
-        <button type="button" data-filter="fr" class="lang-pill fr"><span class="flag">🇫🇷</span> Francés <span class="greet">Bonjour!</span></button>
         <button type="button" data-filter="de" class="lang-pill de"><span class="flag">🇩🇪</span> Alemán <span class="greet">Hallo!</span></button>
         <button type="button" data-filter="ja" class="lang-pill ja"><span class="flag">🇯🇵</span> Japonés <span class="greet">こんにちは</span></button>
         <button type="button" onclick="document.getElementById('modal-suscripcion').style.display='flex'" class="lang-pill subs"><span class="flag">✦</span> Suscripción <span class="greet">All-Access</span></button>
@@ -1738,7 +1735,7 @@ a[href*="wa.me"],
             <div class="subs-modal-head">
                 <span class="subs-modal-eyebrow">✦ Suscripción All-Access</span>
                 <h3 id="subs-modal-title">Elegí tu plan</h3>
-                <p>Acceso ilimitado a los 5 idiomas · +15 cursos · Certificado oficial</p>
+                <p>Acceso ilimitado a los 4 idiomas · +15 cursos · Certificado oficial</p>
             </div>
             <div class="subs-modal-grid">
                 <a href="/suscripcion/#mensual" class="subs-option">
@@ -1852,7 +1849,7 @@ a[href*="wa.me"],
         <article class="course-card pack" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ Pack</span>
-                <img src="img/italiano-pack.jpg" alt="Pack Italiano Avanzado" loading="lazy">
+                <img src="img/italiano-pack.png" alt="Pack Italiano Avanzado" loading="lazy">
             </div>
             <div class="course-body">
                 <h3>Pack Italiano Avanzado</h3>
@@ -1865,6 +1862,7 @@ a[href*="wa.me"],
             </div>
         </article>
 
+        <?php /* Curso de Francés oculto temporalmente - pendiente de creación
         <article class="course-card fr" data-lang="fr">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇫🇷</span> Francés</span>
@@ -1880,11 +1878,12 @@ a[href*="wa.me"],
                 <a href="/frances/" class="course-cta">Ver curso →</a>
             </div>
         </article>
+        */ ?>
 
         <article class="course-card pack" data-lang="it">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ Pack 2x1</span>
-                <img src="img/pack.jpg" alt="Pack Italiano + Inglés">
+                <img src="img/pack.png" alt="Pack Italiano + Inglés">
             </div>
             <div class="course-body">
                 <h3>Pack Italiano + Inglés</h3>
@@ -1916,7 +1915,7 @@ a[href*="wa.me"],
         <article class="course-card ja" data-lang="ja">
             <div class="course-img-wrap">
                 <span class="course-badge"><span class="flag">🇯🇵</span> Japonés</span>
-                <img src="img/japon.png" alt="Japonés">
+                <img src="img/japon.png?v=2" alt="Japonés">
             </div>
             <div class="course-body">
                 <h3>Japonés</h3>
@@ -1932,7 +1931,7 @@ a[href*="wa.me"],
         <article class="course-card all" data-lang="all" id="suscripciones">
             <div class="course-img-wrap">
                 <span class="course-badge">✦ All-Access</span>
-                <img src="img/suscripcion-mensual.svg" alt="Suscripción Mensual">
+                <img src="img/suscripcion-mensual.png" alt="Suscripción Mensual">
             </div>
             <div class="course-body">
                 <h3>Suscripción Mensual</h3>
@@ -2184,7 +2183,6 @@ a[href*="wa.me"],
                     <li><a href="/ingles-nivel-uno/">Inglés N1</a></li>
                     <li><a href="/ingles-nivel-dos/">Inglés N2</a></li>
                     <li><a href="/italiano-inicial/">Italiano</a></li>
-                    <li><a href="/frances/">Francés</a></li>
                     <li><a href="/aleman/">Alemán</a></li>
                     <li><a href="/japones/">Japonés</a></li>
                 </ul>
@@ -2297,7 +2295,7 @@ a[href*="wa.me"],
         <div id="sus-step1" style="text-align:center;">
             <div style="display:inline-block;background:linear-gradient(135deg,#ec1389,#00b6ed);color:#fff;padding:6px 16px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:14px;">✦ SUSCRIPCIÓN ALL-ACCESS</div>
             <h2 style="margin:0 0 10px;font-size:30px;font-weight:800;color:#0a0a0f;font-family:'Sora',sans-serif;line-height:1.15;">Elegí tu plan</h2>
-            <p style="margin:0 0 26px;color:#5a5d72;font-size:15px;line-height:1.5;">Acceso ilimitado a los 5 idiomas · +15 cursos · Certificado oficial</p>
+            <p style="margin:0 0 26px;color:#5a5d72;font-size:15px;line-height:1.5;">Acceso ilimitado a los 4 idiomas · +15 cursos · Certificado oficial</p>
 
             <div class="sus-planes-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
                 <!-- PLAN MENSUAL -->
@@ -2336,7 +2334,7 @@ a[href*="wa.me"],
                         <span style="font-weight:700;color:#0a0a0f;font-size:15px;" id="sus-plan-precio">USD 24/año</span>
                     </div>
                     <ul style="list-style:none;padding:0;margin:10px 0 0;font-size:13px;color:#0a0a0f;line-height:1.9;">
-                        <li>✓ Acceso ilimitado a 5 idiomas (inglés, italiano, francés, alemán, japonés)</li>
+                        <li>✓ Acceso ilimitado a 4 idiomas (inglés, italiano, alemán, japonés)</li>
                         <li>✓ +15 cursos · Todos los niveles</li>
                         <li>✓ Certificado oficial al completar</li>
                         <li>✓ Garantía 7 días · Reembolso sin preguntas</li>

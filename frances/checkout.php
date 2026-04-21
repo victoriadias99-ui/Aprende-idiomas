@@ -1,4 +1,9 @@
 <?php
+// Curso de Francés oculto temporalmente - pendiente de creación
+// Redirige al home para que nadie pueda comprar un curso que aún no existe
+header('Location: /', true, 302);
+exit;
+
 if (isset($_GET['test'])) {
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);

@@ -2,24 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Suscripción All-Access · 5 idiomas desde USD 2/mes | Aprende Idiomas</title>
-    <meta name="description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Certificado oficial. Cancelás cuando quieras.">
+    <title>Suscripción All-Access · 4 idiomas desde USD 2/mes | Aprende Idiomas</title>
+    <meta name="description" content="Acceso ilimitado a cursos de inglés, italiano, alemán y japonés desde USD 2/mes. Certificado oficial. Cancelás cuando quieras.">
     <!-- SEO_TAGS_V1 -->
     <link rel="canonical" href="https://www.aprende-idiomas.com/suscripcion/">
-    <meta name="keywords" content="suscripcion idiomas, 5 idiomas, acceso ilimitado cursos, suscripcion italiano ingles">
+    <meta name="keywords" content="suscripcion idiomas, 4 idiomas, acceso ilimitado cursos, suscripcion italiano ingles">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Aprende Idiomas">
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aprende-idiomas.com/suscripcion/">
-    <meta property="og:title" content="Suscripción All-Access · 5 Idiomas desde USD 2/mes | Aprende Idiomas">
-    <meta property="og:description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Todos los niveles. Cancelás cuando quieras.">
+    <meta property="og:title" content="Suscripción All-Access · 4 Idiomas desde USD 2/mes | Aprende Idiomas">
+    <meta property="og:description" content="Acceso ilimitado a cursos de inglés, italiano, alemán y japonés desde USD 2/mes. Todos los niveles. Cancelás cuando quieras.">
     <meta property="og:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Suscripción All-Access · 5 Idiomas desde USD 2/mes | Aprende Idiomas">
-    <meta name="twitter:description" content="Acceso ilimitado a cursos de inglés, italiano, francés, alemán y japonés desde USD 2/mes. Todos los niveles. Cancelás cuando quieras.">
+    <meta name="twitter:title" content="Suscripción All-Access · 4 Idiomas desde USD 2/mes | Aprende Idiomas">
+    <meta name="twitter:description" content="Acceso ilimitado a cursos de inglés, italiano, alemán y japonés desde USD 2/mes. Todos los niveles. Cancelás cuando quieras.">
     <meta name="twitter:image" content="https://www.aprende-idiomas.com/img/logo.jpg">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Suscripción All-Access Aprende Idiomas","description":"Suscripción con acceso ilimitado a todos los cursos de 5 idiomas: inglés, italiano, francés, alemán y japonés.","url":"https://www.aprende-idiomas.com/suscripcion/","brand":{"@type":"Brand","name":"Aprende Idiomas"},"image":"https://www.aprende-idiomas.com/img/logo.jpg"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Suscripción All-Access Aprende Idiomas","description":"Suscripción con acceso ilimitado a todos los cursos de 4 idiomas: inglés, italiano, alemán y japonés.","url":"https://www.aprende-idiomas.com/suscripcion/","brand":{"@type":"Brand","name":"Aprende Idiomas"},"image":"https://www.aprende-idiomas.com/img/logo.jpg"}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">
@@ -29,8 +29,8 @@
     <meta name="theme-color" content="#0a0a0f">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Suscripción All-Access · 5 idiomas desde USD 2/mes">
-    <meta property="og:description" content="Acceso ilimitado a inglés, italiano, francés, alemán y japonés. Certificado oficial. Cancelás cuando quieras.">
+    <meta property="og:title" content="Suscripción All-Access · 4 idiomas desde USD 2/mes">
+    <meta property="og:description" content="Acceso ilimitado a inglés, italiano, alemán y japonés. Certificado oficial. Cancelás cuando quieras.">
     <meta property="og:image" content="../img/logo.jpg">
     <meta property="og:type" content="website">
 
@@ -952,9 +952,9 @@
 <!-- HERO WITH PLANS AT TOP -->
 <section class="hero" id="planes">
     <div class="hero-inner">
-        <div class="hero-eyebrow">✦ Acceso ilimitado · 5 idiomas</div>
-        <h1>Hablá <span class="grad">5 idiomas</span> por el precio de un café al mes</h1>
-        <p class="hero-sub">Acceso ilimitado a <b>inglés, italiano, francés, alemán y japonés</b>. Todos los niveles, todos los cursos nuevos, desde <b>USD 2/mes</b>. Cancelás cuando quieras.</p>
+        <div class="hero-eyebrow">✦ Acceso ilimitado · 4 idiomas</div>
+        <h1>Hablá <span class="grad">4 idiomas</span> por el precio de un café al mes</h1>
+        <p class="hero-sub">Acceso ilimitado a <b>inglés, italiano, alemán y japonés</b>. Todos los niveles, todos los cursos nuevos, desde <b>USD 2/mes</b>. Cancelás cuando quieras.</p>
         <div class="hero-social">
             <span class="rating-stars">★★★★★</span>
             <span><b>4.9/5</b> · +1.000 suscriptores</span>
@@ -980,7 +980,7 @@
                 <p class="plan-billing">Facturado todos los meses</p>
                 <p class="plan-anchor">Equivalente a <b>USD 48/año</b></p>
                 <ul class="plan-features">
-                    <li><span class="check">✓</span> Acceso a los 5 idiomas</li>
+                    <li><span class="check">✓</span> Acceso a los 4 idiomas</li>
                     <li><span class="check">✓</span> Todos los niveles</li>
                     <li><span class="check">✓</span> Certificado oficial</li>
                     <li><span class="check">✓</span> Comunidad + soporte</li>
@@ -1032,7 +1032,7 @@
 <section class="value">
     <div class="section-head">
         <div class="eyebrow">Qué incluye</div>
-        <h2>Los <span class="grad">5 idiomas más solicitados</span>, todos incluidos</h2>
+        <h2>Los <span class="grad">4 idiomas más solicitados</span>, todos incluidos</h2>
         <p>Una suscripción, +15 cursos entre todos los idiomas. Sin costos ocultos ni sorpresas.</p>
     </div>
     <div class="lang-bento">
@@ -1052,6 +1052,7 @@
             </div>
             <div class="levels"><span>A1</span><span>A2</span><span>B1</span></div>
         </div>
+        <?php /* Francés oculto temporalmente - pendiente de creación
         <div class="l-card fr">
             <div>
                 <div class="flag">🇫🇷</div>
@@ -1060,6 +1061,7 @@
             </div>
             <div class="levels"><span>Inicial</span></div>
         </div>
+        */ ?>
         <div class="l-card de">
             <div>
                 <div class="flag">🇩🇪</div>
@@ -1092,13 +1094,12 @@
             <ul>
                 <li><span>Inglés N1 + N2</span><b>USD 80</b></li>
                 <li><span>Italiano A1 + A2 + B1</span><b>USD 120</b></li>
-                <li><span>Francés Inicial</span><b>USD 40</b></li>
                 <li><span>Alemán Inicial</span><b>USD 40</b></li>
                 <li><span>Japonés Inicial</span><b>USD 40</b></li>
             </ul>
             <div class="total">
                 <span class="total-label">Total</span>
-                <span class="total-amt">USD 320</span>
+                <span class="total-amt">USD 280</span>
             </div>
         </div>
         <div class="anchor-card win">
@@ -1106,7 +1107,6 @@
             <ul>
                 <li><span>Inglés N1 + N2</span><b>Incluido</b></li>
                 <li><span>Italiano A1 + A2 + B1</span><b>Incluido</b></li>
-                <li><span>Francés Inicial</span><b>Incluido</b></li>
                 <li><span>Alemán Inicial</span><b>Incluido</b></li>
                 <li><span>Japonés Inicial</span><b>Incluido</b></li>
             </ul>
@@ -1177,7 +1177,7 @@
     <div class="faq-inner">
         <details class="faq-item" open>
             <summary>¿Qué incluye la suscripción?</summary>
-            <div class="faq-body">Acceso ilimitado a todos los cursos: inglés (N1 + N2), italiano (A1 + A2 + B1), francés inicial, alemán inicial y japonés inicial. Nuevos cursos se agregan sin costo extra.</div>
+            <div class="faq-body">Acceso ilimitado a todos los cursos: inglés (N1 + N2), italiano (A1 + A2 + B1), alemán inicial y japonés inicial. Nuevos cursos se agregan sin costo extra.</div>
         </details>
         <details class="faq-item">
             <summary>¿Mensual o anual? ¿Cuál me conviene?</summary>
@@ -1209,7 +1209,7 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
     <div class="final-cta-inner">
-        <h2>Empezá hoy. <span style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Hablá 5 idiomas este año</span>.</h2>
+        <h2>Empezá hoy. <span style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Hablá 4 idiomas este año</span>.</h2>
         <p>+1.000 personas ya están aprendiendo. Garantía 7 días, cancelás cuando quieras.</p>
         <div class="final-cta-btns">
             <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="btn btn-primary">✦ Plan anual · USD 2/mes</a>

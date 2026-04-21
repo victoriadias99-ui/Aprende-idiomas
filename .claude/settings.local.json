@@ -13,7 +13,18 @@
       "Bash(md5 /Users/federicofuertes/Documents/Aprende-idiomas/img/frances1.png /Users/federicofuertes/Documents/Aprende-idiomas/img/frances1.backup.png)",
       "Bash(md5)",
       "Bash(md5 /Users/federicofuertes/Documents/Aprende-idiomas/img/frances1.png)",
-      "Bash(curl -sI \"https://www.aprende-idiomas.com/img/frances1.png\")"
+      "Bash(curl -sI \"https://www.aprende-idiomas.com/img/frances1.png\")",
+      "Bash(cp pack.jpg pack.backup.jpg)",
+      "Bash(cp italiano-pack.jpg italiano-pack.backup.jpg)",
+      "Bash(curl -sS -o italiano-pack.png \"https://export-download.canva.com/5txe4/DAHHcw5txe4/-1/0/0001-6371968348811673769.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260421%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260421T005233Z&X-Amz-Expires=14696&X-Amz-Signature=a68dfc6bb5f5df4bbaaa84c9092dfc83b15b1fc7e2cc4176eaf11629c382db27&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2021%20Apr%202026%2004%3A57%3A29%20GMT\")",
+      "Bash(curl -sS -o pack.png \"https://export-download.canva.com/VlKq0/DAHHc9VlKq0/-1/0/0001-596101825883849525.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260420%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260420T213849Z&X-Amz-Expires=27917&X-Amz-Signature=b05a1572344380a092b2649c9cfb7c11d31f2d61dbbaf173029d34aa41f84779&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2021%20Apr%202026%2005%3A24%3A06%20GMT\")",
+      "Bash(sips -g pixelWidth -g pixelHeight pack.png italiano-pack.png)",
+      "Bash(cp japon.png japon.backup.png)",
+      "Bash(curl -sS -o japon.png \"https://export-download.canva.com/Q2PL4/DAHHc7Q2PL4/-1/0/0001-429468639593698617.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260420%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260420T080204Z&X-Amz-Expires=75773&X-Amz-Signature=0e358348e1bbcd7d4ddd9309bdd5b9f2d1381b97603bc8708470b6a63cf573d2&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2021%20Apr%202026%2005%3A04%3A57%20GMT\")",
+      "Bash(sips -g pixelWidth -g pixelHeight japon.png)",
+      "Bash(cp suscripcion-mensual.svg suscripcion-mensual.backup.svg)",
+      "Bash(curl -sS -o suscripcion-mensual.png \"https://export-download.canva.com/pUW7k/DAHHc-pUW7k/-1/0/0001-4681992587234955245.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20260420%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260420T202249Z&X-Amz-Expires=33344&X-Amz-Signature=6e819fe3d6f9410e0695a8b93d0edc2fa69b2382ed784063ac00efcf721c1b78&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Tue%2C%2021%20Apr%202026%2005%3A38%3A33%20GMT\")",
+      "Bash(sips -g pixelWidth -g pixelHeight suscripcion-mensual.png)"
     ]
   }
 }
