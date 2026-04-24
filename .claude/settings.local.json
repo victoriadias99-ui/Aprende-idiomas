@@ -42,7 +42,9 @@
       "Bash(curl -s --max-time 8 https://www.aprende-idiomas.com__TRACKED_VAR__)",
       "Bash(ROOT=/Users/federicofuertes/Documents/Aprende-idiomas echo \"=== 12. funcionsDB.php: buscar concat en SQL ===\")",
       "Bash(grep -E '\\\\$consulta\\\\s*=|prepare')",
-      "Bash(curl -sI --max-time 8 -A \"ClaudeBot/1.0\" https://www.aprende-idiomas.com/)"
+      "Bash(curl -sI --max-time 8 -A \"ClaudeBot/1.0\" https://www.aprende-idiomas.com/)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' --max-time 10 https://www.aprende-idiomas.com__TRACKED_VAR__)",
+      "Bash(curl -s --max-time 10 https://www.aprende-idiomas.com__TRACKED_VAR__)"
     ]
   }
 }
