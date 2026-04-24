@@ -69,6 +69,13 @@
 		close
 	}
 
+	# === ANTI-SPIDER-TRAP: rechazar paths profundos (evita que bots inventen /a/b/c/d/e/...) ===
+	# Si la URL tiene 6+ segmentos, ningun path legitimo del sitio lo usa -> 404 directo
+	@tooDeep path_regexp ^/([^/]+/){6,}
+	respond @tooDeep "Not Found" 404 {
+		close
+	}
+
 	# === Security headers ===
 	header {
 		# Forzar HTTPS un año
@@ -98,6 +105,20 @@
 	}
 	header @seo Cache-Control "public, max-age=3600"
 
-	# Serve PHP + static files
-	php_server
+	# === Serve PHP + static files ===
+	# ANTI-SPIDER-TRAP: try_files custom SIN fallback ciego a /index.php.
+	# Si el path no es un archivo real ni un directorio con index.php, cae al handle_errors y devuelve 404.
+	# Stripe endpoints (pago_exitoso.php, /a-includes/pagostripenotif.php, etc.) siguen funcionando
+	# porque son archivos reales y matchean el primer try_files.
+	php_server {
+		try_files {path} {path}/index.php
+	}
+
+	# Manejo de 404: agregar headers que frenan bots y permiten cache del 404 en Cloudflare
+	handle_errors {
+		@is404 expression `{err.status_code} == 404`
+		header @is404 X-Robots-Tag "noindex, nofollow"
+		header @is404 Cache-Control "public, max-age=3600"
+		respond @is404 "Not Found" 404
+	}
 }
