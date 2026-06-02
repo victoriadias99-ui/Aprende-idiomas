@@ -1940,7 +1940,7 @@ a[href*="wa.me"],
             </div>
             <div class="course-foot">
                 <span class="course-price">USD 4/mes</span>
-                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="course-cta">Suscribirse →</a>
+                <a href="https://buy.stripe.com/4gM6oI9ca0iP9Vm9j33oA02" class="course-cta">Suscribirse →</a>
             </div>
         </article>
 
@@ -1956,7 +1956,7 @@ a[href*="wa.me"],
             </div>
             <div class="course-foot">
                 <span class="course-price">USD 24/año</span>
-                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="course-cta">Suscribirse →</a>
+                <a href="https://buy.stripe.com/8x2cN6ewu0iP7Nebrb3oA03" class="course-cta">Suscribirse →</a>
             </div>
         </article>
 
@@ -2350,8 +2350,8 @@ a[href*="wa.me"],
 <script>
 (function(){
     var STRIPE_URLS = {
-        mensual: 'https://buy.stripe.com/fZeg0UeY12610M0003',
-        anual:   'https://buy.stripe.com/aEUg0UdTX5id8es002'
+        mensual: 'https://buy.stripe.com/4gM6oI9ca0iP9Vm9j33oA02',
+        anual:   'https://buy.stripe.com/8x2cN6ewu0iP7Nebrb3oA03'
     };
     var PLAN_INFO = {
         mensual: { nombre: 'Plan Mensual', precio: 'USD 4/mes' },

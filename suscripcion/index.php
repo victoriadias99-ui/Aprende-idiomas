@@ -986,7 +986,7 @@
                     <li><span class="check">✓</span> Comunidad + soporte</li>
                     <li><span class="check">✓</span> Cancelás cuando quieras</li>
                 </ul>
-                <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="plan-cta primary">Empezar mensual</a>
+                <a href="https://buy.stripe.com/4gM6oI9ca0iP9Vm9j33oA02" class="plan-cta primary">Empezar mensual</a>
                 <p class="plan-guarantee">🔒 Stripe · Garantía 7 días</p>
             </div>
 
@@ -1012,7 +1012,7 @@
                     <li><span class="check">✓</span> Prioridad en soporte</li>
                     <li><span class="check">✓</span> Renovación cancelable</li>
                 </ul>
-                <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="plan-cta featured">Empezar plan anual →</a>
+                <a href="https://buy.stripe.com/8x2cN6ewu0iP7Nebrb3oA03" class="plan-cta featured">Empezar plan anual →</a>
                 <p class="plan-guarantee">🔒 Stripe · Garantía 7 días</p>
             </div>
 
@@ -1212,8 +1212,8 @@
         <h2>Empezá hoy. <span style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Hablá 4 idiomas este año</span>.</h2>
         <p>+1.000 personas ya están aprendiendo. Garantía 7 días, cancelás cuando quieras.</p>
         <div class="final-cta-btns">
-            <a href="https://buy.stripe.com/aEUg0UdTX5id8es002" class="btn btn-primary">✦ Plan anual · USD 2/mes</a>
-            <a href="https://buy.stripe.com/fZeg0UeY12610M0003" class="btn btn-light">Plan mensual · USD 4</a>
+            <a href="https://buy.stripe.com/8x2cN6ewu0iP7Nebrb3oA03" class="btn btn-primary">✦ Plan anual · USD 2/mes</a>
+            <a href="https://buy.stripe.com/4gM6oI9ca0iP9Vm9j33oA02" class="btn btn-light">Plan mensual · USD 4</a>
         </div>
         <div class="final-cta-trust">
             <span>🔒 Stripe</span>
