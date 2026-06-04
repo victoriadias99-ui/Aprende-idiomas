@@ -162,6 +162,268 @@ a[href*="wa.me"],
             padding: 0 24px;
         }
 
+        /* ===== Exit-intent popup ===== */
+        .exit-popup {
+            position: fixed;
+            inset: 0;
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: exitFadeIn .25s var(--ease);
+        }
+        .exit-popup[hidden] { display: none; }
+        .exit-popup-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,10,15,.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            cursor: pointer;
+        }
+        .exit-popup-box {
+            position: relative;
+            background: #fff;
+            border-radius: 24px;
+            padding: 44px 36px 32px;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 32px 80px rgba(0,0,0,.45);
+            animation: exitSlideUp .35s var(--ease);
+        }
+        @keyframes exitFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes exitSlideUp { from { opacity: 0; transform: translateY(20px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .exit-popup-close {
+            position: absolute;
+            top: 14px; right: 14px;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            border: 0;
+            background: var(--bg-soft);
+            color: var(--ink-soft);
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s var(--ease);
+            font-family: inherit;
+        }
+        .exit-popup-close:hover { background: var(--ink); color: #fff; }
+        .exit-popup-eyebrow {
+            display: inline-block;
+            background: var(--gradient);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .exit-popup h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 2.1rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+        }
+        .exit-popup h3 .grad {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .exit-popup-sub {
+            color: var(--ink-soft);
+            font-size: .95rem;
+            line-height: 1.5;
+            margin-bottom: 22px;
+        }
+        .exit-popup-coupon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-soft);
+            border: 2px dashed var(--pink);
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+        }
+        .exit-popup-coupon-label {
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--ink-soft);
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            white-space: nowrap;
+        }
+        .exit-popup-coupon-code {
+            flex: 1;
+            font-family: 'Sora', monospace;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--pink);
+            letter-spacing: .1em;
+            text-align: center;
+        }
+        .exit-popup-coupon-copy {
+            background: var(--ink);
+            color: #fff;
+            border: 0;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: .8rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background .2s var(--ease);
+        }
+        .exit-popup-coupon-copy:hover { background: var(--pink); }
+        .exit-popup-cta {
+            display: block;
+            background: var(--gradient);
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-pink);
+            transition: transform .2s var(--ease);
+        }
+        .exit-popup-cta:hover { color: #fff; transform: translateY(-2px); }
+        .exit-popup-foot {
+            font-size: .78rem;
+            color: var(--ink-soft);
+            margin-top: 14px;
+        }
+        @media (max-width: 480px) {
+            .exit-popup-box { padding: 36px 22px 24px; }
+            .exit-popup-coupon { flex-wrap: wrap; gap: 8px; }
+            .exit-popup-coupon-code { flex-basis: 100%; order: 1; }
+            .exit-popup-coupon-label { order: 0; }
+            .exit-popup-coupon-copy { order: 2; margin-left: auto; }
+        }
+
+        /* ===== Sticky CTA mobile ===== */
+        .sticky-mobile-cta {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            z-index: 998;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 20px;
+            background: var(--gradient);
+            color: #fff !important;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 16px 40px rgba(236,19,137,.45), 0 0 0 4px rgba(255,255,255,.85);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .3s var(--ease), transform .3s var(--ease);
+            font-family: inherit;
+        }
+        .sticky-mobile-cta.visible { opacity: 1; transform: translateY(0); }
+        .sticky-mobile-cta-icon { font-size: 1.1rem; }
+        .sticky-mobile-cta-arrow { transition: transform .2s var(--ease); }
+        .sticky-mobile-cta:active .sticky-mobile-cta-arrow { transform: translateX(4px); }
+        @media (max-width: 768px) {
+            .sticky-mobile-cta { display: inline-flex; }
+        }
+
+        /* ===== Promo banner (sticky top) ===== */
+        .promo-banner {
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1f2030 100%);
+            color: #fff;
+            padding: 10px 44px 10px 16px;
+            font-size: .88rem;
+            font-weight: 500;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            overflow: hidden;
+        }
+        .promo-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at left, rgba(236,19,137,.35), transparent 55%),
+                        radial-gradient(ellipse at right, rgba(0,182,237,.30), transparent 55%);
+            pointer-events: none;
+        }
+        .promo-banner-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 1;
+        }
+        .promo-banner-link:hover { color: #fff; }
+        .promo-banner-flag { font-size: 1.1rem; line-height: 1; }
+        .promo-banner-text strong { font-weight: 800; }
+        .promo-banner-code {
+            display: inline-block;
+            background: rgba(255,255,255,.16);
+            border: 1px dashed rgba(255,255,255,.45);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-family: 'Sora', monospace;
+            font-weight: 800;
+            font-size: .82rem;
+            letter-spacing: .08em;
+            margin-left: 4px;
+        }
+        .promo-banner-cta {
+            font-weight: 800;
+            background: var(--gradient);
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: .8rem;
+            transition: transform .2s var(--ease);
+        }
+        .promo-banner-link:hover .promo-banner-cta { transform: translateX(3px); }
+        .promo-banner-close {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,.1);
+            border: 0;
+            color: #fff;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: .85rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: background .2s var(--ease);
+        }
+        .promo-banner-close:hover { background: rgba(255,255,255,.22); }
+        @media (max-width: 640px) {
+            .promo-banner { padding: 9px 38px 9px 12px; font-size: .78rem; }
+            .promo-banner-link { gap: 6px; }
+            .promo-banner-code { font-size: .72rem; padding: 2px 8px; }
+            .promo-banner-cta { padding: 4px 10px; font-size: .72rem; }
+        }
+
         /* ===== Banner preview ===== */
         .preview-banner {
             position: fixed; top: 0; left: 0; right: 0;
@@ -1572,6 +1834,35 @@ a[href*="wa.me"],
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQ2HVF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<!-- ============ PROMO BANNER ============ -->
+<!-- Para cambiar la promo: editar texto, codigo de cupon y link. Si cambias el codigo de cupon, actualiza tambien data-coupon en el exit-intent popup mas abajo. -->
+<div id="promo-banner" class="promo-banner" role="region" aria-label="Promocion activa">
+    <a href="/italiano-pack-experto/" class="promo-banner-link">
+        <span class="promo-banner-flag">🇮🇹</span>
+        <span class="promo-banner-text">
+            <strong>Pack Italiano A1+A2+B1</strong> · 15% OFF con cupón
+            <span class="promo-banner-code">ITALIA15</span>
+        </span>
+        <span class="promo-banner-cta">Aprovechar →</span>
+    </a>
+    <button type="button" class="promo-banner-close" aria-label="Cerrar promo" onclick="cerrarPromoBanner();">✕</button>
+</div>
+<script>
+(function(){
+    try {
+        if (sessionStorage.getItem('promoBannerClosed') === '1') {
+            var b = document.getElementById('promo-banner');
+            if (b) b.style.display = 'none';
+        }
+    } catch(e){}
+    window.cerrarPromoBanner = function(){
+        var b = document.getElementById('promo-banner');
+        if (b) b.style.display = 'none';
+        try { sessionStorage.setItem('promoBannerClosed', '1'); } catch(e){}
+    };
+})();
+</script>
+
 <!-- ============ NAVBAR ============ -->
 <nav class="nav">
     <div class="nav-inner">
@@ -2202,6 +2493,103 @@ a[href*="wa.me"],
         </div>
     </div>
 </footer>
+
+<!-- ============ EXIT-INTENT POPUP ============ -->
+<!-- Cupon y porcentaje configurables en data-coupon / texto del popup -->
+<div id="exit-popup" class="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-popup-title" hidden>
+    <div class="exit-popup-backdrop" onclick="cerrarExitPopup();"></div>
+    <div class="exit-popup-box">
+        <button class="exit-popup-close" aria-label="Cerrar" onclick="cerrarExitPopup();">✕</button>
+        <div class="exit-popup-eyebrow">✦ Antes de que te vayas</div>
+        <h3 id="exit-popup-title">Llevate <span class="grad">15% OFF</span><br>en cualquier curso</h3>
+        <p class="exit-popup-sub">Usá este cupón en el checkout y aprovechá el descuento por tiempo limitado.</p>
+        <div class="exit-popup-coupon" data-coupon="ITALIA15">
+            <span class="exit-popup-coupon-label">Tu cupón</span>
+            <span class="exit-popup-coupon-code">ITALIA15</span>
+            <button type="button" class="exit-popup-coupon-copy" onclick="copiarCuponExit(this);">Copiar</button>
+        </div>
+        <a href="#cursos" class="exit-popup-cta" onclick="cerrarExitPopup();">Ver cursos con descuento →</a>
+        <p class="exit-popup-foot">Válido hoy · 1 uso por persona</p>
+    </div>
+</div>
+<script>
+(function(){
+    var KEY = 'exitPopupShown';
+    var shown = false;
+    try { if (sessionStorage.getItem(KEY) === '1') shown = true; } catch(e){}
+    var popup = document.getElementById('exit-popup');
+    if (!popup) return;
+
+    function abrir(){
+        if (shown) return;
+        shown = true;
+        try { sessionStorage.setItem(KEY, '1'); } catch(e){}
+        popup.hidden = false;
+        document.body.style.overflow = 'hidden';
+    }
+    window.cerrarExitPopup = function(){
+        popup.hidden = true;
+        document.body.style.overflow = '';
+    };
+    window.copiarCuponExit = function(btn){
+        var code = btn.parentNode.getAttribute('data-coupon') || 'ITALIA15';
+        var done = function(){
+            var orig = btn.textContent;
+            btn.textContent = '¡Copiado!';
+            setTimeout(function(){ btn.textContent = orig; }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(code).then(done).catch(done);
+        } else {
+            var t = document.createElement('textarea');
+            t.value = code; document.body.appendChild(t);
+            t.select(); try { document.execCommand('copy'); } catch(e){}
+            document.body.removeChild(t); done();
+        }
+    };
+
+    // Desktop: exit-intent al mover el mouse fuera por arriba
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (!isMobile) {
+        document.addEventListener('mouseout', function(e){
+            if (!e.relatedTarget && e.clientY <= 0) abrir();
+        });
+    } else {
+        // Mobile: despues de 25s + scroll minimo
+        setTimeout(function(){
+            if (window.scrollY > 400) abrir();
+            else {
+                var fired = false;
+                window.addEventListener('scroll', function(){
+                    if (!fired && window.scrollY > 400) { fired = true; abrir(); }
+                }, { passive: true, once: false });
+            }
+        }, 25000);
+    }
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && !popup.hidden) cerrarExitPopup();
+    });
+})();
+</script>
+
+<!-- ============ STICKY CTA MOBILE ============ -->
+<a href="#cursos" id="sticky-mobile-cta" class="sticky-mobile-cta" aria-label="Ver cursos">
+    <span class="sticky-mobile-cta-icon">✦</span>
+    <span class="sticky-mobile-cta-text">Empezar ahora</span>
+    <span class="sticky-mobile-cta-arrow">→</span>
+</a>
+<script>
+(function(){
+    var btn = document.getElementById('sticky-mobile-cta');
+    if (!btn) return;
+    function onScroll(){
+        if (window.scrollY > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
+</script>
 
 <!-- Legal links bar -->
 <div style="background:#0a0a0f;color:rgba(255,255,255,.5);padding:14px 20px;text-align:center;font-size:.78rem;border-top:1px solid rgba(255,255,255,.08)">
