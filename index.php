@@ -1840,8 +1840,7 @@ a[href*="wa.me"],
     <a href="/italiano-pack-experto/" class="promo-banner-link">
         <span class="promo-banner-flag">🇮🇹</span>
         <span class="promo-banner-text">
-            <strong>Pack Italiano A1+A2+B1</strong> · 15% OFF con cupón
-            <span class="promo-banner-code">ITALIA15</span>
+            <strong>Pack Experto Italiano</strong> · 50% OFF ya aplicado
         </span>
         <span class="promo-banner-cta">Aprovechar →</span>
     </a>
@@ -2501,15 +2500,10 @@ a[href*="wa.me"],
     <div class="exit-popup-box">
         <button class="exit-popup-close" aria-label="Cerrar" onclick="cerrarExitPopup();">✕</button>
         <div class="exit-popup-eyebrow">✦ Antes de que te vayas</div>
-        <h3 id="exit-popup-title">Llevate <span class="grad">15% OFF</span><br>en cualquier curso</h3>
-        <p class="exit-popup-sub">Usá este cupón en el checkout y aprovechá el descuento por tiempo limitado.</p>
-        <div class="exit-popup-coupon" data-coupon="ITALIA15">
-            <span class="exit-popup-coupon-label">Tu cupón</span>
-            <span class="exit-popup-coupon-code">ITALIA15</span>
-            <button type="button" class="exit-popup-coupon-copy" onclick="copiarCuponExit(this);">Copiar</button>
-        </div>
-        <a href="#cursos" class="exit-popup-cta" onclick="cerrarExitPopup();">Ver cursos con descuento →</a>
-        <p class="exit-popup-foot">Válido hoy · 1 uso por persona</p>
+        <h3 id="exit-popup-title">Llevate <span class="grad">50% OFF</span><br>en el Pack Experto Italiano</h3>
+        <p class="exit-popup-sub">Descuento ya aplicado · A1 + A2 + B1 en un solo pack por tiempo limitado.</p>
+        <a href="/italiano-pack-experto/" class="exit-popup-cta" onclick="cerrarExitPopup();">Aprovechar 50% OFF →</a>
+        <p class="exit-popup-foot">Oferta válida hoy</p>
     </div>
 </div>
 <script>
