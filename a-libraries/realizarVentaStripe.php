@@ -3,10 +3,11 @@
  * realizarVentaStripe.php
  * ───────────────────────
  * Crea una Stripe Checkout Session y devuelve su URL (echo $session->url).
- * Mismo mecanismo que aprende-excel: el form hace GET y redirige a la URL.
+ * El form (checkoutv4.js) hace GET y redirige a esa URL.
  *
- * Clave secreta de Stripe: se toma de la env var STRIPE_SECRET_KEY (Railway)
- * y, como respaldo, de la columna cursos_detalle.STRIPE_SECRET_KEY.
+ * Datos del curso: esquema v2 (v2_producto / v2_producto_precios) vía funcionsDBStripe.
+ * Clave secreta de Stripe: env var STRIPE_SECRET_KEY_IDIOMAS (Railway), con
+ * fallback a STRIPE_SECRET_KEY y a la columna keySecretStripe de la BD.
  */
 
 // Suprimir deprecated/notices del SDK de Stripe (incompatibles con PHP 8.1+)
@@ -23,9 +24,8 @@ header('Content-Type: text/plain; charset=utf-8');
 
 require_once dirname(__DIR__) . '/a-libraries/vendor/autoload.php';
 
-include("../a-includes/conexion.php");
-include("../a-includes/class.autonum.php");
-require_once dirname(__DIR__) . '/a-includes/logicprecios.php';
+// funcionsDBStripe ya incluye conexion.php, class.autonum.php y Keys.php
+include("../a-includes/funcionsDBStripe.php");
 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
@@ -33,21 +33,11 @@ $curso     = isset($_GET['curso'])     ? trim($_GET['curso'])     : '';
 $pack      = isset($_GET['pack'])      ? trim($_GET['pack'])      : $curso;
 $nombre    = isset($_GET['nombre'])    ? trim($_GET['nombre'])    : '';
 $apellido  = isset($_GET['apellido'])  ? trim($_GET['apellido'])  : '';
-$celular   = isset($_GET['celular'])   ? trim($_GET['celular'])   : '';
 $email     = isset($_GET['email'])     ? trim($_GET['email'])     : '';
 $descuento = isset($_GET['descuento']) ? trim($_GET['descuento']) : '';
 $dir       = isset($_GET['dir'])       ? trim($_GET['dir'])       : '';
-
-// Moneda y país del visitante (enviados desde el form) — fallback ARS/AR
-$monedaIn  = isset($_GET['moneda'])  ? strtoupper(trim($_GET['moneda']))  : 'ARS';
-$countryIn = isset($_GET['country']) ? strtoupper(trim($_GET['country'])) : 'AR';
-
-// El campo "pack" puede traer upsells: "curso|upsell1|...". El primer segmento
-// es el curso real (idiomas vende un curso por checkout).
-$packParts = array_values(array_filter(array_map('trim', explode('|', $pack))));
-if (!empty($packParts) && !empty($packParts[0])) {
-    $curso = $packParts[0];
-}
+$moneda    = isset($_GET['moneda'])    ? strtoupper(trim($_GET['moneda']))  : 'ARS';
+$pais      = isset($_GET['country'])   ? strtoupper(trim($_GET['country'])) : 'AR';
 
 if (empty($curso) || empty($email)) {
     echo 'error:datos_incompletos';
@@ -59,165 +49,112 @@ $dirLimpio = trim(str_replace('../', '', $dir), '/');
 $urlcurso  = !empty($dirLimpio) ? $urlRoot . $dirLimpio . '/' : $urlRoot;
 $dominio   = str_replace('www.', '', $_SERVER['HTTP_HOST']);
 
+// Stripe zero-decimal: el monto va en unidades enteras, no en centavos.
+$stripeZeroDecimal = [
+    'BIF','CLP','DJF','GNF','ISK','JPY','KMF','KRW','MGA',
+    'PYG','RWF','UGX','VND','VUV','XAF','XOF','XPF',
+];
+
 try {
-    $cnx = OpenCon();
+    // 1. Datos del curso (esquema v2)
+    $r = getDataProductoCheckout($curso, $moneda);
+    $producto = isset($r['producto']) ? $r['producto'] : null;
+    $dataPack = isset($r['pack']) ? $r['pack'] : [];
 
-    // 1. Datos del curso (esquema simple cursos_detalle)
-    $stmt = $cnx->prepare("SELECT * FROM cursos_detalle WHERE CURSO = ?");
-    $stmt->bindValue(1, $curso, PDO::PARAM_STR);
-    $stmt->execute();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    if (empty($rows)) {
+    if (empty($producto)) {
         echo 'error:curso_no_encontrado';
         exit;
     }
 
-    $precioBase = $rows[0]['PRECIO_UNITARIO'];
-
-    // ─── Multi-moneda Stripe ──────────────────────────────────────────────
-    $stripeSupported = [
-        'ARS','BOB','BRL','CLP','COP','CRC','DOP','EUR',
-        'GTQ','HNL','MXN','NIO','PAB','PEN','PYG','USD','UYU',
-    ];
-    $stripeZeroDecimal = [
-        'BIF','CLP','DJF','GNF','ISK','JPY','KMF','KRW','MGA',
-        'PYG','RWF','UGX','VND','VUV','XAF','XOF','XPF',
-    ];
-
-    if (in_array($monedaIn, $stripeSupported, true)) {
-        $monedaStripe       = $monedaIn;
-        $precioMonedaStripe = convertirPrecioNumerico($precioBase, $monedaStripe);
-    } else {
-        $monedaStripe       = 'USD';
-        $precioMonedaStripe = convertirPrecioNumerico($precioBase, 'USD');
-    }
-    $isZeroDecimal     = in_array($monedaStripe, $stripeZeroDecimal, true);
-    $factorStripe      = $isZeroDecimal ? 1 : 100;
-    $unitAmount        = intval(round($precioMonedaStripe * $factorStripe));
+    $monedaStripe      = strtoupper($producto['MONEDA']);
     $monedaStripeLower = strtolower($monedaStripe);
+    $factor            = in_array($monedaStripe, $stripeZeroDecimal, true) ? 1 : 100;
 
     // 2. Clave Stripe: env var de idiomas primero, luego genérica, luego BD.
-    $stripeSecretRaw = getenv('STRIPE_SECRET_KEY_IDIOMAS');
-    if ($stripeSecretRaw === false || $stripeSecretRaw === '') {
-        $stripeSecretRaw = getenv('STRIPE_SECRET_KEY');
+    $stripeSecret = getenv('STRIPE_SECRET_KEY_IDIOMAS');
+    if ($stripeSecret === false || $stripeSecret === '') {
+        $stripeSecret = getenv('STRIPE_SECRET_KEY');
     }
-    if ($stripeSecretRaw === false || $stripeSecretRaw === '') {
-        $stripeSecretRaw = $rows[0]['STRIPE_SECRET_KEY'] ?? '';
+    if ($stripeSecret === false || $stripeSecret === '') {
+        $stripeSecret = $producto['keySecretStripe'] ?? '';
     }
-    if (empty($stripeSecretRaw)) {
-        error_log('realizarVentaStripe: STRIPE_SECRET_KEY vacío (env y BD) para curso ' . $curso);
+    if (empty($stripeSecret)) {
+        error_log('realizarVentaStripe: clave Stripe vacía para curso ' . $curso);
         echo 'error:stripe_key_missing';
         exit;
     }
-
-    // Soporta clave como JSON por dominio: {"aprende-idiomas.com":"sk_live_..."}
-    if (strpos($stripeSecretRaw, '{') === false) {
-        $stripeSecret = $stripeSecretRaw;
-    } else {
-        $decoded = json_decode($stripeSecretRaw, true);
-        $stripeSecret = $decoded[$dominio] ?? reset($decoded);
+    // Soporta clave JSON por dominio: {"aprende-idiomas.com":"sk_live_..."}
+    if (strpos($stripeSecret, '{') !== false) {
+        $dec = json_decode($stripeSecret, true);
+        $stripeSecret = $dec[$dominio] ?? (is_array($dec) ? reset($dec) : $stripeSecret);
     }
 
-    \Stripe\Stripe::setApiKey($stripeSecret);
+    $stripe = new \Stripe\StripeClient($stripeSecret);
 
-    // 3. Descuentos (cupón Stripe one-time)
-    $discounts = [];
-    if (!empty($descuento)) {
-        $stmt2 = $cnx->prepare(
-            "SELECT DESCRIPCION, PORCENTAJE FROM descuentos
-             WHERE CURSO=? AND CODIGO_DESCUENTO=? AND ESTADO_ACTIVO=TRUE AND FECHA_HASTA>=DATE(NOW())"
-        );
-        $stmt2->execute([$curso, $descuento]);
-        $rows_desc = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-        if (!empty($rows_desc)) {
-            $montoDesc       = intval($precioBase * ($rows_desc[0]['PORCENTAJE'] / 100));
-            $montoDescMoneda = convertirPrecioNumerico($montoDesc, $monedaStripe);
-            $amountOff       = intval(round($montoDescMoneda * $factorStripe));
+    // 3. Line items: curso base + upsells seleccionados en "pack".
+    $lineItems = [];
+    $precioTotal = floatval($producto['PRECIO_DESC']);
 
-            if ($amountOff > 0) {
-                $coupon = \Stripe\Coupon::create([
-                    'amount_off' => $amountOff,
-                    'currency'   => $monedaStripeLower,
-                    'duration'   => 'once',
-                    'name'       => $rows_desc[0]['DESCRIPCION'],
-                ]);
-                $discounts = [['coupon' => $coupon->id]];
+    $lineItems[] = [
+        'price_data' => [
+            'currency'     => $monedaStripeLower,
+            'unit_amount'  => intval(round($producto['PRECIO_DESC'] * $factor)),
+            'product_data' => ['name' => $producto['NOMBRE']],
+        ],
+        'quantity' => 1,
+    ];
+
+    if ($curso !== $pack) {
+        $arrayPacks = explode('|', $pack);
+        foreach ($dataPack as $p) {
+            if (in_array($p['ID_ABRE'], $arrayPacks, true)) {
+                $lineItems[] = [
+                    'price_data' => [
+                        'currency'     => $monedaStripeLower,
+                        'unit_amount'  => intval(round($p['PRECIO'] * $factor)),
+                        'product_data' => ['name' => $p['NOMBRE']],
+                    ],
+                    'quantity' => 1,
+                ];
+                $precioTotal += floatval($p['PRECIO']);
             }
         }
     }
 
-    // 4. Guardar lead en ventas (no bloquea el checkout si falla)
-    $id_venta = uniqid($curso . '_');
-    try {
-        $auto_num = new auto_num($cnx, $curso);
-        $id_venta = $auto_num->get_id();
-
-        $stmt1 = $cnx->prepare(
-            "INSERT INTO ventas
-                (CURSO, ID, NOMBRE, APELLIDO, PREFIJO_CEL, CELULAR, EMAIL,
-                 ESTADO_MP, PREFERENCIA_ID_MP, DOMINIO, ACCESS_TOKEN, CURSO_P)
-             VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"
-        );
-        $stmt1->execute([
-            $curso, $id_venta, $nombre, $apellido, 0, $celular, $email,
-            'STRIPE_PENDING', '', $dominio, '', $curso,
-        ]);
-    } catch (\Throwable $eLead) {
-        error_log('realizarVentaStripe: INSERT ventas falló - ' . $eLead->getMessage());
-        $id_venta = uniqid($curso . '_');
-    }
+    // 4. Guardar venta (v2_ventas) — mismo flujo que initPagos.php
+    $idTemp = uniqid();
+    setVentaStripe('payment-strype', $curso, $pack, $idTemp, $precioTotal, $monedaStripe, $pais, $nombre, $apellido, $email, 'pendiente', null);
+    $_payment = getVentaStripe($idTemp);
+    $idVenta  = $_payment ? $_payment['ID'] : $idTemp;
 
     // 5. Crear Stripe Checkout Session
-    $sufijoIVA = ($countryIn === 'AR') ? ' (Precio + IVA)' : '';
-
-    $lineItems = [[
-        'price_data' => [
-            'currency'     => $monedaStripeLower,
-            'unit_amount'  => $unitAmount,
-            'product_data' => [
-                'name'        => $rows[0]['TITULO'],
-                'description' => $rows[0]['DESCRIPCION'] . $sufijoIVA,
-            ],
-        ],
-        'quantity' => 1,
-    ]];
-
     $sessionParams = [
         'payment_method_types' => ['card'],
         'line_items'          => $lineItems,
         'mode'                => 'payment',
         'customer_email'      => $email,
-        'client_reference_id' => $curso . '-' . $id_venta,
+        'allow_promotion_codes' => true,
+        'client_reference_id' => $curso . '-' . $idVenta,
         'metadata'            => [
-            'curso'      => $curso,
-            'id_venta'   => $id_venta,
-            'nombre'     => $nombre,
-            'apellido'   => $apellido,
-            'celular'    => $celular,
-            'email'      => $email,
-            'dominio'    => $dominio,
-            'country'    => $countryIn,
-            'moneda'     => $monedaStripe,
-            'precio_ars' => $precioBase,
+            'curso'    => $curso,
+            'id_venta' => $idVenta,
+            'nombre'   => $nombre,
+            'apellido' => $apellido,
+            'email'    => $email,
+            'pais'     => $pais,
+            'moneda'   => $monedaStripe,
         ],
-        'success_url' => $urlRoot . 'pago_exitoso.php?idVenta=' . $id_venta,
+        'success_url' => $urlRoot . 'pago_exitoso.php?id=' . $idVenta . '&moneda=' . $monedaStripe,
         'cancel_url'  => $urlcurso . 'checkout.php',
     ];
 
-    if (!empty($discounts)) {
-        $sessionParams['discounts'] = $discounts;
-    }
+    $session = $stripe->checkout->sessions->create($sessionParams);
 
-    $session = \Stripe\Checkout\Session::create($sessionParams);
-
-    // Guardar el Stripe Session ID en PREFERENCIA_ID_MP (nombre legacy de columna).
-    // pago_exitoso.php lo usa para verificar el pago contra la API de Stripe.
+    // Guardar el Session en la venta (DATA + ID de sesión)
     try {
-        $cnx->prepare("UPDATE ventas SET PREFERENCIA_ID_MP=? WHERE CURSO=? AND ID=?")
-            ->execute([$session->id, $curso, $id_venta]);
+        updVentaStripe($idTemp, 'payment-strype', $curso, $pack, $session->id, $precioTotal, $monedaStripe, $pais, $nombre, $apellido, $email, 'pendiente', json_encode($session));
     } catch (\Throwable $eUpd) {
-        error_log('realizarVentaStripe: UPDATE PREFERENCIA_ID_MP falló - ' . $eUpd->getMessage());
+        error_log('realizarVentaStripe: updVentaStripe falló - ' . $eUpd->getMessage());
     }
 
     if (isset($_GET['test'])) {
@@ -227,15 +164,15 @@ try {
 
     echo $session->url;
 
-} catch (PDOException $e) {
-    error_log('DB Error en realizarVentaStripe: ' . $e->getMessage());
-    if (isset($_GET['test'])) echo 'DB Error: ' . $e->getMessage();
-    else echo 'error:db_' . $e->getCode();
 } catch (\Stripe\Exception\ApiErrorException $e) {
     error_log('Stripe Error en realizarVentaStripe: ' . $e->getMessage());
     if (isset($_GET['test'])) echo 'Stripe Error: ' . $e->getMessage();
     else echo 'error:stripe_' . $e->getStripeCode();
-} catch (\Exception $e) {
+} catch (PDOException $e) {
+    error_log('DB Error en realizarVentaStripe: ' . $e->getMessage());
+    if (isset($_GET['test'])) echo 'DB Error: ' . $e->getMessage();
+    else echo 'error:db_' . $e->getCode();
+} catch (\Throwable $e) {
     error_log('Error en realizarVentaStripe: ' . $e->getMessage());
     if (isset($_GET['test'])) echo 'Error: ' . $e->getMessage();
     else echo 'error:general';
