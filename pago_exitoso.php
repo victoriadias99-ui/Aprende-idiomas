@@ -34,7 +34,10 @@ if (isset($_GET['idVenta'])) {
     try {
         require_once __DIR__ . '/a-libraries/vendor/autoload.php';
 
-        $stripeSecret = getenv('STRIPE_SECRET_KEY');
+        $stripeSecret = getenv('STRIPE_SECRET_KEY_IDIOMAS');
+        if ($stripeSecret === false || $stripeSecret === '') {
+            $stripeSecret = getenv('STRIPE_SECRET_KEY');
+        }
         if ($stripeSecret === false || $stripeSecret === '') {
             $raw = $producto['STRIPE_SECRET_KEY'] ?? '';
             if ($raw !== '' && strpos($raw, '{') !== false) {

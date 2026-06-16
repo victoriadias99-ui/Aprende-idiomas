@@ -97,8 +97,11 @@ try {
     $unitAmount        = intval(round($precioMonedaStripe * $factorStripe));
     $monedaStripeLower = strtolower($monedaStripe);
 
-    // 2. Clave Stripe: env var primero, luego columna de la BD.
-    $stripeSecretRaw = getenv('STRIPE_SECRET_KEY');
+    // 2. Clave Stripe: env var de idiomas primero, luego genérica, luego BD.
+    $stripeSecretRaw = getenv('STRIPE_SECRET_KEY_IDIOMAS');
+    if ($stripeSecretRaw === false || $stripeSecretRaw === '') {
+        $stripeSecretRaw = getenv('STRIPE_SECRET_KEY');
+    }
     if ($stripeSecretRaw === false || $stripeSecretRaw === '') {
         $stripeSecretRaw = $rows[0]['STRIPE_SECRET_KEY'] ?? '';
     }
