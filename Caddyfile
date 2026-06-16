@@ -56,8 +56,7 @@
 	# Bloquear a-libraries excepto webhooks/endpoints publicos necesarios
 	@libraries {
 		path /a-libraries/*
-		not path /a-libraries/realizarVenta.php
-		not path /a-libraries/IPN_mp.php
+		not path /a-libraries/realizarVentaStripe.php
 	}
 	respond @libraries "Not Found" 404 {
 		close
