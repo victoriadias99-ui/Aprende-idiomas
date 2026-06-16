@@ -56,8 +56,15 @@ $stripeZeroDecimal = [
 ];
 
 try {
-    // 1. Datos del curso (esquema v2)
-    $r = getDataProductoCheckout($curso, $moneda);
+    // 1. Datos del curso (esquema v2). Igual que checkout.php: ($curso, $moneda, $pais).
+    // Con fallbacks por si el precio está indexado por país, por moneda o solo en USD.
+    $r = getDataProductoCheckout($curso, $moneda, $pais);
+    if (empty($r['producto'])) {
+        $r = getDataProductoCheckout($curso, $moneda);
+    }
+    if (empty($r['producto'])) {
+        $r = getDataProductoCheckout($curso, 'USD');
+    }
     $producto = isset($r['producto']) ? $r['producto'] : null;
     $dataPack = isset($r['pack']) ? $r['pack'] : [];
 
