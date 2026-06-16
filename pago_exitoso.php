@@ -5,6 +5,108 @@ if (isset($_GET['test'])) {
     error_reporting(E_ALL);
 }
 
+/* ───────────────────────────────────────────────────────────────────────────
+ * Flujo Stripe simple (igual que aprende-excel): pago_exitoso.php?idVenta=XXX
+ * Verifica el pago contra Stripe y muestra el acceso. Hace exit antes del
+ * include v2 para no duplicar funciones (funcionsDB vs funcionsDBStripe).
+ * ─────────────────────────────────────────────────────────────────────────── */
+if (isset($_GET['idVenta'])) {
+    ini_set('display_errors', 0);
+
+    $_idVenta = trim($_GET['idVenta']);
+    if ($_idVenta === '' || !preg_match('/^[A-Za-z0-9_\-]+$/', $_idVenta)) {
+        http_response_code(400);
+        exit('Bad request');
+    }
+
+    include("a-includes/funcionsDB.php");
+    $venta = getVenta($_idVenta);
+    if (!$venta) { http_response_code(404); exit('Not found'); }
+    $producto = getCursoDetalle($venta['CURSO']);
+    if (!$producto) { http_response_code(404); exit('Not found'); }
+
+    $monto   = $producto['PRECIO_UNITARIO'];
+    $moneda  = 'ARS';
+    $eventId = $venta['CURSO'] . '_' . $_idVenta;
+
+    // Verificar contra Stripe que el pago esté realmente pagado (evita IDOR).
+    $pagoVerificado = false;
+    try {
+        require_once __DIR__ . '/a-libraries/vendor/autoload.php';
+
+        $stripeSecret = getenv('STRIPE_SECRET_KEY');
+        if ($stripeSecret === false || $stripeSecret === '') {
+            $raw = $producto['STRIPE_SECRET_KEY'] ?? '';
+            if ($raw !== '' && strpos($raw, '{') !== false) {
+                $host = strtolower(str_replace('www.', '', $_SERVER['HTTP_HOST'] ?? ''));
+                $dec  = json_decode($raw, true);
+                $stripeSecret = $dec[$host] ?? (is_array($dec) ? reset($dec) : '');
+            } else {
+                $stripeSecret = $raw;
+            }
+        }
+
+        if ($stripeSecret && !empty($venta['PREFERENCIA_ID_MP']) && strpos($venta['PREFERENCIA_ID_MP'], 'cs_') === 0) {
+            \Stripe\Stripe::setApiKey($stripeSecret);
+            $session = \Stripe\Checkout\Session::retrieve($venta['PREFERENCIA_ID_MP']);
+            $pagoVerificado = isset($session->payment_status) && $session->payment_status === 'paid';
+            if ($pagoVerificado) {
+                $zeroDec = ['bif','clp','djf','gnf','isk','jpy','kmf','krw','mga','pyg','rwf','ugx','vnd','vuv','xaf','xof','xpf'];
+                $divisor = in_array(strtolower($session->currency), $zeroDec, true) ? 1 : 100;
+                $monto   = $session->amount_total / $divisor;
+                $moneda  = strtoupper($session->currency);
+            }
+        }
+        if (!$pagoVerificado && !empty($venta['ESTADO_MP']) && $venta['ESTADO_MP'] === 'approved') {
+            $pagoVerificado = true;
+        }
+    } catch (\Exception $e) {
+        error_log('pago_exitoso idVenta stripe retrieve error: ' . $e->getMessage());
+    }
+
+    if (!$pagoVerificado) {
+        http_response_code(402);
+        exit('Pago pendiente de confirmación. Si ya pagaste, esperá unos segundos y recargá la página.');
+    }
+    ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Pago exitoso!</title>
+    <style>
+        body{font-family:Arial,Helvetica,sans-serif;background:#f4f5f9;color:#222;margin:0}
+        .wrap{max-width:620px;margin:0 auto;padding:60px 20px;text-align:center}
+        .card{background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.08);padding:48px 32px}
+        h1{font-size:1.9rem;margin:.2em 0}
+        p{font-size:1.05rem;line-height:1.6;color:#444}
+        .btn{display:inline-block;margin-top:24px;background:#e6007e;color:#fff;text-decoration:none;
+             padding:16px 32px;border-radius:10px;font-weight:bold;font-size:1.1rem}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div style="font-size:3rem">🙌</div>
+            <h1>¡Listo! Tu pago se acreditó</h1>
+            <p>¡Te damos la bienvenida a <strong><?= htmlspecialchars($producto['TITULO'], ENT_QUOTES, 'UTF-8') ?></strong>!<br>
+               El acceso al curso llegará a tu e-mail en los próximos minutos. Si no lo ves, revisá la carpeta de spam/no deseados.</p>
+            <a class="btn" href="https://academia.aprende-idiomas.com/">Ir a la Academia 👉</a>
+        </div>
+    </div>
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init','851421198669354');
+        fbq('track','PageView');
+        fbq('track','Purchase',{value:<?= json_encode((float)$monto) ?>,currency:<?= json_encode($moneda) ?>,content_ids:[<?= json_encode($producto['CURSO']) ?>],content_name:<?= json_encode($producto['TITULO']) ?>,content_type:'product'},{eventID:<?= json_encode($eventId) ?>});
+    </script>
+</body>
+</html>
+    <?php
+    exit;
+}
+
 include("a-includes/funcionsDBStripe.php");
 
 $titulo = 'Pago exitoso';

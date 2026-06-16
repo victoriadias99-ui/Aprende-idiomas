@@ -800,7 +800,7 @@ $precioDescuento = Funciones::getFormatMoneda($valPrecioDescuento, $simbolo, $pr
 
 <!-- Scripts (preservar) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../libraries/js/checkout-stripe.js?t=1"></script>
+<script src="../libraries/js/checkoutv4.js?t=1"></script>
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
