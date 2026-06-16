@@ -115,7 +115,7 @@ footer a{color:var(--pink);font-weight:600}
     <li>Errores tipográficos o desactualizaciones puntuales en el contenido.</li>
     <li>Indisponibilidad temporal por mantenimiento o causas externas.</li>
     <li>Daños derivados de virus pese a las medidas de seguridad implementadas.</li>
-    <li>Fallas en servicios de terceros (Stripe, MercadoPago, email, hosting).</li>
+    <li>Fallas en servicios de terceros (Stripe, email, hosting).</li>
 </ul>
 
 <h2>6. Enlaces externos</h2>
@@ -124,7 +124,7 @@ footer a{color:var(--pink);font-weight:600}
 
 <h2>7. Condiciones de venta</h2>
 <p><strong>7.1. Precios y moneda.</strong> Los precios se muestran en la moneda local del usuario (detectada por país) o en USD según corresponda. NEMTOR LLC se reserva el derecho de modificar los precios sin previo aviso; las compras ya efectuadas no se verán afectadas.</p>
-<p><strong>7.2. Métodos de pago.</strong> Los pagos se procesan a través de <strong>Stripe</strong> (tarjetas internacionales) y <strong>MercadoPago</strong> (pagos en pesos argentinos). NEMTOR LLC no almacena datos de tarjetas de crédito.</p>
+<p><strong>7.2. Métodos de pago.</strong> Los pagos se procesan a través de <strong>Stripe</strong> (tarjetas de crédito y débito, nacionales e internacionales). NEMTOR LLC no almacena datos de tarjetas de crédito.</p>
 <p><strong>7.3. Duración del acceso.</strong> La compra de un curso individual incluye <strong>30 días de acceso</strong> a los materiales desde la fecha de compra. Durante ese plazo el usuario puede ver las clases, hacer los ejercicios y descargar los recursos asociados. Las suscripciones mensuales y anuales otorgan acceso mientras el pago se encuentre al día.</p>
 
 <h2>8. Suscripciones</h2>

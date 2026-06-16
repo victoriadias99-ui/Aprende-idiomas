@@ -972,7 +972,7 @@ $urlCheckout = 'checkout.php';
                 <a href="checkout.php" class="btn btn-it btn-arrow">Lo quiero ahora</a>
                 <a href="#temario" class="btn btn-light">Ver temario</a>
             </div>
-            <div class="secure-badge">Pago 100% seguro · MercadoPago, Stripe y más</div>
+            <div class="secure-badge">Pago 100% seguro · Stripe y más</div>
         </div>
 
         <div class="hero-visual">

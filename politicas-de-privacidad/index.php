@@ -91,7 +91,7 @@ footer a{color:var(--pink);font-weight:600}
     <li><strong>Datos de facturación:</strong> domicilio, DNI/CUIT, teléfono (solo si requerís factura).</li>
     <li><strong>Datos técnicos:</strong> dirección IP, navegador, dispositivo, idioma del sistema.</li>
     <li><strong>Datos de uso:</strong> páginas visitadas, cursos consultados, interacciones con la plataforma.</li>
-    <li><strong>Datos de pago:</strong> no almacenamos datos de tarjeta — los procesa Stripe/MercadoPago.</li>
+    <li><strong>Datos de pago:</strong> no almacenamos datos de tarjeta — los procesa Stripe.</li>
 </ul>
 <p>Aplicamos los principios del Reglamento General de Protección de Datos (RGPD):</p>
 <ul>
@@ -124,7 +124,7 @@ footer a{color:var(--pink);font-weight:600}
 <ul>
     <li>Certificado <strong>SSL/HTTPS</strong> en todo el sitio.</li>
     <li>Cifrado de datos sensibles en tránsito y en reposo.</li>
-    <li>Pasarelas de pago certificadas PCI-DSS (Stripe, MercadoPago).</li>
+    <li>Pasarelas de pago certificadas PCI-DSS (Stripe).</li>
     <li>Acceso restringido a datos personales solo a personal autorizado.</li>
     <li>Auditorías periódicas de seguridad y backups programados.</li>
 </ul>
@@ -150,7 +150,7 @@ footer a{color:var(--pink);font-weight:600}
 <ul>
     <li><strong>Hosting:</strong> Railway (infraestructura del sitio)</li>
     <li><strong>Email marketing:</strong> según proveedor activo, siempre con cumplimiento RGPD</li>
-    <li><strong>Pagos:</strong> Stripe (tarjetas internacionales) y MercadoPago (pesos argentinos)</li>
+    <li><strong>Pagos:</strong> Stripe (tarjetas de crédito y débito, nacionales e internacionales)</li>
     <li><strong>Análisis:</strong> Google Analytics, Google Tag Manager</li>
     <li><strong>Publicidad:</strong> Facebook Ads, Pinterest, Google Ads (cookies anonimizadas)</li>
 </ul>

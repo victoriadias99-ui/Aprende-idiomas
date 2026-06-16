@@ -118,7 +118,7 @@ footer a{color:var(--pink);font-weight:600}
     <li><strong>Cookies analíticas:</strong> nos ayudan a entender cómo los usuarios interactúan con el sitio para mejorar la experiencia.</li>
     <li><strong>Cookies publicitarias:</strong> permiten mostrar anuncios personalizados en redes sociales como Facebook e Instagram.</li>
     <li><strong>Cookies de redes sociales:</strong> facilitan compartir contenido en plataformas como Facebook, Instagram y WhatsApp.</li>
-    <li><strong>Cookies de procesamiento de pagos:</strong> necesarias para completar tu compra de forma segura a través de Stripe y MercadoPago.</li>
+    <li><strong>Cookies de procesamiento de pagos:</strong> necesarias para completar tu compra de forma segura a través de Stripe.</li>
 </ul>
 
 <div class="note">
@@ -138,7 +138,6 @@ footer a{color:var(--pink);font-weight:600}
         <tr><td><strong>Facebook Pixel</strong></td><td>Medición de conversiones y retargeting</td><td>3 meses</td></tr>
         <tr><td><strong>Pinterest Tag</strong></td><td>Seguimiento de conversiones de Pinterest Ads</td><td>6 meses</td></tr>
         <tr><td><strong>Stripe</strong></td><td>Procesamiento seguro de pagos con tarjeta</td><td>Sesión / permanente según uso</td></tr>
-        <tr><td><strong>MercadoPago</strong></td><td>Procesamiento de pagos en moneda local</td><td>Sesión / permanente según uso</td></tr>
     </tbody>
 </table>
 
