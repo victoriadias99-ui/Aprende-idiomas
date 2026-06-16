@@ -74,7 +74,7 @@
         </div>
 
         <p class="text-left my-2">Luego de abonar, aguarda unos segundos para ser dirigido a nuestro sitio web 😊.</p>
-        <button type="button" id="proceder_pago" style="cursor:pointer; background-color:#68aa21;" class="btn hvr-sweep-to-right w-100 py-3 text-white" hidden="">👉 Proceder con el pago</button>
+        <button type="button" id="proceder_pago" style="cursor:pointer; background-color:#68aa21; display:none;" class="btn hvr-sweep-to-right w-100 py-3 text-white">👉 Proceder con el pago</button>
         
         <div id="div-pago" style="display:block;">
             <h5 class="mx-auto pb-md-3 text-center mt-3"><b><?= (isset($_GET['op']) && $_GET['op'] == 1) ? 'Realiza tu pago!' : 'Elige como quieres pagar' ?></b></h5> 
