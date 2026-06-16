@@ -49,6 +49,19 @@ $dirLimpio = trim(str_replace('../', '', $dir), '/');
 $urlcurso  = !empty($dirLimpio) ? $urlRoot . $dirLimpio . '/' : $urlRoot;
 $dominio   = str_replace('www.', '', $_SERVER['HTTP_HOST']);
 
+// cancel_url robusto: NUNCA apuntar a /checkout.php en la raíz (no existe -> 500).
+// Prioridad: carpeta del curso (dir) -> página de origen (referer) -> home.
+if (!empty($dirLimpio)) {
+    $cancelUrl = $urlRoot . $dirLimpio . '/checkout.php';
+} else {
+    $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+    if ($ref !== '' && strpos($ref, '://' . $_SERVER['HTTP_HOST']) !== false && strpos($ref, 'checkout.php') !== false) {
+        $cancelUrl = $ref;
+    } else {
+        $cancelUrl = $urlRoot; // home: siempre existe, nunca 500
+    }
+}
+
 // Stripe zero-decimal: el monto va en unidades enteras, no en centavos.
 $stripeZeroDecimal = [
     'BIF','CLP','DJF','GNF','ISK','JPY','KMF','KRW','MGA',
@@ -152,7 +165,7 @@ try {
             'moneda'   => $monedaStripe,
         ],
         'success_url' => $urlRoot . 'pago_exitoso.php?id=' . $idVenta . '&moneda=' . $monedaStripe,
-        'cancel_url'  => $urlcurso . 'checkout.php',
+        'cancel_url'  => $cancelUrl,
     ];
 
     $session = $stripe->checkout->sessions->create($sessionParams);
