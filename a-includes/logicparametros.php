@@ -128,3 +128,6 @@ if (!isset($simbolo)) {
 if (!isset($country)) {
     $country = isset($data['country_code']) ? $data['country_code'] : 'AR';
 }
+if (!isset($test)) {
+    $test = isset($_GET['test']) ? $_GET['test'] : 0;
+}

@@ -106,6 +106,14 @@ $(document).ready(function () {
 
     // FIX bfcache: al volver desde la pasarela, recargar para estado limpio.
     window.addEventListener('pageshow', function (event) {
-        if (event.persisted) { window.location.reload(); }
+        if (event.persisted) {
+            // Resetear estado visual inmediatamente antes del reload
+            // (evita que el usuario vea "Procesando..." mientras recarga)
+            var btn = document.getElementById('proceder_pago');
+            if (btn) { btn.disabled = false; btn.innerHTML = '👉 Proceder con el pago'; }
+            var espera = document.getElementById('espera-pagos');
+            if (espera) espera.style.display = 'none';
+            window.location.reload();
+        }
     });
 });
