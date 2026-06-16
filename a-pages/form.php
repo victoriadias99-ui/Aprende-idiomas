@@ -77,13 +77,12 @@
         <button type="button" id="proceder_pago" style="cursor:pointer; background-color:#68aa21;" class="btn hvr-sweep-to-right w-100 py-3 text-white">👉 Proceder con el pago</button>
         
         <div id="div-pago" style="display:block;">
-            <h5 class="mx-auto pb-md-3 text-center mt-3"><b><?= (isset($_GET['op']) && $_GET['op'] == 1) ? 'Realiza tu pago!' : 'Elige como quieres pagar' ?></b></h5> 
             <div id="espera-pagos" class="row" style="display: none">
                 <div class="col">
                     <p>Espera un momento....</p>
                 </div>
             </div>
-            <div id="btn-pagos" class="row">
+            <div id="btn-pagos" class="row" style="display:none;">
                     <?php
                     echo '<div class="col-md-12 p-0 m-md-0 ml-2 mr-2 mb-2">';
                     echo '<div style="width:100%;" id="payment-strype"  class="btn-payment-cuadrado p-1 mb-md-1">';
