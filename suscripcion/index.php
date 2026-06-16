@@ -1284,6 +1284,19 @@ fbq('init','177917573796998');
 fbq('track','PageView');
 fbq('track','ViewContent');
 fbq('trackCustom','visitas suscripcion');
+// InitiateCheckout al ir a Stripe (mensual=USD4 / anual=USD24)
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var anual = a.href.indexOf('8x2cN6ewu0iP7Nebrb3oA03') !== -1;
+      fbq('track','InitiateCheckout',{
+        value: anual ? 24 : 4,
+        currency: 'USD',
+        content_name: anual ? 'suscripcion_anual' : 'suscripcion_mensual'
+      });
+    });
+  });
+});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"></noscript>
 
