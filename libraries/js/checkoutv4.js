@@ -53,7 +53,7 @@ $(document).ready(function () {
             email:     email,
             celular:   val('celular'),
             curso:     val('curso'),
-            dir:       val('dir'),
+            dir:       val('dir') || (window.location.pathname.split('/').filter(Boolean)[0] || ''),
             pack:      val('pack') || val('curso'),
             descuento: val('descuento') || val('codigo'),
             moneda:    val('moneda') || 'ARS',
