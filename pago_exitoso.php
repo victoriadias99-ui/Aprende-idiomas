@@ -133,10 +133,15 @@ $totalUSD = $productoUSD['PRECIO_DESC'];
 $total = $producto['PRECIO_DESC'];
 $upsell = [];
 
+// Inicializadas SIEMPRE: en compras SIN upsell estas variables quedaban
+// indefinidas y reventaban el foreach($_p) y el tracking ($productoCheckout)
+// de más abajo → página en blanco bajo PHP 8.
+$_p = [];
+$productoCheckout = getDataProductoCheckout($venta['PRODUCTO'], $_moneda);
+
 if ($venta['UPSELL'] != $venta['PRODUCTO']) {
     $upsell = explode('|', $venta['UPSELL']);
-    $productoCheckout = getDataProductoCheckout($venta['PRODUCTO'], $_moneda);
-    foreach ($productoCheckout['pack'] as $item) {
+    foreach (($productoCheckout['pack'] ?? []) as $item) {
         if (in_array($item['ID_ABRE'], $upsell)) {
             $total += $item['PRECIO'];
             $_p[] = [
