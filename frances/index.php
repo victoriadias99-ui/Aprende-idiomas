@@ -1244,7 +1244,7 @@ $urlCheckout = 'checkout.php';
 fbq('init','851421198669354');
 fbq('init','177917573796998');
 fbq('track','PageView');
-fbq('track','ViewContent');
+fbq('track','ViewContent',{value:<?= json_encode((float)$valPrecio) ?>,currency:<?= json_encode($monedaOficial) ?>,content_ids:[<?= json_encode($curso) ?>],content_name:<?= json_encode($curso) ?>,content_type:'product'});
 fbq('trackCustom','visitas <?= $curso ?>');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=851421198669354&ev=PageView&noscript=1"></noscript>

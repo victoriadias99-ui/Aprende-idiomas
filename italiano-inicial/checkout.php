@@ -860,7 +860,7 @@ $(document).on('click', '.btn-payment-cuadrado', function() {
 <!-- Tracking -->
 <script>
 (function(){
-  if (typeof fbq !== 'undefined') fbq('track', 'AddToCart');
+  if (typeof fbq !== 'undefined') fbq('track', 'AddToCart', {value:<?= json_encode($valPrecioOferta) ?>,currency:<?= json_encode($moneda) ?>,content_ids:[<?= json_encode($curso) ?>],content_name:<?= json_encode($curso) ?>,content_type:'product'});
 })();
 </script>
 
@@ -873,7 +873,7 @@ $(document).on('click', '.btn-payment-cuadrado', function() {
 fbq('init','851421198669354');
 fbq('init','177917573796998');
 fbq('track','PageView');
-fbq('track','InitiateCheckout');
+fbq('track','InitiateCheckout',{value:<?= json_encode($valPrecioOferta) ?>,currency:<?= json_encode($moneda) ?>,content_ids:[<?= json_encode($curso) ?>],content_name:<?= json_encode($curso) ?>,content_type:'product',num_items:1});
 </script>
 
 <!-- Google Analytics -->
