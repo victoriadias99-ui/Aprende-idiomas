@@ -128,6 +128,54 @@ if (!$venta) {
     exit;
 }
 $producto = getDataProducto($venta['PRODUCTO'], $_moneda)['producto'];
+
+// ─── Red de seguridad: alta en la academia desde la página de éxito ──────
+// El alta principal corre en el webhook de Stripe (pagostripenotif.php). Si el
+// webhook falló, se demoró o no llegó, acá disparamos el MISMO alta idempotente
+// para que el comprador SIEMPRE reciba las credenciales (es la página que ve
+// siempre tras pagar). Verificamos el pago contra Stripe antes de crear nada
+// para no dar de alta sobre una venta sin pago real (IDOR). Idempotente: si el
+// usuario ya existe solo suma el curso y no reenvía credenciales.
+try {
+    $pagado = isset($venta['STATUS']) && strtoupper($venta['STATUS']) === 'DONE';
+
+    if (!$pagado) {
+        $sessionId = '';
+        if (!empty($venta['DATA'])) {
+            $dataObj = json_decode($venta['DATA']);
+            if (isset($dataObj->id) && strpos((string) $dataObj->id, 'cs_') === 0) {
+                $sessionId = $dataObj->id;
+            }
+        }
+        $stripeSecret = ($producto['live'] == 1)
+            ? ($producto['keySecretStripe'] ?? '')
+            : ($producto['keySecretStripeTest'] ?? '');
+
+        if ($sessionId !== '' && $stripeSecret) {
+            require_once __DIR__ . '/a-libraries/vendor/autoload.php';
+            \Stripe\Stripe::setApiKey($stripeSecret);
+            $session = \Stripe\Checkout\Session::retrieve($sessionId);
+            $pagado = isset($session->payment_status) && $session->payment_status === 'paid';
+        }
+    }
+
+    if ($pagado) {
+        $cursosAcademia = array_merge(
+            [$venta['PRODUCTO']],
+            explode('|', (string) $venta['UPSELL'])
+        );
+        enviarAltaAcademia(
+            $venta['CORREO'],
+            $venta['NOMBRE'],
+            $cursosAcademia,
+            $venta['MONTO'],
+            $venta['MONEDA']
+        );
+    }
+} catch (\Throwable $e) {
+    error_log('[pago_exitoso alta academia] ' . $e->getMessage());
+}
+
 $productoUSD = getDataProducto($venta['PRODUCTO'], 'USD')['producto'];
 $totalUSD = $productoUSD['PRECIO_DESC'];
 $total = $producto['PRECIO_DESC'];

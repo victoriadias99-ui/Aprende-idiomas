@@ -1,8 +1,17 @@
 <?php
+// ─────────────────────────────────────────────────────────────────────────
+// WEBHOOK DE STRIPE — ruta correcta (configurar en Stripe → Developers → Webhooks):
+//   https://www.aprende-idiomas.com/a-includes/pagostripenotif.php?p=latam
+// OJO: la ruta vieja /latam/includes/pagostripenotif.php fue ELIMINADA al
+// unificar /latam al root (commit cd71322). Si el webhook apunta ahí, Stripe
+// recibe HTTP 500 y el usuario NO se crea en la academia. El fallback de
+// pago_exitoso.php cubre ese caso, pero la URL del webhook debe quedar correcta.
+// Eventos requeridos: payment_intent.succeeded.
+// ─────────────────────────────────────────────────────────────────────────
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-    
+
 include("funcionsDBStripe.php");
 include("logicintegromat.php");
 
@@ -49,43 +58,21 @@ if ($_GET['p'] == 'latam') {
         sendDataIntegromat($data, $urlIntegromat);
 
         // ─── Alta directa en la academia (red de seguridad) ───────────
-        // Crea el usuario y manda el mail de bienvenida AUNQUE el escenario de
-        // Make falle. El endpoint /idiomas fija la academia; es idempotente
-        // (si el usuario ya existe, solo suma el curso, no reenvía credenciales).
-        // URL/secret salen de env (Railway); no rompe el webhook si falla.
-        $academiaUrl    = getenv('ACADEMIA_URL') ?: 'https://academia-production-c4cc.up.railway.app';
-        $academiaSecret = getenv('ACADEMIA_WEBHOOK_SECRET_IDIOMAS') ?: (getenv('WEBHOOK_SECRET') ?: '');
-        $cursosAcademia = array_values(array_unique(array_filter(array_merge(
+        // Crea el usuario y manda el mail de credenciales AUNQUE el escenario
+        // de Make falle. Idempotente: si el usuario ya existe solo suma el
+        // curso, no reenvía credenciales. Mismo alta que dispara pago_exitoso.php
+        // (doble chance independiente: si el webhook no llega, igual se crea).
+        $cursosAcademia = array_merge(
             [$dataProducto['PRODUCTO']],
             explode('|', (string) $dataProducto['UPSELL'])
-        ))));
-        $payloadAcademia = json_encode([
-            'email'    => $dataProducto['CORREO'],
-            'nombre'   => $dataProducto['NOMBRE'],
-            'cursos'   => $cursosAcademia,
-            'monto'    => $dataProducto['MONTO'],
-            'moneda'   => $dataProducto['MONEDA'],
-            'academia' => 'idiomas',
-        ]);
-        $headersAcademia = ['Content-Type: application/json'];
-        if ($academiaSecret !== '') {
-            $headersAcademia[] = 'x-webhook-secret: ' . $academiaSecret;
-        }
-        $ch = curl_init(rtrim($academiaUrl, '/') . '/api/webhook/purchase/idiomas');
-        curl_setopt_array($ch, [
-            CURLOPT_POST           => true,
-            CURLOPT_POSTFIELDS     => $payloadAcademia,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT        => 15,
-            CURLOPT_HTTPHEADER     => $headersAcademia,
-        ]);
-        $respAcademia = curl_exec($ch);
-        $codeAcademia = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        if ($respAcademia === false || $codeAcademia >= 300) {
-            error_log('[pagostripenotif] alta academia fallo: HTTP ' . $codeAcademia
-                . ' | ' . curl_error($ch) . ' | ' . $respAcademia);
-        }
-        curl_close($ch);
+        );
+        enviarAltaAcademia(
+            $dataProducto['CORREO'],
+            $dataProducto['NOMBRE'],
+            $cursosAcademia,
+            $dataProducto['MONTO'],
+            $dataProducto['MONEDA']
+        );
     }
     /*
       else if ($dataProducto != null && $arrayStatus[$data->type] == 'RECHAZADO'){

@@ -228,6 +228,56 @@ function getDataPaymentEbanx($idPayment) {
     return $data;
 }
 
+/**
+ * Alta directa en la academia (idempotente). Crea el usuario y dispara el
+ * mail con las credenciales. Se llama desde el webhook de Stripe
+ * (pagostripenotif.php) Y como red de seguridad desde pago_exitoso.php, para
+ * que el comprador SIEMPRE reciba el acceso aunque uno de los dos falle.
+ * El endpoint /idiomas es idempotente: si el usuario ya existe solo suma el
+ * curso y NO reenvía credenciales, así que dispararlo dos veces es seguro.
+ * URL/secret salen de env (Railway); nunca lanza, solo loguea si falla.
+ *
+ * @return array{ok:bool, code:int, resp:string}
+ */
+function enviarAltaAcademia($email, $nombre, array $cursos, $monto, $moneda) {
+    $academiaUrl    = getenv('ACADEMIA_URL') ?: 'https://academia-production-c4cc.up.railway.app';
+    $academiaSecret = getenv('ACADEMIA_WEBHOOK_SECRET_IDIOMAS') ?: (getenv('WEBHOOK_SECRET') ?: '');
+
+    $cursos = array_values(array_unique(array_filter(array_map('trim', $cursos))));
+
+    $payload = json_encode([
+        'email'    => $email,
+        'nombre'   => $nombre,
+        'cursos'   => $cursos,
+        'monto'    => $monto,
+        'moneda'   => $moneda,
+        'academia' => 'idiomas',
+    ]);
+    $headers = ['Content-Type: application/json'];
+    if ($academiaSecret !== '') {
+        $headers[] = 'x-webhook-secret: ' . $academiaSecret;
+    }
+    $ch = curl_init(rtrim($academiaUrl, '/') . '/api/webhook/purchase/idiomas');
+    curl_setopt_array($ch, [
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $payload,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT        => 25, // margen para cold-start de Railway
+        CURLOPT_HTTPHEADER     => $headers,
+    ]);
+    $resp = curl_exec($ch);
+    $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $err  = curl_error($ch);
+    curl_close($ch);
+
+    $ok = ($resp !== false && $code < 300);
+    if (!$ok) {
+        error_log('[enviarAltaAcademia] fallo: HTTP ' . $code
+            . ' | ' . $err . ' | email=' . $email . ' | ' . $resp);
+    }
+    return ['ok' => $ok, 'code' => $code, 'resp' => (string) $resp];
+}
+
 function getDataProducto($curso, $moneda, $pais = null) {
     $cnx = OpenCon();
 
