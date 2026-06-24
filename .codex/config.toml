@@ -1,0 +1,6 @@
+[mcp_servers.gemini]
+command = "npx"
+args = [
+    "-y",
+    "@modelcontextprotocol/server-gemini",
+]
