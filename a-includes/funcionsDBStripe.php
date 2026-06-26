@@ -239,7 +239,7 @@ function getDataPaymentEbanx($idPayment) {
  *
  * @return array{ok:bool, code:int, resp:string}
  */
-function enviarAltaAcademia($email, $nombre, array $cursos, $monto, $moneda) {
+function enviarAltaAcademia($email, $nombre, array $cursos, $monto, $moneda, $fuente = 'stripe') {
     $academiaUrl    = getenv('ACADEMIA_URL') ?: 'https://academia-production-c4cc.up.railway.app';
     $academiaSecret = getenv('ACADEMIA_WEBHOOK_SECRET_IDIOMAS') ?: (getenv('WEBHOOK_SECRET') ?: '');
 
@@ -252,6 +252,8 @@ function enviarAltaAcademia($email, $nombre, array $cursos, $monto, $moneda) {
         'monto'    => $monto,
         'moneda'   => $moneda,
         'academia' => 'idiomas',
+        // Origen del pago para la sección de ventas de la Academia (stripe|mercadopago).
+        'fuente'   => $fuente,
     ]);
     $headers = ['Content-Type: application/json'];
     if ($academiaSecret !== '') {

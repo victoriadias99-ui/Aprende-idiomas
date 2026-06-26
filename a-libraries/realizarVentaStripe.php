@@ -91,25 +91,28 @@ try {
     $factor            = in_array($monedaStripe, $stripeZeroDecimal, true) ? 1 : 100;
 
     // 2. Clave Stripe: env var de idiomas primero, luego genérica, luego BD.
-    $stripeSecret = getenv('STRIPE_SECRET_KEY_IDIOMAS');
-    if ($stripeSecret === false || $stripeSecret === '') {
-        $stripeSecret = getenv('STRIPE_SECRET_KEY');
-    }
-    if ($stripeSecret === false || $stripeSecret === '') {
-        $stripeSecret = $producto['keySecretStripe'] ?? '';
-    }
-    if (empty($stripeSecret)) {
-        error_log('realizarVentaStripe: clave Stripe vacía para curso ' . $curso);
-        echo 'error:stripe_key_missing';
-        exit;
-    }
-    // Soporta clave JSON por dominio: {"aprende-idiomas.com":"sk_live_..."}
-    if (strpos($stripeSecret, '{') !== false) {
-        $dec = json_decode($stripeSecret, true);
-        $stripeSecret = $dec[$dominio] ?? (is_array($dec) ? reset($dec) : $stripeSecret);
-    }
+    //    Los argentinos pagan con MercadoPago, así que no requieren clave Stripe.
+    if ($pais !== 'AR') {
+        $stripeSecret = getenv('STRIPE_SECRET_KEY_IDIOMAS');
+        if ($stripeSecret === false || $stripeSecret === '') {
+            $stripeSecret = getenv('STRIPE_SECRET_KEY');
+        }
+        if ($stripeSecret === false || $stripeSecret === '') {
+            $stripeSecret = $producto['keySecretStripe'] ?? '';
+        }
+        if (empty($stripeSecret)) {
+            error_log('realizarVentaStripe: clave Stripe vacía para curso ' . $curso);
+            echo 'error:stripe_key_missing';
+            exit;
+        }
+        // Soporta clave JSON por dominio: {"aprende-idiomas.com":"sk_live_..."}
+        if (strpos($stripeSecret, '{') !== false) {
+            $dec = json_decode($stripeSecret, true);
+            $stripeSecret = $dec[$dominio] ?? (is_array($dec) ? reset($dec) : $stripeSecret);
+        }
 
-    $stripe = new \Stripe\StripeClient($stripeSecret);
+        $stripe = new \Stripe\StripeClient($stripeSecret);
+    }
 
     // 3. Line items: curso base + upsells seleccionados en "pack".
     $lineItems = [];
@@ -146,6 +149,102 @@ try {
     setVentaStripe('payment-strype', $curso, $pack, $idTemp, $precioTotal, $monedaStripe, $pais, $nombre, $apellido, $email, 'pendiente', null);
     $_payment = getVentaStripe($idTemp);
     $idVenta  = $_payment ? $_payment['ID'] : $idTemp;
+
+    // ─────────────────────────────────────────────────────────────────────
+    // Argentina → MercadoPago (Checkout Pro). El resto del mundo sigue con
+    // Stripe (abajo). Devolvemos el init_point igual que devolvemos la URL de
+    // Stripe; checkoutv4.js redirige sin cambios.
+    // ─────────────────────────────────────────────────────────────────────
+    if ($pais === 'AR') {
+        $mpToken = getenv('MP_ACCESS_TOKEN_IDIOMAS') ?: (getenv('MP_ACCESS_TOKEN') ?: '');
+        if (empty($mpToken)) {
+            error_log('realizarVentaStripe: MP_ACCESS_TOKEN(_IDIOMAS) vacío');
+            echo 'error:mp_token_missing';
+            exit;
+        }
+
+        // Ítems en ARS: curso base + upsells seleccionados en "pack".
+        $mpItems = [[
+            'title'       => mb_substr($producto['NOMBRE'], 0, 256),
+            'quantity'    => 1,
+            'unit_price'  => (float) $producto['PRECIO_DESC'],
+            'currency_id' => 'ARS',
+        ]];
+        if ($curso !== $pack) {
+            $arrayPacks = explode('|', $pack);
+            foreach ($dataPack as $p) {
+                if (in_array($p['ID_ABRE'], $arrayPacks, true)) {
+                    $mpItems[] = [
+                        'title'       => mb_substr($p['NOMBRE'], 0, 256),
+                        'quantity'    => 1,
+                        'unit_price'  => (float) $p['PRECIO'],
+                        'currency_id' => 'ARS',
+                    ];
+                }
+            }
+        }
+
+        $prefPayload = [
+            'items' => $mpItems,
+            'payer' => ['email' => $email, 'name' => $nombre, 'surname' => $apellido],
+            'external_reference' => (string) $idVenta,
+            'back_urls' => [
+                'success' => $urlRoot . 'pago_exitoso.php?id=' . $idVenta . '&moneda=ARS',
+                'pending' => $urlRoot . 'pago_exitoso.php?id=' . $idVenta . '&moneda=ARS',
+                'failure' => $cancelUrl,
+            ],
+            'auto_return'          => 'approved',
+            'notification_url'     => $urlRoot . 'mp_webhook.php',
+            'statement_descriptor' => 'APRENDEIDIOMAS',
+            'metadata' => [
+                'curso'    => $curso,
+                'id_venta' => $idVenta,
+                'nombre'   => $nombre,
+                'apellido' => $apellido,
+                'email'    => $email,
+                'pais'     => $pais,
+                'moneda'   => 'ARS',
+                'upsell'   => $pack,
+            ],
+        ];
+
+        try {
+            $mpClient = new \GuzzleHttp\Client(['timeout' => 15]);
+            $mpResp   = $mpClient->post('https://api.mercadopago.com/checkout/preferences', [
+                'headers' => ['Authorization' => 'Bearer ' . $mpToken, 'Content-Type' => 'application/json'],
+                'json'    => $prefPayload,
+            ]);
+            $mpData    = json_decode((string) $mpResp->getBody(), true);
+            $prefId    = $mpData['id'] ?? '';
+            // init_point = producción; sandbox_init_point = credenciales de test.
+            $initPoint = $mpData['init_point'] ?? ($mpData['sandbox_init_point'] ?? '');
+
+            if (empty($initPoint)) {
+                error_log('realizarVentaStripe MP sin init_point: ' . json_encode($mpData));
+                echo 'error:mp_no_init_point';
+                exit;
+            }
+
+            // Guardar el preference id como ID_PAGO de la venta (queda 'pendiente').
+            try {
+                updVentaStripe($idTemp, 'mercadopago', $curso, $pack, $prefId, $precioTotal, 'ARS', $pais, $nombre, $apellido, $email, 'pendiente', json_encode($mpData));
+            } catch (\Throwable $eUpd) {
+                error_log('realizarVentaStripe MP updVentaStripe falló: ' . $eUpd->getMessage());
+            }
+
+            if (isset($_GET['test'])) {
+                echo "OK MP\npreference_id: " . $prefId . "\ninit_point: " . $initPoint;
+                exit;
+            }
+
+            echo $initPoint;
+            exit;
+        } catch (\Throwable $eMp) {
+            error_log('realizarVentaStripe MP error: ' . $eMp->getMessage());
+            echo 'error:mp_general';
+            exit;
+        }
+    }
 
     // 5. Crear Stripe Checkout Session
     $sessionParams = [

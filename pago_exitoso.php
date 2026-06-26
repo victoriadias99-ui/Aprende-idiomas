@@ -137,40 +137,75 @@ $producto = getDataProducto($venta['PRODUCTO'], $_moneda)['producto'];
 // para no dar de alta sobre una venta sin pago real (IDOR). Idempotente: si el
 // usuario ya existe solo suma el curso y no reenvía credenciales.
 try {
-    $pagado = isset($venta['STATUS']) && strtoupper($venta['STATUS']) === 'DONE';
+    $esMP   = isset($venta['TIPO_PAGO']) && strtolower($venta['TIPO_PAGO']) === 'mercadopago';
+    $yaDone = isset($venta['STATUS']) && strtoupper($venta['STATUS']) === 'DONE';
 
-    if (!$pagado) {
-        $sessionId = '';
-        if (!empty($venta['DATA'])) {
-            $dataObj = json_decode($venta['DATA']);
-            if (isset($dataObj->id) && strpos((string) $dataObj->id, 'cs_') === 0) {
-                $sessionId = $dataObj->id;
+    if ($esMP) {
+        // ─── MercadoPago: red de seguridad ───────────────────────────────────
+        // Si el webhook (mp_webhook.php) ya marcó la venta DONE, NO reprocesamos
+        // (evita duplicar la venta en la Academia). Si todavía no llegó, acá
+        // verificamos el pago contra MP por external_reference y damos el alta.
+        if (!$yaDone) {
+            $mpToken  = getenv('MP_ACCESS_TOKEN_IDIOMAS') ?: (getenv('MP_ACCESS_TOKEN') ?: '');
+            $aprobado = false;
+            if ($mpToken !== '') {
+                require_once __DIR__ . '/a-libraries/vendor/autoload.php';
+                $mpClient = new \GuzzleHttp\Client(['timeout' => 8, 'http_errors' => false]);
+                $resp = $mpClient->get('https://api.mercadopago.com/v1/payments/search', [
+                    'headers' => ['Authorization' => 'Bearer ' . $mpToken],
+                    'query'   => ['external_reference' => (string) $venta['ID'], 'sort' => 'date_created', 'criteria' => 'desc'],
+                ]);
+                $mpData = json_decode((string) $resp->getBody(), true);
+                foreach (($mpData['results'] ?? []) as $p) {
+                    if (($p['status'] ?? '') === 'approved') { $aprobado = true; break; }
+                }
+            }
+            if ($aprobado) {
+                try {
+                    $cnxMp = OpenCon();
+                    $cnxMp->prepare("UPDATE `v2_ventas` SET `STATUS`='DONE' WHERE `ID`=?")->execute([$venta['ID']]);
+                } catch (\Throwable $e) { /* no bloquear el alta */ }
+                $cursosAcademia = array_merge([$venta['PRODUCTO']], explode('|', (string) $venta['UPSELL']));
+                enviarAltaAcademia($venta['CORREO'], $venta['NOMBRE'], $cursosAcademia, $venta['MONTO'], $venta['MONEDA'], 'mercadopago');
             }
         }
-        $stripeSecret = ($producto['live'] == 1)
-            ? ($producto['keySecretStripe'] ?? '')
-            : ($producto['keySecretStripeTest'] ?? '');
+    } else {
+        // ─── Stripe (comportamiento original) ────────────────────────────────
+        $pagado = $yaDone;
 
-        if ($sessionId !== '' && $stripeSecret) {
-            require_once __DIR__ . '/a-libraries/vendor/autoload.php';
-            \Stripe\Stripe::setApiKey($stripeSecret);
-            $session = \Stripe\Checkout\Session::retrieve($sessionId);
-            $pagado = isset($session->payment_status) && $session->payment_status === 'paid';
+        if (!$pagado) {
+            $sessionId = '';
+            if (!empty($venta['DATA'])) {
+                $dataObj = json_decode($venta['DATA']);
+                if (isset($dataObj->id) && strpos((string) $dataObj->id, 'cs_') === 0) {
+                    $sessionId = $dataObj->id;
+                }
+            }
+            $stripeSecret = ($producto['live'] == 1)
+                ? ($producto['keySecretStripe'] ?? '')
+                : ($producto['keySecretStripeTest'] ?? '');
+
+            if ($sessionId !== '' && $stripeSecret) {
+                require_once __DIR__ . '/a-libraries/vendor/autoload.php';
+                \Stripe\Stripe::setApiKey($stripeSecret);
+                $session = \Stripe\Checkout\Session::retrieve($sessionId);
+                $pagado = isset($session->payment_status) && $session->payment_status === 'paid';
+            }
         }
-    }
 
-    if ($pagado) {
-        $cursosAcademia = array_merge(
-            [$venta['PRODUCTO']],
-            explode('|', (string) $venta['UPSELL'])
-        );
-        enviarAltaAcademia(
-            $venta['CORREO'],
-            $venta['NOMBRE'],
-            $cursosAcademia,
-            $venta['MONTO'],
-            $venta['MONEDA']
-        );
+        if ($pagado) {
+            $cursosAcademia = array_merge(
+                [$venta['PRODUCTO']],
+                explode('|', (string) $venta['UPSELL'])
+            );
+            enviarAltaAcademia(
+                $venta['CORREO'],
+                $venta['NOMBRE'],
+                $cursosAcademia,
+                $venta['MONTO'],
+                $venta['MONEDA']
+            );
+        }
     }
 } catch (\Throwable $e) {
     error_log('[pago_exitoso alta academia] ' . $e->getMessage());
