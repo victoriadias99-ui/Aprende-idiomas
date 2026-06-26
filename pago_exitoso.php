@@ -161,12 +161,19 @@ try {
                 }
             }
             if ($aprobado) {
+                // Reclamo atómico: solo damos el alta si NADIE marcó DONE antes
+                // (evita doble alta con el webhook → dos contraseñas distintas).
+                $reclamado = true;
                 try {
                     $cnxMp = OpenCon();
-                    $cnxMp->prepare("UPDATE `v2_ventas` SET `STATUS`='DONE' WHERE `ID`=?")->execute([$venta['ID']]);
-                } catch (\Throwable $e) { /* no bloquear el alta */ }
-                $cursosAcademia = array_merge([$venta['PRODUCTO']], explode('|', (string) $venta['UPSELL']));
-                enviarAltaAcademia($venta['CORREO'], $venta['NOMBRE'], $cursosAcademia, $venta['MONTO'], $venta['MONEDA'], 'mercadopago');
+                    $claim = $cnxMp->prepare("UPDATE `v2_ventas` SET `STATUS`='DONE' WHERE `ID`=? AND COALESCE(`STATUS`,'') <> 'DONE'");
+                    $claim->execute([$venta['ID']]);
+                    $reclamado = $claim->rowCount() > 0;
+                } catch (\Throwable $e) { /* ante error de DB, intentamos el alta igual */ }
+                if ($reclamado) {
+                    $cursosAcademia = array_merge([$venta['PRODUCTO']], explode('|', (string) $venta['UPSELL']));
+                    enviarAltaAcademia($venta['CORREO'], $venta['NOMBRE'], $cursosAcademia, $venta['MONTO'], $venta['MONEDA'], 'mercadopago');
+                }
             }
         }
     } else {

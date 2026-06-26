@@ -116,20 +116,22 @@ if (!$venta) {
     exit;
 }
 
-// Idempotencia: si ya está DONE, no reprocesar.
-if (strtoupper((string) ($venta['STATUS'] ?? '')) === 'DONE') {
-    http_response_code(200);
-    echo json_encode(['status' => 'already_processed']);
-    exit;
-}
-
-// Marcar la venta como DONE (guardando el id de pago de MP y el payload).
+// ── Idempotencia ATÓMICA: solo UN proceso reclama la venta ───────────────────
+// El alta la pueden disparar a la vez este webhook y la red de seguridad de
+// pago_exitoso.php. Un "leer STATUS y luego actuar" no es atómico y podía dar
+// de alta dos veces (dos contraseñas → "contraseña incorrecta"). El UPDATE
+// condicional es atómico: solo la primera ejecución afecta una fila.
 try {
-    $cnx = OpenCon();
-    $stmt = $cnx->prepare("UPDATE `v2_ventas` SET `STATUS`='DONE', `ID_PAGO`=?, `DATA`=? WHERE `ID`=?");
-    $stmt->execute([(string) ($pago['id'] ?? $paymentId), json_encode($pago), $idVenta]);
+    $cnx   = OpenCon();
+    $claim = $cnx->prepare("UPDATE `v2_ventas` SET `STATUS`='DONE', `ID_PAGO`=?, `DATA`=? WHERE `ID`=? AND COALESCE(`STATUS`,'') <> 'DONE'");
+    $claim->execute([(string) ($pago['id'] ?? $paymentId), json_encode($pago), $idVenta]);
+    if ($claim->rowCount() === 0) {
+        http_response_code(200);
+        echo json_encode(['status' => 'already_processed']);
+        exit;
+    }
 } catch (\Throwable $e) {
-    error_log('mp_webhook idiomas UPDATE v2_ventas falló: ' . $e->getMessage());
+    error_log('mp_webhook idiomas claim atómico falló: ' . $e->getMessage());
 }
 
 // ─── Alta en la Academia (idempotente) ────────────────────────────────────────
