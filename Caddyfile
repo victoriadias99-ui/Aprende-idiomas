@@ -48,6 +48,7 @@
 		not path /a-includes/chat-ia.php
 		not path /a-includes/pagostripenotif.php
 		not path /a-includes/pagopaypalnotif.php
+		not path /a-includes/enviar_recovery_resend.php
 	}
 	respond @internalPath "Not Found" 404 {
 		close
