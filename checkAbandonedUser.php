@@ -23,7 +23,16 @@ include("a-includes/class.autonum.php");
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 $cnx = OpenCon();
 
-$consulta = "SELECT `ID`, `PRODUCTO` as CURSO, `FECHA`, `NOMBRE`, NULL AS APELLIDO, NULL AS `PREFIJO_CEL`, NULL AS CELULAR, `CORREO` AS EMAIL FROM `v2_ventas` WHERE `STATUS`='CREADO' AND TIMESTAMPDIFF(MINUTE,FECHA,NOW())>10 ORDER BY `v2_ventas`.`FECHA`";
+// Excluimos a quien ya tenga una compra completada (STATUS='DONE') con el mismo
+// correo: nadie que ya pagó —incluido MercadoPago— entra al flujo de recuperación.
+$consulta = "SELECT v.`ID`, v.`PRODUCTO` as CURSO, v.`FECHA`, v.`NOMBRE`, NULL AS APELLIDO, NULL AS `PREFIJO_CEL`, NULL AS CELULAR, v.`CORREO` AS EMAIL
+             FROM `v2_ventas` v
+             WHERE v.`STATUS`='CREADO'
+               AND TIMESTAMPDIFF(MINUTE, v.`FECHA`, NOW())>10
+               AND LOWER(v.`CORREO`) NOT IN (
+                   SELECT LOWER(p.`CORREO`) FROM `v2_ventas` p WHERE p.`STATUS`='DONE' AND p.`CORREO` IS NOT NULL
+               )
+             ORDER BY v.`FECHA`";
 $stmt = $cnx->prepare($consulta);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -31,6 +40,16 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
 echo json_encode($rows);
 
-$stmt1=$cnx->prepare("UPDATE v2_ventas SET `STATUS`='abandoned' WHERE `STATUS`='CREADO'");
+// Marcamos 'abandoned' solo los CREADO de quienes NO compraron (los compradores
+// quedan fuera del flujo de recuperación).
+$stmt1 = $cnx->prepare(
+    "UPDATE v2_ventas SET `STATUS`='abandoned'
+     WHERE `STATUS`='CREADO'
+       AND LOWER(`CORREO`) NOT IN (
+           SELECT LOWER(`CORREO`) FROM (
+               SELECT `CORREO` FROM v2_ventas WHERE `STATUS`='DONE' AND `CORREO` IS NOT NULL
+           ) AS x
+       )"
+);
 $stmt1->execute();
 ?>

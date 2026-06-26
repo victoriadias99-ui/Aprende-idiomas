@@ -280,6 +280,26 @@ function enviarAltaAcademia($email, $nombre, array $cursos, $monto, $moneda, $fu
     return ['ok' => $ok, 'code' => $code, 'resp' => (string) $resp];
 }
 
+/**
+ * Marca como convertido al lead abandonado de ese email (idempotente).
+ * updVentaStripe ya lo hace para los pagos que pasan por ahí, pero las compras
+ * por MercadoPago marcan la venta con un UPDATE directo, así que lo llamamos
+ * explícitamente desde el webhook / pago_exitoso de MP. Nunca lanza.
+ */
+function marcarLeadConvertido($email) {
+    $email = trim((string) $email);
+    if ($email === '') {
+        return;
+    }
+    try {
+        $cnx = OpenCon();
+        $stmt = $cnx->prepare("UPDATE `leads_abandonados` SET `CONVERTIDO`=1, `FECHA_CONVERSION`=NOW() WHERE `EMAIL`=? AND `CONVERTIDO`=0");
+        $stmt->execute([$email]);
+    } catch (Throwable $e) {
+        error_log('[marcarLeadConvertido] ' . $e->getMessage());
+    }
+}
+
 function getDataProducto($curso, $moneda, $pais = null) {
     $cnx = OpenCon();
 

@@ -173,6 +173,8 @@ try {
                 if ($reclamado) {
                     $cursosAcademia = array_merge([$venta['PRODUCTO']], explode('|', (string) $venta['UPSELL']));
                     enviarAltaAcademia($venta['CORREO'], $venta['NOMBRE'], $cursosAcademia, $venta['MONTO'], $venta['MONEDA'], 'mercadopago');
+                    // Marcar el lead abandonado como convertido (no más recovery).
+                    marcarLeadConvertido($venta['CORREO']);
                 }
             }
         }

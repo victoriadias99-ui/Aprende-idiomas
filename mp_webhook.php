@@ -151,5 +151,8 @@ $res = enviarAltaAcademia(
     'mercadopago'
 );
 
+// Marcar el lead abandonado como convertido para que no reciba recovery.
+marcarLeadConvertido($venta['CORREO']);
+
 http_response_code(200);
 echo json_encode(['status' => 'ok', 'academia' => $res['code'] ?? 0]);
